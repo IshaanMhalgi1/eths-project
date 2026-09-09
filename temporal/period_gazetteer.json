@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Early Republic",
+    "aliases": ["Early National Period"],
+    "start_year": 1789,
+    "end_year": 1824
+  },
+  {
+    "name": "Jeffersonian Era",
+    "aliases": ["Jefferson administration"],
+    "start_year": 1801,
+    "end_year": 1809
+  },
+  {
+    "name": "American Civil War",
+    "aliases": ["Civil War", "US Civil War"],
+    "start_year": 1861,
+    "end_year": 1865
+  },
+  {
+    "name": "Reconstruction Era",
+    "aliases": ["Reconstruction"],
+    "start_year": 1865,
+    "end_year": 1877
+  },
+  {
+    "name": "Gilded Age",
+    "aliases": [],
+    "start_year": 1870,
+    "end_year": 1900
+  },
+  {
+    "name": "Progressive Era",
+    "aliases": [],
+    "start_year": 1896,
+    "end_year": 1916
+  },
+  {
+    "name": "World War I",
+    "aliases": ["WWI", "First World War", "Great War"],
+    "start_year": 1914,
+    "end_year": 1918
+  },
+  {
+    "name": "Roaring Twenties",
+    "aliases": ["1920s", "Jazz Age"],
+    "start_year": 1920,
+    "end_year": 1929
+  },
+  {
+    "name": "Great Depression",
+    "aliases": ["Depression era"],
+    "start_year": 1929,
+    "end_year": 1939
+  },
+  {
+    "name": "World War II",
+    "aliases": ["WWII", "Second World War"],
+    "start_year": 1939,
+    "end_year": 1945
+  }
+]
