@@ -63,8 +63,8 @@ def evaluate_cached(cached_data, alpha_hybrid, beta_temporal, k=10):
             min_t, max_t = min(t_scores), max(t_scores)
 
             for r in candidates:
-                nh = (r['score'] - min_h) / (max_h - min_h) if max_h > min_h else 1.0
-                nt = (r['_raw_t'] - min_t) / (max_t - min_t) if max_t > min_t else 1.0
+                nh = (r['score'] - min_h) / (max_h - min_h) if max_h > min_h else r['score']
+                nt = (r['_raw_t'] - min_t) / (max_t - min_t) if max_t > min_t else r['_raw_t']
                 r['_final'] = alpha_hybrid * nh + beta_temporal * nt
 
             scored = sorted(candidates, key=lambda r: r['_final'], reverse=True)
@@ -82,7 +82,7 @@ def evaluate_cached(cached_data, alpha_hybrid, beta_temporal, k=10):
 
         hits = [1 if d in true_docs else 0 for d in dedup]
         n_rel = max(len(true_docs), 1)
-        p_at_k_list.append(sum(hits) / min(k, n_rel))
+        p_at_k_list.append(sum(hits) / k)
         recall_list.append(sum(hits) / n_rel)
         mrr = 0
         for rank, d in enumerate(dedup):

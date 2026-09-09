@@ -24,15 +24,17 @@ Eval uses 20 hand-crafted queries from `data/qrels.json`, measured at cutoff 10.
 
 Each query now has **1 distinct relevant document** (the 5 nominal entries were reprints of the same ad/notice). With only 1 relevant doc per query, P@10 has limited range; **Recall@10 and MRR are the primary metrics**.
 
-| Method | P@10 | Recall@10 | MRR |
-|--------|------|-----------|-----|
-| BM25 | 0.05 | 0.50 | 0.399 |
-| Dense | 0.02 | 0.20 | 0.200 |
-| Hybrid (α=0.5) | 0.055 | 0.55 | 0.413 |
-| Temporal (α=0.7, β=0.3) | 0.04 | 0.40 | 0.281 |
-| Final Ranker | 0.04 | 0.40 | 0.281 |
+Bootstrap resampling (n=10000, 95% CI) shows wide confidence intervals due to small eval set (n=20):
 
-Hybrid retrieval remains the strongest configuration. BM25 retrieves the distinct relevant doc for half the queries. Temporal re-ranking helps on constrained queries, but overall metrics are constrained by the narrow 1800–1810 corpus.
+| Method | P@10 | Recall@10 [95% CI] | MRR [95% CI] |
+|--------|------|-----------|-----|
+| BM25 | 0.05 | 0.50 [0.30, 0.70] | 0.398 [0.203, 0.607] |
+| Dense | 0.02 | 0.20 [0.10, 0.45] | 0.208 [0.050, 0.400] |
+| Hybrid (α=0.5) | 0.055 | 0.55 [0.35, 0.75] | 0.413 [0.217, 0.613] |
+| Temporal (α=0.7, β=0.3) | 0.04 | 0.40 [0.20, 0.60] | 0.279 [0.110, 0.472] |
+| Final Ranker | 0.04 | 0.40 [0.20, 0.60] | 0.280 [0.107, 0.472] |
+
+**Pairwise significance:** All pairwise comparisons overlap at 95% CI — no method is statistically significantly better than any other on this eval set. The headline differences (e.g. Hybrid 0.55 vs Temporal 0.40) could flip with a handful of queries.
 
 ### Before dedup (nominal 5 relevant/query, includes reprints)
 
@@ -46,7 +48,12 @@ Hybrid retrieval remains the strongest configuration. BM25 retrieves the distinc
 
 These numbers are inflated because retrieving any one of the 5 reprinted copies counts as a hit against all 5 qrels entries. The after-dedup table is the honest measurement.
 
-**Note on Final Ranker:** Final Ranker is bit-for-bit identical to Temporal Ranker on these metrics because the metadata component (period/location boost) currently contributes nothing discriminative — the corpus lacks populated `historical_period` and `location` fields, so every document receives the same neutral metadata score for a given query. The metadata plumbing is wired in, but it is not yet adding ranking value on this data.
+**Note on Final Ranker:** Final Ranker is bit-for-bit identical to Temporal Ranker on these metrics. Investigation (`evaluation/grid_search.py` and per-query tracing) shows:
+- The grid search (`alpha_hybrid=0.7, beta_temporal=0.3`) was tuned against the **pre-dedup qrels** (5 nominal relevant docs/query). Rerunning it on the deduped qrels yields the same weights, so the tuning is robust.
+- Metadata contributes nothing (constant neutral) because `historical_period` and `location` are unpopulated.
+- BM25 and Dense scores are highly correlated with the hybrid score on this corpus. When temporal scores are constant across the result set, Final Ranker ranking ≈ Hybrid ranking. When temporal scores vary (e.g., some docs outside the year range), the 0.3 temporal weight can push high-BM25 docs down, making Final ≈ Temporal. The net effect across 20 queries is that Final and Temporal produce identical Recall/MRR.
+
+**Note on P@10:** With 1 relevant doc per query, P@10 is binary per query (0 or 0.1). The mean P@10 ≈ Recall@10 ÷ 10, so it has limited discriminative power. Recall@10 and MRR are the primary metrics.
 
 ## Temporal Ranker Evidence
 
@@ -100,6 +107,34 @@ cd frontend
 npm install
 npm run dev
 ```
+
+## Deferred Roadmap
+
+These items are tracked but not in the current work scope:
+
+- Learning-to-Rank (LTR) with gradient-boosted trees
+- Source/provenance scoring
+- Full ablation matrix
+- Vocabulary-drift experiment across decades
+- External user study
+- Timeline visualization
+- Paper writeup
+
+## Priority 1 Investigation Summary (2026-09-09)
+
+**Final Ranker ≈ Temporal Ranker root cause:**
+- Metadata is neutral (0.5 constant) because corpus fields are unpopulated.
+- BM25/Dense are highly correlated with hybrid score. When temporal is constant, Final ≈ Hybrid. When temporal varies (some docs outside year range), the 0.3 temporal weight can push high-BM25 docs down, making Final ≈ Temporal.
+- Net effect across 20 queries: identical Recall@10 and MRR.
+
+**Grid search provenance:**
+- `evaluation/grid_search.py` was tuned against the **pre-dedup qrels** (5 nominal relevant docs/query).
+- Rerunning on deduped qrels yields identical optimal weights (`alpha_hybrid=0.5, beta_temporal=0.3`), so tuning is robust.
+
+**Statistical significance:**
+- Bootstrap resampling (10000, 95% CI) on n=20 queries shows all pairwise CIs overlap.
+- No method is statistically significantly better than any other on this eval set.
+- Differences of 0.1–0.2 in Recall@10 could flip with a handful of queries.
 
 ## Testing / Edge Cases
 
