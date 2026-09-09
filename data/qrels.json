@@ -1,0 +1,202 @@
+[
+  {
+    "query_id": "q1",
+    "query_text": "strayed horse reward advertisement",
+    "temporal_type": "none",
+    "relevant_doc_ids": [
+      "train_1707"
+    ],
+    "original_count": 5,
+    "deduped_count": 1
+  },
+  {
+    "query_id": "q2",
+    "query_text": "flour and grain market prices",
+    "temporal_type": "none",
+    "relevant_doc_ids": [
+      "train_257"
+    ],
+    "original_count": 5,
+    "deduped_count": 1
+  },
+  {
+    "query_id": "q3",
+    "query_text": "runaway slave reward advertisement",
+    "temporal_type": "none",
+    "relevant_doc_ids": [
+      "train_916"
+    ],
+    "original_count": 5,
+    "deduped_count": 1
+  },
+  {
+    "query_id": "q4",
+    "query_text": "military officer appointments",
+    "temporal_type": "none",
+    "relevant_doc_ids": [
+      "train_1963"
+    ],
+    "original_count": 5,
+    "deduped_count": 1
+  },
+  {
+    "query_id": "q5",
+    "query_text": "obituaries deaths 1806",
+    "temporal_type": "explicit_year",
+    "relevant_doc_ids": [
+      "train_141"
+    ],
+    "original_count": 5,
+    "deduped_count": 1
+  },
+  {
+    "query_id": "q6",
+    "query_text": "real estate land for sale 1807",
+    "temporal_type": "explicit_year",
+    "relevant_doc_ids": [
+      "train_1927"
+    ],
+    "original_count": 5,
+    "deduped_count": 1
+  },
+  {
+    "query_id": "q7",
+    "query_text": "ship arrivals cargo from Europe 1803",
+    "temporal_type": "explicit_year",
+    "relevant_doc_ids": [
+      "train_1569"
+    ],
+    "original_count": 5,
+    "deduped_count": 1
+  },
+  {
+    "query_id": "q8",
+    "query_text": "new store goods for sale 1803",
+    "temporal_type": "explicit_year",
+    "relevant_doc_ids": [
+      "train_1582"
+    ],
+    "original_count": 5,
+    "deduped_count": 1
+  },
+  {
+    "query_id": "q9",
+    "query_text": "political news congress 1800 to 1805",
+    "temporal_type": "range",
+    "relevant_doc_ids": [
+      "train_294"
+    ],
+    "original_count": 5,
+    "deduped_count": 1
+  },
+  {
+    "query_id": "q10",
+    "query_text": "tax land assessment 1804 to 1808",
+    "temporal_type": "range",
+    "relevant_doc_ids": [
+      "train_162"
+    ],
+    "original_count": 5,
+    "deduped_count": 1
+  },
+  {
+    "query_id": "q11",
+    "query_text": "legal public notice sheriff 1800 1810",
+    "temporal_type": "range",
+    "relevant_doc_ids": [
+      "train_482"
+    ],
+    "original_count": 5,
+    "deduped_count": 1
+  },
+  {
+    "query_id": "q12",
+    "query_text": "weather storm floods 1805 to 1810",
+    "temporal_type": "range",
+    "relevant_doc_ids": [
+      "train_96"
+    ],
+    "original_count": 5,
+    "deduped_count": 1
+  },
+  {
+    "query_id": "q13",
+    "query_text": "news dispatches France Europe before 1808",
+    "temporal_type": "before_after",
+    "relevant_doc_ids": [
+      "train_76"
+    ],
+    "original_count": 5,
+    "deduped_count": 1
+  },
+  {
+    "query_id": "q14",
+    "query_text": "shipping port arrivals after 1805",
+    "temporal_type": "before_after",
+    "relevant_doc_ids": [
+      "train_13"
+    ],
+    "original_count": 5,
+    "deduped_count": 1
+  },
+  {
+    "query_id": "q15",
+    "query_text": "medicines apothecary bitters since 1802",
+    "temporal_type": "before_after",
+    "relevant_doc_ids": [
+      "train_627"
+    ],
+    "original_count": 5,
+    "deduped_count": 1
+  },
+  {
+    "query_id": "q16",
+    "query_text": "poetry verse published before 1810",
+    "temporal_type": "before_after",
+    "relevant_doc_ids": [
+      "train_56"
+    ],
+    "original_count": 5,
+    "deduped_count": 1
+  },
+  {
+    "query_id": "q17",
+    "query_text": "European war news Jeffersonian Era",
+    "temporal_type": "period",
+    "relevant_doc_ids": [
+      "train_294"
+    ],
+    "original_count": 5,
+    "deduped_count": 1
+  },
+  {
+    "query_id": "q18",
+    "query_text": "election campaign republican Early Republic",
+    "temporal_type": "period",
+    "relevant_doc_ids": [
+      "train_130"
+    ],
+    "original_count": 5,
+    "deduped_count": 1
+  },
+  {
+    "query_id": "q19",
+    "query_text": "trade embargo Britain Jefferson administration",
+    "temporal_type": "period",
+    "relevant_doc_ids": [
+      "train_31"
+    ],
+    "original_count": 5,
+    "deduped_count": 1
+  },
+  {
+    "query_id": "q20",
+    "query_text": "letters editor public opinion Early National Period",
+    "temporal_type": "period",
+    "relevant_doc_ids": [
+      "train_129"
+    ],
+    "original_count": 5,
+    "deduped_count": 1
+  }
+]
