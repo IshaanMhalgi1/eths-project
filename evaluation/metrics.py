@@ -6,6 +6,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
 from retrieval.bm25 import search_bm25
 from retrieval.dense import search_dense
+from ranking.shared_hybrid import get_hybrid_candidates, clear_hybrid_cache
 
 def compute_metrics(qrels_path, retrieval_fn, k=10):
     with open(qrels_path, 'r') as f:
@@ -21,8 +22,12 @@ def compute_metrics(qrels_path, retrieval_fn, k=10):
         if 'relevant_doc_id' in q:
             true_docs.append(q['relevant_doc_id'])
             
-        # Retrieve
-        results = retrieval_fn(query_text, size=k * 2) # Get more chunks to allow dedup
+        # Retrieve - use shared hybrid pool for consistency
+        if retrieval_fn.__name__ == 'search_hybrid':
+            clear_hybrid_cache()
+            results = get_hybrid_candidates(query_text)
+        else:
+            results = retrieval_fn(query_text, size=k * 5)
         retrieved_docs = [res['parent_doc_id'] for res in results]
         
         # We consider it a hit if ANY chunk from the parent_doc_id is in the top K.

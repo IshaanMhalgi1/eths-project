@@ -8,8 +8,8 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
 from retrieval.hybrid import search_hybrid
 
-# Fixed candidate pool size for all rankers
-SHARED_FETCH_SIZE = 200
+# Fixed candidate pool size for all rankers (matches size * 5 for size=10)
+SHARED_FETCH_SIZE = 50
 
 # Cache for hybrid candidates per query (optional optimization)
 _hybrid_cache = {}

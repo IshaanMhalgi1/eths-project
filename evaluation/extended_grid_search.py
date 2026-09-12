@@ -1,12 +1,7 @@
-"""
-Grid search over beta_temporal for the temporal ranker.
-Uses shared_hybrid.py for consistent candidate pool with the real pipeline.
-The hybrid base is FIXED at alpha=0.5 (BM25+Dense RRF) — only beta_temporal varies.
-"""
-import os, sys, json, itertools
+import os, sys, json
+import numpy as np
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
-import numpy as np
 from ranking.shared_hybrid import get_hybrid_candidates, clear_hybrid_cache
 from ranking.temporal_ranker import calculate_temporal_score
 from temporal.temporal_parser import TemporalParser
@@ -15,7 +10,6 @@ from ranking.normalization_stats import NORM_STATS
 parser = TemporalParser()
 
 def z_score_normalize(val, mean, std):
-    """Global z-score normalization (matching pipeline)."""
     if std > 0:
         return (val - mean) / std
     return 0.0
@@ -25,12 +19,10 @@ with open(QRELS_PATH) as f:
     qrels = json.load(f)
 qrels = [q for q in qrels if q.get('relevant_doc_ids')]
 
-# ── Step 1: Pre-fetch hybrid candidates from shared pool (same as pipeline) ──
-print("Pre-fetching hybrid candidates from shared pool…")
+# Pre-fetch hybrid candidates
 clear_hybrid_cache()
 cached = []
-for i, q in enumerate(qrels):
-    # Use the SAME hybrid base as the pipeline: alpha=0.5 BM25+Dense RRF
+for q in qrels:
     candidates = get_hybrid_candidates(q['query_text'])
     intent = parser.parse(q['query_text'])
     cached.append({
@@ -40,18 +32,11 @@ for i, q in enumerate(qrels):
         'query_end': intent.get('end_year'),
         'candidates': candidates,
     })
-    print(f"  [{i+1}/{len(qrels)}] {q['query_text'][:50]}")
-
-print("Done. Running grid search with pipeline-consistent normalization…\n")
-
-# Hybrid base is FIXED at alpha=0.5 (the pipeline's hybrid).
-# Only beta_temporal varies.
-HYBRID_ALPHA = 0.5
-hybrid_std = NORM_STATS['dense_std']
 
 def evaluate_cached(cached_data, beta_temporal, k=10):
-    """Evaluate temporal ranker with given beta_temporal on fixed hybrid base."""
     p_at_k_list, recall_list, mrr_list = [], [], []
+    HYBRID_ALPHA = 0.5
+    hybrid_std = NORM_STATS['dense_std']
 
     for entry in cached_data:
         candidates = entry['candidates']
@@ -59,17 +44,14 @@ def evaluate_cached(cached_data, beta_temporal, k=10):
         qs = entry['query_start']
         qe = entry['query_end']
 
-        # Apply temporal scoring if needed
         if qs is not None and qe is not None:
             for r in candidates:
                 t, _ = calculate_temporal_score(r.get('historical_start'), r.get('historical_end'), qs, qe)
                 r['_raw_t'] = t
         else:
             for r in candidates:
-                r['_raw_t'] = 0.5  # neutral
+                r['_raw_t'] = 0.5
 
-        # Score: hybrid base (FIXED, alpha=0.5) + temporal adj (beta_temporal)
-        # final = HYBRID_ALPHA * r['score'] + beta_temporal * temp_adj
         for r in candidates:
             norm_temp = z_score_normalize(
                 r['_raw_t'], 
@@ -77,12 +59,10 @@ def evaluate_cached(cached_data, beta_temporal, k=10):
                 NORM_STATS['temporal_std']
             )
             temp_adj = norm_temp * hybrid_std
-            
             r['_final'] = HYBRID_ALPHA * r['score'] + beta_temporal * temp_adj
 
         scored = sorted(candidates, key=lambda r: r['_final'], reverse=True)
 
-        # Deduplicate by parent_doc_id (same as pipeline)
         seen = set()
         dedup = []
         for r in scored:
@@ -105,36 +85,29 @@ def evaluate_cached(cached_data, beta_temporal, k=10):
         mrr_list.append(mrr)
 
     return {
-        "P@10": float(np.mean(p_at_k_list)),
-        "Recall@10": float(np.mean(recall_list)),
-        "MRR": float(np.mean(mrr_list)),
+        'P@10': float(np.mean(p_at_k_list)),
+        'Recall@10': float(np.mean(recall_list)),
+        'MRR': float(np.mean(mrr_list)),
     }
 
+# Extended grid search
+betas = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
 
-# ── Step 2: Grid search over beta_temporal only (including 0) ──
-betas = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5]
+print('Extended beta_temporal grid search:')
+print('beta_t     P@10     R@10      MRR')
+print('-' * 36)
 
 best_mrr = -1
 best_combo = None
-rows = []
-
 for beta in betas:
     m = evaluate_cached(cached, beta)
-    rows.append((beta, m))
+    marker = ' <-- BEST' if m['MRR'] > best_mrr else ''
     if m['MRR'] > best_mrr:
         best_mrr = m['MRR']
         best_combo = (beta, m)
-
-# ── Step 3: Print table ──
-print(f"{'beta_t':>8} {'P@10':>8} {'R@10':>8} {'MRR':>8}")
-print("-" * 36)
-for beta, m in rows:
-    marker = " <-- BEST MRR" if beta == best_combo[0] else ""
-    print(f"{beta:>8.1f} {m['P@10']:>8.3f} {m['Recall@10']:>8.3f} {m['MRR']:>8.3f}{marker}")
+    print('{:>8.1f} {:>8.3f} {:>8.3f} {:>8.3f}{}'.format(beta, m['P@10'], m['Recall@10'], m['MRR'], marker))
 
 print()
-print(f"Best: beta_temporal={best_combo[0]}")
-print(f"  P@10={best_combo[1]['P@10']:.3f}  Recall@10={best_combo[1]['Recall@10']:.3f}  MRR={best_combo[1]['MRR']:.3f}")
-
-# Also show the pure hybrid baseline (fetch_size=50, matching pipeline)
-print(f"\nPipeline Hybrid (alpha=0.5, fetch_size=50) baseline: MRR=0.249, Recall@10=0.400")
+print('Best: beta_temporal={}'.format(best_combo[0]))
+print('  P@10={:.3f}  Recall@10={:.3f}  MRR={:.3f}'.format(
+    best_combo[1]['P@10'], best_combo[1]['Recall@10'], best_combo[1]['MRR']))

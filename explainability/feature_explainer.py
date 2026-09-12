@@ -60,15 +60,20 @@ def explain(query: str, size: int = 5):
         temp_contrib = 0.2 * r.get('temporal_score', 0)
         meta_contrib = 0.1 * r.get('metadata_score', 0)
         
-        # Convert to percentages of final score
-        if abs(final_score) > 1e-9:
-            contrib = {
-                "hybrid": round(100 * hybrid_contrib / final_score, 1),
-                "temporal": round(100 * temp_contrib / final_score, 1),
-                "metadata": round(100 * meta_contrib / final_score, 1),
-            }
+        # Convert to percentages: relative weight of each discriminating feature
+        # Only include discriminating features in the percentage calculation
+        discriminating = []
+        if not temporal_non_discriminating:
+            discriminating.append(("temporal", abs(temp_contrib)))
+        if not metadata_non_discriminating:
+            discriminating.append(("metadata", abs(meta_contrib)))
+        discriminating.append(("hybrid", abs(hybrid_contrib)))  # hybrid always discriminates
+        
+        total_mag = sum(v for _, v in discriminating)
+        if total_mag > 1e-9:
+            contrib = {name: round(100 * mag / total_mag, 1) for name, mag in discriminating}
         else:
-            contrib = {"hybrid": 0.0, "temporal": 0.0, "metadata": 0.0}
+            contrib = {name: 0.0 for name, _ in discriminating}
         
         if temporal_non_discriminating:
             contrib["temporal"] = "not distinguishing"

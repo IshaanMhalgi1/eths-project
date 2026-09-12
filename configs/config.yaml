@@ -1,5 +1,5 @@
 embedding_model: all-MiniLM-L6-v2
-max_chunks: 2000
+max_chunks: 50000
 index_name: ethsearch_chunks
 opensearch:
   host: localhost
@@ -7,3 +7,5 @@ opensearch:
   http_auth:
     username: admin
     password: ${OPENSEARCH_PASSWORD}
+corpus_start_year: 1800
+corpus_end_year: 1900
