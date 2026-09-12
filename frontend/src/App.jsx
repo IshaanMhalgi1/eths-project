@@ -52,12 +52,11 @@ export default function App() {
               {explain && (
                 <div style={{ fontSize: "0.9em", marginTop: "0.5rem" }}>
                   <strong>Score breakdown:</strong>{" "}
-                  BM25 {(r["feature_contributions_%"] && r["feature_contributions_%"].bm25) ?? (r.bm25_score != null ? r.bm25_score.toFixed(2) : "-")} |
-                  Dense {(r["feature_contributions_%"] && r["feature_contributions_%"].dense) ?? (r.dense_score != null ? r.dense_score.toFixed(2) : "-")} |
+                  Hybrid {(r["feature_contributions_%"] && r["feature_contributions_%"].hybrid) ?? (r.hybrid_score != null ? (r.hybrid_score * 100).toFixed(1) : "-")} |
                   {r.temporal_non_discriminating ? (
                     <span style={{ fontStyle: "italic", color: "#666" }}> Temporal relevance: not distinguishing for this query</span>
                   ) : (
-                    <span> Temporal {(r["feature_contributions_%"] && r["feature_contributions_%"].temporal) ?? (r.temporal_score != null ? r.temporal_score.toFixed(2) : "-")}</span>
+                    <span> Temporal {(r["feature_contributions_%"] && r["feature_contributions_%"].temporal) ?? (r.temporal_score != null ? r.temporal_score.toFixed(4) : "-")}</span>
                   )}
                   {r.temporal_explanation && (
                     <span style={{ marginLeft: "0.5rem", color: "#555" }}>({r.temporal_explanation})</span>
@@ -65,7 +64,7 @@ export default function App() {
                   {r.metadata_non_discriminating ? (
                     <span style={{ fontStyle: "italic", color: "#666" }}> Metadata: not distinguishing (neutral)</span>
                   ) : (
-                    <span> Metadata {(r["feature_contributions_%"] && r["feature_contributions_%"].metadata) ?? (r.metadata_score != null ? r.metadata_score.toFixed(2) : "-")}</span>
+                    <span> Metadata {(r["feature_contributions_%"] && r["feature_contributions_%"].metadata) ?? (r.metadata_score != null ? r.metadata_score.toFixed(4) : "-")}</span>
                   )}
                 </div>
               )}

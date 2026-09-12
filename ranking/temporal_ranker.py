@@ -6,9 +6,19 @@ import json
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
 from temporal.temporal_parser import TemporalParser
-from retrieval.hybrid import search_hybrid
+from ranking.shared_hybrid import get_hybrid_candidates
 
 parser = TemporalParser()
+
+# Load global normalization stats
+with open(os.path.join(os.path.dirname(__file__), 'normalization_stats.json'), 'r') as f:
+    NORM_STATS = json.load(f)
+
+def z_score_normalize(val, mean, std):
+    """Global z-score normalization."""
+    if std > 0:
+        return (val - mean) / std
+    return 0.0
 
 def calculate_temporal_score(doc_start: int, doc_end: int, query_start: int, query_end: int):
     # Missing document dates -> no penalty, treated as neutral
@@ -34,25 +44,25 @@ def calculate_temporal_score(doc_start: int, doc_end: int, query_start: int, que
     # No overlap
     return 0.0, "no_overlap"
 
-def search_temporal(query: str, size: int = 10, alpha_hybrid: float = 0.5, beta_temporal: float = 0.3):
+def search_temporal(query: str, size: int = 10, alpha_hybrid: float = 0.7, beta_temporal: float = 0.3):
     """
     Retrieves using hybrid search and boosts based on temporal constraints.
+    Uses shared hybrid candidate pool for consistent results across rankers.
     """
     # Parse temporal intent
     temporal_intent = parser.parse(query)
     query_start = temporal_intent.get('start_year')
     query_end = temporal_intent.get('end_year')
     
-    # Fetch more candidates from hybrid because temporal might re-rank heavily
-    fetch_size = size * 5
-    hybrid_res = search_hybrid(query, size=fetch_size, alpha=0.5)
+    # Get shared hybrid candidates
+    hybrid_res = get_hybrid_candidates(query)
     
-    # If no temporal constraint, temporal score is neutral (1.0), and we just use hybrid scores
+    # If no temporal constraint, just use hybrid scores
     if query_start is None or query_end is None:
         for r in hybrid_res:
-            r['temporal_score'] = 1.0
+            r['temporal_score'] = 0.0  # zero adjustment
             r['temporal_explanation'] = "no_constraint"
-            r['final_score'] = r['score'] # Keep hybrid score
+            r['final_score'] = r['score']  # Pure hybrid
         return sorted(hybrid_res, key=lambda x: x['final_score'], reverse=True)[:size]
         
     # Apply temporal scoring
@@ -64,23 +74,23 @@ def search_temporal(query: str, size: int = 10, alpha_hybrid: float = 0.5, beta_
         
         r['raw_temporal_score'] = t_score
         r['temporal_explanation'] = explanation
-        
-    # Min-max normalize hybrid base (RRF) scores
-    hybrid_scores = [r['score'] for r in hybrid_res]
-    min_h = min(hybrid_scores) if hybrid_scores else 0
-    max_h = max(hybrid_scores) if hybrid_scores else 1
     
-    # Min-max normalize temporal scores
-    temp_scores = [r['raw_temporal_score'] for r in hybrid_res]
-    min_t = min(temp_scores) if temp_scores else 0
-    max_t = max(temp_scores) if temp_scores else 1
+    hybrid_std = NORM_STATS['dense_std']
     
+    # Global z-score normalization for temporal, scaled to hybrid RRF scale
     for r in hybrid_res:
-        norm_h = (r['score'] - min_h) / (max_h - min_h) if max_h > min_h else 1.0
-        norm_t = (r['raw_temporal_score'] - min_t) / (max_t - min_t) if max_t > min_t else 1.0
+        norm_temp = z_score_normalize(
+            r['raw_temporal_score'], 
+            NORM_STATS['temporal_mean'], 
+            NORM_STATS['temporal_std']
+        )
         
-        r['temporal_score'] = norm_t
-        r['final_score'] = alpha_hybrid * norm_h + beta_temporal * norm_t
+        temp_adj = norm_temp * hybrid_std
+        
+        r['temporal_score'] = temp_adj
+        r['hybrid_score'] = r['score']
+        
+        r['final_score'] = alpha_hybrid * r['score'] + beta_temporal * temp_adj
         
     sorted_res = sorted(hybrid_res, key=lambda x: x['final_score'], reverse=True)
     
@@ -98,4 +108,4 @@ if __name__ == '__main__':
     # Test
     res = search_temporal("real estate sales in 1805")
     for r in res[:2]:
-        print(f"[{r['final_score']:.3f}] (Temp: {r['temporal_explanation']}) {r['parent_doc_id']}: {r['text'][:50]}...")
+        print(f"[{r['final_score']:.6f}] (Temp: {r['temporal_explanation']}) {r['parent_doc_id']}: {r['text'][:50]}...")

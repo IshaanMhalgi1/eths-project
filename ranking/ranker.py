@@ -1,13 +1,24 @@
 import os
 import sys
+import json
 
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
 from temporal.temporal_parser import TemporalParser
-from retrieval.hybrid import search_hybrid
+from ranking.shared_hybrid import get_hybrid_candidates
 from ranking.temporal_ranker import calculate_temporal_score
 
 parser = TemporalParser()
+
+# Load global normalization stats
+with open(os.path.join(os.path.dirname(__file__), 'normalization_stats.json'), 'r') as f:
+    NORM_STATS = json.load(f)
+
+def z_score_normalize(val, mean, std):
+    """Global z-score normalization."""
+    if std > 0:
+        return (val - mean) / std
+    return 0.0
 
 def extract_metadata_intent(query: str):
     # Very simple MVP metadata intent extractor.
@@ -36,17 +47,26 @@ def calculate_metadata_score(doc_period: str, doc_location: str, query_periods: 
         
     return score, (",".join(explanation_parts) if explanation_parts else "no_metadata_match")
 
-def final_search(query: str, size: int = 10, w_bm25=0.3, w_dense=0.3, w_temp=0.3, w_meta=0.1):
+def final_search(query: str, size: int = 10, w_hybrid=0.7, w_temp=0.2, w_meta=0.1):
+    """
+    Final ranker with global z-score normalization (respecting RRF precedent).
+    
+    Architecture:
+    - Hybrid RRF score is the base (already calibrated rank-fusion of BM25+Dense).
+    - Temporal and Metadata are global z-score normalized and added as adjustments.
+    - The hybrid RRF score is kept in its natural scale [0, ~0.016].
+    - Temporal z-scores are scaled by hybrid_std to be comparable adjustments.
+    - Weights: hybrid=0.7, temporal=0.2, metadata=0.1 (sum=1.0)
+    """
     temporal_intent = parser.parse(query)
     query_start = temporal_intent.get('start_year')
     query_end = temporal_intent.get('end_year')
     meta_intent = extract_metadata_intent(query)
     
-    fetch_size = size * 5
-    # Get base hybrid scores normalized internally
-    hybrid_res = search_hybrid(query, size=fetch_size, alpha=0.5)
+    # Get shared hybrid candidates
+    hybrid_res = get_hybrid_candidates(query)
     
-    # 1. Calculate raw scores
+    # Calculate raw temporal and metadata scores
     for r in hybrid_res:
         doc_start = r.get('historical_start')
         doc_end = r.get('historical_end')
@@ -68,37 +88,41 @@ def final_search(query: str, size: int = 10, w_bm25=0.3, w_dense=0.3, w_temp=0.3
         r['raw_metadata_score'] = m_score
         r['metadata_explanation'] = m_exp
 
-    # 2. Extract arrays for normalization
-    bm25_scores = [r.get('bm25_score', 0) for r in hybrid_res]
-    dense_scores = [r.get('dense_score', 0) for r in hybrid_res]
-    temp_scores = [r.get('raw_temporal_score', 0) for r in hybrid_res]
-    meta_scores = [r.get('raw_metadata_score', 0) for r in hybrid_res]
+    # Hybrid RRF score is the base (already calibrated, range [0, ~0.0164])
+    hybrid_std = NORM_STATS['dense_std']  # ~0.0051
     
-    # 3. Min-Max Helpers
-    def get_norm(val, arr):
-        if not arr: return 0.0
-        min_v, max_v = min(arr), max(arr)
-        if max_v > min_v:
-            return (val - min_v) / (max_v - min_v)
-        return val
-
-    # 4. Normalize and blend
     for r in hybrid_res:
-        norm_bm25 = get_norm(r.get('bm25_score', 0), bm25_scores)
-        norm_dense = get_norm(r.get('dense_score', 0), dense_scores)
-        norm_temp = get_norm(r.get('raw_temporal_score', 0), temp_scores)
-        norm_meta = get_norm(r.get('raw_metadata_score', 0), meta_scores)
+        # Normalize temporal globally, then scale to hybrid scale
+        norm_temp = z_score_normalize(
+            r['raw_temporal_score'], 
+            NORM_STATS['temporal_mean'], 
+            NORM_STATS['temporal_std']
+        )
         
-        r['bm25_score'] = norm_bm25
-        r['dense_score'] = norm_dense
-        r['temporal_score'] = norm_temp
-        r['metadata_score'] = norm_meta
+        # Normalize metadata globally, then scale to hybrid scale  
+        norm_meta = z_score_normalize(
+            r['raw_metadata_score'], 
+            NORM_STATS['metadata_mean'], 
+            NORM_STATS['metadata_std']
+        )
         
+        # Scale z-scores to hybrid RRF scale for comparable adjustments
+        temp_adj = norm_temp * hybrid_std
+        meta_adj = norm_meta * hybrid_std
+        
+        r['temporal_score'] = temp_adj
+        r['metadata_score'] = meta_adj
+        
+        # Keep hybrid in its natural scale
+        r['hybrid_score'] = r['score']
+        r['bm25_score'] = r.get('bm25_score', 0)
+        r['dense_score'] = r.get('dense_score', 0)
+        
+        # Final blend: hybrid base (70%) + temporal adj (20%) + metadata adj (10%)
         r['final_score'] = (
-            w_bm25 * norm_bm25 +
-            w_dense * norm_dense +
-            w_temp * norm_temp +
-            w_meta * norm_meta
+            w_hybrid * r['score'] +
+            w_temp * temp_adj +
+            w_meta * meta_adj
         )
     
     # Explicit deduplication by parent_doc_id for user-facing output
@@ -111,7 +135,8 @@ def final_search(query: str, size: int = 10, w_bm25=0.3, w_dense=0.3, w_temp=0.3
             deduped.append(r)
     return deduped[:size]
 
+
 if __name__ == '__main__':
     res = final_search("real estate sales in 1805")
     for r in res[:2]:
-        print(f"[{r['final_score']:.3f}] {r['parent_doc_id']}: {r['text'][:50]}...")
+        print(f"[{r['final_score']:.6f}] {r['parent_doc_id']}: {r['text'][:50]}...")

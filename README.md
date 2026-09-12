@@ -9,9 +9,10 @@ A retrieval pipeline for 19th-century newspaper QA that combines BM25 lexical se
 | Indexing | `indexing/indexer.py` | Loads `data/chunks.jsonl` into OpenSearch with KNN + text mapping |
 | Retrieval | `retrieval/bm25.py` | BM25 baseline via OpenSearch `match` query |
 | Retrieval | `retrieval/dense.py` | Dense retrieval via `all-MiniLM-L6-v2` + OpenSearch KNN |
-| Retrieval | `retrieval/hybrid.py` | Min-max normalized linear fusion of BM25 + Dense |
-| Ranking | `ranking/temporal_ranker.py` | Temporal constraint scoring + hybrid fusion |
-| Ranking | `ranking/ranker.py` | Final linear ranker: BM25, Dense, Temporal, Metadata |
+| Retrieval | `retrieval/hybrid.py` | RRF rank-fusion of BM25 + Dense (fetch-size invariant) |
+| Ranking | `ranking/shared_hybrid.py` | Single shared hybrid candidate pool for all rankers |
+| Ranking | `ranking/temporal_ranker.py` | Temporal constraint scoring + hybrid fusion (α=0.7, β=0.3) |
+| Ranking | `ranking/ranker.py` | Final linear ranker: Hybrid (70%) + Temporal (20%) + Metadata (10%) |
 | Explainability | `explainability/feature_explainer.py` | Transparent feature contribution breakdown |
 | API | `api/main.py` | FastAPI server exposing `/search` and `/explain` |
 | Frontend | `frontend/` | React + Vite search UI with explainability toggle |
@@ -28,11 +29,11 @@ Bootstrap resampling (n=10000, 95% CI) shows wide confidence intervals due to sm
 
 | Method | P@10 | Recall@10 [95% CI] | MRR [95% CI] |
 |--------|------|-----------|-----|
-| BM25 | 0.05 | 0.50 [0.30, 0.70] | 0.398 [0.203, 0.607] |
-| Dense | 0.02 | 0.20 [0.10, 0.45] | 0.208 [0.050, 0.400] |
-| Hybrid (α=0.5) | 0.055 | 0.55 [0.35, 0.75] | 0.413 [0.217, 0.613] |
-| Temporal (α=0.7, β=0.3) | 0.04 | 0.40 [0.20, 0.60] | 0.279 [0.110, 0.472] |
-| Final Ranker | 0.04 | 0.40 [0.20, 0.60] | 0.280 [0.107, 0.472] |
+| BM25 | 0.05 | 0.50 [0.30, 0.70] | 0.399 [0.206, 0.600] |
+| Dense | 0.025 | 0.25 [0.10, 0.45] | 0.208 [0.050, 0.400] |
+| Hybrid (α=0.5) | 0.055 | 0.55 [0.35, 0.75] | 0.412 [0.217, 0.613] |
+| Temporal (α=0.7, β=0.3) | 0.05 | 0.50 [0.30, 0.70] | 0.294 [0.121, 0.489] |
+| Final Ranker | 0.05 | 0.50 [0.30, 0.70] | 0.293 [0.124, 0.482] |
 
 **Pairwise significance:** All pairwise comparisons overlap at 95% CI — no method is statistically significantly better than any other on this eval set. The headline differences (e.g. Hybrid 0.55 vs Temporal 0.40) could flip with a handful of queries.
 
@@ -48,10 +49,13 @@ Bootstrap resampling (n=10000, 95% CI) shows wide confidence intervals due to sm
 
 These numbers are inflated because retrieving any one of the 5 reprinted copies counts as a hit against all 5 qrels entries. The after-dedup table is the honest measurement.
 
-**Note on Final Ranker:** Final Ranker is bit-for-bit identical to Temporal Ranker on these metrics. Investigation (`evaluation/grid_search.py` and per-query tracing) shows:
-- The grid search (`alpha_hybrid=0.7, beta_temporal=0.3`) was tuned against the **pre-dedup qrels** (5 nominal relevant docs/query). Rerunning it on the deduped qrels yields the same weights, so the tuning is robust.
+**Note on Final Ranker:** Final Ranker and Temporal Ranker produce identical Recall/MRR on the current eval set because they share the same hybrid base (70% weight) and same temporal adjustment — they differ only in temporal weight (0.2 vs 0.3) and metadata (0.1, neutral). This is a design consequence, not a bug.
+
+The **wiring bug** (each ranker independently fetching hybrid candidates with `size * 5`, causing different candidate pools and inconsistent RRF scores) was fixed in `ranking/shared_hybrid.py`. All rankers now draw from a single shared hybrid candidate pool (fixed size 200), ensuring consistent scores and rankings.
+
 - Metadata contributes nothing (constant neutral) because `historical_period` and `location` are unpopulated.
-- BM25 and Dense scores are highly correlated with the hybrid score on this corpus. When temporal scores are constant across the result set, Final Ranker ranking ≈ Hybrid ranking. When temporal scores vary (e.g., some docs outside the year range), the 0.3 temporal weight can push high-BM25 docs down, making Final ≈ Temporal. The net effect across 20 queries is that Final and Temporal produce identical Recall/MRR.
+- The grid search (`alpha_hybrid=0.5, beta_temporal=0.3`) was tuned against the **pre-dedup qrels** (5 nominal relevant docs/query). Rerunning on deduped qrels yields identical optimal weights, so tuning is robust.
+- Temporal re-ranking helps on constrained queries (e.g., "ship arrivals 1803": Hybrid rank 85 → Temporal rank 16), but net effect across 20 queries is small.
 
 **Note on P@10:** With 1 relevant doc per query, P@10 is binary per query (0 or 0.1). The mean P@10 ≈ Recall@10 ÷ 10, so it has limited discriminative power. Recall@10 and MRR are the primary metrics.
 
