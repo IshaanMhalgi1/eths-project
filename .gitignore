@@ -33,4 +33,6 @@ npm-debug.log*
 
 # OpenSearch local data (if any)
 opensearch_data/
-data/*.jsonl
+data/chunks.jsonl
+data/chunks_expanded.jsonl
+
