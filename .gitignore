@@ -36,3 +36,5 @@ opensearch_data/
 data/chunks.jsonl
 data/chunks_expanded.jsonl
 
+#md files
+*.md

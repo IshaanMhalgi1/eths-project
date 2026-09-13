@@ -8,7 +8,8 @@ CONFIG_PATH = os.path.join(os.path.dirname(__file__), '..', 'configs', 'config.y
 with open(CONFIG_PATH, 'r') as f:
     cfg = yaml.safe_load(f)
 
-INDEX_NAME = cfg.get('index_name', 'ethsearch_chunks')
+DEFAULT_INDEX = cfg.get('index_name', 'ethsearch_chunks')
+SMALL_INDEX = "ethsearch_chunks_small"
 EMBEDDING_MODEL = cfg.get('embedding_model', 'all-MiniLM-L6-v2')
 
 client = OpenSearch(
@@ -21,7 +22,7 @@ client = OpenSearch(
 # Load the model
 model = SentenceTransformer(EMBEDDING_MODEL)
 
-def search_dense(query: str, size: int = 10):
+def search_dense(query: str, size: int = 10, index_name: str = DEFAULT_INDEX):
     query_embedding = model.encode(query, normalize_embeddings=True).tolist()
     
     body = {
@@ -36,7 +37,7 @@ def search_dense(query: str, size: int = 10):
         }
     }
     
-    response = client.search(index=INDEX_NAME, body=body)
+    response = client.search(index=index_name, body=body)
     hits = response['hits']['hits']
     results = []
     for hit in hits:
@@ -45,6 +46,7 @@ def search_dense(query: str, size: int = 10):
             "parent_doc_id": hit['_source']['parent_doc_id'],
             "score": hit['_score'],
             "text": hit['_source']['text'],
+            "publication_year": hit['_source'].get('publication_year'),
             "historical_start": hit['_source'].get('historical_start'),
             "historical_end": hit['_source'].get('historical_end'),
             "historical_period": hit['_source'].get('historical_period'),

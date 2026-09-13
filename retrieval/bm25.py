@@ -7,7 +7,9 @@ CONFIG_PATH = os.path.join(os.path.dirname(__file__), '..', 'configs', 'config.y
 with open(CONFIG_PATH, 'r') as f:
     cfg = yaml.safe_load(f)
 
-INDEX_NAME = cfg.get('index_name', 'ethsearch_chunks')
+DEFAULT_INDEX = cfg.get('index_name', 'ethsearch_chunks')
+SMALL_INDEX = "ethsearch_chunks_small"
+
 client = OpenSearch(
     hosts=[{'host': cfg['opensearch']['host'], 'port': cfg['opensearch']['port']}],
     use_ssl=False,
@@ -15,7 +17,7 @@ client = OpenSearch(
     ssl_show_warn=False
 )
 
-def search_bm25(query: str, size: int = 10):
+def search_bm25(query: str, size: int = 10, index_name: str = DEFAULT_INDEX):
     body = {
         "size": size,
         "query": {
@@ -24,7 +26,7 @@ def search_bm25(query: str, size: int = 10):
             }
         }
     }
-    response = client.search(index=INDEX_NAME, body=body)
+    response = client.search(index=index_name, body=body)
     hits = response['hits']['hits']
     results = []
     for hit in hits:
@@ -33,6 +35,7 @@ def search_bm25(query: str, size: int = 10):
             "parent_doc_id": hit['_source']['parent_doc_id'],
             "score": hit['_score'],
             "text": hit['_source']['text'],
+            "publication_year": hit['_source'].get('publication_year'),
             "historical_start": hit['_source'].get('historical_start'),
             "historical_end": hit['_source'].get('historical_end'),
             "historical_period": hit['_source'].get('historical_period'),

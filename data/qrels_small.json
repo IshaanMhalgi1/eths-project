@@ -1,0 +1,230 @@
+[
+  {
+    "query_id": "q1",
+    "query_text": "strayed horse reward advertisement",
+    "temporal_type": "none",
+    "relevant_doc_ids": [
+      "train_1707",
+      "train_1761",
+      "train_916",
+      "train_917",
+      "train_918"
+    ]
+  },
+  {
+    "query_id": "q2",
+    "query_text": "flour and grain market prices",
+    "temporal_type": "none",
+    "relevant_doc_ids": [
+      "train_257",
+      "train_258",
+      "train_259",
+      "train_260",
+      "train_261"
+    ]
+  },
+  {
+    "query_id": "q3",
+    "query_text": "runaway slave reward advertisement",
+    "temporal_type": "none",
+    "relevant_doc_ids": [
+      "train_916",
+      "train_917",
+      "train_918",
+      "train_1463",
+      "train_1464"
+    ]
+  },
+  {
+    "query_id": "q4",
+    "query_text": "military officer appointments",
+    "temporal_type": "none",
+    "relevant_doc_ids": [
+      "train_1963",
+      "train_1964",
+      "train_1965",
+      "train_1516",
+      "train_1517"
+    ]
+  },
+  {
+    "query_id": "q5",
+    "query_text": "obituaries deaths 1806",
+    "temporal_type": "explicit_year",
+    "relevant_doc_ids": [
+      "train_141",
+      "train_142",
+      "train_143",
+      "train_144",
+      "train_145"
+    ]
+  },
+  {
+    "query_id": "q6",
+    "query_text": "real estate land for sale 1807",
+    "temporal_type": "explicit_year",
+    "relevant_doc_ids": [
+      "train_1927",
+      "train_1928",
+      "train_1929",
+      "train_1930",
+      "train_31"
+    ]
+  },
+  {
+    "query_id": "q7",
+    "query_text": "ship arrivals cargo from Europe 1803",
+    "temporal_type": "explicit_year",
+    "relevant_doc_ids": [
+      "train_1569",
+      "train_1570",
+      "train_1571",
+      "train_1572",
+      "train_1573"
+    ]
+  },
+  {
+    "query_id": "q8",
+    "query_text": "new store goods for sale 1803",
+    "temporal_type": "explicit_year",
+    "relevant_doc_ids": [
+      "train_1582",
+      "train_1583",
+      "train_1584",
+      "train_1585",
+      "train_1053"
+    ]
+  },
+  {
+    "query_id": "q9",
+    "query_text": "political news congress 1800 to 1805",
+    "temporal_type": "range",
+    "relevant_doc_ids": [
+      "train_294",
+      "train_295",
+      "train_296",
+      "train_297",
+      "train_298"
+    ]
+  },
+  {
+    "query_id": "q10",
+    "query_text": "tax land assessment 1804 to 1808",
+    "temporal_type": "range",
+    "relevant_doc_ids": [
+      "train_162",
+      "train_163",
+      "train_164",
+      "train_165",
+      "train_166"
+    ]
+  },
+  {
+    "query_id": "q11",
+    "query_text": "legal public notice sheriff 1800 1810",
+    "temporal_type": "range",
+    "relevant_doc_ids": [
+      "train_482",
+      "train_483",
+      "train_484",
+      "train_485",
+      "train_1678"
+    ]
+  },
+  {
+    "query_id": "q12",
+    "query_text": "weather storm floods 1805 to 1810",
+    "temporal_type": "range",
+    "relevant_doc_ids": [
+      "train_96",
+      "train_97",
+      "train_98",
+      "train_99",
+      "train_100"
+    ]
+  },
+  {
+    "query_id": "q13",
+    "query_text": "news dispatches France Europe before 1808",
+    "temporal_type": "before_after",
+    "relevant_doc_ids": [
+      "train_76",
+      "train_77",
+      "train_78",
+      "train_79",
+      "train_277"
+    ]
+  },
+  {
+    "query_id": "q14",
+    "query_text": "shipping port arrivals after 1805",
+    "temporal_type": "before_after",
+    "relevant_doc_ids": [
+      "train_13",
+      "train_14",
+      "train_15",
+      "train_16",
+      "train_17"
+    ]
+  },
+  {
+    "query_id": "q15",
+    "query_text": "medicines apothecary bitters since 1802",
+    "temporal_type": "before_after",
+    "relevant_doc_ids": [
+      "train_627",
+      "train_628",
+      "train_629",
+      "train_10",
+      "train_11"
+    ]
+  },
+  {
+    "query_id": "q16",
+    "query_text": "poetry verse published before 1810",
+    "temporal_type": "before_after",
+    "relevant_doc_ids": [
+      "train_56",
+      "train_57",
+      "train_58",
+      "train_59",
+      "train_104"
+    ]
+  },
+  {
+    "query_id": "q17",
+    "query_text": "European war news Jeffersonian Era",
+    "temporal_type": "period",
+    "relevant_doc_ids": [
+      "train_294",
+      "train_295",
+      "train_296",
+      "train_297",
+      "train_298"
+    ]
+  },
+  {
+    "query_id": "q19",
+    "query_text": "trade embargo Britain Jefferson administration",
+    "temporal_type": "period",
+    "relevant_doc_ids": [
+      "train_31",
+      "train_32",
+      "train_206",
+      "train_207",
+      "train_406"
+    ]
+  },
+  {
+    "query_id": "q20",
+    "query_text": "letters editor public opinion Early National Period",
+    "temporal_type": "period",
+    "relevant_doc_ids": [
+      "train_129",
+      "train_974",
+      "train_975",
+      "train_1294",
+      "train_1295"
+    ]
+  }
+]

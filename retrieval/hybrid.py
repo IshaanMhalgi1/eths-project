@@ -7,22 +7,25 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from retrieval.bm25 import search_bm25
 from retrieval.dense import search_dense
 
-def search_hybrid(query: str, size: int = 10, alpha: float = 0.5):
+def search_hybrid(query: str, size: int = 10, alpha: float = 0.5, index_name: str = None):
     """
     Combines BM25 and Dense scores with a tunable alpha.
     Final Score = alpha * BM25_norm + (1 - alpha) * Dense_norm
     """
+    if index_name is None:
+        from retrieval.bm25 import DEFAULT_INDEX
+        index_name = DEFAULT_INDEX
     # Fetch more candidates to ensure good overlap
     fetch_size = size * 2
-    bm25_res = search_bm25(query, size=fetch_size)
-    dense_res = search_dense(query, size=fetch_size)
+    bm25_res = search_bm25(query, size=fetch_size, index_name=index_name)
+    dense_res = search_dense(query, size=fetch_size, index_name=index_name)
     
     # Assign ranks instead of min-max scaling
     bm25_ranks = {r['chunk_id']: rank + 1 for rank, r in enumerate(bm25_res)}
     dense_ranks = {r['chunk_id']: rank + 1 for rank, r in enumerate(dense_res)}
     
     k = 60 # RRF constant
-                
+            
     # Combine scores using RRF
     combined = {}
     for r in bm25_res:
@@ -32,6 +35,7 @@ def search_hybrid(query: str, size: int = 10, alpha: float = 0.5):
             "chunk_id": r['chunk_id'],
             "parent_doc_id": r['parent_doc_id'],
             "text": r['text'],
+            "publication_year": r.get('publication_year'),
             "historical_start": r.get('historical_start'),
             "historical_end": r.get('historical_end'),
             "historical_period": r.get('historical_period'),
@@ -53,6 +57,7 @@ def search_hybrid(query: str, size: int = 10, alpha: float = 0.5):
                 "chunk_id": r['chunk_id'],
                 "parent_doc_id": r['parent_doc_id'],
                 "text": r['text'],
+                "publication_year": r.get('publication_year'),
                 "historical_start": r.get('historical_start'),
                 "historical_end": r.get('historical_end'),
                 "historical_period": r.get('historical_period'),
