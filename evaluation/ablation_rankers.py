@@ -146,18 +146,28 @@ def rank_bm25_temporal(query, size=10, index_name=DEFAULT_INDEX, alpha_bm25=0.7,
         for r in bm25_res:
             r['final_score'] = r['score']
         return sorted(bm25_res, key=lambda x: x['final_score'], reverse=True)[:size]
+    
+    # Convert BM25 to RRF scale (same as hybrid does for BM25 component)
+    k = 60
+    bm25_ranks = {r['chunk_id']: rank + 1 for rank, r in enumerate(bm25_res)}
+    for r in bm25_res:
+        rank_bm25 = bm25_ranks[r['chunk_id']]
+        r['rrf_score'] = 1.0 / (k + rank_bm25)
+    
     for r in bm25_res:
         doc_start = r.get('historical_start')
         doc_end = r.get('historical_end')
         t_score, _ = calculate_temporal_score(doc_start, doc_end, query_start, query_end)
         r['raw_temporal_score'] = t_score
-    bm25_std = NORM_STATS['dense_std']
+    
+    # Use RRF scale std for temporal adjustment (consistent with hybrid)
+    rrf_std = NORM_STATS['dense_std']
     for r in bm25_res:
         norm_temp = z_score_normalize(r['raw_temporal_score'], NORM_STATS['temporal_mean'], NORM_STATS['temporal_std'])
-        temp_adj = norm_temp * bm25_std
+        temp_adj = norm_temp * rrf_std
         r['temporal_score'] = temp_adj
-        r['bm25_score'] = r['score']
-        r['final_score'] = alpha_bm25 * r['score'] + beta_temporal * temp_adj
+        r['bm25_score'] = r['rrf_score']  # Use RRF-normalized BM25
+        r['final_score'] = alpha_bm25 * r['rrf_score'] + beta_temporal * temp_adj
     return sorted(bm25_res, key=lambda x: x['final_score'], reverse=True)[:size]
 
 
