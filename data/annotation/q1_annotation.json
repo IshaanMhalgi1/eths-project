@@ -1,0 +1,350 @@
+{
+  "query_id": "q1",
+  "query_text": "strayed horse reward advertisement",
+  "temporal_type": "none",
+  "corpus": "both",
+  "candidates": [
+    {
+      "candidate_id": "q1_cand_0",
+      "canonical_parent_doc_id": "train_86158",
+      "original_parent_doc_id": "train_86158",
+      "chunk_id": "train_86158_0",
+      "text": "Dr. Aonius, wife of James O. Brown. She lingered for four months, and for nine weeks received nothing into her system but cold water, and one cracker. She was born at Stewart, Ayrshire, Scotland, on the 3rd of May, 1764; was baptized into the Church of Jesus Christ of Latter-day Saints the following year. She was a faithful wife, and lived and died strong in the faith of the gospel of Christ. Millennial Star, please copy. Advertisement. NOTICE. I WILL pay Five Dollars per head for all STOCK, branded on the left hip with C or O, or with both brands on left hip. S. M. BLAIR. That Horse. FRIEND, do you return that horse COLT you took from the West Jordan Range, the one Bishop Hammond told you was mine, and you will save trouble and exposure. S. M. BLAIR. $50 REWARD. STRAYED from the pasture at Jordan Bridge, on the 7th inst., one brown Mare, seven years old, middle size, branded \"\" on left thigh, shot all round, and was heavy with foal. Whoever will bring said mare to me in the 17th Ward, shall receive the above reward. G.W. HYRUM BURGESS. THAT BEATS THE PONY EXPRESS. THE TRAIN J. ASHER & CO.'S Having Arrived here from California, in double quick time, BEG to announce to the public of G. S. L.",
+      "metadata": {
+        "publication_year": 1860,
+        "historical_start": 1860,
+        "historical_end": 1860,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q1_cand_1",
+      "canonical_parent_doc_id": "train_87302",
+      "original_parent_doc_id": "train_87302",
+      "chunk_id": "train_87302_0",
+      "text": "The finder will receive the thanks of the owner by leaving the tboxe at the City Surveyor's office, or 176 Pa. avenue, between 13th and 14th streets west. no 8 tf LOST - By a young lady, on Monday afternoon at about 3 o'clock, either on Massachusetts ave., between 12th and 7th sts., or on 7th, between Massachusetts avenue and I street, a large round GOLD EARSTPIN, containing the daguerreotype of her father. The finder will receive a suitable reward by leaving it at this office. no 8 3t * REWARD - Was stolen from the subscriber on Saturday night, October 6, a dark bay HORSE, 10 or 11 hands high; between 8 and 9 years old; has a slight lameness on his left hind leg, and the skin rubbed off on his left shoulder, by the collar. I will give the above reward for his return to me, at No. 126 Gay street, Georgetown, D. C. no 8 3t* ANDREW McINTYRE STRAYED OR STOLEN from the subscriber, on the 22nd of October, a dark BAY HORSE, between 10 and 12 years of age. He has one hind foot white, and his back and shoulders have been rubbed by the harness. Any person bringing said horse to me will be liberally rewarded. JOS. T. MITCHELL, no 2-5t* 8th st. east, bet. Pa. av. and D st. south Runaway from the subscriber, on last Sunday evening.",
+      "metadata": {
+        "publication_year": 1858,
+        "historical_start": 1858,
+        "historical_end": 1858,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q1_cand_2",
+      "canonical_parent_doc_id": "train_4100",
+      "original_parent_doc_id": "train_4100",
+      "chunk_id": "train_4100_0",
+      "text": "Hallowell, June 4, 1810 N B \u2014It will be recollected that a vote has been passed by the Society, that its Mem- bers endeavor to promote a Contribution in the several Parishes to which they belong, on the Sabbath preceding the ensuing meet- ing. Sir, A VERY handsome black-lege HORSE strayed from the pasture of Mr. Wm. Coult, Wednesday, May 23. The Horse had a very small white spot under his mane, and the heel on his off hind foot was worn up much by the toe cork overreaching. If anyone will give notice of said horse, where he may be found, he shall receive a reward of nine dol- lars, and if anyone will return said horse, they shall receive a reward of ten dollars, by ad- dressing JEREMIAH COFFIN at Freeport landing. * 4) 1810 THE subscriber hereby gives public notice to all concerned, that he has been duly ap- pointed and has taken upon himself the trust of Administrator on the estate of STEPHEN KNIGHT, late of Falmouth, in the county of Cumber- land, shipwright, by giving bond as the law directs\u2014He therefore requests all persons who are indebted to the said deceased's es- tate to make immediate payment; and those who have any demands thereon, to exhibit the same to CHARLES KNIGHT. May 24, 1810. # (J 4)",
+      "metadata": {
+        "publication_year": 1810,
+        "historical_start": 1810,
+        "historical_end": 1810,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q1_cand_3",
+      "canonical_parent_doc_id": "train_81341",
+      "original_parent_doc_id": "train_81341",
+      "chunk_id": "train_81341_0",
+      "text": "Only, 1858, I HAVE A BAY MULE, 15 hands high, 3 years old, mane and tail attached. Valued at $55. Also by the same, I HAVE A BRIGHT SORREL HORSE, about 15 hands high, 8 years old, some saddle stubs on right side, about breast, not supposed to be good. Valued $150. Also by the same and at the same time, 5 HORSES of nearly a whole color, supposed to have been an iron grey, about 16 hands high, 11 years old, with marks of harness on one leg. Valued at $75. Said to be in the lot of F. N. English's. A. S. THOMAS, Jyl0-diw4. King, Shelby county Strayed or Stolen, TEN DOLLARS REWARD. Ten dollars reward will be paid for her delivery to me, or for any information so that I may recover her. J. H. MAGEVNEY. For Supreme Judge. We are authorized to announce Hon. ARCHIBALD WRIGHT, of this",
+      "metadata": {
+        "publication_year": 1858,
+        "historical_start": 1858,
+        "historical_end": 1858,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q1_cand_4",
+      "canonical_parent_doc_id": "train_33814",
+      "original_parent_doc_id": "train_33814",
+      "chunk_id": "train_33814_0",
+      "text": "Taken up by the subscriber at Prairie du Chien, Michigan Territory, about two miles and a half from the fort, on the 6th day of August last, a HORSE, described as follows, to wit:\u2014\u201cA bright brown horse 6 years old past, fifteen and a half hands high, both right feet white, a pale star on his forehead, and snip on his nose, a small dent in the left side of his neck, black switch tail and mane, and paces.\u201d The above horse I am desirous the rightful owner should have. I have advertised him in several places, and now in the paper, thinking by this means the proper owner will be better able to find his lost horse. The horse is in my possession, near Carlyle, Clinton county, Illinois, and will be kept for the owner, and delivered up on proof, and payment of the charges of the advertisements. REUBEN T. HAWKINS. Carlyle, Sept. 1, 1837. U. S. Mail Stage. The subscriber has commenced running a line of four-horse coaches from Vandalia to Macoupin Point, twice a week. Travelers from the east for Springfield and the northern parts of the State, will find this one of the most convenient and expeditious routes. This line intersects the line of stages from Springfield to St. Louis twice a week, at Macoupin Point, and the line from Mmsville to St. Louis once a week, at Vandalia.",
+      "metadata": {
+        "publication_year": 1832,
+        "historical_start": 1832,
+        "historical_end": 1832,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q1_cand_5",
+      "canonical_parent_doc_id": "train_1586",
+      "original_parent_doc_id": "train_1586",
+      "chunk_id": "train_1586_0",
+      "text": "Show's Tavern, where all kinds of Wearing, such as Coverlids, Carpeting and Diaper, and all kinds of plain work, will be executed in the neatest and most durable manner, and hopes from the goodness of his work, to merit the future settlement of the public. Is JACOB WISEHART. May 13, 1803. MEZcHamu\u00a3L % c' AUER, has settled in Shepherdstown, and opened a store, and commenced the Practice of PHYSIC and SURGERY. He will not boast of what he has done, or can do, but, having had nearly as good opportunities, as Europe or America could afford, he will endeavor to recommend himself by faithful practice. May 13, 1803. FOUR DOLLARS REWARD. STRAYED from the subscriber living in Shepherdstown, on Friday the 29th of April last, a Dark SORREL HORSE, near fourteen hands high, eight years old this spring, has a remarkable ill-natured look, and is very hard to be caught, has a black spot near his rump about the bigness of a man\u2019s hand, and has some grey hairs in his mane; he was raised near Gerrardstown, Berkeley County. The above Reward and all reasonable expenses will be paid for returning said horse. JACOB HAINES. June 3, 1803. Valuable PROPERTY for sale, TO be sold or rented, the Plantation whereon I now live, containing 367 acres, a part of which is sown down with wheat and rye. There",
+      "metadata": {
+        "publication_year": 1803,
+        "historical_start": 1803,
+        "historical_end": 1803,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q1_cand_6",
+      "canonical_parent_doc_id": "train_72634",
+      "original_parent_doc_id": "train_72634",
+      "chunk_id": "train_72634_0",
+      "text": "N. Y. Just received and for sale, 500 bushels per sack, in the cheap grocery store, July 21, 1861. J. N. STANDISH or STOKES. Stolen or Strayed - on Sunday night, the 6th inst. - A sorrel horse, very stout, with a white face, black mane and tail - a reward will be given for the recovery of the horse, or for information leading to the recovery of the same. Apply at Ottawa, this 6th day of August, 1861. Or G. F. WALKER. Just received, a lot of Ohio made tree Saddles, Bridles and Martingales, which will be sold low either for cash or wheat. Aug. 12, '61 - J. V. NATTINGER. M. M. MILLER & CO. Dealers in dry goods, hardware, iron and steel, crockery, groceries, hats, boots and shoes, dye stuffs, glass, oil, nails, etc. at the brick store, Peru. July 30, 1861. 33 ' 4' 1' blaster fastenings, for wood or brick buildings, a superior article for sale by J. MANLEY & CO. Ottawa. July 10, 1861. Agricultural and white full jades received at the new store. July 22, 1861. P. FITZGERALD.",
+      "metadata": {
+        "publication_year": 1846,
+        "historical_start": 1846,
+        "historical_end": 1846,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q1_cand_7",
+      "canonical_parent_doc_id": "train_94745",
+      "original_parent_doc_id": "train_94745",
+      "chunk_id": "train_94745_0",
+      "text": "The above reward will be paid by leaving same at the office of the St. Nicholas Hotel, for Mills Beach. REWARD. - STOLEN FROM THE PREMISES OF Mr. Boyd, at Coram, Long Island, on Wednesday Night, November 30, a bay horse, about fifteen hands high, long tail, and a white spot on his forehead; also a top buggy wagon, painted dark green, with a yellow stripe; also two sets of harness, silver mounted, and a buffalo robe. Whoever will return the above described property to Conklin & Colyer, 151 Attorney, or 59 Houston street, will receive the above reward. $00 REWARD.? LOST OR STOLEN. FROM THE SLOOP Armenia, on December 3, a pocketbook containing and some odd cents. The finder will receive the above reward by leaving the same at No. 11 Barclay street, for Mr. W. W. Morris. REWARD PAID for the recovery of a lady's fur tippet, lost on Fourth avenue, between Thirteenth and Twenty-first streets, by leaving it at either 77 East Eighteenth street, or 81 Broadway. $5 REWARD.? LOST, IN THE NEIGHBORHOOD OF Washington Square, a small black and tan King Charles spaniel slut; has a little white on the chest; has a patent leather collar. Any person returning her to Philip Arnold, 117 Waverley place, will receive the above reward. $5 REWARD.? LOST, FROM 57 BROADWAY, ON Thursday, December.",
+      "metadata": {
+        "publication_year": 1853,
+        "historical_start": 1853,
+        "historical_end": 1853,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q1_cand_8",
+      "canonical_parent_doc_id": "train_32288",
+      "original_parent_doc_id": "train_32288",
+      "chunk_id": "train_32288_0",
+      "text": "A TO LET OR LAND, containing about 'JMS hundred and fifty acres, lying on the river Etoa. Situated between the lands of John J. Franklin, and others. The purchaser giving bond and good security. - JAMES WEBB, Cf f M. April 1, 1840. Blooded Horses. FINE imported Race Horse FLORIAN, with American Race Horse TRUMPETER, to M stand at Wm. Quarrier's, Sandy Creek, this present season, (1840.) For terms, see handbills. EDWD. H. CARTER. Vienna, February 1840. gf 11 tf Strayed. FROM the Subscriber, on Sunday night last, a small bay MARE, about fifteen hands high, supposed to be seven years old, two hind legs and the two fore legs. white, a star in the forehead, is delicate If made, has a scar on her right hind leg, a saddle bite on her back, long mane and tail. Any person who may take up said mare and deliver her at Major Palmer's Hotel, Hillsboro, shall receive a reward; any information respecting her will be thankfully received. ODEND'HAL. April 1, 1840.",
+      "metadata": {
+        "publication_year": 1840,
+        "historical_start": 1840,
+        "historical_end": 1840,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q1_cand_9",
+      "canonical_parent_doc_id": "train_3849",
+      "original_parent_doc_id": "train_3849",
+      "chunk_id": "train_3849_0",
+      "text": "G. Ladd [ Landing, for sale, from said vessel, 45 tons Pickard's-clarified Paris, 3 barrels Claret Wine, 60 bags Gut kass, 15 cwt. Glauber's Salt. July 38. (L) NAct-Wss :*- nisi No. 53- A HORSE\u2014 and CHAIR to hire\u2014by Alexandar PecsiWy July 25. ecsi * Ten DOLLARS' REWARD STRAYED or STOLEN said Mr. Me?! an hour's plS'ZUlG, near Alexandria, said: that it is Let: dun, a large GREY HORSE\u20148 years old has been running in the streets between the 13 and Duke street own, 16 hands 1t high boned and bare of flesh, chafed a HORSE with a harness, has a white face. The person right eye, and three white spots under his saddle =.ctsisct'si sin ,igkcds The abovementioned will e ;, ,id to 'cll !.eziag him to 'ss John Gidsby, July 28. Public sale: ON MONDAY NEXT, At half past three o'clock, will be sold at the late dwelling house of A. Jackson, deceased, a variety of Household and Kitchen Furniture. AND IMMEDIATELY AFTER'g The schooner ANN, Burthen forty-five tons. Terms will be made known at the place of sale, LUDct'iU'ii) musihiNGs SOMEWHERE on Fairfax or Prince streets A bL-ctl OF MONEY, in Alexander miss hay, a guess, of 5 dollars each.",
+      "metadata": {
+        "publication_year": 1808,
+        "historical_start": 1808,
+        "historical_end": 1808,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q1_cand_10",
+      "canonical_parent_doc_id": "train_104621",
+      "original_parent_doc_id": "train_104621",
+      "chunk_id": "train_104621_0",
+      "text": "Dear user, the corrected paragraph is as follows: \"Your Article, PBOI'. HEATHCOAT, who combined the Chiarist with the Artist, which enables him at all times to produce superior Pictures F. H. CLARE & CO, dec2-tt No. 1 Clark's Marble Block. FOR SALE BY - Robt. M. Salls 15 Sycamore St., Cincinnati, O. WM. G. McCORMICK, Commission & Forwarding Merchant, No. 15 SYCAMORE STREET, CINCINNATI, OHIO. msriyir $10 REWARD FOR a dark gray HORSE, blind in one eye, about twelve years old; has been missing for three weeks; supposed to be in the vicinity of Memphis. epl-tl HA WES, SMITH & CO'S BULLETIN. VOL. 1, NO. 1 LOOK TO HAWKS, SMITH & CO., SOUTH MARKET, Auctioneers, Commission Merchants, No. 104 and 106 Main St., 182 Adams St., and 31 Jefferson St., MEMPHIS! HAVING now received the largest stock of Goods for the season, we are determined to offer greater inducements to the country trade than ever before, as we are prepared to offer goods from our own importation, and from large purchases in the Eastern markets, for proof of which we respectfully solicit an inspection of our stock and prices. In offering these inducements to the country trade we also extend our thanks for the patronage so liberally bestowed upon us in the past, and assure our friends and customers that we shall use every effort to merit a continuance of their favors, by giving them the advantage of the best markets in making their purchases.\"",
+      "metadata": {
+        "publication_year": 1857,
+        "historical_start": 1857,
+        "historical_end": 1857,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q1_cand_11",
+      "canonical_parent_doc_id": "train_91325",
+      "original_parent_doc_id": "train_91325",
+      "chunk_id": "train_91325_0",
+      "text": "Private rooms for gentlemen wishing to pass a pleasant evening undisturbed, have been fitted up. Open at all hours of the day and night. B. POULEUR. Weaverville, Aug. 28, 1858. 32td. NOTICE OF DISSOLUTION. THE PARTNERSHIP existing between the undersigned, under the style of Robin & Co., is this day dissolved by mutual consent. E. N. ROBIN, Weaverville, Aug. 24, 1858. JOS. KOHN. Joseph Kohn will continue the business at the old stand, and will be happy to see his old customers and the public generally. 32. SHAVING AND BATHING. THE UNDERSIGNED Would respectfully inform the citizens of Weaverville that they have leased the establishment formerly kept by I. Dixon, and will continue the above-mentioned business, in such a manner as to merit a share of public patronage. O. W. BROWN, W. H. FOOTE. Oct. 1st baths will be given on Saturday and Sunday, only. 32td. Purse Found. CONTAINING A SMALL AMOUNT of money. The owner can have it on application to A. M. KUETTSCHEMITT. Weaverville, Aug. 28, 1858. 32td. Strayed or Stolen. $25 Reward. FROM GROSS' TRADING POST, mouth of Brown\u2019s Creek, a Sorrel horse mule, with several old brands, saddle marked, and blind in right eye. Any person returning said mule to Kroger & Vogel, Union Hotel, will receive the above reward. JOSEPH BERTRANDS. Weaverville, Aug. 28, 1858. 32lm.",
+      "metadata": {
+        "publication_year": 1858,
+        "historical_start": 1858,
+        "historical_end": 1858,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q1_cand_12",
+      "canonical_parent_doc_id": "train_156674",
+      "original_parent_doc_id": "train_156674",
+      "chunk_id": "train_156674_0",
+      "text": "Resolved, That we wear the national badge of mourning for thirty days. U. ALDRICH, R. U. CASH, Committee. J. J. LOVIN. D. C. TRADER, Sec'ry. Memphis, Jan'y 8, 1861. advertisements. Wanted To hire a girl to work as a good Cook, Washer and Ironer for a family of three persons. Address P. O. Box 109, jy18-1t Post Office. PRIVATE SCHOOL MADAME FILCHER will open a SCHOOL for young ladies at her residence, on Union street, opposite Mr. Patrick's and adjoining Mrs. Keherty's residence, on SUNDAY, August 5th, 1861, for the purpose of teaching French, Embroidery, Crochet, and all kinds of fancy and useful work. Terms $3 per month. jy-26 lw MASONIC NOTICE A SPECIAL convocation of Penn Chapter R. A. M's. will be held at their Hall, Odd-Fellows' building TONIGHT, July 28th, at 8 o'clock for labor in the Mark Masters degree. Sojourning companions are fraternally invited to attend. By order of the D. P. jy28-1t D. C. TRADER, Sec'ry. $10 Reward STRAYED from my premises, about six weeks ago, a light sorrel HORSE, about sixteen hands high. Both hind feet white, marked with a cut on his right ear, upper side. The above reward will be given on his return to me. K. KEAPTY, Baker. Market street, between Main and Second. I have at my place for sale 25 tons of Clover and",
+      "metadata": {
+        "publication_year": 1861,
+        "historical_start": 1861,
+        "historical_end": 1861,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q1_cand_13",
+      "canonical_parent_doc_id": "train_114894",
+      "original_parent_doc_id": "train_114894",
+      "chunk_id": "train_114894_0",
+      "text": "All competitors must be the actual owners of the animals entered by them, on the first day of July 1855, and such ownership must have continued to the day of the Show. Security will be required that every Bull, to which a premium is awarded, shall be kept within the State for twelve months succeeding the Show. No animal will be allowed to enter into competition in more than one class. All animals offered for competition must be entered with William A. Lincoln, the Secretary of this Committee, in Worcester, on or before WEDNESDAY, the 26th day of SEPTEMBER, at 12 o\u2019clock, noon, and must be exhibited upon the grounds of the Worcester Agricultural Society, on the day of exhibition, at 8 A. M., and remain till 3 P. M. TRAVEL. The Trustees will pay at the rate of 12 cents per mile to the owners of such animals as obtain premiums and which are brought or driven more than 10 miles from the place of exhibiting, computing from the place from which the animals come; unsuccessful competitors the like sum if upon the report of any committee such an indemnity for expense should be merited.",
+      "metadata": {
+        "publication_year": 1856,
+        "historical_start": 1856,
+        "historical_end": 1856,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q1_cand_14",
+      "canonical_parent_doc_id": "train_27780",
+      "original_parent_doc_id": "train_27780",
+      "chunk_id": "train_27780_0",
+      "text": "Camp THE RIVAL BOAT KILLS. GALVAN, TEXAS, or CAMPING on the JALVES? S and have their Mills run to the or more Carried Inks on Plain or Coated Paper, and Lrsparch, and on favorable Terms, by leaving their Opinions In the AMERICAN OFFICE, Corner of Broadway and St. Charles Street it very plain paper or any kind, in large or small quantities, Fill be executed by mllers of an attention to the SECOND MUNICIPALITY NOTICES. I HAVE brought to the pound of the 3d A bay horse, 5 feet 3 inches high, branded, the latter, supposed to be A A in shape and 13 and 14 hands high. A sorrel horse with white feet, branded with let- ters P P on the left hind quarter and 13 hands high. A dark brown mare, 4 feet 8 inches high and branded with letters Y F on the right shoulder and about 13 hands high. A dark Roan Mare.",
+      "metadata": {
+        "publication_year": 1839,
+        "historical_start": 1839,
+        "historical_end": 1839,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q1_cand_15",
+      "canonical_parent_doc_id": "train_20244",
+      "original_parent_doc_id": "train_20244",
+      "chunk_id": "train_20244_0",
+      "text": "entered on or before Saturday, March 19, at 5 P. M. I ask no horse can be offered at auction unless registered in the catalogue. _ _ JOHN W. WATSON, 446 Broadway. N. B. Horses required for sale must be left at New York Tattersalls before 12 o'clock on the day of sale, or they will not be offered. j8a?l* _ GENTLEMEN'S CAST OFF CLOTHING BOUGHT, and the full value given in cash, by H. L. LEVY, No. 226 Bleecker street, near Carmine street, new york. N.B. Knowing there are persons who make a great puff in their advertisements for Cast Off Clothing, and who in many cases do not give the full value for the same, H. L. will as sure those Gentlemen who may have such articles by him, and who may send for him, of their receiving the very ut most value in cash for every article. N.B. A line through the post office or otherwise, to the above address, will meet with due attention. i?. fcn* HOLIDAY PRESENTS. CARDS. AT 172 BROADWAY. VISITING CARDS, in plain writing, the Italian and fancy bands, printed on the polished German Porcelain Card, may be procured at the corner of Maiden lane and Broadway, at STOUT'S Engraving Establishment, where specimen books may be seen. Also, silver plate. Door and Number plates, the plating of which is uncommonly thick, the silver being expressly rolled for the advertiser.",
+      "metadata": {
+        "publication_year": 1838,
+        "historical_start": 1838,
+        "historical_end": 1838,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q1_cand_16",
+      "canonical_parent_doc_id": "train_120078",
+      "original_parent_doc_id": "train_120078",
+      "chunk_id": "train_120078_0",
+      "text": "The undersigned having purchased the well-known corner, on Walnut and Farmer streets, formerly occupied by Mr. Alfred Clark, and erected a large and commodious Stable, would respectfully inform the citizens of this and the adjoining counties, and the public generally, that he will at all times, keep fine saddle & Harness Horses, for Sale or Hire; also, fine Buggies and Hacks. From his well-known reputation as a Livery Stable keeper, he hopes to receive a generous patronage. The following are his rates for Horse Hire, Feed, &c. Hire of Hack per day, $5 00; Horse and Buggy per day, $4 00; Saddle Horse, $2 50; Harness Horse, $1 25; Buggy and Harness, $1 50; Feed per Month, $12 00; Week, $4 00; Single Feed, $0 25. All losses or injury done to horses or rigging, must be accounted for at a fair estimate. All travelers wishing private conveyance, by calling at his stable, can obtain any mode of travel they may desire. His horses being well and gently trained, there will be no danger of breakage or loss of life. Fine Horses, Mules and Scrubs, on hand and for sale. He will give a good washing, rubbing, carding, currying and a full feed, all for Forty Cents. From an arrangement he has made with an experienced Horse Trader, he is enabled to furnish, at short notice, Pairs, or any kind of horses which may be wanted.",
+      "metadata": {
+        "publication_year": 1851,
+        "historical_start": 1851,
+        "historical_end": 1851,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q1_cand_17",
+      "canonical_parent_doc_id": "train_103173",
+      "original_parent_doc_id": "train_103173",
+      "chunk_id": "train_103173_0",
+      "text": "The lost day of January two fifty one years HEK KT and XOSiCh D, broadly to SM e-taU. See it I c ctov r. M JOBX T DOUGLAS, Clerk. R X wAsraao, Secretary Petitioner. decide well Strayed or Stolen. FROM within the enclosure of the Pair Grounds are Thursday the 31st as 1BOK GHT HORSE, with Saddle and Bridle. ,A...SLeia..rk. Ml fcl. Sail without turn. .of a ' 4 war. mud and rUl . w!?. As reciept tion respecting his recovery will be liberally rewarded by the subscriber. L H TEBPB, claimant for the same $10 REWARD. RANAWAY, about the Fifth of August LAST, a yellow man about built about twenty. J years old with about one hundred and forty fir pounds has rather black eyes, speaks tend, and has a scar on one of her ears above the wrist shaped for . , T Sh, . WhmM .1 aiU T\" I. Mrnre. rt r.tr'T.ar I $10 reward for her harboring and detaining to me, or informing of her at my residence, one mile south of Fort Prudling, on the railroad. oct3-lm F G LATHAM. Beneath is en VINCENT BACIGALUPO'S OYSTER SALOON NO. 95 FRONT ROW Corner of Washington Street. rp HE proprietor of the popular Oyster Saloon, . public generally, that he is now in receipt of a fresh supply of Oysters. The lovers of these delicacies can be served in any style from the shell stewed, roasted, escalloped or fried. He also keeps a large stock.",
+      "metadata": {
+        "publication_year": 1857,
+        "historical_start": 1857,
+        "historical_end": 1857,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    }
+  ]
+}

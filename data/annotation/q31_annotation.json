@@ -1,0 +1,331 @@
+{
+  "query_id": "q31",
+  "query_text": "Monroe Doctrine foreign policy 1823",
+  "temporal_type": "explicit_year",
+  "corpus": "expanded",
+  "candidates": [
+    {
+      "candidate_id": "q31_cand_0",
+      "canonical_parent_doc_id": "train_51855",
+      "original_parent_doc_id": "train_51855",
+      "chunk_id": "train_51855_0",
+      "text": "I did not vote for the Tariff of 1823, for which, however, Mr. Van Buren, Col. Johnson, Mr. Wright, and others of our present opponents did vote. And it is remarkable that from that period my exertions in Congress have been directed to the reduction and moderation of Tariffs. Thus, in 1832, I supported that Tariff which greatly modified and reduced the Tariff of 1823, insomuch that it was supposed by reasonable men that it would or ought to satisfy the Nullifiers of South Carolina. The next year, 1833, I brought forward the compromise. In 1841, I supported three articles which were limited. I never was in favor of what I regarded as a high tariff. And my present opinion is in perfect coincidence with that of the whole Whig party of the United States, including Georgia, as I understand it. We all believe that the Revenue from the General Government should be derived from the Foreign imports, to the exclusion of direct taxes, and the proceeds of the sales of the public lands; but no more revenue should be levied than is necessary for an economical administration of the Government, and to afford just and reasonable protection to American interests against the rival and prohibitory policy of Foreign powers. In this belief and this Compromise in all beneficial adhered to.",
+      "metadata": {
+        "publication_year": 1843,
+        "historical_start": 1843,
+        "historical_end": 1843,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q31_cand_1",
+      "canonical_parent_doc_id": "train_1605",
+      "original_parent_doc_id": "train_1605",
+      "chunk_id": "train_1605_0",
+      "text": "At this juncture the intelligence of the surrender of Copenhagen, the disasters in South America, and the measures of France against Portugal, with other important affairs on the continent of Europe, particularly with Russia, so pressed upon the British ministers, as to induce them to solicit Mr. Monroe's indulgence. Mr. Monroe's accordingly agreed to remain, and we have good reason to believe that the ultimatum of the British government was delivered on the 5th of October, and moreover we understand, \"That no act of hostility will be committed by Great Britain, until this ultimatum has been submitted to, and acted upon by this government.\" Of the contents of this ultimatum it would be ridiculous in us to attempt a conjecture, but it is easy to infer that all the demands of our government have not been acceded to, but we venture to assert that the British government have not unequivocally denied any pretensions on its part to search a national ship of the United States. The disastrous result in South America has produced much discontent and a great loss. Nothing, it appears, could have been less expected. Accounts to the 15th September had been received from Lisbon, the demands by Buonaparte for money were so great as to determine, it is said, a refusal, and it is added that the court, and many of the principal persons in that country were preparing to embark for the Brazil.",
+      "metadata": {
+        "publication_year": 1807,
+        "historical_start": 1807,
+        "historical_end": 1807,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q31_cand_2",
+      "canonical_parent_doc_id": "train_97055",
+      "original_parent_doc_id": "train_97055",
+      "chunk_id": "train_97055_0",
+      "text": "But, sir, carry out the doctrine which has been asserted with reference to the acquisition of Cuba; get it fairly if you can, but get it anyhow, for it is ours, and is essential to the well-being of the United States. The terrors of the country will always be safe when I adhere to the Monroe doctrine: Europe cannot and must not interfere with the nations of this continent as long as we do not interfere with them. I do not deny that the acquisition of Cuba has often been urged upon us, and I am far from supposing that it may not be a desirable acquisition. I only mean to say that it becomes us to be watchful that nothing shall be lost by a policy which our power of expansion, and our duty to propagate free principles, demands so extended a theatre as this whole continent, and the islands adjacent to it. It is impossible to conceive that the American Union should ever be engaged in the work of colonizing monarchical institutions upon the continent of America. We have already a vast fertile unoccupied territory. The millions of Europe are emptying upon our shores, and, like the drops of the morning dew, they will vanish and be no more.",
+      "metadata": {
+        "publication_year": 1853,
+        "historical_start": 1853,
+        "historical_end": 1853,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q31_cand_3",
+      "canonical_parent_doc_id": "train_88506",
+      "original_parent_doc_id": "train_88506",
+      "chunk_id": "train_88506_0",
+      "text": "To the notion that he was not a member of the Republican party in 1806 is of no weight. It is enough that on the great question of the day, the question of slavery as related to the Federal Government and the Federal Constitution he takes as such a man but takes the right side. He holds the old doctrine in regard to slavery, the doctrine of the Revolution and of the Ordinance of 1787, the doctrine of Washington and Franklin, of Jefferson and Madison, in the days when Virginia had not yet been degraded into 'the slave coast' of America, the doctrine of Roger Sherman and Oliver Ellsworth and John Jay. He has done long ago what Washington did only in his last will and testament, he has emancipated his own slaves on conscience' sake, and for the sake of the testimony which he thereby gave against the system of slavery. We do not ask whether he agrees with us on every point, it is enough for us to know that he is heartily opposed to the new, demoralizing, and revolutionary policy represented by whoever may be made the candidate of the Democratic party.",
+      "metadata": {
+        "publication_year": 1860,
+        "historical_start": 1860,
+        "historical_end": 1860,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q31_cand_4",
+      "canonical_parent_doc_id": "train_1600",
+      "original_parent_doc_id": "train_1600",
+      "chunk_id": "train_1600_0",
+      "text": "With respect to American affairs, we regret to say, that they are by no means in that state for immediate adjustment, that accounts by way of Boston have induced us to imagine. We have given in one view all the most prominent articles upon American affairs, which appeared in the London papers from the 1st to the 29th of September. They are contradictory and of course very unsatisfactory. The false rumor of Mr. Monroe's decease excited much speculation with some agitation. Upon comparing the papers with letters by this ship and with private information, we think there is no reason to apprehend an unfavorable issue to the negotiation; of which the detention of the Revenge, and Mr. Monroe\u2019s stay, are evidences, because if a negotiation was not depending, and which did not promise a favorable result, our ministers would have desisted from all further attempt. Mr. Monroe at one time fully expected to return in the Pocahontas, but was delayed on public affairs. We have the most satisfactory information, that nothing is less desirable in England than a war with the United States. We understand from good authority, that on the 14th of September, Mr. Monroe delivered a memorial to the British government, demanding a final answer previous to his departure for the United States, for which he was already prepared, and did expect to depart immediately.",
+      "metadata": {
+        "publication_year": 1807,
+        "historical_start": 1807,
+        "historical_end": 1807,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q31_cand_5",
+      "canonical_parent_doc_id": "train_81743",
+      "original_parent_doc_id": "train_81743",
+      "chunk_id": "train_81743_0",
+      "text": "It is the mission of the Democratic party to maintain this inestimable right. It was once the joint duty of the Whig and Democratic parties, according to their respective pledges, to maintain that principle. Independent of party creeds. In 1850 that doctrine was incorporated into the territorial policy by the joint action of the two great parties. At that day it was unfair and unjust to claim the doctrine as exclusively Democratic or specially Whig to the exclusion of the other party, for it was the joint work and common property of both parties; accordingly in 1852, when the Whig party assembled in National Convention at Baltimore and nominated General Scott as its candidate for the Presidency, they incorporated into the platform a resolution declaring the purpose and pledge of the Whig party in all time to come, to adhere to the principles of the Compromise Measures of 1850, as the rule of action in the organization of Territories and the admission of new States. When the Democratic party assembled in national convocation at the same place, one month afterward, and nominated Gen. Pierce for the Presidency, we asserted the same principle and gave the same pledge. Thus the two great parties - the Whig and Democratic in 1852 stood pledged to the doctrines of non-intervention and popular sovereignty.",
+      "metadata": {
+        "publication_year": 1859,
+        "historical_start": 1859,
+        "historical_end": 1859,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q31_cand_6",
+      "canonical_parent_doc_id": "train_67869",
+      "original_parent_doc_id": "train_67869",
+      "chunk_id": "train_67869_0",
+      "text": "A uniform currency was not provided, exchanges were not regulated, and little or nothing was added to the general circulation; and in 1820 its embarrassments had become so great that the Directors petitioned Congress to repeal that article of the charter which made its notes receivable everywhere in payment of the public dues. It had, up to that period, dealt to but a very small extent in exchanges, either foreign or domestic; and as late as 1823 its operations in that line amounted to a little more than $7,000,000 per annum. A very rapid augmentation soon after occurred, and in 1823 its dealings in exchanges amounted to upwards of $100,000,000, including the sales of its own drafts; and all these immense transactions were effected without the employment of extraordinary means. The currency of the country became sound, and the negotiations in the exchanges were carried on at the lowest possible rates. The circulation was increased to more than $22,000,000, and the notes of the bank were regarded as equal to specie all over the country; thus showing, almost conclusively, that it was the capacity to deal in exchanges, and not in local discounts which furnished these facilities and advantages.",
+      "metadata": {
+        "publication_year": 1841,
+        "historical_start": 1841,
+        "historical_end": 1841,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q31_cand_7",
+      "canonical_parent_doc_id": "train_1964",
+      "original_parent_doc_id": "train_1964",
+      "chunk_id": "train_1964_0",
+      "text": "The nominal King of Prussia has appointed a Court Martial, to inquire into the conduct of several officers during the late war with France. A serious misunderstanding continues between England and Russia, but there are no official accounts of hostilities having been commenced by either party. Mr. Monroe's Conge\u2014After many contradictory reports concerning Mr. Monroe's leaving England, as to the terms on which he closed his official duties, from a paragraph in the National Intelligencer and several letters from Washington on that subject, we believe the following statement may be relied on as correct. That Mr. Monroe communicated to Mr. Canning his instructions to demand satisfaction for the attack on the Chesapeake, and a relinquishment of the right of impressment from American merchantmen. That Mr. Monroe was asked, whether he could not treat on one point without discussing the other. On his replying in the negative, he was informed that under such circumstances, further negotiation was impracticable, and that a special minister would be deputed to our government, to attempt an accommodation with respect to the affair of the Chesapeake. That Mr. Monroe having thus brought his business to a close, demanded his passports, and immediately prepared to return. The news of Mr. Monroe's arrival in this country may be very shortly expected.",
+      "metadata": {
+        "publication_year": 1807,
+        "historical_start": 1807,
+        "historical_end": 1807,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q31_cand_8",
+      "canonical_parent_doc_id": "train_21928",
+      "original_parent_doc_id": "train_21928",
+      "chunk_id": "train_21928_0",
+      "text": "At New-York, where the Bank has not been able to get the upper hand, there was an increase of more than 120,000 dollars; the revenue there for the first quarter of 1833 was 3,122,166; for the first of 1823, it was 3,249,786 dollars. At Boston, where the Bank is again predominant, the revenue fell off about one third; at Salem, (Mass.) it fell off four fifths. At Baltimore, where the Bank has been defeated, there was an increase in the revenue of more than 70,000 dollars; at Richmond, the revenue was doubled, from 12,034 dollars to 25,810 dollars; at Charleston, it was increased from 69,503 dollars to 102,810 dollars; at Petersburgh, it was slightly increased; and throughout all the region south of the Potomac, there was either an increase, or the slight falling off which might result from diminished duties without diminished importations. Mr. B. said he knew that Bank power was predominant in some of the cities to the south; but he knew also that the Bank policy of distress and oppression had not been practiced there. That was not the region to be governed by the scourge. The high mettle of that region required a different policy: gentleness, conciliation, coaxing! If the south was to be gained over by the Bank, it was to be done by favor, not by fear.",
+      "metadata": {
+        "publication_year": 1834,
+        "historical_start": 1834,
+        "historical_end": 1834,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q31_cand_9",
+      "canonical_parent_doc_id": "train_104781",
+      "original_parent_doc_id": "train_104781",
+      "chunk_id": "train_104781_0",
+      "text": "In a letter to John Quincy Adams, Thomas Jefferson, in a passage dated 1823, expressed his concern over the American territories and the potential threat from foreign powers. He mentioned the expansionist ambitions towards the Mississippi coast, and the claims held by Great Britain based on relations with indigenous tribes in the region. Jefferson highlighted the significance of protecting America's interests, especially against the backdrop of Spain's sovereign rights in the area. He criticized the revival of British claims against the Central American States and emphasized Spain's historical and sovereign rights in the region. Jefferson's letter underscored the need for the United States to assert its own interests and political rights, ensuring the protection of its territories against external threats.",
+      "metadata": {
+        "publication_year": 1856,
+        "historical_start": 1856,
+        "historical_end": 1856,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q31_cand_10",
+      "canonical_parent_doc_id": "train_36621",
+      "original_parent_doc_id": "train_36621",
+      "chunk_id": "train_36621_0",
+      "text": "In regard to the treaty alluded to, he would state that he had negotiated that treaty under the eye and sanction of James Monroe, at that time President of the United States, and a slave-holder. Every line of that treaty was negotiated under Mr. Monroe's order, and he (Mr. A.) was the very last man to draw the line alluded to. He was for going to the Rio del Norte, and for including that territory. Before that treaty was signed he was directed to take it to the present chief magistrate of the U. States, who was then in this city, and to ask his opinion, whether the treaty, prescribing that boundary, ought to be signed. Gen. Jackson, who would hear what Mr. A. had this day asserted, and who could not deny it, gave his opinion that it ought to be signed. After some remarks from Messrs. Ripley of Louisiana, and Williams of Kentucky, in favor and Messrs. Reed of Mass., and Garland of Louisiana, in opposition to the bill, Mr. John Y. Mason, Chairman of the Committee on Foreign Relations, of Va., spoke at some length in favor of the appropriation. He contended that nothing had been done and was contemplated by Gen. Gaines, or the Executive, which was calculated to violate the principles which ought to govern our conduct. As to acknowledging the independence of Texas he hoped that question would not be involved in the present discussion.",
+      "metadata": {
+        "publication_year": 1836,
+        "historical_start": 1836,
+        "historical_end": 1836,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q31_cand_11",
+      "canonical_parent_doc_id": "train_32195",
+      "original_parent_doc_id": "train_32195",
+      "chunk_id": "train_32195_0",
+      "text": "The Committee appointed to prepare resolutions expressive of the sense of the Convention, reported the following, which were unanimously adopted: Resolved, That this Convention cordially approves of the principles upon which the Republican Administration of Martin Van Buren has been conducted. We also approve of his skill and management of the Maine boundary question, as well as of his conduct of our foreign relations generally. That we heartily respond to the various expressions of the popular will in favor of his re-election to the Presidency. Resolved, That we approve of the course pursued by our Senators in Congress touching the resolutions usually denounced as the Raynor Resolutions. That while we here publicly profess our devotion to the doctrine of \"Instruction,\" we hold that honesty and candor require of the constituent body to use direct and explicit language, when it designs to instruct. That we believe the majority of our last General Assembly purposely evaded the use of language which would commit them to the doctrine of instructions. Resolved, That we approve of the Independent Treasury System as proposed by President Van Buren. That we believe the true interests of the people, and the people's government, will be promoted by its adoption. That we are yet to learn that the people cannot procure as honest agents as the banks. Resolved, That we heartily concur in the nomination.",
+      "metadata": {
+        "publication_year": 1839,
+        "historical_start": 1839,
+        "historical_end": 1839,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q31_cand_12",
+      "canonical_parent_doc_id": "train_95008",
+      "original_parent_doc_id": "train_95008",
+      "chunk_id": "train_95008_0",
+      "text": "Thee and all the thinkers on the administration side, think the acquisition of Cuba is of geographical and political necessity. The doctrine of political necessity had been in all times the plea of tyrants. Geographical necessity lent intelligible, and the law of gravitation was cited to check it out. Why did the law of political gravitation affect only the possessions of feeble States, and not those of Great Britain, for instance? Cuba, he admitted, was a convenient island, but to seize it for that reason is the doctrine of the highway of might over right. Mr. Hale here read extracts from Jefferson, Adams, Clay, Everett and others, relied on to prove the necessity of its acquisition, to show that their opinions were qualified by contingencies of committees' report. He says there are but three alternatives for Cuba\u2014first, for a foreign power to have it, which we won't permit; second, independence, which is impossible; third, to become ours, which is inevitable. These are curious alternatives. The first cannot be permitted; the second impossible, the third inevitable. He thought that in the present condition of the treasury, it was useless to expend thirty millions to bring about an inevitable result. The report says, \"for Great Britain, France, and Russia pursue this course of annexation in East, we will look on with indifference, and claim the same privilege on this continent.\"",
+      "metadata": {
+        "publication_year": 1859,
+        "historical_start": 1859,
+        "historical_end": 1859,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q31_cand_13",
+      "canonical_parent_doc_id": "train_67629",
+      "original_parent_doc_id": "train_67629",
+      "chunk_id": "train_67629_0",
+      "text": "The assurance of these Repudiators in presuming to prate about public honesty would be laughable if it were not so disgusting. Jackson Southron. The editor of the Southron must have been enraptured in bond-paying abstractions, while penning the above rather verdant commentary. Was Jefferson a Repudiator? Why, man, the doctrine was not known in his age, for then the cautious State Governments were wary in plunging the young commonwealths into irredeemable bankruptcy, or allowing them to be fleeced by foreign capitalists, alias, swindlers. The whole doctrine of much-abused Repudiation is based upon the simple and incontrovertible fact, that no power known under the Constitution can incur an unconstitutional debt, therefore, an unconstitutional debt cannot be constitutionally saddled upon the people. We will not recriminate, by calling the editor of the Whig organ at the capital, or his party dishonest; for we believe the majority of the Whig party honest in the advocacy of their principles; but we challenge him to overthrow our position, and, when the work is accomplished, we will advocate his side of the question. But, before this is done, it would be ungenerous to denounce. Now, Mr. Southron, nib your pen, and give us good logic instead of idle invective. O.O. Woodman, one of the enterprising booksellers of Vicksburg, has favored us with copies of his Almanac for 1817. The work is neatly executed, and, no doubt, its chronology and statistics are accurate.",
+      "metadata": {
+        "publication_year": 1846,
+        "historical_start": 1846,
+        "historical_end": 1846,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q31_cand_14",
+      "canonical_parent_doc_id": "train_16863",
+      "original_parent_doc_id": "train_16863",
+      "chunk_id": "train_16863_0",
+      "text": "I will leave the net expenditure for the year 1923, at $13,759,592. Thus it will appear that the expenditures of the first year of the administration of General Jackson exceeded those of the first year of his predecessor, $2,209,123.91, and those of every other year, between 700,000, and one million and a half of dollars. In the single item of expenditures for Foreign Missions, according to the appropriations of this year, there will be an excess of $65,500 over that of the last year of Mr. Adams' administration, to wit: For Foreign Missions in 1830, $181,500. For contingent expenses of the same, $30,000. $214,000. Deduct from this the amount appropriated to cover a similar expenditure due for the year 1923, $19,000. It will then be perceived that the excess will be in the year 1830, over that of 1829, the sum of \"sixty-five thousand five hundred dollars.\" I now compare the appropriations made for the contingent expenses of the House of Representatives while Mr. Clay was Speaker of the House, with those since made: In 1822, they were $13,000. In 1823, $40,000. In 1821, $60,000. In the year 1829, we find them $106,000. In the year 1830, $133,000, making the difference more than two to one between this, and the former Administration.",
+      "metadata": {
+        "publication_year": 1830,
+        "historical_start": 1830,
+        "historical_end": 1830,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q31_cand_15",
+      "canonical_parent_doc_id": "train_115650",
+      "original_parent_doc_id": "train_115650",
+      "chunk_id": "train_115650_0",
+      "text": "And has reduced the number of fighting men to 85,000, and it will be six weeks before reinforcements can arrive from Bessarabia. The Czar has requested the Montenegrans to operate against the Turks. The Porte has de- cided that foreign refugees shall not be employed in Europe, but may serve in 84, GREAT BRITAIN. The British fleet at Spithead is or- dered to be ready for sea on the 11th, but their destination is not stated. The Lord Mayor's banquet took place, as usual on the 9th, and was attended by all the Cabinet and foreign ministers, including Mr. Buchanan. Mr. Bs speech was merely complimentary to a successful issue. The Earl of Aber- deen referred to his known policy of peace, but said that while he still fol- lowed a peace policy, it was not pos- sible to engage in war to prevent greater evils. A full cabinet council was held on the receipt of the Indian news. Their deliberations did not transpire. The weather in England was very favorable for wheat sowing. FRANCE. The trial of the conspirators in the Opera Comique plot was proceeding. It seems from the evidence to have been really a plot to assassinate the Emperor. AUSTRIA. Austria is keeping a strict watch on the movements of Servia, and is con- centrating a force on that frontier but otherwise remains neutral.",
+      "metadata": {
+        "publication_year": 1853,
+        "historical_start": 1853,
+        "historical_end": 1853,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q31_cand_16",
+      "canonical_parent_doc_id": "train_93960",
+      "original_parent_doc_id": "train_93960",
+      "chunk_id": "train_93960_0",
+      "text": "Our readers will perceive that Mr. Buchanan has taken his position as President of the United States; that is to say, as the master, and not as the creature, of his Cabinet. He will consult them upon all important questions, not with reference to their will and pleasure, but in regard to the most eligible ways and means for accomplishing his own. Acting upon this fundamental principle as the head of the government, he will have very little difficulty in giving a practical direction to his views upon every administrative measure, whether relating to our foreign or our domestic affairs. Our readers will accordingly understand that our circumstantial intelligence concerning the Dallas-Clarendon treaty does not rest upon the peculiar views of any member of the Cabinet, but upon the ascertained opinions and sentiments of Mr. Buchanan himself. With the point established, also, that his policy is to be the policy of the administration, the meaning and the bearing of the Senate amendments to the Dallas-Clarendon treaty will be readily comprehended. As far as possible, the entangling policy of the Clayton-Bulwer stock jobbing convention is to be superseded by a mutual policy between the contracting parties of non-intervention in the domestic affairs of the Central American States. And as the prevailing opinion at Washington is that England will readily accept the treaty, as thus amended, we perhaps may venture in advance to pronounce its final ratification an important victory of straightforward American diplomacy.",
+      "metadata": {
+        "publication_year": 1857,
+        "historical_start": 1857,
+        "historical_end": 1857,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    }
+  ]
+}

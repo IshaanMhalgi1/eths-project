@@ -1,0 +1,179 @@
+{
+  "query_id": "q14",
+  "query_text": "shipping port arrivals after 1805",
+  "temporal_type": "before_after",
+  "corpus": "small",
+  "candidates": [
+    {
+      "candidate_id": "q14_cand_0",
+      "canonical_parent_doc_id": "train_2213",
+      "original_parent_doc_id": "train_2213",
+      "chunk_id": "train_2213_0",
+      "text": "The messages of the executive rung with the applause of his own measures and the deluded democrats all thought this was the happy result of Mr. Jefferson's administration. The vessel of state conducted through the perilous storms of European politics had reached the port in safety, when he was placed at the helm to guide it, and he was foolish enough to think that he was entitled to the credit. But now after the lapse of five years, we would call the attention of every serious and thinking friend of his country to a survey of our public affairs. It is a sad reverse. Instead of gaining respectability with the increase of our physical strength, our government has become the sport of diplomatic insolence. Our treasury has been exhausted in the purchase of a country whose limits are undefined and which will probably cost us as much again to secure it. The necessity of an efficient navy which had been foreseen and provided for by the federal rulers, is now acknowledged and the money of the nation must be squandered to supply the want of the shipping which had been disposed of merely to uphold a ridiculous boast of economy.",
+      "metadata": {
+        "publication_year": 1806,
+        "historical_start": 1806,
+        "historical_end": 1806,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q14_cand_1",
+      "canonical_parent_doc_id": "train_3526",
+      "original_parent_doc_id": "train_3526",
+      "chunk_id": "train_3526_0",
+      "text": "The following royal decree has been issued at the Hague, under the date of the 29th July. \u201cWe, Louis Napoleon, etc. have resolved and hereby decree \u2014 \u201cOur decree of the 30th June, respecting the permission to American ships to enter and load in the ports of our kingdom is repealed, and everything is replaced on the former footing; so that the permission can extend to no ships except to those which have complied with the conditions of our former decrees.\u201d A letter from Holland, received in New York, says \u201cThe director of the customs house officers stationed in the harbors and ports of this kingdom to act in conformity to the above decree, and to inform the captains of the American vessels thereof, as well as of the decree by which the import of goods is permitted. They are also to send to the director the papers of such vessels from the time of their cargoes they may conceive just and necessary for his instructions thereon.\u201d \"Norfolk, Oct. 27. The ship Powhatan, Captain Thomas, arrived yesterday from London, last from Plymouth in 44 days. We have received no papers by her and understand there was no news of importance.\u201d",
+      "metadata": {
+        "publication_year": 1809,
+        "historical_start": 1809,
+        "historical_end": 1809,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q14_cand_2",
+      "canonical_parent_doc_id": "train_897",
+      "original_parent_doc_id": "train_897",
+      "chunk_id": "train_897_0",
+      "text": "Merci on the coast, 39,500 For nine months' service of eight gun boats, having Only men enough to navigate them across the Atlantic, 3,500 For two bombards, purchased and fitted out by commodore Preble, and seven months' service, 47,000 For nine months' service of 400 extra men, sent out in the John Adams, to the Mediterranean, 63,000 For bounty to seamen, which we were obliged to give to induce them to enter the service, the pay in the merchant service, being extravagantly high, 10,000 DOLLS. 30,000 The undersigned consul of the United States of America for the port and district of Bordeaux, maketh known, That vessels purchased after the date of the present notice, by his countrymen, will not any longer obtain a consular certificate. WILLIAM LEE. Bordeaux, 25th October, 1805. Philadelphia, Dec. 11. INTERESTING DECREE. We are informed, that Gen. Ferrand, of the city of St. Domingo, has recently issued a proclamation, in which he gives the names of the American vessels, captains, owners, and shippers, who have carried on a trade with the Blacks of St. Domingo, and orders his privateers to bring in for confiscation, every such vessel, or others, belonging to, or having on board any article, even the most trifling, the property of the said captains, owners, or shippers.",
+      "metadata": {
+        "publication_year": 1805,
+        "historical_start": 1805,
+        "historical_end": 1805,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q14_cand_3",
+      "canonical_parent_doc_id": "train_684",
+      "original_parent_doc_id": "train_684",
+      "chunk_id": "train_684_0",
+      "text": "Boston, OCT. 6. West-India and Southern Storms. Since our last, we have received the following particulars: In the gale at St. Thomas, from 4th to 5th Sept., a fleet of vessels, principally Americans, destroyed; and in some places, lay three deep! An eastern schooner laden with lumber, upset, one man killed, number wounded. Schr Hiram, Bacon, of Barnstable, for Boston, was safe, and no damage; the Fair Trader, Crawford, of Boston, had been ashore, but got off. In Martinique, out of 12 sail at that place, all but 5 had been lost. A heavy gale has been experienced at New Providence; but no material damage is said to have been done. The gale was felt at Jacmel; but no very great damage done. At St. Croix, no material damage was done. At St. Pierres, Martinique, it is said all the vessels in the road, except 5, were totally lost. At St. Kitts, St. Barts, St. Eustatia and Nevis, most of the vessels are reported to have been lost. From Curacao and St. Vincents, we have no accounts of damage, although there have been arrivals at New-York, which left those places September 5-6. At Guadaloupe, it is stated that the shipping suffered very much, as well as at Tortola, where it is mentioned that only 4 escaped out of 40.",
+      "metadata": {
+        "publication_year": 1804,
+        "historical_start": 1804,
+        "historical_end": 1804,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q14_cand_4",
+      "canonical_parent_doc_id": "train_1573",
+      "original_parent_doc_id": "train_1573",
+      "chunk_id": "train_1573_0",
+      "text": "Brown arrived yesterday from Lisbon, informs that a report was prevalent there about three days before he sailed, that Admiral Cornwallis had fallen in with off Brest, 15 sail of the line and five French frigates, he captured one of the line of battle ships & the 5 frigates, the latter having 1000 troops each supposed for Ireland; also that a skirmish had taken place between some French and Spanish troops on the frontiers, the issue was that the French were repulsed. It was firmly believed at Lisbon that Bonaparte would, at all hazards attempt the invasion of England. There had been two Moorish frigates and two galleys that against the Americans, one of the frigates arrived at Lisbon a few days before captain B. sailed, the other was taken some time since by one of our frigates. They had captured a Boston brig, which has since been retaken by Captain Bainbridge. CHARLESTON, October 31. A small French schooner arrived in this port on Saturday last from Barracoa, in the island of Cuba, having on board 37 inhabitants of Port-au-Prince, which place was evacuated about four weeks ago by the French troops; as many of the inhabitants as could find passages fled to Cuba in the most distressed condition; the remainder have submitted to the brigands, who it is said have treated them with humanity.",
+      "metadata": {
+        "publication_year": 1803,
+        "historical_start": 1803,
+        "historical_end": 1803,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q14_cand_5",
+      "canonical_parent_doc_id": "train_2035",
+      "original_parent_doc_id": "train_2035",
+      "chunk_id": "train_2035_0",
+      "text": "Property was ordered to be reboarded; but her insured, damages not indemnify (nor pillage was attempted. The piers of the United States are thronged with shipping On the 31st iust. there were at New York, 661\u2014of which 85 were ships, and 64 brigs.\u2014On the 3d inst. there were 105 at Charleston\u2014of which 63 were ships and brigs. There were in the port of Baltimore, the 1st inst. 34 ships, 2 barques, 27 brigs, 33 schooners, and 6 sloops, exclusive of coasters. The Massachusetts Revenue Cutter, sold at Boston, a few days since for 900 dollars. The John Jay Cutter at New York, sold for 7,400. She was purchased by Mr. Crowninshield, of Salem. The small sum at which the Massachusetts was struck off, was owing to the peace in Europe. Boarding. o FIVE or six Mechanics, may be well accommodated in Back-street.\u2014Inquire of the Printer. Portland, Nov. 30. JUST PUBLISHED. And for Sale at the Bookstore of JENKS & CLARK, DORVAL or the Speculator: A Novel founded on recent By the Author of full 1 and the Illuminated Baron.",
+      "metadata": {
+        "publication_year": 1801,
+        "historical_start": 1801,
+        "historical_end": 1801,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q14_cand_6",
+      "canonical_parent_doc_id": "train_550",
+      "original_parent_doc_id": "train_550",
+      "chunk_id": "train_550_0",
+      "text": "Weymouth. Tuesday, April 24, 1804. NEWS EXPECTED. Accounts from France to the 20th, and from England to the 24th March, may be expected in the course of a few days; vessels sailing from those places, at the period mentioned, having been spoken with by some of the late arrivals at this port. One of the vessels spoken is the Mars bound from Liverpool to New-York; the other the Eagle, from Bordeaux for Baltimore. They have probably both arrived. From the EAST-INDIES. Capt. Myrick, from Batavia, in the ship Indus, informs, that a French squadron of one 74, two frigates, and the corvette Berceau, [probably, that commanded by admiral Linois] sailed from Batavia the 8th December\u2014which, previous to the arrival of the Indus, had destroyed the English pepper magazines at Bencoolen, (on the island of Sumatra,) to the amount, it was said, of from 18 to 20,000 piculs. And that the same squadron had captured an English ship at Bencoolen, with a valuable cargo of Calcutta and Madras goods, and sent her to the Isle of France. Accounts from the coast of Africa state, that the Isle of Goree had been assaulted and captured by a French national vessel, and privateers from Cayenne.",
+      "metadata": {
+        "publication_year": 1804,
+        "historical_start": 1804,
+        "historical_end": 1804,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q14_cand_7",
+      "canonical_parent_doc_id": "train_3645",
+      "original_parent_doc_id": "train_3645",
+      "chunk_id": "train_3645_0",
+      "text": "On the 17th March, sailed from the US on the 25th March, and left there sits the ship Criterion, Chase, for Boston; Rose, ct Philadelphia, Jones, for do. Dispatch, Nichols, from Amsterdam, for do. John Jay, Providence for India. Sailed same day brig John Adams, from London for Sa May 4, to long. 63, 30, lat. spoke ship Whydah, from New-York Greenock, out 5 days, all well. May 7th, at 9 AM, saw brig Matilda for Hispaniola. The vessel was in the Downs waiting for a fair wind; and the Mercury was to sail in a few weeks for this port. 5th Fanny, Braine, from Greenock. 73; William and Margaret sailed in company with the Fanny. April 6, in lat, 3, 3, long. 24, 8, spoke ship Hiram, from New-York to London, out 22 days. si] 15th, spoke ship Rebecca, Cut 5 days from Portland, bound to Liverpool. Brig Halifax, Randall, from Newfoundland. On the 24th ult. in a squall, carried away both masts. Alexandria Advertiser. Tuesday, May 7. We are authentically informed, that Stephen Cox, Esq. has been recently instructed by the President of the United States to repair to London for the purpose of executing cer- tain missions.",
+      "metadata": {
+        "publication_year": 1802,
+        "historical_start": 1802,
+        "historical_end": 1802,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q14_cand_8",
+      "canonical_parent_doc_id": "train_1345",
+      "original_parent_doc_id": "train_1345",
+      "chunk_id": "train_1345_0",
+      "text": "April 20, four arrived at Cadiz\u2014 the fleet of the Portuguese (from 18 to 24 gun, and, from 100 to 115 in all). Orders had been received from the French government by the Spanish consul at Cadiz, to take possession of all captured American property; which was complied with. The king of Spain has given to the French 12 sail of the line, ready for sea, to be dis armed and manned by Frenchmen. Six thousand French troops were on their march for Cadiz to protect the place; and the French and Spanish fleet, from Brest, were escorted to Cadiz, where 5 sail of the line from Ferrol and two frigates from Brest had arrived, the latter having on board officers and men for the above fleet. Fourteen more ships of war were daily expected from the Me diterranean. Letters from the American consul at Ma laga, and the consul at Algiers, mention, that eleven sail of American vessels had been cap tured by the Tripolitan cruisers\u2014and that no American vessels were permitted to sail from the Mediterranean without a convoy.",
+      "metadata": {
+        "publication_year": 1801,
+        "historical_start": 1801,
+        "historical_end": 1801,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    }
+  ]
+}

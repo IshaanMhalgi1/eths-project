@@ -1,0 +1,198 @@
+{
+  "query_id": "q9",
+  "query_text": "political news congress 1800 to 1805",
+  "temporal_type": "range",
+  "corpus": "small",
+  "candidates": [
+    {
+      "candidate_id": "q9_cand_0",
+      "canonical_parent_doc_id": "train_617",
+      "original_parent_doc_id": "train_617",
+      "chunk_id": "train_617_0",
+      "text": "Portsmouth, May 7, 1805, For Sale or to Let = The HOUSE lately occupied by Mrs. Hawm, situated in Pleasant. ABEL & ROBERT HARRIS. May 5, 1805, LAST NOTICE. The subscribers inform those in debted to the late firm of Peirce, Hill and Peirce, that they shall strictly adhere to their former advertisement, and shall indiscriminately leave all notes and accounts which remain unpaid on the 19th inst. with an Attorney for collection. BENJAMIN HILL, WASHINGTON PEIRCE. Portsmouth, July 9, 1805. FOR SALE, A Lot of LAND situated on Farm Point, containing 30 feet in front, and carrying that breadth nearly 500 feet to the water running back of the point; with a small convenient DWELLING HOUSE on the same; for terms apply to HENRY PARCHER. Portsmouth June 18th, 1805. FOR SALE, A Convenient two story HOUSE, situated in Buck Street with a good garden, and Aqueduct in the cellar, and is a central situation. Terms will be made liberal; for further particulars apply to the printers. Edward Dinsley. Portsmouth, July 2. At GAINS JOHN GAINS Clock and Watch Maker, INFORMS his customers and the Public in general that he has REMOVED from Congress.",
+      "metadata": {
+        "publication_year": 1805,
+        "historical_start": 1805,
+        "historical_end": 1805,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q9_cand_1",
+      "canonical_parent_doc_id": "train_403",
+      "original_parent_doc_id": "train_403",
+      "chunk_id": "train_403_0",
+      "text": "The internal taxes, whatever they might be, their wisest, they did not venture until, without the advice of Mr. Jefferson, to make perpetual. Those taxes were temporary; some of them would have ceased to this day, had not the desire of the party to preserve the trappings of monarchy indulged them to pass the law of the 4th of February 1801, by which they were made permanent. To satisfy the public that the design of the opposition in objecting to the repeal of the internal taxes, was solely to embarrass government and not to relieve the poor, who, while they fret it with moderation, are as much comforted by spirits as by tea or sugar; it is proper to examine their conduct while in power, a little more minutely. Instead of lessening the duties on these articles, at the month of February 1797, when they had the benefit of their knowledge of the operation of the duties for more than six years, they increased them. Every member of congress from Connecticut (including Griswold and Dana), every member from New-Hampshire, and every member present from Massachusetts (excepting Wm. Lyman) voted in favor of that measure. At the same session, a law was passed granting relief to distillers, by removing the duty from the amount of spirits and fixing it on the capacity of the still. Every member from the states of New-Hampshire, Massachusetts and Connecticut, voted in favor of this law.",
+      "metadata": {
+        "publication_year": 1802,
+        "historical_start": 1802,
+        "historical_end": 1802,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q9_cand_2",
+      "canonical_parent_doc_id": "train_2719",
+      "original_parent_doc_id": "train_2719",
+      "chunk_id": "train_2719_0",
+      "text": "At a meeting of a number of Federal citizens of the counties of Chester and Dela ware, at West Chester, on Saturday the 30th of August, 1800, it was resolved to support Joseph Hemphill, Esquire, at the ensuing election for member of Congress for said counties. The citizens of Delaware having retired, it was on motion, resolved, that Thomas Bull, Isaac Wayne, and Joseph M'Clellan, Esquires, be appointed Conferees on behalf of Chester county, to meet Conferees already appointed by the counties of Bucks and Montgomery, at Norristown, the 12th of September next to fix upon some suitable Federal Character to be voted for the ensuing election, to represent the district in the Senate of Pennsylvania. On motion, it was resolved, That the Federal citizens of Chester county be re quested to meet at the house of Abraham Marshall, in West-Bradford, on the 30th of September next, for the purpose of fixing on a ticket generally for said county, and that the whole proceeding of the day be published in Hall and Stiles's Gazette, with a request to the other Federal printers of the city of Philadelphia, to publish the same in their papers until the election. JAMES MOORE Chairman, Joseph M'Clellan, Secretary. August 30th, 1800. At a meeting of the citizens of Philadelphia, held pursuant to a public notice at Mr. Dunwoody's Tavern on Thursday evening the 18th September. JOHN MILLER, jun. was appointed Chairman, and THOMAS B. ADAMS, Sec'ry.",
+      "metadata": {
+        "publication_year": 1800,
+        "historical_start": 1800,
+        "historical_end": 1800,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q9_cand_3",
+      "canonical_parent_doc_id": "train_645",
+      "original_parent_doc_id": "train_645",
+      "chunk_id": "train_645_0",
+      "text": "Many politicians have adopted a proverb, that the want of news is an indication of the prosperous state of the world; what then must we think of the prosperity of our political affairs, when there is not even a single measure of our general government, which can excite disquiet and discussion, though there is a party in this country, who with all the anxious avidity of the hawk, are continually watching for their prey? No wars, no armies to disgust us by their presence and cast a gloom over our future prospects; no excise gatherers to gauge our stills, to measure our windows, and to excite our indignation; no sedition law to muzzle the press and introduce suspicions into the convivial circle; no proscription. Our government seems to have realized that admirable theory, which the most-enlightened politicians have delighted to contemplate; where the administration is scarcely seen on the theatre of action, and man is left to the undisturbed exercise of his individual energies. Not a solitary basis can be found for even federal cavil or federal denunciation.... Richmond Eng. BY-THE LAST MAILS, Wunx 27, His Excellency governor Harrison has received information from St. Louis, that expectations are entertained, that the Sac Indians will be diverted from their intended expedition to avenge the death of one of their tribe lately confined at St. Louis. Washington City, July 17,",
+      "metadata": {
+        "publication_year": 1805,
+        "historical_start": 1805,
+        "historical_end": 1805,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q9_cand_4",
+      "canonical_parent_doc_id": "train_1649",
+      "original_parent_doc_id": "train_1649",
+      "chunk_id": "train_1649_0",
+      "text": "Weed, nor any other useful article our employers have to dispose of.\u2014From those who do not make payment in my way, at this time, we shall certainly expect now due, before their notes for what is doing are encroached.\u2014Many have expressed a willingness to settle annually, but from not being called upon, have neglected it and some have generously paid us in advance\u2014to such we tender our thanks. Undetermined now to settle at the end of this establishment until the first of January next, after which time, If the Intelligencer remains in our hands, we shall endeavor to \u201calter the proceedings\u201d and have our accounts closed at the end of every succeeding year; this, we are certain, will be agreeable to our patrons, and more beneficial to further the paper on which we now print, advanced. I cannot dispense without addressing the time is fast approaching in hope our friends will not think that their aid is necessary to accomplish. October 7, 1808. (Or The Federal Republicans of Berkeley, Jefferson, and Hampshire, have resolved to support Major James Stephenson as a Candidate for Congress, at the election in April next. Dec. 2, 1808. PROPOSALS FOR PRINTING By William Hunter. The publisher has been induced to offer a neat American edition of this work to the public from the scarceness of it.",
+      "metadata": {
+        "publication_year": 1808,
+        "historical_start": 1808,
+        "historical_end": 1808,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q9_cand_5",
+      "canonical_parent_doc_id": "train_298",
+      "original_parent_doc_id": "train_298",
+      "chunk_id": "train_298_0",
+      "text": "Congress of the United States. HOUSE OF REPRESENTATIVES. SATURDAY, Feb. 14. The House proceeded to the 1st, 2nd, and 3rd ballot for President, but the result was invariably 8 for Jefferson, 6 for Burr, two divided. The further balloting was adjourned until Monday, 12 o\u2019clock. A letter from the Secretary of the Treasury was received; but was not read. After the 30th ballot, a motion was made to postpone the next ballot to the 2nd March; which was rejected unanimously by the States. Monday, Feb. 16. The House proceeded to the 34th ballot, The result the same as before. Next ballot postponed until tomorrow, at 12 o\u2019clock, Tuesday, Feb. 17. The House proceeded to the 35th ballot for President. The result the same as before. At one o\u2019clock the 36th ballot was taken, which issued in the election of THOMAS JEFFERSON. After the declaration of the choice, a bill for declaring all letters received by or written to JOHN ADAMS, free of postage, was twice read. European Intelligence, By the British Packet Harlequin, arrived at New-York, from Falmouth, and brought London papers to the 14th of December. The following is a concise abridgment of their contents. ABSTRACT OF NEWS. Accounts from Italy say hostilities were to be recommenced on the 23rd of November. The French Army had made preparatory movements.",
+      "metadata": {
+        "publication_year": 1801,
+        "historical_start": 1801,
+        "historical_end": 1801,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q9_cand_6",
+      "canonical_parent_doc_id": "train_606",
+      "original_parent_doc_id": "train_606",
+      "chunk_id": "train_606_0",
+      "text": "On Thursday, July 4th, the Students of the University joined to celebrate the day. A procession was formed at the College and moved thence to the Chapel, where the throne of Grace being addressed by the President, an oration was pronounced by James Brackett, at once eloquent and impressive. The procession then moved to the Booth where the following toasts were drank under the discharge of cannon. 1. The day we celebrate\u2014the birthday of Liberty and Independence; May we testify our readiness to defend its rights, by our enjoyment of its blessings. 2. The United States of America; May party animosities and political contentions soon be floating on that sea, whose waters wash the shores of other worlds. 3. Thomas Jefferson, President of the United States; May his measures be such, as shall advance the honor and happiness of the nation. 4. The State of New-Hampshire; So long as her hills are crowned with verdure so long may her children continue to preserve their political integrity. 5. John Langdon; By measures the most salutary, may he convince his constituents, that wisdom and virtue are the basis of good government. 6. The firm patriots of '76; Ever zealous to defend the rights of their country, and more ready to die freemen, than to live slaves. 7. The political constitution of the United States\u2014firm and unshaken as its founders.",
+      "metadata": {
+        "publication_year": 1805,
+        "historical_start": 1805,
+        "historical_end": 1805,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q9_cand_7",
+      "canonical_parent_doc_id": "train_690",
+      "original_parent_doc_id": "train_690",
+      "chunk_id": "train_690_0",
+      "text": "A Synopsis of all the votes given by the People for Representatives to Congress, in August.\u2014Viz. For the federalists, duly given, \"returned and counted, : 10,978 By Dunstable, not returned, : 45 By Bartlett, not returned, : 0 By Landaff, returned too late, : 17 By Atkinson, not certified, : 8 By Eaton, not certified, : 0 By Derryfield, not counted, : 91 By Sutton, not counted, : 0 Total: 11,076. For the republicans, duly returned and counted, : 4,278 By Bartlett, not returned, : 75 By Dunstable, not returned, : 63 By Landaff, returned too late, : 38 By Atkinson, not certified, : 57 By Eaton, not certified, : 71 By Derryfield, not counted, : 30 By Sutton, not counted, : 90 Total: 4,306. Amount of federal & republican votes: 16,384 Scattering: 8 Whole number of votes given for Representatives throughout the State: 16,392 10,886 being a majority, Whereof the feds. had 11,076. Leaving a federal majority of one hundred and ninety votes. A number of republican towns did not receive Precepts in season for holding their meetings; the consequence of which, was the failure of the republican ticket\u2014if would otherwise undoubtedly have been carried by a handsome majority.",
+      "metadata": {
+        "publication_year": 1804,
+        "historical_start": 1804,
+        "historical_end": 1804,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q9_cand_8",
+      "canonical_parent_doc_id": "train_1483",
+      "original_parent_doc_id": "train_1483",
+      "chunk_id": "train_1483_0",
+      "text": "The act of Congress of February 3rd, 1805, for building and employing a number of gun-boats, is now in a course of execution to the extent there provided for. The obstacle to naval enterprise which vessels of this construction offer for our sea-port towns, their utility towards supporting within our waters the authority of the laws, the promptness with which they are manned by the seamen and militia of the place in the moment they are wanting, the facility of their assembling from different parts of the coast to any point where they are required in greater force than ordinary, the economy of their maintenance and preservation from decay when not in actual service, and the competence of our finances to this defensive provision without any new burden, are considerations which will have due weight with Congress in deciding on the expediency of adding to their number from year to year, as experience shall test their utility, until all our important harbours, by these and auxiliary means, shall be secured against insult and opposition to the laws. No circumstance has arisen since your last session which calls for any augmentation of our regular military force. Should any improvement occur in the militia system, that will always be seasonable. Accounts of the receipts and expenditures of the last year, with estimates for the ensuing one, will, as usual, be laid before you.",
+      "metadata": {
+        "publication_year": 1804,
+        "historical_start": 1804,
+        "historical_end": 1804,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q9_cand_9",
+      "canonical_parent_doc_id": "train_2814",
+      "original_parent_doc_id": "train_2814",
+      "chunk_id": "train_2814_0",
+      "text": "By order of Brig-Gen. Macpherson, JOHN M'CAULEY Adjutant April 15, 1800 CONGRESS. HOUSE OF REPRESENTATIVES. April 17. The bill intituled An act making appropriations for the Military establishment of the United States for the year 1800; and the bill supplementary to the laws now in force fixing the compensation to the officers of the Senate and House of Representatives were respectively read a third time and passed. A message was received from the Senate, by Mr. Otis their Secretary, informing the house that the Senate have passed the bill supplemental to the act for an amicable settlement of limits with the state of Georgia, and authorizing the establishment of a government in the Mississippi territory, with amendments. The bill and amendments were referred to select committee, and ordered to be printed. The House again resolved itself into a committee of the whole on the bill preferring the mode of deciding disputed titles of President and Vice President, Mr. Rutledge in the chair, and Mr. Marshall's amendment being under consideration: Mr. Randolph moved to amend the bill by striking out that part which directs the Grand Committee to be chosen by ballot, and inserting that they shall be chosen by lot. Mr. Nicholas then rose, and after noticing the amendments which had been offered, and animadverting at considerable length upon the unconstitutionality of the bill, moved to strike out the first section.",
+      "metadata": {
+        "publication_year": 1800,
+        "historical_start": 1800,
+        "historical_end": 1800,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    }
+  ]
+}

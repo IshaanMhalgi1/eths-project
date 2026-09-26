@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETHS Annotation UI</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #ddd;
+        }
+        .header h1 { margin: 0; font-size: 1.5rem; }
+        .query-info {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .query-info h2 { margin: 0 0 10px; font-size: 1.1rem; }
+        .query-meta { display: flex; gap: 20px; font-size: 0.9rem; color: #666; }
+        .query-meta span { background: #eee; padding: 2px 8px; border-radius: 4px; }
+        .progress-bar {
+            height: 8px;
+            background: #eee;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        .progress-fill {
+            height: 100%;
+            background: #4CAF50;
+            transition: width 0.3s;
+        }
+        .candidates-container { display: flex; flex-direction: column; gap: 15px; }
+        .candidate-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .candidate-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 15px;
+            background: #fafafa;
+            border-bottom: 1px solid #eee;
+        }
+        .candidate-id { font-weight: 600; color: #333; }
+        .candidate-meta { display: flex; gap: 15px; font-size: 0.8rem; color: #888; }
+        .candidate-text {
+            padding: 15px;
+            max-height: 300px;
+            overflow-y: auto;
+            line-height: 1.6;
+            font-size: 0.9rem;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }        .annotation-controls {
+            display: flex;
+            gap: 10px;
+            padding: 12px 15px;
+            background: #fafafa;
+            border-top: 1px solid #eee;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .annotator-badge {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+        .annotator-badge.annotator1 { background: #e3f2fd; color: #1565c0; }
+        .annotator-badge.annotator2 { background: #fce4ec; color: #c2185b; }
+        .relevance-btn {
+            flex: 1;
+            min-width: 80px;
+            padding: 8px 12px;
+            border: 2px solid #ddd;
+            background: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .relevance-btn:hover { border-color: #999; }
+        .relevance-btn.selected { border-color: #4CAF50; background: #e8f5e9; color: #2e7d32; }
+        .relevance-btn.relevant { border-color: #4CAF50; }
+        .relevance-btn.partial { border-color: #FF9800; }
+        .relevance-btn.not-relevant { border-color: #f44336; }
+        .relevance-btn.relevant.selected { background: #e8f5e9; color: #2e7d32; }
+        .relevance-btn.partial.selected { background: #fff3e0; color: #e65100; }
+        .relevance-btn.not-relevant.selected { background: #fce4ec; color: #c62828; }
+        .notes-input {
+            flex: 1;
+            min-width: 200px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+        .notes-input:focus { outline: none; border-color: #4CAF50; }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .nav-btn {
+            padding: 10px 20px;
+            background: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        .nav-btn:disabled { background: #ccc; cursor: not-allowed; }
+        .nav-btn.secondary { background: #757575; }
+        .save-status {
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .save-status.saved { background: #e8f5e9; color: #2e7d32; }
+        .save-status.saving { background: #fff3e0; color: #e65100; }
+        .save-status.error { background: #fce4ec; color: #c62828; }
+        .annotator-select {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .annotator-btn {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #ddd;
+            background: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .annotator-btn.active { border-color: #2196F3; background: #e3f2fd; color: #1565c0; }
+        .annotator-btn.annotator2.active { border-color: #E91E63; background: #fce4ec; color: #c2185b; }
+        .query-selector {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .query-btn {
+            padding: 8px 16px;
+            border: 2px solid #ddd;
+            background: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+        .query-btn:hover { border-color: #999; }
+        .query-btn.active { border-color: #2196F3; background: #e3f2fd; color: #1565c0; }
+        .query-btn.completed { border-color: #4CAF50; background: #e8f5e9; }
+        .temporal-tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .temporal-tag.explicit_year { background: #e3f2fd; color: #1565c0; }
+        .temporal-tag.range { background: #f3e5f5; color: #7b1fa2; }
+        .temporal-tag.before_after { background: #fff3e0; color: #e65100; }
+        .temporal-tag.period { background: #e8f5e9; color: #2e7d32; }
+        .temporal-tag.none { background: #eee; color: #666; }
+        .corpus-tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            background: #f5f5f5;
+            color: #666;
+        }
+        .corpus-tag.expanded { background: #e8f5e9; color: #2e7d32; }
+        .corpus-tag.both { background: #e3f2fd; color: #1565c0; }
+        .retriever-scores {
+            display: flex;
+            gap: 10px;
+            font-size: 0.75rem;
+            color: #888;
+            margin-top: 5px;
+        }
+        .retriever-score {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+        .blind-mode-banner {
+            background: #e8f5e9;
+            border: 1px solid #4CAF50;
+            border-radius: 8px;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            color: #2e7d32;
+        }
+        .blind-mode-banner strong { color: #1b5e20; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>ETHS Relevance Annotation</h1>
+        <div style="display: flex; gap: 10px; align-items: center;">
+            <button id="saveBtn" class="nav-btn" onclick="saveAll()">Save All Progress</button>
+            <button id="exportBtn" class="nav-btn secondary" onclick="exportResults()">Export JSON</button>
+        </div>
+    </div>
+
+    <div id="saveStatus" class="save-status" style="display:none;"></div>
+
+    <div class="blind-mode-banner">
+        <strong>Blind annotation mode.</strong> Retriever names and scores are hidden.
+        Judge each document on its own topical relevance to the query, without regard to
+        which retriever produced it. Candidate order is randomized and carries no signal.
+    </div>
+
+    <div class="annotator-select">
+        <div style="min-width: 120px; font-weight: 600; display: flex; align-items: center;">Annotator:</div>
+        <button class="annotator-btn annotator1 active" data-annotator="1" onclick="selectAnnotator(1)">Annotator 1</button>
+        <button class="annotator-btn annotator2" data-annotator="2" onclick="selectAnnotator(2)">Annotator 2</button>
+    </div>
+
+    <div class="query-selector" id="querySelector"></div>
+
+    <div class="query-info" id="queryInfo"></div>
+
+    <div class="candidates-container" id="candidatesContainer"></div>
+
+    <div class="navigation">
+        <button class="nav-btn secondary" id="prevBtn" onclick="prevQuery()" disabled>← Previous Query</button>
+        <span id="queryCounter" style="display: flex; align-items: center; font-weight: 500;"></span>
+        <button class="nav-btn" id="nextBtn" onclick="nextQuery()">Next Query →</button>
+    </div>
+
+    <script>
+        // State
+        let allData = null;
+        let currentQueryIndex = 0;
+        let currentAnnotator = 1;
+        let queryButtons = [];
+        let currentOrdered = [];   // shuffled candidate order for the visible query
+
+        // Load data on startup
+        async function loadData() {
+            try {
+                const response = await fetch('annotation_pools.json');
+                allData = await response.json();
+                renderQuerySelector();
+                loadQuery(0);
+                loadSavedProgress();
+            } catch (e) {
+                console.error('Failed to load annotation pools:', e);
+                document.body.innerHTML = '<div style="padding:40px;text-align:center;color:red;">Failed to load annotation_pools.json. Make sure you are serving this file from the eths/data/annotation directory.</div>';
+            }
+        }
+
+        function renderQuerySelector() {
+            const container = document.getElementById('querySelector');
+            container.innerHTML = '';
+            allData.queries.forEach((q, i) => {
+                const btn = document.createElement('button');
+                btn.className = 'query-btn';
+                btn.dataset.index = i;
+                btn.textContent = `${q.query_id}: ${q.query_text.substring(0, 40)}${q.query_text.length > 40 ? '...' : ''}`;
+                btn.onclick = () => loadQuery(i);
+                container.appendChild(btn);
+                queryButtons.push(btn);
+            });
+            updateQueryButtons();
+        }
+
+        function updateQueryButtons() {
+            queryButtons.forEach((btn, i) => {
+                btn.classList.remove('active', 'completed');
+                if (i === currentQueryIndex) btn.classList.add('active');
+                if (isQueryComplete(i)) btn.classList.add('completed');
+            });
+        }
+
+        function isQueryComplete(queryIndex) {
+            const q = allData.queries[queryIndex];
+            const key = `annotator${currentAnnotator}`;
+            return q.candidates.every(c => c[`relevance_${key}`] !== null);
+        }
+
+        function loadQuery(index) {
+            currentQueryIndex = index;
+            const q = allData.queries[index];
+            document.getElementById('queryInfo').innerHTML = `
+                <h2>Query: ${q.query_text}</h2>
+                <div class="query-meta">
+                    <span>ID: ${q.query_id}</span>
+                    <span class="temporal-tag ${q.temporal_type}">${q.temporal_type.replace('_', ' ')}</span>
+                    <span class="corpus-tag ${q.corpus}">${q.corpus} corpus</span>
+                </div>
+            `;
+            renderCandidates(q);
+            updateProgress(q);
+            updateQueryButtons();
+            document.getElementById('queryCounter').textContent = `Query ${index + 1} of ${allData.queries.length}`;
+            document.getElementById('prevBtn').disabled = index === 0;
+            document.getElementById('nextBtn').disabled = index === allData.queries.length - 1;
+        }
+
+        function renderCandidates(query) {
+            const container = document.getElementById('candidatesContainer');
+            container.innerHTML = '';
+            const key = `relevance_annotator${currentAnnotator}`;
+            const notesKey = `notes_annotator${currentAnnotator}`;
+
+            // Blind mode: stable per-(query,annotator) shuffle so candidate order
+            // carries no ranking signal and both annotators see the same order.
+            const ordered = query.candidates.slice();
+            const seedStr = query.query_id + '|' + currentAnnotator;
+            let seed = 0;
+            for (let i = 0; i < seedStr.length; i++) seed = (seed * 31 + seedStr.charCodeAt(i)) >>> 0;
+            function mulberry32(a) {
+                return function() {
+                    a |= 0; a = a + 0x6D2B79F5 | 0;
+                    let t = Math.imul(a ^ a >>> 15, 1 | a);
+                    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+                    return ((t ^ t >>> 14) >>> 0) / 4294967296;
+                };
+            }
+            const rand = mulberry32(seed);
+            for (let i = ordered.length - 1; i > 0; i--) {
+                const j = Math.floor(rand() * (i + 1));
+                [ordered[i], ordered[j]] = [ordered[j], ordered[i]];
+            }
+            currentOrdered = ordered;
+
+            ordered.forEach((cand, i) => {
+                const score = cand[key];
+                const notes = cand[notesKey] || '';
+                const year = cand.metadata.publication_year;
+                const card = document.createElement('div');
+                card.className = 'candidate-card';
+                card.innerHTML = `
+                    <div class="candidate-header">
+                        <span class="candidate-id">Candidate ${i + 1} of ${ordered.length}</span>
+                        <div class="candidate-meta">
+                            <span>Year: ${year || 'unknown'}</span>
+                        </div>
+                    </div>
+                    <div class="candidate-text">${escapeHtml(cand.text)}</div>
+                    <div class="annotation-controls">
+                        <span class="annotator-badge annotator${currentAnnotator}">Annotator ${currentAnnotator}</span>
+                        <button class="relevance-btn relevant ${score === 2 ? 'selected' : ''}" data-value="2">Relevant (2)</button>
+                        <button class="relevance-btn partial ${score === 1 ? 'selected' : ''}" data-value="1">Partial (1)</button>
+                        <button class="relevance-btn not-relevant ${score === 0 ? 'selected' : ''}" data-value="0">Not Relevant (0)</button>
+                        <input type="text" class="notes-input" placeholder="Notes (optional)" value="${escapeHtml(notes)}">
+                    </div>
+                `;
+                container.appendChild(card);
+
+                // Bind with the candidate object captured in the closure.
+                // (An earlier version round-tripped through a data-* index, which
+                // broke because the HTML parser lowercases attribute names.)
+                card.querySelectorAll('.relevance-btn').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        setRelevance(btn, parseInt(btn.dataset.value, 10), cand);
+                    });
+                });
+                card.querySelector('.notes-input').addEventListener('change', ev => {
+                    setNotes(ev.target, cand);
+                });
+            });
+        }
+
+        function setRelevance(btn, value, candidate) {
+            const q = allData.queries[currentQueryIndex];
+            const key = `relevance_annotator${currentAnnotator}`;
+            candidate[key] = value;
+
+            btn.parentElement.querySelectorAll('.relevance-btn').forEach(b => b.classList.remove('selected'));
+            btn.classList.add('selected');
+
+            updateProgress(q);
+            updateQueryButtons();
+            autoSave();
+        }
+
+        function setNotes(input, candidate) {
+            const q = allData.queries[currentQueryIndex];
+            const key = `notes_annotator${currentAnnotator}`;
+            candidate[key] = input.value;
+            autoSave();
+        }
+
+        function updateProgress(query) {
+            const key = `relevance_annotator${currentAnnotator}`;
+            const total = query.candidates.length;
+            const done = query.candidates.filter(c => c[key] !== null).length;
+            const pct = total > 0 ? (done / total * 100) : 0;
+
+            // Idempotent: replaces the progress block rather than appending,
+            // so repeated labeling does not stack duplicate bars.
+            let el = document.getElementById('progressBlock');
+            if (!el) {
+                el = document.createElement('div');
+                el.id = 'progressBlock';
+                document.getElementById('queryInfo').appendChild(el);
+            }
+            el.innerHTML =
+                `<div class="progress-bar"><div class="progress-fill" style="width:${pct}%"></div></div>` +
+                `<div style="font-size:0.85rem;color:#666;">${done}/${total} annotated</div>`;
+        }
+
+        function selectAnnotator(num) {
+            currentAnnotator = num;
+            document.querySelectorAll('.annotator-btn').forEach(b => b.classList.remove('active'));
+            document.querySelector(`.annotator-btn.annotator${num}`).classList.add('active');
+            loadQuery(currentQueryIndex);
+        }
+
+        function prevQuery() {
+            if (currentQueryIndex > 0) loadQuery(currentQueryIndex - 1);
+        }
+
+        function nextQuery() {
+            if (currentQueryIndex < allData.queries.length - 1) loadQuery(currentQueryIndex + 1);
+        }
+
+        // Auto-save to localStorage
+        function autoSave() {
+            showSaveStatus('saving', 'Auto-saving...');
+            const saveData = {
+                annotator: currentAnnotator,
+                queryIndex: currentQueryIndex,
+                data: allData,
+                timestamp: Date.now()
+            };
+            localStorage.setItem('eths_annotation_progress_v2_blind', JSON.stringify(saveData));
+            setTimeout(() => showSaveStatus('saved', 'Saved locally'), 500);
+        }
+
+        function loadSavedProgress() {
+            try {
+                const saved = localStorage.getItem('eths_annotation_progress_v2_blind');
+                if (saved) {
+                    const parsed = JSON.parse(saved);
+                    if (parsed.data && parsed.data.queries) {
+                        // Merge saved annotations
+                        parsed.data.queries.forEach((q, qi) => {
+                            q.candidates.forEach((c, ci) => {
+                                if (allData.queries[qi] && allData.queries[qi].candidates[ci]) {
+                                    ['relevance_annotator1', 'relevance_annotator2', 'notes_annotator1', 'notes_annotator2'].forEach(k => {
+                                        if (c[k] !== null && c[k] !== undefined) {
+                                            allData.queries[qi].candidates[ci][k] = c[k];
+                                        }
+                                    });
+                                }
+                            });
+                        });
+                        showSaveStatus('saved', 'Loaded previous progress');
+                        setTimeout(() => document.getElementById('saveStatus').style.display = 'none', 2000);
+                    }
+                }
+            } catch (e) {
+                console.warn('Could not load saved progress:', e);
+            }
+        }
+
+        function saveAll() {
+            const saveData = {
+                annotator: currentAnnotator,
+                queryIndex: currentQueryIndex,
+                data: allData,
+                timestamp: Date.now()
+            };
+            localStorage.setItem('eths_annotation_progress_v2_blind', JSON.stringify(saveData));
+            showSaveStatus('saved', 'Progress saved to browser storage');
+        }
+
+        function exportResults() {
+            // Build final qrels-compatible output
+            const output = {
+                version: "1.0",
+                annotator: currentAnnotator,
+                export_date: new Date().toISOString(),
+                queries: allData.queries.map(q => ({
+                    query_id: q.query_id,
+                    query_text: q.query_text,
+                    temporal_type: q.temporal_type,
+                    corpus: q.corpus,
+                    candidates: q.candidates.map(c => ({
+                        canonical_parent_doc_id: c.canonical_parent_doc_id,
+                        relevance_annotator1: c.relevance_annotator1,
+                        relevance_annotator2: c.relevance_annotator2,
+                        relevance_final: c.relevance_final,
+                        notes_annotator1: c.notes_annotator1,
+                        notes_annotator2: c.notes_annotator2
+                    }))
+                }))
+            };
+            
+            const blob = new Blob([JSON.stringify(output, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `annotation_results_annotator${currentAnnotator}_${Date.now()}.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+            showSaveStatus('saved', 'Exported JSON file');
+        }
+
+        function showSaveStatus(type, message) {
+            const el = document.getElementById('saveStatus');
+            el.className = `save-status ${type}`;
+            el.textContent = message;
+            el.style.display = 'block';
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // Keyboard shortcuts: 0/1/2 label the first UNLABELED candidate,
+        // arrows switch queries.
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+            if (e.metaKey || e.ctrlKey || e.altKey) return;
+            if (e.key === '0' || e.key === '1' || e.key === '2') {
+                const key = `relevance_annotator${currentAnnotator}`;
+                const target = currentOrdered.find(c => c[key] === null);
+                if (target) {
+                    const idx = currentOrdered.indexOf(target);
+                    const card = document.querySelectorAll('.candidate-card')[idx];
+                    const btn = card && card.querySelector(`.relevance-btn[data-value="${e.key}"]`);
+                    if (btn) { btn.click(); e.preventDefault(); }
+                }
+            }
+            if (e.key === 'ArrowLeft') { prevQuery(); e.preventDefault(); }
+            if (e.key === 'ArrowRight') { nextQuery(); e.preventDefault(); }
+        });
+
+        // Surface any uncaught error instead of failing silently.
+        window.addEventListener('error', ev => {
+            const bar = document.getElementById('saveStatus');
+            if (!bar) return;
+            bar.className = 'save-status error';
+            bar.textContent = 'JS error: ' + (ev.message || 'unknown') +
+                ' — labels may not be saving. Screenshot this and report it.';
+            bar.style.display = 'block';
+        });
+
+        // Start
+        loadData();
+    </script>
+</body>
+</html>

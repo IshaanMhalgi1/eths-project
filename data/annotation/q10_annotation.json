@@ -1,0 +1,141 @@
+{
+  "query_id": "q10",
+  "query_text": "tax land assessment 1804 to 1808",
+  "temporal_type": "range",
+  "corpus": "small",
+  "candidates": [
+    {
+      "candidate_id": "q10_cand_0",
+      "canonical_parent_doc_id": "train_539",
+      "original_parent_doc_id": "train_539",
+      "chunk_id": "train_539_0",
+      "text": "John Gray Esq. Keene, N.H. Wentworth, Esq. John Nelson, Esq. John Ward, Esq. Robert Graham Esq. David Scrymgeour, Esq. Colin Mackenzie, Esq. Thomas Mayoe, Esq. Edward Mayoe, Esq. William Serwus, Esq. The Hon. Robert Needham, Samuel Young, Esq. Thomas Evans Esq. and William Wentworth, of Barbados, Esq. They will pay me before the time of sale hereafter mentioned eight dollars thirty-five cents and half a cent on the common and undivided land in each of said rights (it being the balance due of said tax) and also pay the incidental charges thereon, so much of said delinquent's common and undivided land in each of said rights as will pay the balance of said tax and the legal charges will be sold at public auction at my dwelling house in Epping in said county of Rockingham on the thirteenth day of July next at ten o'clock in the forenoon. A. O. Clock, B. William Plumer, Proprietors Collector, Epping, May 2, 1804. MAYNLESBOROUGH.",
+      "metadata": {
+        "publication_year": 1804,
+        "historical_start": 1804,
+        "historical_end": 1804,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q10_cand_1",
+      "canonical_parent_doc_id": "train_509",
+      "original_parent_doc_id": "train_509",
+      "chunk_id": "train_509_0",
+      "text": "Shall direct, any time between the first day of June, and the fifteenth day of September in the year when said tax is assessed at the rate of six cents the hour for every able bodied man, finding his own tools and diet, and the same price per yoke for good oxen; and we the subscribers have assessed said tax, and will be prepared and ready to receive the work agreeable to the true intent and meaning of said grant. JOHN RICHARDSON, ) Com- TIMOTHY TAYLOR, } mit- SIMON OAKES, tee. Concur. May 7 WHEREAS the chief magistrate of the State of New-Hampshire at their Session at Concord, in the year 1798, assessed a tax of three cents, on each acre of land in the town of Stratford, (public rights excepted) for the purpose of making and repairing roads, and building bridges in said town. This is therefore to notify the proprietors, and land owners, in said town, that they have liberty to work out said tax any time between the first of June, next, and the fifteenth day of September following, by applying to us the committee, who are appointed to superintend and lay out said tax. ISAAC STEVENS, 3 Com GEORGE GAMSEY, it DAVID HOLBROOK, se. Shipton, May 20 THE Proprietors of New-Ca- stle are hereby notified that.",
+      "metadata": {
+        "publication_year": 1804,
+        "historical_start": 1804,
+        "historical_end": 1804,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q10_cand_2",
+      "canonical_parent_doc_id": "train_178",
+      "original_parent_doc_id": "train_178",
+      "chunk_id": "train_178_0",
+      "text": "N. B. The State tax is five cents, five mills, the county tax is five cents, five mills, and the school tax is nine cents on the hundred acres; those lots that have no number affixed are one hundred acres. Range 1st.\u2014Lot No. 1, 2, 5, 6, 8, 9, 18, 12, 19, 15. Range 2nd.\u2014Lot No. 1, 3, 4, 6, 8, 9, 13, 18, 15, 16, 3, 18, 35, 17. Range 3rd.\u2014Lot No. 1, 2, 3, 5, 6, 8, 16, 11, 3, 18, 35, 17. Range 4th.\u2014Lot No. 2, 4, 7, 8, 9, 10, 12, 13, 14, 15, 17. Range 5th.\u2014Lot No. 1, 2, 3, 4, 7, 8, 11, 13, 16, 17. Range 6th.\u2014Lot No. 2, 4, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18. Range 7th.\u2014Lot No. 5, 6, 9, 11, 16, 13, 14, 16, 18. Range 8th.\u2014Lot No. 1, 2, 3, 4, 5, 8, 10, 12, 13, 17, 18. Range 9th.\u2014Lot No. 5, 6, 7, 8, 10 acres, 10, 11, 12. Range 10th.\u2014No, Lot 2, 3, 4, 5, 6, 7, 8, 10, 12, 13, 16. Range 11th.\u2014Lot No. 2, 4, 7, 8, 9, 10, 13, 14, 15, 16, 17, 18, 19, 21, 22, 24, 26, 27. Range 14th.\u2014Lot No. 1, 2, 3, 4, 5, 6. Range 15th.\u2014Lot No. 1, 2, 3, 4, 5. Range 14th.\u2014Lot No. 1, 2. Undivided Land, 450 acres, Part of Cockburn, formerly Waits' Location, each right estimated at 900 acres, taxed 60 cents on each right. Original proprietors' names.",
+      "metadata": {
+        "publication_year": 1806,
+        "historical_start": 1806,
+        "historical_end": 1806,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q10_cand_3",
+      "canonical_parent_doc_id": "train_514",
+      "original_parent_doc_id": "train_514",
+      "chunk_id": "train_514_0",
+      "text": "The annual meeting stands adjourned to the 4th day of May next. Warrant for the State of New Hampshire - Grafton. Notice is hereby given to the non-resident proprietors and owners of land in the town of STRATFORD, in said county, who have not paid their county tax for the year 1808 - that so much of their land as will pay said tax, together with incidental charges, will be sold at public vendue, at the dwelling-house of Widow BALDWIN, in said Stratford, on the 6th Wednesday of July next, at ten o\u2019clock in the forenoon, unless prevented by previous payment to me the subscriber. Original Proprietors Names, &c. Moses Averell, 1 50 4 0 do 4 8 53 200 7 0 do 3 101 600 4 0 A. TR 4 136 200 2 3 undivided 9 0 50 10 Perry Averell, 1 50 4 0 do 2 59 800 7 0 do 5 200 8 137 200 4 0 do 4 194 200 2 5 undivided 0 0 80 10 Samuel Bard, 1 6 350 4 0 do 2 384 200 7 0 do 3 181 40 do 7 40 800 2 0 undivided 0 8 0 10 Isaiah Brown, 2 8 200 5 0 undivided 0 0 80",
+      "metadata": {
+        "publication_year": 1804,
+        "historical_start": 1804,
+        "historical_end": 1804,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q10_cand_4",
+      "canonical_parent_doc_id": "train_531",
+      "original_parent_doc_id": "train_531",
+      "chunk_id": "train_531_0",
+      "text": "Col. Josiah Willard, 62 200 7 do 8 do 3 iy 4 105 do 2 3 undivided 0 0 1 John Wendell, Esq. 67 50 4 do 2 106 200 7 0 do 8 186 do 3 Bo - - R Ak db e R undivided 6 50 1.0 Ezrahiah Whaitmdre, 147 200 7 do LT sEIg <dd 14 do A 24 do 9 undivided 3 3 SL| \u00bbg Sold from the Governor\u2019s corner for a building lot to the Morse farm, AGUR PLATT, Collector. Stratford, April 4, 1804. Graston County, NOTICE is hereby given to the non-resident proprietors and owners of land in the town of HANOVER in the county and State aforesaid; who have not paid their proprietary tax raised the 18th of October last that so much of their land as will pay said tax, together with incidental charges, will be sold at Public vendue at the dwelling house of Benjamin Hatch\u2019s, in said Hanover on the first Tuesday in July next, at one o\u2019clock afternoon, unless prevented by previous payment to me the subscriber. Original proprietors names as follows, (viz.) Joseph Westcott, Jr. 2 dollars, Difis Freeman, 2 do. Ebenezer Donbara, 2 do. Moses Wilcox, 2 do, William Woodward, 0 do.",
+      "metadata": {
+        "publication_year": 1804,
+        "historical_start": 1804,
+        "historical_end": 1804,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q10_cand_5",
+      "canonical_parent_doc_id": "train_500",
+      "original_parent_doc_id": "train_500",
+      "chunk_id": "train_500_0",
+      "text": "The purpose of making and repairing the Ye\u00dfigeri\u00df Road through said location\u2014 \"The proprietors are hereby defied to pay - said tax by the fifteenth day of September next; or work the same out on the Kear Road, at the rate of six cents per hour for every able-bodied man, finding his own tools and diet, and a yoke of oxen, at the same rate\u2014otherwise, their lands will be advertised as the law directs, - LABEL LARNED, -. Committee - VICTORY TENNISON, Sec. County of Grafton, Wales - | - Location, 9th of April, 1804 }_______ STATE OF NEW-HAMPSHIRE\u2014 Courts of Grafton, Jf. - NOTICE is hereby given to the non- resident proprietors and owners of land in the town of PIERCY, in said county who have not paid their highway and county taxes for the year 1803\u2014that so much of their land as will pay said taxes to- gether with incidental charges, will be sold at public vendue, at my dwelling house in said Percy, on the first Wednesday of Sep- tember next, at 10 o\u2019clock in the forenoon; unless prevented by previous payment to me the subscriber, e c Original Proprietors, g Jacobs Walden, $3 88 Thomas Burrofide, - 6 68 David Paul, 1, 5 68 Towop Noulon, - 7 8 68 * Caleb Tappen, 6 68 < George Walioo, jr. 6 68 William Stanwood, -6 68",
+      "metadata": {
+        "publication_year": 1804,
+        "historical_start": 1804,
+        "historical_end": 1804,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q10_cand_6",
+      "canonical_parent_doc_id": "train_3491",
+      "original_parent_doc_id": "train_3491",
+      "chunk_id": "train_3491_0",
+      "text": "I expect they have obtained fire- passes and will endeavor to push for free negroes; it is probable they are lurking about the batteries or declivity near Petersburg; they were seen in Manchester a few days past. Any person taking them up and confining them in jail, so that I get them, shall have the above reward of 50 dollars for either, paid by the subscriber LEWIS HENING June 5th, 1808. \"ISK The subscriber wishes to sell for cash, or on credit till the first day of January next, the Two Brick Tenements, Adjoining the house of Mr. Benjamin Mosby.\" JOHN PENDLETON. City of Richmond, Nov. 10th, 1804. 2w THE proprietor offers for sale, a TRACT OF LAND, adjoining Scott- Town, which he proposes to divide into lots of twenty-five acres\u2014For further particulars apply to Messrs. Prosser & Moncure. James Terman Has just received a supply of fresh Drugs, Medicines, paints and brushes COLOGNE\u2014opening at his Corner Shop, opposite Col. Gamble's, with which he shall be happy to serve his numerous friends, on the most moderate terms.\u2014He returns his sincere thanks for the favor of their custom. (tf) Sept 4",
+      "metadata": {
+        "publication_year": 1805,
+        "historical_start": 1805,
+        "historical_end": 1805,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    }
+  ]
+}

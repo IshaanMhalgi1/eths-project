@@ -1,0 +1,1717 @@
+{
+  "_note": "Per-judgment single-rater labels. a2 is null by construction; no agreement statistics are computed from this file.",
+  "n_raters": 1,
+  "cohen_kappa": null,
+  "percent_agreement": null,
+  "per_query_stats": {
+    "q10": {
+      "n": 7,
+      "g0": 0,
+      "g1": 1,
+      "g2": 6
+    },
+    "q9": {
+      "n": 10,
+      "g0": 1,
+      "g1": 3,
+      "g2": 6
+    },
+    "q14": {
+      "n": 9,
+      "g0": 5,
+      "g1": 4,
+      "g2": 0
+    },
+    "q33": {
+      "n": 24,
+      "g0": 10,
+      "g1": 13,
+      "g2": 1
+    },
+    "q31": {
+      "n": 17,
+      "g0": 10,
+      "g1": 4,
+      "g2": 3
+    },
+    "q42": {
+      "n": 22,
+      "g0": 9,
+      "g1": 8,
+      "g2": 5
+    },
+    "q71": {
+      "n": 30,
+      "g0": 22,
+      "g1": 3,
+      "g2": 5
+    },
+    "q1": {
+      "n": 18,
+      "g0": 4,
+      "g1": 1,
+      "g2": 13
+    },
+    "q3": {
+      "n": 22,
+      "g0": 10,
+      "g1": 4,
+      "g2": 8
+    },
+    "q101": {
+      "n": 24,
+      "g0": 15,
+      "g1": 4,
+      "g2": 5
+    }
+  },
+  "judgments": [
+    {
+      "query_id": "q10",
+      "doc_id": "train_539",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q10",
+      "doc_id": "train_509",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q10",
+      "doc_id": "train_178",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q10",
+      "doc_id": "train_514",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q10",
+      "doc_id": "train_531",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q10",
+      "doc_id": "train_500",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q10",
+      "doc_id": "train_3491",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q9",
+      "doc_id": "train_617",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q9",
+      "doc_id": "train_403",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q9",
+      "doc_id": "train_2719",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q9",
+      "doc_id": "train_645",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q9",
+      "doc_id": "train_1649",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q9",
+      "doc_id": "train_298",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q9",
+      "doc_id": "train_606",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q9",
+      "doc_id": "train_690",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q9",
+      "doc_id": "train_1483",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q9",
+      "doc_id": "train_2814",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q14",
+      "doc_id": "train_2213",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q14",
+      "doc_id": "train_3526",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q14",
+      "doc_id": "train_897",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q14",
+      "doc_id": "train_684",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q14",
+      "doc_id": "train_1573",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q14",
+      "doc_id": "train_2035",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q14",
+      "doc_id": "train_550",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q14",
+      "doc_id": "train_3645",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q14",
+      "doc_id": "train_1345",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q33",
+      "doc_id": "train_31115",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q33",
+      "doc_id": "train_68590",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q33",
+      "doc_id": "train_51236",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q33",
+      "doc_id": "train_31143",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q33",
+      "doc_id": "train_17507",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q33",
+      "doc_id": "train_18160",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q33",
+      "doc_id": "train_18550",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q33",
+      "doc_id": "train_17619",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q33",
+      "doc_id": "train_17713",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q33",
+      "doc_id": "train_31148",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q33",
+      "doc_id": "train_26095",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q33",
+      "doc_id": "train_72714",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q33",
+      "doc_id": "train_94358",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q33",
+      "doc_id": "train_151727",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q33",
+      "doc_id": "train_16194",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q33",
+      "doc_id": "train_31108",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q33",
+      "doc_id": "train_24460",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q33",
+      "doc_id": "train_31105",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q33",
+      "doc_id": "train_106441",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q33",
+      "doc_id": "train_28793",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q33",
+      "doc_id": "train_10184",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q33",
+      "doc_id": "train_17453",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q33",
+      "doc_id": "train_142091",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q33",
+      "doc_id": "train_133243",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q31",
+      "doc_id": "train_51855",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q31",
+      "doc_id": "train_1605",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q31",
+      "doc_id": "train_97055",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q31",
+      "doc_id": "train_88506",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q31",
+      "doc_id": "train_1600",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q31",
+      "doc_id": "train_81743",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q31",
+      "doc_id": "train_67869",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q31",
+      "doc_id": "train_1964",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q31",
+      "doc_id": "train_21928",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q31",
+      "doc_id": "train_104781",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q31",
+      "doc_id": "train_36621",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q31",
+      "doc_id": "train_32195",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q31",
+      "doc_id": "train_95008",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q31",
+      "doc_id": "train_67629",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q31",
+      "doc_id": "train_16863",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q31",
+      "doc_id": "train_115650",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q31",
+      "doc_id": "train_93960",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q42",
+      "doc_id": "train_26079",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q42",
+      "doc_id": "train_17792",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q42",
+      "doc_id": "train_65918",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q42",
+      "doc_id": "train_32069",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q42",
+      "doc_id": "train_39513",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q42",
+      "doc_id": "train_38306",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q42",
+      "doc_id": "train_38444",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q42",
+      "doc_id": "train_10392",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q42",
+      "doc_id": "train_18611",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q42",
+      "doc_id": "train_18949",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q42",
+      "doc_id": "train_17142",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q42",
+      "doc_id": "train_37511",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q42",
+      "doc_id": "train_95779",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q42",
+      "doc_id": "train_113272",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q42",
+      "doc_id": "train_27496",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q42",
+      "doc_id": "train_15664",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q42",
+      "doc_id": "train_34919",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q42",
+      "doc_id": "train_10394",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q42",
+      "doc_id": "train_12813",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q42",
+      "doc_id": "train_18036",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q42",
+      "doc_id": "train_169784",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q42",
+      "doc_id": "train_12811",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q71",
+      "doc_id": "train_169011",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q71",
+      "doc_id": "train_168984",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q71",
+      "doc_id": "train_150136",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q71",
+      "doc_id": "train_161222",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q71",
+      "doc_id": "train_159917",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q71",
+      "doc_id": "train_145751",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q71",
+      "doc_id": "train_168918",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q71",
+      "doc_id": "train_142556",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q71",
+      "doc_id": "train_164028",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q71",
+      "doc_id": "train_76730",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q71",
+      "doc_id": "train_129243",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q71",
+      "doc_id": "train_143714",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q71",
+      "doc_id": "train_168927",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q71",
+      "doc_id": "train_149915",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q71",
+      "doc_id": "train_142959",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q71",
+      "doc_id": "train_166003",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q71",
+      "doc_id": "train_156668",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q71",
+      "doc_id": "train_155191",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q71",
+      "doc_id": "train_32269",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q71",
+      "doc_id": "train_148877",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q71",
+      "doc_id": "train_150188",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q71",
+      "doc_id": "train_142909",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q71",
+      "doc_id": "train_164178",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q71",
+      "doc_id": "train_148511",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q71",
+      "doc_id": "train_146245",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q71",
+      "doc_id": "train_66172",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q71",
+      "doc_id": "train_79302",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q71",
+      "doc_id": "train_147214",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q71",
+      "doc_id": "train_156575",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q71",
+      "doc_id": "train_147484",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q1",
+      "doc_id": "train_86158",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q1",
+      "doc_id": "train_87302",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q1",
+      "doc_id": "train_4100",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q1",
+      "doc_id": "train_81341",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q1",
+      "doc_id": "train_33814",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q1",
+      "doc_id": "train_1586",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q1",
+      "doc_id": "train_72634",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q1",
+      "doc_id": "train_94745",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q1",
+      "doc_id": "train_32288",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q1",
+      "doc_id": "train_3849",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q1",
+      "doc_id": "train_104621",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q1",
+      "doc_id": "train_91325",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q1",
+      "doc_id": "train_156674",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q1",
+      "doc_id": "train_114894",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q1",
+      "doc_id": "train_27780",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q1",
+      "doc_id": "train_20244",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q1",
+      "doc_id": "train_120078",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q1",
+      "doc_id": "train_103173",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q3",
+      "doc_id": "train_38218",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q3",
+      "doc_id": "train_111311",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q3",
+      "doc_id": "train_61195",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q3",
+      "doc_id": "train_917",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q3",
+      "doc_id": "train_102660",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q3",
+      "doc_id": "train_51661",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q3",
+      "doc_id": "train_113483",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q3",
+      "doc_id": "train_114276",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q3",
+      "doc_id": "train_73432",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q3",
+      "doc_id": "train_25516",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q3",
+      "doc_id": "train_94547",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q3",
+      "doc_id": "train_38739",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q3",
+      "doc_id": "train_55227",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q3",
+      "doc_id": "train_94745",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q3",
+      "doc_id": "train_20721",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q3",
+      "doc_id": "train_71866",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q3",
+      "doc_id": "train_127004",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q3",
+      "doc_id": "train_150174",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q3",
+      "doc_id": "train_27170",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q3",
+      "doc_id": "train_27220",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q3",
+      "doc_id": "train_10214",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q3",
+      "doc_id": "train_42600",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q101",
+      "doc_id": "train_138635",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q101",
+      "doc_id": "train_5576",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q101",
+      "doc_id": "train_100747",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q101",
+      "doc_id": "train_125948",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q101",
+      "doc_id": "train_114894",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q101",
+      "doc_id": "train_69473",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q101",
+      "doc_id": "train_93196",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q101",
+      "doc_id": "train_73509",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q101",
+      "doc_id": "train_76306",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q101",
+      "doc_id": "train_93188",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q101",
+      "doc_id": "train_104718",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q101",
+      "doc_id": "train_99956",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q101",
+      "doc_id": "train_102474",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q101",
+      "doc_id": "train_81890",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q101",
+      "doc_id": "train_6078",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q101",
+      "doc_id": "train_14014",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q101",
+      "doc_id": "train_42315",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q101",
+      "doc_id": "train_37897",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q101",
+      "doc_id": "train_114885",
+      "a1": 2,
+      "a2": null,
+      "mean": 2.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q101",
+      "doc_id": "train_74793",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q101",
+      "doc_id": "train_22175",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q101",
+      "doc_id": "train_23069",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q101",
+      "doc_id": "train_115217",
+      "a1": 1,
+      "a2": null,
+      "mean": 1.0,
+      "binarized": true,
+      "rater": "annotator1_only"
+    },
+    {
+      "query_id": "q101",
+      "doc_id": "train_138040",
+      "a1": 0,
+      "a2": null,
+      "mean": 0.0,
+      "binarized": false,
+      "rater": "annotator1_only"
+    }
+  ]
+}

@@ -1,0 +1,578 @@
+{
+  "query_id": "q71",
+  "query_text": "Civil War Fort Sumter 1861",
+  "temporal_type": "explicit_year",
+  "corpus": "expanded",
+  "candidates": [
+    {
+      "candidate_id": "q71_cand_0",
+      "canonical_parent_doc_id": "train_169011",
+      "original_parent_doc_id": "train_169011",
+      "chunk_id": "train_169011_0",
+      "text": "Said then speculated on his own terms, which were accepted, and the work evacuated. A civil war was now inaugurated and the port of Charleston was blockaded. Confederate Troops at Charleston in 1861. Men. First regiment artillery, colonel took 271 First regiment infantry, colonel Elliek, colonel Elliek's first battalion Charleston militia 212 Seventeenth regiment infantry, colonel Cunningham, all Mounted militia men 500 Total 2,783 Reserve troops of infantry, artillery, and unmounted men near Charleston 1,278 Total 4,061 Losses at Fort Sumter, 1861. Officers Killed 14 Wounded 15 Total 29 At least an unsuccesful attempt had been made to take Charleston by the way of James Island! On the 31st of January of the present year the two rebel ironclads made a night attack upon our blockading fleet, damaging two of them, but otherwise doing no harm since which time the rebels have lost all their Vicksburg-like exultations. Nothing has surprised the Confederate government more than the failure on our part hitherto to send a strong expedition against Charleston. They expected, when the war first broke out, that the first object at which the government would aim would be Charleston, and the second Richmond. They expected that, at all events, before the fall or winter of 1861, the whole naval and military force of the",
+      "metadata": {
+        "publication_year": 1863,
+        "historical_start": 1863,
+        "historical_end": 1863,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q71_cand_1",
+      "canonical_parent_doc_id": "train_168984",
+      "original_parent_doc_id": "train_168984",
+      "chunk_id": "train_168984_0",
+      "text": "While the neighboring islands, on Morris Island and Sullivan's Island, from which the memorable attack upon the fort on the 11th of April, 1861, was conducted, are in possession of the Confederates and are not likely to pass out of their hands. Behind Fort Sumter a new fort, which takes its name from General Ripley, and is built almost entirely of palmetto wood, enhances the difficulty to which ships are exposed in approaching the town. In the work of fortification. Although for obvious reasons I do not feel myself at liberty to enter into details with regard to the fortifications, it may be stated that all that two of the most accomplished engineer officers of the Confederacy?General Lee and Beauregard?could suggest or devise has been done to strengthen the town on its land side. General Lee, before he was moved to Virginia and assigned his present high position, was for some time in command of Charleston, and by him the first line of land defenses was planned and executed. The line ran from Fort Johnson to Fort Moultrie, embracing at the junction of Fort Sumter and Fort Moultrie, forming a perfect work of earthworks and embrasures, extending from the north to the Ashley River on the south.",
+      "metadata": {
+        "publication_year": 1863,
+        "historical_start": 1863,
+        "historical_end": 1863,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q71_cand_2",
+      "canonical_parent_doc_id": "train_150136",
+      "original_parent_doc_id": "train_150136",
+      "chunk_id": "train_150136_0",
+      "text": "Yourlias loaned oiious' brightly and pleasantly this morning, and were our country involved in no troubles and were it not threatened with the evils of a civil war, the year 1801 would be unspiciously begun. But unfortunately this beautiful morning has found our country disarrayed; the Union, if not al- ready dissolved, is on the verge of disso- lution, and every thing pertaining to Na- tional affairs in the worst confusion. When I wrote you last by Pony, I told you of the resignation of Messrs. Cobb and Cass, of the Cabinet; since then Secretary Floyd has resigned. \"Old Buck seems to change with every wind, and will soon have no cabinet left. Cobb left him because Old Buck had de- termined to enforce the laws in South Carolina; Cass, because he would not enforce them, and now Floyd leaves be- cause Old Buck is disposed to enforce them. It is not known certainly yet who will be appointed in Floyd's place. Since I wrote you, South Carolina has declared herself independent, and seems determined to go it on her own hook. After the ordinance had been passed, Major Anderson, the officer in command at Fort Moultrie, on Christ- mas eve, spiked the guns, burned the car- riages, and moved his whole force and supplies to Fort Sumter, which, Gen. Scott says is the strongest fort in the world of its size (). Anderson did! n't do this because he said he could not maintain himself there with his small force, while in Sumter he would be in a valuable (although isolated) position.",
+      "metadata": {
+        "publication_year": 1861,
+        "historical_start": 1861,
+        "historical_end": 1861,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q71_cand_3",
+      "canonical_parent_doc_id": "train_161222",
+      "original_parent_doc_id": "train_161222",
+      "chunk_id": "train_161222_0",
+      "text": "It is therefore ordered that for every soldier of the United States killed in violation of the laws of war, a rebel soldier shall be executed, and for every one enslaved by the enemy or sold into slavery, a rebel soldier shall be placed at hard labor on the public works, and continued at such labor until the other shall be released and receive the treatment due to a prisoner of war. Abraham Lincoln. The News from South Carolina. New York, Aug. 2.\u2014The steamer Fulton, from Fort Royal July 31, arrived tonight. The siege of Fort Wagner was still progressing. Gen. Gilmore has mounted a number of 200-pounder siege guns within range of Fort Sumter. He is confident of reducing both Sumter and Wagner in a short time. The New South says:\u2014\u201cJust as we go to press it is reported that Rosecrans is within thirty miles of Savannah.\u201d The Free South publishes the following:\u2014 Beaufort, S. C., July 27, 1863.\u2014To the Colored Soldiers and Freedmen in this Department:\u2014It is fitting that you should pay a last tribute of respect to the memory of the late Col. Robert Gould Shaw, colonel of the 54th regiment, of Massachusetts volunteers. He commanded the first regiment of colored soldiers from a free state ever mustered into the United States service. He fell at the head of his regiment while leading a storming party against a rebel stronghold.",
+      "metadata": {
+        "publication_year": 1863,
+        "historical_start": 1863,
+        "historical_end": 1863,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q71_cand_4",
+      "canonical_parent_doc_id": "train_159917",
+      "original_parent_doc_id": "train_159917",
+      "chunk_id": "train_159917_0",
+      "text": "Fort Mc\u00dfae, the hospital, and navy yard were destroyed. The barracks were saved as were also the foundry and blacksmith shop in the navy yard. The city and forts had been occupied by Gen. Jones with 300 troops. Gen. Arnold was to establish his headquarters in the city on the 12th, and occupied the city with 1200 men. There is nothing of importance from Key West or Port Royal. Some few days ago the gunboat Wamsutta lost two men in a skirmish on Warsaw sound. From Gen. Halleck\u2019s Army. Before Corinth. May 20. \u2014There has been skirmishing along the whole lines, today, feeling the enemy\u2019s strength, and seeking more advantageous positions. Our losses were small. The army is advancing slowly. The story about several regiments attempting mutiny, and that the federal forces had sent assistance, is false. The Nashville Union chronicles the constant arrival of Tennesseans sick of the southern confederacy, and says a thorough Union man must be chosen at the approaching election for circuit judge. Off Fort Wrigt, May 18. \u2014Refugees who arrived yesterday report that the rebels are making extensive preparations for a second attack. They now calculate on being able to whip the federals at Richmond, Corinth, and on the Mississippi, after which they don\u2019t expect to be molested in their cause. XXXVIIth Congress\u2014First Session. Tuesday, May 20. SENATE. The confiscation bill was taken up and discussed at length.",
+      "metadata": {
+        "publication_year": 1862,
+        "historical_start": 1862,
+        "historical_end": 1862,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q71_cand_5",
+      "canonical_parent_doc_id": "train_145751",
+      "original_parent_doc_id": "train_145751",
+      "chunk_id": "train_145751_0",
+      "text": "The \"Mobile Register\" was produced this morning by a report, which obtained currency and credit in important circles, that Major Anderson would be withdrawn from Fort Sumter. As no official action has been taken by the Administration, no answer is indicated to weigh with the public, though it has made some impression here. It is well known that Major Anderson cannot now be reinforced without imminent danger of a serious collision. Two steamers of light draft, with supplies of men and provisions, have been in readiness for some time to make the attempt whenever ordered, under the command of an officer who is willing to take the risk, and feels confident of success. But the military preparations in and outside of the Harbor of Charleston render any such experiment hazardous, unless sustained by a heavy naval force, which could be used now, as the main ship channel is entirely clear of obstructions. The War Department has obtained a detailed statement of the stock of provisions in Fort Sumter, and it is abundant for a considerable time, except in fresh beef, which is not sufficient for over thirty days. One of the first and most important questions, therefore, to press the Administration will be, whether Major Anderson will be supplied or withdrawn. That decision cannot be made until an-",
+      "metadata": {
+        "publication_year": 1861,
+        "historical_start": 1861,
+        "historical_end": 1861,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q71_cand_6",
+      "canonical_parent_doc_id": "train_168918",
+      "original_parent_doc_id": "train_168918",
+      "chunk_id": "train_168918_0",
+      "text": "Its weakest point is on the south side, of which the masonry is not only weaker than the other sides, but it is not protected by any flank fire which would sweep the landing wharf. Once landed, a party could have easily effected an entrance. The work was designed for an armament of one hundred and forty guns of various calibers. Two tiers of guns are in casemates, while the upper one is open, or in barbette, the lower tier for forty-two-pounder Paixhan guns, second tier eight and ten-inch columbiads, and the barbette tier for mortars and twenty four-pounder guns. We learn from Thomas Kearns, one of the garrison of Fort Sumter, many interesting particulars in relation to that work. Our informant left there only a few weeks ago and is now in this city. He states that in Fort Sumter there are one hundred and four guns ready for action, about fifty-two (one and a half) of which are ten-inch columbiads, the remainder being eight and nine-inch Dahlgrens and howitzers. There are four heavy mortars in the fort, one being stationed at its corner. There are about twelve rifled guns in the works, but in consequence of the explosion of one of those guns, by which an officer of high rank narrowly escaped losing his life, it had been determined not to place any more reliance upon such pieces.",
+      "metadata": {
+        "publication_year": 1863,
+        "historical_start": 1863,
+        "historical_end": 1863,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q71_cand_7",
+      "canonical_parent_doc_id": "train_142556",
+      "original_parent_doc_id": "train_142556",
+      "chunk_id": "train_142556_0",
+      "text": "Col. V. D. McPherson, Chief Engineer, deserving of personal mention for their gallantry and services. For full details and reports and particulars, reference is made to the reports of the Engineer, Medical Director, and Commanders of Brigades and Divisions, to follow. I am General, Very respectfully, your obedient servant. U. S. GRANT, Brigadier Gen. Grant immediately after the Headquarters District West Tennessee, Fort Donelson, Feb. 17, 1862. The general commanding takes great pleasure in congratulating the troops of this command for the triumph over rebellion, gained by their the 13th, 14th, and 16th instant. For four successive nights, without shelter during the most inclement weather known in this latitude, they faced the enemy in large force in a position chosen by himself. Though strongly fortified by nature, all the additional safety added. With borne, prepared at all attack, and with continuous guards suggested by science without a murmur this times to receive skirmishing all day, resulting ultimately in surrender without conditions. The victory achieved is not only great in the effect it will have in breaking down rebellion, but has elicited the greatest number of prisoners. Fort Donelson will hereafter be marked in capitals on the map of the united country, and the men who fought the battle will live in the memory of a grateful people. By order, O. S. Grant, Brigadier General Commanding GEN. McCLERNAND'S ORDER OF THE DAY. Headquarters First Div Fort Donelson, Feb. 15, 1862.",
+      "metadata": {
+        "publication_year": 1862,
+        "historical_start": 1862,
+        "historical_end": 1862,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q71_cand_8",
+      "canonical_parent_doc_id": "train_164028",
+      "original_parent_doc_id": "train_164028",
+      "chunk_id": "train_164028_0",
+      "text": "The Australian with dates from Queenstown to Dec. 28th, has arrived. Breadstuffs have advanced with an active demand. Political news is unimportant. One Day Later. St. Louis, Jan. 4. The promises of peace are not confirmed. It is feared that the report was a stock-jobbing operation. Forts Pulaski and Jackson have been occupied by State troops of Georgia, by order of the Governor, and it is said on purpose to prevent a spontaneous uprising of the people. The revenue cutter was seized, but returned. It is believed the secessionists have carried Georgia. There are rumors at Charleston that Anderson\u2019s communication has been cut off; that Fort Sumter was besieged, and Fort Moultrie prepared and ready to open fire on Sumter. [\u201cDoubtful,\u201d says the report.] The rumors are renewed that there is a combination to take forcible possession of Washington. General Scott has made preparations for the emergency, by order of the President. The Florida Convention met yesterday with a feeling decidedly secession. The order for the removal of the cannon from Pittsburg has been rescinded. The Governor of South Carolina has appointed his Cabinet. The Delaware Legislature rejected the secession overtures of Mississippi. Governor Banks, of Massachusetts, in his valedictory, denounces secession, and advocates a repeal of the Personal Liberty Laws. Governor Jackson\u2019s inaugural, in Missouri, advocates a convention and co-operation of Southern States. Senator Baker concluded his speech January 3rd.",
+      "metadata": {
+        "publication_year": 1861,
+        "historical_start": 1861,
+        "historical_end": 1861,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q71_cand_9",
+      "canonical_parent_doc_id": "train_76730",
+      "original_parent_doc_id": "train_76730",
+      "chunk_id": "train_76730_0",
+      "text": "Feb 14, 1861. Public 1 notice! ELL, LADD & DENSMORE, CIVIL ENGINEERS, offer their services for surveying and subdividing lands, making surveys and estimates for roads, bridges, and hydraulic works. Particular attention also given to drafting and copying plans. Office in Post Office building, St. Paul, Minnesota. dec 15 dif A. W. & G. I. HAYES ATTORNEYS AND COUNSELORS AT LAW, Hastings, Minnesota Territory. mpri 1 rvl t DR. J. K. DAY, WILL practice his profession in Saint Paul and vicinity. Office on Bench street. B. W. EAST, ATTORNEY and COUNSELOR At LAW and GENERAL LAND AGENT. Particular attention will be given to collections, paying taxes, entering lands, securing preemptions, and entries made by military land warrants. J.T.C. BURNAVE & Co., STORAGE, FORWARDING & COMMISSION GROCERS, and DEALERS IN GRAIN and PROVISIONS, Wharf Boat, St. Paul, Minnesota. P. T. BRADLEY, MANUFACTURER AND DEALER IN ALL KINDS OF SADDLES, HARNESS, BRIDLES, COLLARS, VALISES, etc. Keeps constantly on hand all kinds of leather: Oak and Hemlock Sole, Band, Ik Rows, etc. St. Anthony street, St. Paul, Minnesota may 8. KIRY & CALLENDER, MANUFACTURER OF LIME, Shakopee, Minnesota. U. HAMILTON & Co., BOOKSELLERS & STATIONERS, No. 3 Winslow House, corner of Eagle and Fort streets. WARD, FIELD & BROWN, ATTORNEYS",
+      "metadata": {
+        "publication_year": 1855,
+        "historical_start": 1855,
+        "historical_end": 1855,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q71_cand_10",
+      "canonical_parent_doc_id": "train_129243",
+      "original_parent_doc_id": "train_129243",
+      "chunk_id": "train_129243_0",
+      "text": "Pattison, J. J. Amonett, Wm Davidson, J. M. Provine, Grafton Baker, Arch. Reid, & Fowlkes, John Brown, D. L. Stockton, S. W. Daugherty, J. D. Williams, H. L. Inchbett, Chas. Chidley, T. D. Knox, M. A. Hopkins, Thos James, Jr. mB-at Special Service and Local Defense. ARMORY HALL, Memphis Board, March 7, 1862. This company is mustered into the Confederate Service for twelve months under the Act of Congress of August 21st, 1861, for local defense and special service. We will take a few more men. None detailed in the militia will be received. Application for membership can be made at the office of the Captain, No. 4 Union street, or at the drill room, Gayoso Block. The following is a list of the present members: Jno B Weld, Captain C M Farmer, 4th Serg't J M Patrick, Sec'y & Treas Sam'l Jack, 1st Corporal P H Davis, 2d Corporal D C Trader, 3rd Corporal E A Manning, 1st Lieut Ralph Wonneley, 2nd Lieut G C White, 3rd Lieut H Weatherbee, 1st Serg't A Eyricb, 2nd Serg't R L Dalton, 4th Corporal B F Taylor, 3rd Serg't M Aiken O W Sale M A Smith B A Shepard C C Harrison J W Harris M Hawk J C Harrison Wm Leigo W J Lewry J H Mill M H Middaugh C N Martin D McKenzie Ja Maydwell Tho Maydwell Rheamofoo.",
+      "metadata": {
+        "publication_year": 1862,
+        "historical_start": 1862,
+        "historical_end": 1862,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q71_cand_11",
+      "canonical_parent_doc_id": "train_143714",
+      "original_parent_doc_id": "train_143714",
+      "chunk_id": "train_143714_0",
+      "text": "If this be effected, we may soon after expect to hear of a grand combined land and sea attack on Charleston, Fort Sumter and other defenses, the Federals expressing the most confident hopes of success; and indeed a Charleston paper is reported to have admitted that the last hope of saving the city rests in the bayonet. The crossing of the Potomac by Lee's army was a great surprise to the Federal Commander, Meade, who expected to have caught him on the northern bank near Williamsport and fought the decisive battle of the War. But Lee successfully achieved the passage of his main army, with 7,000 train wagons, losing only a brigade of his rear guard, some 1,500 men captured. Lee's movements are not clearly defined, but he is supposed to be going up the Shenandoah Valley, with a view of covering Richmond, and resuming operations on the old theatres of war in Virginia. Meade has also crossed the Potomac, lower down the river, and has the advantage of a shorter march than Lee, to gain any point in Eastern Virginia either may desire to possess. The ultra eastern press are already muttering dissatisfaction at Meade for having allowed Lee to escape annihilation; rumors are abroad that he is to be superseded by Grant, but this is not probable. The anti-conscription riots in the North and the reported discontent with the Confederate government in North Carolina, though not regular military operations, are nevertheless marked features of the War.",
+      "metadata": {
+        "publication_year": 1863,
+        "historical_start": 1863,
+        "historical_end": 1863,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q71_cand_12",
+      "canonical_parent_doc_id": "train_168927",
+      "original_parent_doc_id": "train_168927",
+      "chunk_id": "train_168927_0",
+      "text": "The width of the outer wall and parapet is six feet. The entrance to the work is on the northern side, on either side of which are the officers' quarters, mess rooms, etc. Its armament is about twenty-five pieces, twenty-four and thirty-two pounders, a few sea-coast mortars and six ten-inch columbiads. * JOSEPH RIPLEY, The work on the middle ground promised to give our people more trouble than any work in the harbor, Fort Sumter not excepted. The very best of engineering talent has produced an iron-clad casemated work, with sloping sides, which will shed shot as well as, perhaps, our own ironclads. No time, expense, or skill has been spared upon the work, and it is believed to be almost impregnable. Our informants do not give us the details of its construction, but all claim for it the greatest merits. Our own officers acknowledge its commanding position and the probability of it doing us much harm. Its guns sweep down the Swash channel, giving an approaching vessel the full benefit of a terrible raking fire. It crosses the fire of Sumter and Moultrie, making it perhaps the hottest place ever tried by any class of vessels; for where the vessel meets the obstructions she also encounters the fire of Sumter a half mile distant, Moultrie half a mile distant, and the middle ground work, distant about two miles, with.",
+      "metadata": {
+        "publication_year": 1863,
+        "historical_start": 1863,
+        "historical_end": 1863,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q71_cand_13",
+      "canonical_parent_doc_id": "train_149915",
+      "original_parent_doc_id": "train_149915",
+      "chunk_id": "train_149915_0",
+      "text": "The Mississippi, on the 18th of May, - The New York Commercial says the report that Jeff. Davis had telegraphed to Charleston for Virginia vessels carrying mere supplies to Sumter, was confirmed by a dispatch from Charleston to a shipping house in that city. The Tribune says the reported agents of the Confederate states received the \"cold shoulder\" in unmistakable terms by sev eral of our largest capitalists in the mat ter of the loan of the seceded states. Three companies of infantry left New Orleans for Pensacola on the 11th. The board of assistant aldermen of New Orleans has referred an appropria tion of $100,000 for protection of the city against invasion to a committee. Extensive ordnance and ordnance stores had been landed at Fort Taylor by the schooner Mary E. Hudson, from New York. Various theories of reasons are given in newspapers for the present military demonstrations, among which was one that they were stimulated by the results of cer tain late elections, but this was an error; at the commencement of the Administra tion, the President and Cabinet entertained the idea of reinforcing both Forts Sumter and Pickens; but, owing to the maintenance with the means at the command of this government and the condition of the coun try, the prosecution of the plans now progressing was impracticable. In other words, it was necessary to ascertain the extent of the effects bequeathed the Presi dent by the late Administration. It was deemed essential to keep secret the objects of the military movements, especially the sailing of vessels under sealed orders, as under the last Administration there were.",
+      "metadata": {
+        "publication_year": 1861,
+        "historical_start": 1861,
+        "historical_end": 1861,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q71_cand_14",
+      "canonical_parent_doc_id": "train_142959",
+      "original_parent_doc_id": "train_142959",
+      "chunk_id": "train_142959_0",
+      "text": "The New Orleans Picayune has a severe review of Russell\u2019s letter descriptive of what he saw at Pensacola and Fort Pickens, and considers his revelations as those of a spy who abused the confidence of those who, on the assumption that he was a man of honor, permitted him to observe closely all the arrangements of the two combatants. President Davis has issued a proclamation announcing Tennessee a member of the Southern Confederacy according to the act of Congress. By a vote\u2014said to be strictly partisan\u2014of nearly two to one, the lower house of the Connecticut Legislature has refused to consider, at the present session, either the amendments to the constitution proposed by Mr. Corwin, or a bill proposed for the repeal of the State Personal Liberty Bill. The following is the order of Gen. Scott referred to a few days since: Henceforward the telegraph will convey no dispatches concerning the operations of the army not permitted by the commanding general WINFIELD SCOTT. Department of War, July 8, 1861. The above order is confirmed. SIMON CAMERON, Secretary of War.",
+      "metadata": {
+        "publication_year": 1861,
+        "historical_start": 1861,
+        "historical_end": 1861,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q71_cand_15",
+      "canonical_parent_doc_id": "train_166003",
+      "original_parent_doc_id": "train_166003",
+      "chunk_id": "train_166003_0",
+      "text": "I have a new and commodious house in Midland City, where it will ever be found ready to suit and satisfy all who will oblige him with their patronage. Midland City, October 11, 1861-12 DESK, Counter and Foot Stool, at SILSBEE'S. BIRD Cages, AT SILSBEE'S, ROCKING and Office Chairs, at SILSBEE'S. LEATHER and Curled Hair Pillows made to order, at SILSBEE'S. WINDOW CORNICE and Curtain Bands, at SILSBEE'S. War with The Policy of Great Britain towards the United States, and the Duty of Irishmen. (From the Dublin Freeman, Dec 6) In a letter addressed by Mr. William Smith O'Brien to Mr. Seward, Secretary of State of the United States, we find the following allusions to recent events, \"By the recent seizure of the Confederate Commissioners on board of a British mail steamer the government of Mr. Lincoln has incurred a fearful responsibility. I take for granted that this act will not be disavowed. I take for granted that it was intended as a deliberate affront to the English nation. I take for granted that it was designed as a bold and defiant answer to the insolence which has been directed against the American nation by every organ of British opinion since the civil war broke out in the United States.\"",
+      "metadata": {
+        "publication_year": 1862,
+        "historical_start": 1862,
+        "historical_end": 1862,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q71_cand_16",
+      "canonical_parent_doc_id": "train_156668",
+      "original_parent_doc_id": "train_156668",
+      "chunk_id": "train_156668_0",
+      "text": "Once his horse was shot dead while he held the bridle before mounting. Petersburg Express Gen. Pemberton. -Col. J. C. Pemberton, late of the United States army, who was recently at Craney Island, (promoted to brigadier generalcy,) is to take command of the entire forces in Virginia west of Nansemond river, consisting of infantry, cavalry, artillery and fixed batteries; he is reputed to be a most accomplished officer. It is stated that Gen. Albert S. John ston, late of the U. S. army, in Utah, left Richmond on Sunday last to take command of the Confederate Army in Western Virginia, lately commanded by Gen. Garnett. The London Times says that the total amount of cotton in hand June 24th, 1861, as compared with last year, is nearly 200,000 bales less. The Louisville Journal, of the 24th, says the result of the battle at Manassas has caused a change in the plan of the administration. We have good reason to believe that the intention was to place Gen. McClellan at the head of the expedition down the Mississippi, but he will take command of the army in Virginia. He has at this time more of the confidence of the nation than any other officer except Gen. Scott, and we have no doubt that in all circumstances he will prove worthy of it. Special to the New York Post.) Looking for Encouragement Abroad.",
+      "metadata": {
+        "publication_year": 1861,
+        "historical_start": 1861,
+        "historical_end": 1861,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q71_cand_17",
+      "canonical_parent_doc_id": "train_155191",
+      "original_parent_doc_id": "train_155191",
+      "chunk_id": "train_155191_0",
+      "text": "The glorious example of the lamented William Goo at Fort McCree, in the harbor at Pensacola, who, with a hand battery wounding twenty-two guns, whipped the lance steamships the new Mexico and the Vincennes. The garrison at Fort Morgan should take courage from these examples, and if they serve their guns coolly and bravely, they have an opportunity of wearing the brightest laurels of this war. It would seem from the above that the Rebels deem the work impregnable and easily defensible. It was named after Brigadier-General Miraglia, of revolutionary fame. It was seized by the Rebel Alabama troops on January 4, 1861, and was immediately garrisoned by them under command of the Governor of the State. Preparations were then being made to repair the wharf, and the work had seriously commenced. The structure had cost the United States $117,000. A promising young man in Concord, N. H., just arrived home, has committed suicide. Colonel E. McGilvery, 1st Maine Light Artillery, has been appointed Chief of Artillery and of Ordnance of the 6th Corps, relieving Captain P. M. Vohwinkel, 4th United States Artillery, who will resume command of his battery. Married In Portsmouth, August 20th, by Rev. W. Claxon, Mr. Joseph N. Avers to Miss Mary E. Ball, all of this city.",
+      "metadata": {
+        "publication_year": 1864,
+        "historical_start": 1864,
+        "historical_end": 1864,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q71_cand_18",
+      "canonical_parent_doc_id": "train_32269",
+      "original_parent_doc_id": "train_32269",
+      "chunk_id": "train_32269_0",
+      "text": "Richmond, Virginia, Jan 9, 1861 A proper platform to be adopted by the Convention. The Convention then adjourned to meet at 11 o'clock on the following day. Friday, 11th September. The President announced the presence of the Rev. Mr. Calhoun, pastor of the Presbyterian profession, who was requested to open the meeting with prayer, which he did accordingly, in a most appropriate and patriotic manner. Mr. Wise, from the committee appointed Aug. 23, reported the following resolution for the adoption of the Convention: Whereas, it is the deliberate and con- scientious opinion of this Convention, that an attempt at the coercion of a Sovereign State is in direct contravention of the letter and spirit of the United States Constitution, and that, while it is the desire of Virginia to expend that in due course of law, her rights as a sovereign, she is unwilling to precipitate the dreadful and calamitous issues of civil war, in which the effusion of blood and the devastation of the country must ensue, and which can be averted by the concurrent action of all the States.",
+      "metadata": {
+        "publication_year": 1839,
+        "historical_start": 1839,
+        "historical_end": 1839,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q71_cand_19",
+      "canonical_parent_doc_id": "train_148877",
+      "original_parent_doc_id": "train_148877",
+      "chunk_id": "train_148877_0",
+      "text": "We telegraph you today that express companies will not receive coin for the southern States by order of our State government. No improvement here. Matters are getting more and more complicated, and the few who hold sentiments differing from the dominant party dare not express them. From our known connection with the South, we are subjected to the rigid surveillance of our police, and we doubt not all our letters are tampered with by them. The northern people regard it treason to pay what they honestly owe to the people of the South. So be it. The grab game can be played by both sides. Rev. E. L. Compere, just from North Fork, says it was currently reported there on Tuesday last, that the U. S. troops were leaving Fort Washita; and that they were burning what stores they could not carry with them, and intended to blow up the fortifications. Also, that they intended destroying Forts Arbuckle and Cobb, and then leaving for Fort Leavenworth.\u2014Fort Smith Times, May 3rd. Arkansas out of the Union. Ordinance of Secession passed\u2014Resolutions adopted to join the Southern Confederacy\u2014Great enthusiasm and unanimity of feeling.",
+      "metadata": {
+        "publication_year": 1861,
+        "historical_start": 1861,
+        "historical_end": 1861,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q71_cand_20",
+      "canonical_parent_doc_id": "train_150188",
+      "original_parent_doc_id": "train_150188",
+      "chunk_id": "train_150188_0",
+      "text": "The legends of the past are exceedingly interesting, and Black Hawk's cave, the ruins of old Fort Armstrong, and the tragic spot, upon which Col. Davenport was slain, must ever command the attention of the traveler. We are now credibly informed that the prison in which so many captives have so long been confined, is to be converted into a trophy depot for the States of the Northwest. The Arsenal is slowly assuming height and proportion, and in its completed state, aside from its usefulness, it will be one of the most attractive ornaments of the twin cities. We suggest to our citizens that if any monuments are to be erected, that the sister cities of Rock Island, Moline and Davenport unite in erecting one on the Island which will be worthy of their patriotism and liberality. Davenport Democrat. The venerable and learned Judge Witherell, of the Circuit court at Detroit, Michigan, has vindicated the majesty of the civil law in a most refreshing manner. Some little time ago a soldier fired upon and killed a hackman of that city, by order of the wounded officers. These perpetrators of murder were arrested and held by the local civil authorities; whereupon the war department at Washington demanded that they should be handed over to the federal military authorities. It is in interposing a flat refusal to this demand that Judge Witherell has maintained the supremacy of the civil law.",
+      "metadata": {
+        "publication_year": 1865,
+        "historical_start": 1865,
+        "historical_end": 1865,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q71_cand_21",
+      "canonical_parent_doc_id": "train_142909",
+      "original_parent_doc_id": "train_142909",
+      "chunk_id": "train_142909_0",
+      "text": "General Butler is represented as having come in conflict with the officers of the fort and to have made his grievances a subject of communication to the War Department. The President has approved the force bill. The reign of terror prevailing in Loudon county, Virginia is at its height. Citizens were told to be ready today to be drafted into the service, and march to Manassas Junction. Twelve Unionists fled from Waterford, and they report forty more coming on the first opportunity. A naval militia is to be extemporized for service at sea, for the purpose of sweeping the sea of privateers. Washington, July 10. [Special to Commercial] \u2014 The Richmond Whig has an official announcement to the effect that the flag of truce brought by Col. Taylor to Washington had reference to an exchange of prisoners captured on the Savannah. A flag of truce dispatched for a purpose so absurd was, of course, justly disregarded. The Secretary of State has made a requisition on the Spanish government for the surrender of American vessels carried into Cienfuegos by the Sumter, and there is no doubt of their immediate release, with their cargoes, and a prohibition of the entrance of Confederate privateers into West Indian ports. It has been ascertained that a Spanish proclamation which has been received had not, at the time, reached Cuba.",
+      "metadata": {
+        "publication_year": 1861,
+        "historical_start": 1861,
+        "historical_end": 1861,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q71_cand_22",
+      "canonical_parent_doc_id": "train_164178",
+      "original_parent_doc_id": "train_164178",
+      "chunk_id": "train_164178_0",
+      "text": "The account of capture of Fort Pillow says that on the morning of 12th, Forrest, Chalmers, and McCullough, with from 6,000 to 8,000 men, attacked the Fort garrisoned by 300 of 13th Tennessee cavalry and 200 negroes. Some citizens were inside the Fort who fought well. Women and children went over on an island. The enemy were hidden and fired from under cover for some time. Surrender was demanded several times without effect. At last, the enemy formed into two columns and made a direct assault. Troops in the fort fought like heroes until rebels were seen on breastworks, when negro troops gave way and ran down under the river bank. White troops were directed to take their places, but derangement in lines could not be remedied, and the enemy poured in force. Gunboats, seven in number, threw 240 shells, but did no damage to the enemy. Our troops spiked three guns, who afterward set fire to everything combustible, burning all houses in town. Negroes who had taken refuge under the river bank were shot wherever found, notwithstanding surrender. Fifty white troops were also shot and wounded after surrender. Little Rock, Ark. 11th.\u2014Advices from Gen. Steele are to 7th. The expedition had reached a point on Little Missouri 25 miles from Camden where it was expected Gen. Thayer with a force from Fort Smith would join him the next day. On the 2nd, Shelby attacked Steele\u2019s rearguard, under Gen. Rice, with 1,200 cavalry and two pieces of artillery. The enemy were routed with 100 killed and wounded.",
+      "metadata": {
+        "publication_year": 1864,
+        "historical_start": 1864,
+        "historical_end": 1864,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q71_cand_23",
+      "canonical_parent_doc_id": "train_148511",
+      "original_parent_doc_id": "train_148511",
+      "chunk_id": "train_148511_0",
+      "text": "Had the writer extended his poetic researches a little further, he could have found a stanza far better calculated to impress the youthful mind profitably if not so congenially, as richly caparisoned war-steeds, glittering swords (and I will add in parentheses, gaping wounds.) \"When the battle is o'er, 'tis sorrowful to tread O'er the weltering field of the tombless dead; To see worms of the earth and fowls of the air, Beasts of the forest all gathering there.\" May God avert the calamities which the present posture of affairs indicates. Patriot. LATEST BY TELEGRAPH TO THE VAN BUREN PRESS By the St. Louis and Western Telegraph Stebbin's Line. R3T We copy the following telegraph news from the Fort Smith Daily Times and Herald: St. Louis, April 3. Accounts in regard to the policy of the administration respecting Forts Sumter and Pickens are becoming more contradictory daily. Texas advices state that Col. Ford had been reliably informed from Matamoras, that Gen. Ampudia with a band of Mexicans, was sixty miles off marching on Brownsville. Ampudia had despatched expresses with placards and handbills, announcing that Texas rightly belonged to Mexico, that she should no longer support the federal government, and now was the time to retake the State. Reinforcements in large numbers were rapidly coming to him.",
+      "metadata": {
+        "publication_year": 1861,
+        "historical_start": 1861,
+        "historical_end": 1861,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q71_cand_24",
+      "canonical_parent_doc_id": "train_146245",
+      "original_parent_doc_id": "train_146245",
+      "chunk_id": "train_146245_0",
+      "text": "The Secretary shows an aggregate of appropriations already made of seventy-nine million seven hundred and ten thousand and eighteen dollars and seventy-eight cents, and then proceeds to state that the additional estimates for the fiscal year ending June 30, 1861, including the deficiency caused by the application of $6,298,837 to the service of the preceding year will require additional appropriations for the civil list, foreign intercourse, and miscellaneous objects, $831,160; for the Interior Department, $431,523; for the War Department, $185,296,379.19; for the Navy Department, $30,009,520; in the aggregate, $217,168,050.50. In addition to the demands upon the Treasury, it will be necessary to provide for the redemption of Treasury notes due and maturing to the amount of $12,039,861, and for the payment of the interest on the public debt to be created during the year, which, computed for an average of six months, may be estimated at nine million. The whole amount required for the fiscal year 1862 may therefore be stated at $318,519,581.87. Provision is made for the interest on the existing public debt in the sum of nearly $66,000,000 already appropriated for the year 1862.",
+      "metadata": {
+        "publication_year": 1861,
+        "historical_start": 1861,
+        "historical_end": 1861,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q71_cand_25",
+      "canonical_parent_doc_id": "train_66172",
+      "original_parent_doc_id": "train_66172",
+      "chunk_id": "train_66172_0",
+      "text": "MILLARD FILLMORE, (Public\u2014No. 47.) AN ACT making appropriations for certain Fortifications of the United States, for the year ending the thirtieth of June, one thousand eight hundred and fifty-one. Be it enacted by the Senate and House of Representatives of the United States of America in Congress assembled, That the following sums be, and they are hereby, appropriated, to be paid out of any money in the Treasury not otherwise appropriated, for the preservation, repairs, and construction of certain fortifications, for the year ending the thirtieth of June, eighteen hundred and fifty-one. For defensive works and barracks near Detroit, fifteen thousand dollars, For fortifications at outlet of Lake Champlain, fifteen thousand dollars, For defensive works and barracks at Narrows of Penobscot River, Maine, twenty thousand dollars. For repairs of Fort Scammel, Portland Harbor, Maine, five thousand dollars. For repairs of fortifications on Governor's Island, Boston Harbor, ten thousand dollars. For Fort Warren, Boston Harbor, thirty thousand dollars. For repairs of Fort Independence, Boston Harbor, five thousand dollars. For Fort Adams, Newport Harbor, Rhode Island, and permanent quarters and barracks thereat, thirty-five thousand dollars, For building Fort Trumbull, New London, Connecticut, ten thousand dollars, For Fort Schuyler, Long Island Sound, fifteen thousand dollars.",
+      "metadata": {
+        "publication_year": 1850,
+        "historical_start": 1850,
+        "historical_end": 1850,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q71_cand_26",
+      "canonical_parent_doc_id": "train_79302",
+      "original_parent_doc_id": "train_79302",
+      "chunk_id": "train_79302_0",
+      "text": "At 7 o'clock. S. L. STRAIT 'June 1st, R. S. SHERIFFS' SALES. By virtue of Sundry Writs of Fieri Facias to me directed, I will sell before the Court House door in Lancaster, on the first Monday in December next, within the legal hours of sale, the following property, viz, one Tract of Land containing seven Thousand acres more or less lying on Little River Creek adjoining land of Roddick Moseley, Caine, and others, Granted to Thomas Sumter. Printers Fee $200. Also, One Tract, or all the unconveyed Interest of Thomas Sumter in and to 15 Thousand acres Land more or less Granted to Thomas Sumter, lying on the head of Lynches Creek and adjoining the North Carolina line. The above Lands are to be sold as the property of Thomas Sumter, at the suit of the President and Directors of the Bank of the State of South Carolina, vs Frances Sumter Executor of Thomas Sumter. Printers Fee $200. Sale of Valuable PROPERTY. I WILL sell on the 16th and 17th days of November next, upon the premises of Richard Rollings, deceased, in Chesterfield.",
+      "metadata": {
+        "publication_year": 1853,
+        "historical_start": 1853,
+        "historical_end": 1853,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q71_cand_27",
+      "canonical_parent_doc_id": "train_147214",
+      "original_parent_doc_id": "train_147214",
+      "chunk_id": "train_147214_0",
+      "text": "The newly-appointed Attorney General, is an eminent Alabama jurist. He is an old-line Whig, and was regarded as the chief Magistrate of Alabama. LATEST NEWS. GOOD NEWS. We have some information which prompts to withhold, which puts quite a cheering aspect upon our future, and when the time comes for its disclosure, will doubtless gladden the public heart. Whilst we have been lamenting our reverses near home, success has attended our army away off in New Mexico. Twenty-five hundred gallant Southerners have defeated and captured a force of thirty-five hundred of the enemy, with their arms, and an immense amount of ammunition and stores. The Confederate forces were under the command of Col Sibley, and the victory and are confessed to be complete. An armament has arrived safely at Mobile, as per a late number of the Baltimore American which succeeded in running the blockade. Vicksburg, March 21. FIGHT ON THE MISSISSIPPI RIVER. Memphis, March 21. On Saturday, the 15th, a Federal gunboat commenced shelling the Confederate camp, but was soon driven off by the Confederate batteries, renewed on Sunday.",
+      "metadata": {
+        "publication_year": 1862,
+        "historical_start": 1862,
+        "historical_end": 1862,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q71_cand_28",
+      "canonical_parent_doc_id": "train_156575",
+      "original_parent_doc_id": "train_156575",
+      "chunk_id": "train_156575_0",
+      "text": "The Fort Smith Times of the 17th inst., learns that the Texas regiment of horse, expected at that place, would arrive in four or five days. There are about five hundred men besides the regiment, coming as independent companies; making in all 1,600 men, with a large park of artillery, the whole of them well armed. The Times further learns that there are at least 5000 Texans determined to go into Missouri to help that State. ?\" Russell, of the London Times, says the New Orleans Delta, it appears, accompanied the \"victorious army\" of Gen. McDowell. We hope his description of the great victory which he went to witness will be more truthful than the narratives of what he saw in the South. To maintain the consistency of his career as a historian, will impose a severe tax upon his inventive powers, when he comes to describe \"the great race\" at Manassas. Louisiana's Quota. The present army of Louisiana in the service of the Confederate States, embraces 20,640 men, with over one hundred pieces of large cannon, including the batteries of the forts. Besides these, five or six ships have been manned and equipped in New Orleans. ?\" The Cincinnati note of the 22nd inst., says: \"The river is getting so low that the packets are experiencing much difficulty in getting over the shoal bars.",
+      "metadata": {
+        "publication_year": 1861,
+        "historical_start": 1861,
+        "historical_end": 1861,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q71_cand_29",
+      "canonical_parent_doc_id": "train_147484",
+      "original_parent_doc_id": "train_147484",
+      "chunk_id": "train_147484_0",
+      "text": "THE CONFEDERATE. WEEKLY. AUGUST 14, 1864. Pffte. It is a very easy matter to draw the line on which fair and legitimate propositions may be made, on which rightful opinions may be held, and on which full discussion may be had. It was not always wise, but it was never criminal to express a wish for peace, to urge the government to make every effort to commence negotiations for peace. This was not always wise, because, up to a very late period the enemy had shown no inclination whatever to listen to any terms, except the humiliation of an abject submission. Neither the Federal Government nor the Yankee people had given promise of any inclination for other terms. Until a late period the fortunes of the war varied; and though the true brave, patriot spirit looked assuredly for a final success, it was obliged to nerve itself for the endurance of much trial and danger, in order to its achievement. Last summer and fall, when the peace cry in North Carolina was most noisy, was a most inopportune and inappropriate period for such demonstration. Then, the balance of success was with the north. Disaster had settled heavily upon us, and the cry for peace in such a time, was like the cry of \"enough\" by the beaten pugilist when he gives up the fight.",
+      "metadata": {
+        "publication_year": 1864,
+        "historical_start": 1864,
+        "historical_end": 1864,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    }
+  ]
+}

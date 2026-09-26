@@ -1,0 +1,180 @@
+{
+  "_schema_note": "Human-annotated qrels. relevant_doc_ids = binarized from 3-point scale (mean of 2 annotators >= 1.0). Non-lexical ground truth.",
+  "resolution_method": "MEAN of two annotators, binarized at >=1.0",
+  "n_queries": 10,
+  "n_judgments": 158,
+  "percent_agreement": 63.9,
+  "cohen_kappa": 0.452,
+  "queries": [
+    {
+      "query_id": "q5",
+      "query_text": "obituaries deaths 1806",
+      "temporal_type": "explicit_year",
+      "corpus": "small",
+      "relevant_doc_ids": [
+        "train_132",
+        "train_2204",
+        "train_2384"
+      ]
+    },
+    {
+      "query_id": "q9",
+      "query_text": "political news congress 1800 to 1805",
+      "temporal_type": "range",
+      "corpus": "small",
+      "relevant_doc_ids": [
+        "train_1483",
+        "train_1649",
+        "train_2719",
+        "train_2814",
+        "train_298",
+        "train_403",
+        "train_606",
+        "train_645",
+        "train_690"
+      ]
+    },
+    {
+      "query_id": "q14",
+      "query_text": "shipping port arrivals after 1805",
+      "temporal_type": "before_after",
+      "corpus": "small",
+      "relevant_doc_ids": [
+        "train_2035",
+        "train_2213",
+        "train_3526",
+        "train_3645",
+        "train_550",
+        "train_897"
+      ]
+    },
+    {
+      "query_id": "q21",
+      "query_text": "War of 1812 navy battles",
+      "temporal_type": "explicit_year",
+      "corpus": "expanded",
+      "relevant_doc_ids": [
+        "train_109273",
+        "train_73598",
+        "train_7931",
+        "train_7965"
+      ]
+    },
+    {
+      "query_id": "q31",
+      "query_text": "Monroe Doctrine foreign policy 1823",
+      "temporal_type": "explicit_year",
+      "corpus": "expanded",
+      "relevant_doc_ids": [
+        "train_104781",
+        "train_16863",
+        "train_36621",
+        "train_51855",
+        "train_95008",
+        "train_97055"
+      ]
+    },
+    {
+      "query_id": "q42",
+      "query_text": "Trail of Tears Cherokee removal 1838",
+      "temporal_type": "explicit_year",
+      "corpus": "expanded",
+      "relevant_doc_ids": [
+        "train_10392",
+        "train_17142",
+        "train_17792",
+        "train_18036",
+        "train_26079",
+        "train_34919",
+        "train_39513",
+        "train_65918"
+      ]
+    },
+    {
+      "query_id": "q71",
+      "query_text": "Civil War Fort Sumter 1861",
+      "temporal_type": "explicit_year",
+      "corpus": "expanded",
+      "relevant_doc_ids": [
+        "train_142909",
+        "train_142959",
+        "train_143714",
+        "train_145751",
+        "train_146245",
+        "train_148511",
+        "train_159917",
+        "train_161222",
+        "train_164028",
+        "train_168918",
+        "train_168927",
+        "train_168984",
+        "train_169011"
+      ]
+    },
+    {
+      "query_id": "q1",
+      "query_text": "strayed horse reward advertisement",
+      "temporal_type": "none",
+      "corpus": "both",
+      "relevant_doc_ids": [
+        "train_103173",
+        "train_104621",
+        "train_156674",
+        "train_1586",
+        "train_27780",
+        "train_32288",
+        "train_33814",
+        "train_3849",
+        "train_4100",
+        "train_72634",
+        "train_81341",
+        "train_86158",
+        "train_87302",
+        "train_91325",
+        "train_94745"
+      ]
+    },
+    {
+      "query_id": "q3",
+      "query_text": "runaway slave reward advertisement",
+      "temporal_type": "none",
+      "corpus": "both",
+      "relevant_doc_ids": [
+        "train_102660",
+        "train_111311",
+        "train_113483",
+        "train_127004",
+        "train_25516",
+        "train_27170",
+        "train_38218",
+        "train_38739",
+        "train_51661",
+        "train_55227",
+        "train_61195",
+        "train_73432",
+        "train_917",
+        "train_94547"
+      ]
+    },
+    {
+      "query_id": "q101",
+      "query_text": "agricultural fair prize livestock",
+      "temporal_type": "none",
+      "corpus": "both",
+      "relevant_doc_ids": [
+        "train_100747",
+        "train_102474",
+        "train_114885",
+        "train_114894",
+        "train_125948",
+        "train_14014",
+        "train_37897",
+        "train_42315",
+        "train_6078",
+        "train_69473",
+        "train_74793",
+        "train_93196"
+      ]
+    }
+  ]
+}

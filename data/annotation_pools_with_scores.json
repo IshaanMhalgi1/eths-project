@@ -1,0 +1,1530 @@
+{
+  "version": "2.0-scored",
+  "_warning": "CONTAINS RETRIEVER SCORES. Do not give this file to annotators.",
+  "queries": [
+    {
+      "query_id": "q10",
+      "query_text": "tax land assessment 1804 to 1808",
+      "candidates": [
+        {
+          "canonical_parent_doc_id": "train_539",
+          "retriever_scores": {
+            "bm25": 11.525976,
+            "dense": null,
+            "hybrid": 0.011475409836065573
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_509",
+          "retriever_scores": {
+            "bm25": 8.863194,
+            "dense": 0.7672798,
+            "hybrid": 0.014377492246344707
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_178",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.75371975,
+            "hybrid": 0.012142266335814726
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_514",
+          "retriever_scores": {
+            "bm25": 11.050037,
+            "dense": null,
+            "hybrid": 0.01129032258064516
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_531",
+          "retriever_scores": {
+            "bm25": 10.736587,
+            "dense": null,
+            "hybrid": 0.01044776119402985
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_500",
+          "retriever_scores": {
+            "bm25": 9.124539,
+            "dense": null,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_3491",
+          "retriever_scores": {
+            "bm25": 8.839023,
+            "dense": null,
+            "hybrid": null
+          }
+        }
+      ]
+    },
+    {
+      "query_id": "q9",
+      "query_text": "political news congress 1800 to 1805",
+      "candidates": [
+        {
+          "canonical_parent_doc_id": "train_617",
+          "retriever_scores": {
+            "bm25": 8.44303,
+            "dense": null,
+            "hybrid": 0.011475409836065573
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_403",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.72085816,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_2719",
+          "retriever_scores": {
+            "bm25": 6.074087,
+            "dense": null,
+            "hybrid": 0.013409090909090909
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_645",
+          "retriever_scores": {
+            "bm25": 7.8947797,
+            "dense": null,
+            "hybrid": 0.010769230769230769
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_1649",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.71053994,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_298",
+          "retriever_scores": {
+            "bm25": 6.0376606,
+            "dense": 0.6940784,
+            "hybrid": 0.012408536585365854
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_606",
+          "retriever_scores": {
+            "bm25": 6.654336,
+            "dense": null,
+            "hybrid": 0.010606060606060605
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_690",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7011986,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_1483",
+          "retriever_scores": {
+            "bm25": 6.4576917,
+            "dense": null,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_2814",
+          "retriever_scores": {
+            "bm25": 6.07271,
+            "dense": null,
+            "hybrid": null
+          }
+        }
+      ]
+    },
+    {
+      "query_id": "q14",
+      "query_text": "shipping port arrivals after 1805",
+      "candidates": [
+        {
+          "canonical_parent_doc_id": "train_2213",
+          "retriever_scores": {
+            "bm25": 8.975363,
+            "dense": null,
+            "hybrid": 0.011475409836065573
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_3526",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.77282,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_897",
+          "retriever_scores": {
+            "bm25": 8.367317,
+            "dense": null,
+            "hybrid": 0.014236111111111109
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_684",
+          "retriever_scores": {
+            "bm25": 8.091547,
+            "dense": null,
+            "hybrid": 0.009999999999999998
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_1573",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.765934,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_2035",
+          "retriever_scores": {
+            "bm25": 7.34846,
+            "dense": null,
+            "hybrid": 0.009859154929577464
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_550",
+          "retriever_scores": {
+            "bm25": 7.0530386,
+            "dense": null,
+            "hybrid": 0.008860759493670885
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_3645",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7483774,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_1345",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.74611706,
+            "hybrid": null
+          }
+        }
+      ]
+    },
+    {
+      "query_id": "q33",
+      "query_text": "Erie Canal completion 1825",
+      "candidates": [
+        {
+          "canonical_parent_doc_id": "train_31115",
+          "retriever_scores": {
+            "bm25": 15.1404915,
+            "dense": 0.7827664,
+            "hybrid": 0.01639344262295082
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_68590",
+          "retriever_scores": {
+            "bm25": 14.097781,
+            "dense": 0.7947199,
+            "hybrid": 0.014925373134328358
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_51236",
+          "retriever_scores": {
+            "bm25": 14.89685,
+            "dense": null,
+            "hybrid": 0.015873015873015872
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_31143",
+          "retriever_scores": {
+            "bm25": 14.84969,
+            "dense": null,
+            "hybrid": 0.015625
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_17507",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.78827214,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_18160",
+          "retriever_scores": {
+            "bm25": 13.888053,
+            "dense": 0.7856643,
+            "hybrid": 0.014705882352941176
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_18550",
+          "retriever_scores": {
+            "bm25": 13.888053,
+            "dense": 0.7723615,
+            "hybrid": 0.014492753623188406
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_17619",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7846746,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_17713",
+          "retriever_scores": {
+            "bm25": 13.888053,
+            "dense": 0.78455675,
+            "hybrid": 0.014285714285714285
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_31148",
+          "retriever_scores": {
+            "bm25": 13.647485,
+            "dense": null,
+            "hybrid": 0.014084507042253521
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_26095",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.77683514,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_72714",
+          "retriever_scores": {
+            "bm25": 13.563911,
+            "dense": null,
+            "hybrid": 0.013333333333333334
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_94358",
+          "retriever_scores": {
+            "bm25": 13.3095,
+            "dense": null,
+            "hybrid": 0.013157894736842105
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_151727",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7733085,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_16194",
+          "retriever_scores": {
+            "bm25": 13.113375,
+            "dense": 0.76703334,
+            "hybrid": 0.01282051282051282
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_31108",
+          "retriever_scores": {
+            "bm25": 12.953242,
+            "dense": null,
+            "hybrid": 0.012658227848101266
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_24460",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7695401,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_31105",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.76911163,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_106441",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.76780474,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_28793",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.767557,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_10184",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7615304,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_17453",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7594613,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_142091",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7592561,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_133243",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7564838,
+            "hybrid": null
+          }
+        }
+      ]
+    },
+    {
+      "query_id": "q31",
+      "query_text": "Monroe Doctrine foreign policy 1823",
+      "candidates": [
+        {
+          "canonical_parent_doc_id": "train_51855",
+          "retriever_scores": {
+            "bm25": 16.40695,
+            "dense": 0.77264196,
+            "hybrid": 0.01639344262295082
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_1605",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.77380663,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_97055",
+          "retriever_scores": {
+            "bm25": 16.073385,
+            "dense": null,
+            "hybrid": 0.016129032258064516
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_88506",
+          "retriever_scores": {
+            "bm25": 13.915868,
+            "dense": null,
+            "hybrid": 0.015873015873015872
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_1600",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.75113285,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_81743",
+          "retriever_scores": {
+            "bm25": 11.675264,
+            "dense": null,
+            "hybrid": 0.015625
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_67869",
+          "retriever_scores": {
+            "bm25": 11.540619,
+            "dense": null,
+            "hybrid": 0.015384615384615385
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_1964",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7478562,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_21928",
+          "retriever_scores": {
+            "bm25": 11.368135,
+            "dense": null,
+            "hybrid": 0.015151515151515152
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_104781",
+          "retriever_scores": {
+            "bm25": 10.86384,
+            "dense": null,
+            "hybrid": 0.014705882352941176
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_36621",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.745358,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_32195",
+          "retriever_scores": {
+            "bm25": 10.765297,
+            "dense": null,
+            "hybrid": 0.014492753623188406
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_95008",
+          "retriever_scores": {
+            "bm25": 10.765297,
+            "dense": null,
+            "hybrid": 0.014084507042253521
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_67629",
+          "retriever_scores": {
+            "bm25": 10.516167,
+            "dense": null,
+            "hybrid": 0.013888888888888888
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_16863",
+          "retriever_scores": {
+            "bm25": 10.388168,
+            "dense": null,
+            "hybrid": 0.013513513513513514
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_115650",
+          "retriever_scores": {
+            "bm25": 10.257397,
+            "dense": null,
+            "hybrid": 0.012658227848101266
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_93960",
+          "retriever_scores": {
+            "bm25": 10.171133,
+            "dense": null,
+            "hybrid": 0.0125
+          }
+        }
+      ]
+    },
+    {
+      "query_id": "q42",
+      "query_text": "Trail of Tears Cherokee removal 1838",
+      "candidates": [
+        {
+          "canonical_parent_doc_id": "train_26079",
+          "retriever_scores": {
+            "bm25": 16.375523,
+            "dense": null,
+            "hybrid": 0.01639344262295082
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_17792",
+          "retriever_scores": {
+            "bm25": 11.075424,
+            "dense": 0.78127456,
+            "hybrid": 0.013513513513513514
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_65918",
+          "retriever_scores": {
+            "bm25": 13.216293,
+            "dense": 0.74781597,
+            "hybrid": 0.016129032258064516
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_32069",
+          "retriever_scores": {
+            "bm25": 12.896623,
+            "dense": null,
+            "hybrid": 0.015384615384615385
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_39513",
+          "retriever_scores": {
+            "bm25": 11.996487,
+            "dense": 0.7778393,
+            "hybrid": 0.014705882352941176
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_38306",
+          "retriever_scores": {
+            "bm25": 12.303493,
+            "dense": null,
+            "hybrid": 0.015151515151515152
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_38444",
+          "retriever_scores": {
+            "bm25": 12.21366,
+            "dense": null,
+            "hybrid": 0.014925373134328358
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_10392",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.77051485,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_18611",
+          "retriever_scores": {
+            "bm25": 11.950431,
+            "dense": null,
+            "hybrid": 0.014084507042253521
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_18949",
+          "retriever_scores": {
+            "bm25": 11.284901,
+            "dense": null,
+            "hybrid": 0.0136986301369863
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_17142",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7608837,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_37511",
+          "retriever_scores": {
+            "bm25": 10.467936,
+            "dense": null,
+            "hybrid": 0.013333333333333334
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_95779",
+          "retriever_scores": {
+            "bm25": 10.409442,
+            "dense": null,
+            "hybrid": 0.012987012987012988
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_113272",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7553168,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_27496",
+          "retriever_scores": {
+            "bm25": 10.185013,
+            "dense": null,
+            "hybrid": 0.01282051282051282
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_15664",
+          "retriever_scores": {
+            "bm25": 10.160185,
+            "dense": null,
+            "hybrid": 0.012658227848101266
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_34919",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7546123,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_10394",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7543067,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_12813",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.74873245,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_18036",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7405555,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_169784",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7403449,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_12811",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.73946065,
+            "hybrid": null
+          }
+        }
+      ]
+    },
+    {
+      "query_id": "q71",
+      "query_text": "Civil War Fort Sumter 1861",
+      "candidates": [
+        {
+          "canonical_parent_doc_id": "train_169011",
+          "retriever_scores": {
+            "bm25": 26.85937,
+            "dense": 0.78406954,
+            "hybrid": 0.01639344262295082
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_168984",
+          "retriever_scores": {
+            "bm25": 21.601154,
+            "dense": 0.80143297,
+            "hybrid": 0.015873015873015872
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_150136",
+          "retriever_scores": {
+            "bm25": 21.188194,
+            "dense": null,
+            "hybrid": 0.015625
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_161222",
+          "retriever_scores": {
+            "bm25": 18.44801,
+            "dense": 0.78442925,
+            "hybrid": 0.015384615384615385
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_159917",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.77227986,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_145751",
+          "retriever_scores": {
+            "bm25": 17.025297,
+            "dense": null,
+            "hybrid": 0.015151515151515152
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_168918",
+          "retriever_scores": {
+            "bm25": 14.81296,
+            "dense": 0.74685574,
+            "hybrid": 0.014925373134328358
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_142556",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7608266,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_164028",
+          "retriever_scores": {
+            "bm25": 14.034139,
+            "dense": null,
+            "hybrid": 0.014705882352941176
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_76730",
+          "retriever_scores": {
+            "bm25": 14.00312,
+            "dense": null,
+            "hybrid": 0.014492753623188406
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_129243",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.75503457,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_143714",
+          "retriever_scores": {
+            "bm25": 13.934729,
+            "dense": null,
+            "hybrid": 0.014285714285714285
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_168927",
+          "retriever_scores": {
+            "bm25": 13.871994,
+            "dense": null,
+            "hybrid": 0.014084507042253521
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_149915",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7451475,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_142959",
+          "retriever_scores": {
+            "bm25": 13.645921,
+            "dense": null,
+            "hybrid": 0.013888888888888888
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_166003",
+          "retriever_scores": {
+            "bm25": 13.337337,
+            "dense": null,
+            "hybrid": 0.0136986301369863
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_156668",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7443748,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_155191",
+          "retriever_scores": {
+            "bm25": 13.318729,
+            "dense": 0.7434772,
+            "hybrid": 0.013513513513513514
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_32269",
+          "retriever_scores": {
+            "bm25": 13.152687,
+            "dense": null,
+            "hybrid": 0.013333333333333334
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_148877",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.74388015,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_150188",
+          "retriever_scores": {
+            "bm25": 13.125479,
+            "dense": null,
+            "hybrid": 0.013157894736842105
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_142909",
+          "retriever_scores": {
+            "bm25": 13.11856,
+            "dense": null,
+            "hybrid": 0.012987012987012988
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_164178",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7390038,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_148511",
+          "retriever_scores": {
+            "bm25": 13.11856,
+            "dense": null,
+            "hybrid": 0.01282051282051282
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_146245",
+          "retriever_scores": {
+            "bm25": 12.728502,
+            "dense": null,
+            "hybrid": 0.012658227848101266
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_66172",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7388456,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_79302",
+          "retriever_scores": {
+            "bm25": 12.184031,
+            "dense": null,
+            "hybrid": 0.0125
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_147214",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7380742,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_156575",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7357426,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_147484",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7346821,
+            "hybrid": null
+          }
+        }
+      ]
+    },
+    {
+      "query_id": "q1",
+      "query_text": "strayed horse reward advertisement",
+      "candidates": [
+        {
+          "canonical_parent_doc_id": "train_86158",
+          "retriever_scores": {
+            "bm25": 20.927048,
+            "dense": null,
+            "hybrid": 0.01639344262295082
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_87302",
+          "retriever_scores": {
+            "bm25": 17.600664,
+            "dense": 0.79187214,
+            "hybrid": 0.016129032258064516
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_4100",
+          "retriever_scores": {
+            "bm25": 17.576977,
+            "dense": null,
+            "hybrid": 0.015873015873015872
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_81341",
+          "retriever_scores": {
+            "bm25": 16.95171,
+            "dense": 0.7500538,
+            "hybrid": 0.015151515151515152
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_33814",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.776592,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_1586",
+          "retriever_scores": {
+            "bm25": 16.456615,
+            "dense": 0.7555212,
+            "hybrid": 0.014925373134328358
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_72634",
+          "retriever_scores": {
+            "bm25": 16.233591,
+            "dense": null,
+            "hybrid": 0.014492753623188406
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_94745",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.77413833,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_32288",
+          "retriever_scores": {
+            "bm25": 16.233591,
+            "dense": 0.7549304,
+            "hybrid": 0.014285714285714285
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_3849",
+          "retriever_scores": {
+            "bm25": 16.002274,
+            "dense": 0.76974845,
+            "hybrid": 0.0136986301369863
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_104621",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.76555735,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_91325",
+          "retriever_scores": {
+            "bm25": 15.132439,
+            "dense": null,
+            "hybrid": 0.012987012987012988
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_156674",
+          "retriever_scores": {
+            "bm25": 15.132439,
+            "dense": null,
+            "hybrid": 0.0125
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_114894",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7576541,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_27780",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7555661,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_20244",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7545017,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_120078",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.75178945,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_103173",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.75147194,
+            "hybrid": null
+          }
+        }
+      ]
+    },
+    {
+      "query_id": "q3",
+      "query_text": "runaway slave reward advertisement",
+      "candidates": [
+        {
+          "canonical_parent_doc_id": "train_38218",
+          "retriever_scores": {
+            "bm25": 16.106869,
+            "dense": 0.7119204,
+            "hybrid": 0.01639344262295082
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_111311",
+          "retriever_scores": {
+            "bm25": 15.610212,
+            "dense": 0.7533354,
+            "hybrid": 0.015873015873015872
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_61195",
+          "retriever_scores": {
+            "bm25": 15.267398,
+            "dense": null,
+            "hybrid": 0.015625
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_917",
+          "retriever_scores": {
+            "bm25": 14.008135,
+            "dense": null,
+            "hybrid": 0.014925373134328358
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_102660",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7393654,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_51661",
+          "retriever_scores": {
+            "bm25": 13.859959,
+            "dense": null,
+            "hybrid": 0.014285714285714285
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_113483",
+          "retriever_scores": {
+            "bm25": 13.206909,
+            "dense": null,
+            "hybrid": 0.013888888888888888
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_114276",
+          "retriever_scores": {
+            "bm25": 12.502238,
+            "dense": 0.72537464,
+            "hybrid": 0.013513513513513514
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_73432",
+          "retriever_scores": {
+            "bm25": 12.423736,
+            "dense": null,
+            "hybrid": 0.013157894736842105
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_25516",
+          "retriever_scores": {
+            "bm25": 12.311674,
+            "dense": 0.7121364,
+            "hybrid": 0.012987012987012988
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_94547",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.72331333,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_38739",
+          "retriever_scores": {
+            "bm25": 12.126936,
+            "dense": null,
+            "hybrid": 0.012658227848101266
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_55227",
+          "retriever_scores": {
+            "bm25": 12.099149,
+            "dense": null,
+            "hybrid": 0.0125
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_94745",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7215783,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_20721",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7212399,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_71866",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.71459234,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_127004",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7144505,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_150174",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7144283,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_27170",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7142668,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_27220",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.71390325,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_10214",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7118633,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_42600",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.70870405,
+            "hybrid": null
+          }
+        }
+      ]
+    },
+    {
+      "query_id": "q101",
+      "query_text": "agricultural fair prize livestock",
+      "candidates": [
+        {
+          "canonical_parent_doc_id": "train_138635",
+          "retriever_scores": {
+            "bm25": 13.63695,
+            "dense": null,
+            "hybrid": 0.01639344262295082
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_5576",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.80459344,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_100747",
+          "retriever_scores": {
+            "bm25": 13.258151,
+            "dense": null,
+            "hybrid": 0.016129032258064516
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_125948",
+          "retriever_scores": {
+            "bm25": 12.855426,
+            "dense": null,
+            "hybrid": 0.015625
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_114894",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.80168355,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_69473",
+          "retriever_scores": {
+            "bm25": 12.558775,
+            "dense": null,
+            "hybrid": 0.015151515151515152
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_93196",
+          "retriever_scores": {
+            "bm25": 12.237177,
+            "dense": null,
+            "hybrid": 0.014925373134328358
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_73509",
+          "retriever_scores": {
+            "bm25": 12.086752,
+            "dense": 0.79155666,
+            "hybrid": 0.014084507042253521
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_76306",
+          "retriever_scores": {
+            "bm25": 11.361362,
+            "dense": null,
+            "hybrid": 0.013888888888888888
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_93188",
+          "retriever_scores": {
+            "bm25": 11.250888,
+            "dense": null,
+            "hybrid": 0.0136986301369863
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_104718",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.786237,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_99956",
+          "retriever_scores": {
+            "bm25": 11.243417,
+            "dense": null,
+            "hybrid": 0.013333333333333334
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_102474",
+          "retriever_scores": {
+            "bm25": 10.9529,
+            "dense": null,
+            "hybrid": 0.013157894736842105
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_81890",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7814652,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_6078",
+          "retriever_scores": {
+            "bm25": 10.924501,
+            "dense": null,
+            "hybrid": 0.012987012987012988
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_14014",
+          "retriever_scores": {
+            "bm25": 10.7247715,
+            "dense": null,
+            "hybrid": 0.0125
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_42315",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7766615,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_37897",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7763732,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_114885",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7706039,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_74793",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.76994574,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_22175",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.7672021,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_23069",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.76603824,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_115217",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.76603556,
+            "hybrid": null
+          }
+        },
+        {
+          "canonical_parent_doc_id": "train_138040",
+          "retriever_scores": {
+            "bm25": null,
+            "dense": 0.76580983,
+            "hybrid": null
+          }
+        }
+      ]
+    }
+  ]
+}

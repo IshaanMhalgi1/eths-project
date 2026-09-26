@@ -1,0 +1,464 @@
+{
+  "query_id": "q101",
+  "query_text": "agricultural fair prize livestock",
+  "temporal_type": "none",
+  "corpus": "both",
+  "candidates": [
+    {
+      "candidate_id": "q101_cand_0",
+      "canonical_parent_doc_id": "train_138635",
+      "original_parent_doc_id": "train_138635",
+      "chunk_id": "train_138635_0",
+      "text": "DOCTOR MOTT'S CONCEPTION PREVENTIVE is used by over three hundred thousand ladies in the Atlantic States alone, and by a large number in the West, who would not be without it for ten times its cost. It is to this Preventive that the mothers of those States owe their immunity from large families. It is absolutely certain, convenient to use, and withal beneficial to health. Abortion is criminal; then use means perfectly moral and proper. Send stamp for pamphlet, containing full particulars. Address. DR. A. G. WILBER, 719 St. Charles Street, St. Louis, Mo. (P. O. Box 3092) Jan. 30-ly. FLORENCE Lock-Stitch Reversible Feed SEWING MACHINE! Triumphs for 1867. The Highest Prize - Paris Exhibition Universelle, 1867. The Only Gold Medal Massachusetts Mechanics' Association, After Five successive weeks' exhibition. First Premium Fair of American Institute, N. York, After Six successive weeks' exhibition. The Gold Medal Fair of Maryland Institute, After Four successive weeks' exhibition. First Premium N. York State Fair, Held at Buffalo. Besides the Highest Premiums At NUMEROUS MINOR FAIRS. Send for Reports and Circulars. WM. E. PLANT, General Western Agent, 612 N. Fourth Street, St. Louis, Mo. Feb. 20, 68-ly. MANSFIELD & ELLINGWOOD, Successors to A. G. MANSFIELD, WHOLESALE AND RETAIL DEALERS IN IRON, STEEL & HARDWARE, Wagon and Buggy Wood Work, AGRICULTURAL IMPLEMENTS, FARM AND GARDEN SEEDS, ETC. Sole Agents for DEERE'S MOLINE PLOWS; BROWN'S CORN PLANTER; BUCKEYE REAPERS and MOWERS; THRESHING MACHINES, and PATENT SPINNING WHEELS.",
+      "metadata": {
+        "publication_year": 1868,
+        "historical_start": 1868,
+        "historical_end": 1868,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q101_cand_1",
+      "canonical_parent_doc_id": "train_5576",
+      "original_parent_doc_id": "train_5576",
+      "chunk_id": "train_5576_0",
+      "text": "According to the provisions thereof, the defendant or defendants may plead the general issue, and give the special matter, under this act, in evidence; and if in such suit or action, a verdict and judgment shall be given for the defendant or defendants, or the plaintiff shall become nonsuit, or discontinue his action, the defendant or defendants shall have and recover double costs of suit. Passed February 2, 1820. From the Connecticut Gazette. I would advise every farmer not to be too ambitious of a numerous herd of cattle, or stock of sheep; nor to keep more of either than he can keep in a thriving state. If he owns two pair of steers, or two yoke of oxen, and cannot keep their furies loose and hair slick, he must sell one. If he has ten cows, and makes small cheese, let him sell two; if that does not enlarge his cheese, let him sell two more. If his sheep be feeble, and cast their wool, let him examine his flock; if it consists of fifty, let him immediately sell ten at least. From his flock let him annually select the oldest, and the weakest of the young, and either sell them at a fair price, or feed them himself for market. With us, sheep of more than thirty in a flock, seldom answer well. Of breeds of sheep I say nothing.",
+      "metadata": {
+        "publication_year": 1820,
+        "historical_start": 1820,
+        "historical_end": 1820,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q101_cand_2",
+      "canonical_parent_doc_id": "train_100747",
+      "original_parent_doc_id": "train_100747",
+      "chunk_id": "train_100747_0",
+      "text": "State Agricultural Society,' was announced by them on Friday at the State Fair at Utica. The highest prize for the best mower, and the second prize as a reaper, was awarded to J. H. Manny, of Illinois. There were twelve different machines in competition, among which were the celebrated McCormick's & Hussey's reapers. Manny's seems to have some important advantages over all the others, which consist in the perfection of the cutting apparatus, and its adjustability to various heights of cutting, and also a very important advantage seems to exist in the peculiar combination of a reaping and mowing machine, by which it is equally well adapted to both purposes; the placing in, or removing a loose platform, being the only change necessary to convert it from one to another. These two awards must, in our judgment, place Manny's machine at the head of mowers and reapers on the present trial. The combination must be especially valuable to farmers who require a machine both for reaping and mowing, and we regard it as a great triumph that the best mowing machine is awarded to be the second best reaper, beating McCormick's & Hussey's, of world renowned celebrity. Profanity Rebuked.?A friend sends us the following, which although it has been published, heretofore, we think it cannot be published too frequently.?Eds. Cow. ? $? Enq. A true extract from the original \"General Order Book\" of Gen. Washington, under date of 29th July, 1799.",
+      "metadata": {
+        "publication_year": 1852,
+        "historical_start": 1852,
+        "historical_end": 1852,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q101_cand_3",
+      "canonical_parent_doc_id": "train_125948",
+      "original_parent_doc_id": "train_125948",
+      "chunk_id": "train_125948_0",
+      "text": "A Division of the Order be established at Grand Haven that would be promotive of great good in the temperance reformation, acting in concert with the Good Templars? The U. S. Agricultural Fair. The Fair of the United States Agricultural Society is to be held in Cincinnati, in September next. No cattle will be admitted to the exhibition, on account of the prevalence of the pleuro pneumonia in the Eastern and Middle States. No cattle are to be admitted to the fair grounds of the Illinois State Agricultural Society, at its next Annual Fair, that have been north and east of that State and Kentucky, since the first day For the Grand Haven Now. Newaygo, July 24, 1860. Editor News: Your paper comes to us enriched with an article from the pen of Miss Gardiner, \"The Education of the Heart,\" and we cannot forbear speaking a word in praise and admiration of so worthy a production. Miss G. came to your county a stranger, only a year since, and has been commendably unselfish, in that she has entered the field of moral and intellectual improvement with her whole heart and head. We like the tenor of her essay very much, and are sure that the Gregory Association need be proud of her cooperation.",
+      "metadata": {
+        "publication_year": 1860,
+        "historical_start": 1860,
+        "historical_end": 1860,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q101_cand_4",
+      "canonical_parent_doc_id": "train_114894",
+      "original_parent_doc_id": "train_114894",
+      "chunk_id": "train_114894_0",
+      "text": "All competitors must be the actual owners of the animals entered by them, on the first day of July 1855, and such ownership must have continued to the day of the Show. Security will be required that every Bull, to which a premium is awarded, shall be kept within the State for twelve months succeeding the Show. No animal will be allowed to enter into competition in more than one class. All animals offered for competition must be entered with William A. Lincoln, the Secretary of this Committee, in Worcester, on or before WEDNESDAY, the 26th day of SEPTEMBER, at 12 o\u2019clock, noon, and must be exhibited upon the grounds of the Worcester Agricultural Society, on the day of exhibition, at 8 A. M., and remain till 3 P. M. TRAVEL. The Trustees will pay at the rate of 12 cents per mile to the owners of such animals as obtain premiums and which are brought or driven more than 10 miles from the place of exhibiting, computing from the place from which the animals come; unsuccessful competitors the like sum if upon the report of any committee such an indemnity for expense should be merited.",
+      "metadata": {
+        "publication_year": 1856,
+        "historical_start": 1856,
+        "historical_end": 1856,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q101_cand_5",
+      "canonical_parent_doc_id": "train_69473",
+      "original_parent_doc_id": "train_69473",
+      "chunk_id": "train_69473_0",
+      "text": "The Southern Press. Vol. 1. Washington, Monday, September 3, 1850. No. 66. AGRICULTURAL ASSOCIATION. THE Fifth Annual fair of the Southern Central Agricultural Association, will be held during the week embracing Wednesday, the 14th day of August next, which is the day of the fifth annual meeting at Atlanta, Georgia. The Committee charged with the duty of prescribing such general rules as they may deem necessary to a proper management of the approaching Fair, have adopted the following General Regulations. 1st The Fair Grounds and Buildings will be opened for visitors on Monday morning, and continue open until Friday evening. It is therefore desirable that all persons having articles for exhibition, shall be on the ground as early as Friday or Saturday, the 9th and 10th August when a Committee will be there ready to receive them.",
+      "metadata": {
+        "publication_year": 1850,
+        "historical_start": 1850,
+        "historical_end": 1850,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q101_cand_6",
+      "canonical_parent_doc_id": "train_93196",
+      "original_parent_doc_id": "train_93196",
+      "chunk_id": "train_93196_0",
+      "text": "To our surprise, but one sample of coffee is presented this year, that of Mr. B. Pitman, of Hilo. It is of excellent quality, and takes the premium. Wheat. There is no competitor for the first premium in wheat, but we are of opinion that H. J. G. Croswell of East Maui, is entitled to the second prize, which we award him accordingly. Several fair samples of wheat in the ear are presented. Corn. We award the first premium in corn, to the Rev. J. S. Emerson of Waialua, and the second to Lieut Reynolds, of Kauai. The corn exhibited by Mr. Emerson is very fine, and we take pleasure in noticing several samples of fair quality, from other parties. Oats. No competitor for the prize. A fair specimen of oats in the ear is exhibited by John Smith, of East Maui. Barley. We award the premium for Barley to Mr. Hollingsworth, of Ewa, who presents samples of two different kinds. Specimens of Barley in the ear are exhibited from Maui. Arrow-root. There are three competitors for this prize, and the specimens exhibited are all choice. We award the premium to the Rev. C. B. Andrews, of Molokai. Irish Potatoes. Only three samples are exhibited; two from East Maui and one from Ewa. We award the premium to G. D. Gilman & Co., of Lahaina. Sweet Potatoes. We award this premium to Halolohe, of Honolulu. Numerous fair specimens are shown.",
+      "metadata": {
+        "publication_year": 1853,
+        "historical_start": 1853,
+        "historical_end": 1853,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q101_cand_7",
+      "canonical_parent_doc_id": "train_73509",
+      "original_parent_doc_id": "train_73509",
+      "chunk_id": "train_73509_0",
+      "text": "Valued at $150, to be awarded to the person who by the 1st of October, the largest list of new subscribers to the volume commencing in July next; $50 for the 2nd Prize, and $100 for the third largest. The publisher has also added three other prizes, payable in agricultural works. He has also offered $100 for prize essays for the coming volume, viz: $100 in silver plate for the best Essay for the plan and arrangement of farm buildings and the management of the farm yard; $50 for the best essay on the cultivation of tobacco; and $20 for the best essay on the management of the dairy. The first number, to appear in July, will contain one of the most valuable papers, from the pen of Bonna Bronis, esq. of Virginia, presented to the agricultural public, particularly of the tide-water regions of Virginia, Maryland, and the Carolinas. It gives the details of his farm management for the five years he has occupied his present estate in eastern Virginia, and proves conclusively that, with a reasonable degree of prudence in its management, farming can be made as profitable as any other business. The second year after he took.",
+      "metadata": {
+        "publication_year": 1850,
+        "historical_start": 1850,
+        "historical_end": 1850,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q101_cand_8",
+      "canonical_parent_doc_id": "train_76306",
+      "original_parent_doc_id": "train_76306",
+      "chunk_id": "train_76306_0",
+      "text": "J 3\u201d For sale by all the Druggists and Groceries in the country, and at this office. Of the best quality. J.M. BRUNSWICK\u2019S CO. Cincinnati, Ohio, Marble Top Billiard Tables. Best Patent Cushions ever invented. AGENTS SAFES! STEARNS & MARVIN'S, WIL- SAFES! DER\u2019S Patent Salamander Safes, with Burglar and Powder proof La Belle lock. FARMERS! ATTENTION!!! 1859 McCormack\u2019s Reaper and Mower 1859 Received the highest prize at the United States Agricultural Society in 1857 as the best Reaper and Mower. CONSTANS & STEVENSON, Agents, St. Paul, February 1, 1859. ja\u00dfldy",
+      "metadata": {
+        "publication_year": 1859,
+        "historical_start": 1859,
+        "historical_end": 1859,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q101_cand_9",
+      "canonical_parent_doc_id": "train_93188",
+      "original_parent_doc_id": "train_93188",
+      "chunk_id": "train_93188_0",
+      "text": "The sales amounted to between $400 and $500; after which the Society adjourned till tomorrow at 10 o'clock at the chapel. Thursday, June 9th. Met at the chapel, and proceeded to the hearing of Reports of standing committees. The following were read and accepted. Of the committee on Statistics, by C. R. Bishop. Of the committee on Tanning, by J. Hardy. The reading of Reports of standing committees was suspended, to hear the reports of the committees on Premiums, which were read and adopted. Report on Agricultural Products. The undersigned, Judges of agricultural products, at the Fair of the Royal Hawaiian Agricultural Society, held this 8th day of June 1853, beg leave to offer the following Report. The show of agricultural products this year falls short of that of last year as regards the variety and quantity of articles exhibited; but, in point of quality, the articles shown this year, with few exceptions, surpass those hitherto presented. Sugar. The samples of sugar are quite numerous, and we have had more difficulty in deciding on the rival claims of the several competitors in this article than in any other.",
+      "metadata": {
+        "publication_year": 1853,
+        "historical_start": 1853,
+        "historical_end": 1853,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q101_cand_10",
+      "canonical_parent_doc_id": "train_104718",
+      "original_parent_doc_id": "train_104718",
+      "chunk_id": "train_104718_0",
+      "text": "E. TED DS1LV BT B. Bt SPICTB, ASEBT, tt raoar sow. COB ...r-e., $ 104 1 00 B barrel Bacon....Rib Side SautJS, Clear Bteeo ShdSc; tuejyc; County Hams, II that he; Cao 11, the)14c V B. Butter.... Country Extra JSc a lb; Country Fair, It 430c; Extra Western Reserve, JBc Beans.... Navy White, $1 16 per bushel. Barley....TtJEOe per cwt in Wisconsin Cattle.... On foot . 45 c. each. Cabbage.... $10 00$18 85 per hundred Corn....I1 Each., 884)88. Cheese 10 c. lb. Dressed.... $J 7)l 00 dosen-dressed Dried Fruit Apples, $100$)$! t Peaches peeled. $1004)$! 00; unpeeled. $J 18$J 13 Duck... .Muscovy, 75-80c per pair; Beg too. 40 40c per pair Eggs....30 dozen. Flour.... In stock, Superfine, $2 00$4) 00; Country Extra Family, $3 00$3 80; In bbls . $7 50$8 50. Fruit and Vegetables, 18$24c. a lb. Geese.... 48 to 88c. each. Hike... .. Flint. 10-14c; green, 6c per lb; Dry Salted. 11-14c; Green Salted, aft. Iron... is demand; Retail. $1$3 per ton. Honey. $1 08$3 to at bushel. Lard Country Lard No. 1, 10-11c per lb; kegs. asatas. MEAL Country, 7-8c; in demand Mutton.... On foot, No. 1 $1 85$3 00 per head. Onions ... 784)80 Vbnshel; Soft. $1 00Rbushel Oats....77c per bushel-In demand. Peas.. . Table, $1 00$1 88 per bushel. Pears 70c $1 per bushel. Potatoes Sweet.",
+      "metadata": {
+        "publication_year": 1858,
+        "historical_start": 1858,
+        "historical_end": 1858,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q101_cand_11",
+      "canonical_parent_doc_id": "train_99956",
+      "original_parent_doc_id": "train_99956",
+      "chunk_id": "train_99956_0",
+      "text": "Wooton, Whig, 175 mnj. In Campbell county the result is doubtful. Sixth District. No returns. Seventh District. Snowden, Whig, 150 ahead, four counties to hear from result doubtful. Eighth District. Faulkner, Democrat, -. Twelfth and Thirteenth Districts. No opposition to the Democratic candidates. Eleventh District. No returns. The Whigs gain several members of the Legislature. No definite amount of \"Public Works;\" vote generally small. State Agricultural Society. We understand that Wednesday the 22nd of June next, has been designated as the day for the first meeting of the Board of Di- rectors of the Agricultural Society at Boonville As the meeting be an important one, it is, at it, are determined the premiums for the various agricultural products that will be exhibited in October next, at the Great State Fair. We presume the board will see the necessity of a full attendance. On. We subjoin a list of the board as appointed by an act of the last General Assembly: M. M. Marmeduke, of Saline county.",
+      "metadata": {
+        "publication_year": 1853,
+        "historical_start": 1853,
+        "historical_end": 1853,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q101_cand_12",
+      "canonical_parent_doc_id": "train_102474",
+      "original_parent_doc_id": "train_102474",
+      "chunk_id": "train_102474_0",
+      "text": "An emetic was given to the child, and that vomited severely from his stomach, which may or may not be all. At any rate, the child is better. This incident should serve as a caution to mothers to keep such things out of the reach of their children. New York Politics.\u2014According to the political prophets, it is pretty well arranged that for the next Governor of New York the Democrats will nominate John Van Buren. The Prince has gone to Europe to be rid of inquisitive and catechizing letter-writers. If John Van Buren is elected Governor, and the Legislature becomes democratic, Ex-Governor Seymour is to succeed Mr. Seward in the United States Senate. Isaac V. Fowler, Postmaster, is spoken of as the next Tammany Hall candidate for Mayor of the city, after Tiemann\u2019s time has expired. Agricultural and Mechanical Fair. Premium List of the White County Agricultural Society, for the Fair, to be held on the 2nd Thursday in October next. Farming Implements. For best Turning Plow, $2.50 \u201c Subsoil \u201c 2.50 Cotton Scraper, 2.50 Grain Cradle, 5.00 \u201c Scythe, 5.00 Ox Yoke and Bows, 5.00 \u201c Axe Handle, 0.50 \u201c Plow Stock, 0.75 \u201c Farm Wagon, 50.00 Family Carriage, 25.00 \u201c Jockey Buggy, 20.00 Open \u201c 20.00 Display of Farming Implements, 10.00 Leather Goods.",
+      "metadata": {
+        "publication_year": 1858,
+        "historical_start": 1858,
+        "historical_end": 1858,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q101_cand_13",
+      "canonical_parent_doc_id": "train_81890",
+      "original_parent_doc_id": "train_81890",
+      "chunk_id": "train_81890_0",
+      "text": "BEEF Dressed, kind quarter to forequarter I a Inc. SUGAR, h, tae per lb .. tS 7.V t 90 t..r 100 t. CATTLE On foot to sell. CABBAGE None CO. V Vt- The lot for fn. DRIED FRUIT Apples $1 to per bushel; Peeled $1.50 per bushel; Coresed do $1.75 to $2.00; Peaches $1.00 peeled Raisins, 10c per lb. EGGS 11 to 12c. FLOUR Ra. $4 to $5.50; Extras $4 to $7. ra. Theat., fl 90 to 3\" per m HIDES Flint 14c cents; Green 6c; Dry Salted 14 to 16c; Green Salted 7c; Sheep Skins 15 to 40c each; Deer Skins 15 to 25c per lb; Coon Skins 15 to 20c each in de mand. HAY Retail by 10 per ton. HONEY $9 to $11 per dozen LARD Country 10 to 11c per lb; in kegs, 12 to 13c. MEAL Country 90 to 90c per bushel. MUTTON On foot, 3c to 4c per lb OATS 45 to 40c per bushel OIL-Grand. Clarified Cotton Seed Oil, for burning and lubricating, 60c a fl gal; Grand's Tanner Oil, Tanner's 90c. OIL MEAL For milk cows, sheep, hogs and poultry, $1 to $1.50 per bd. PEAS Table $1.00 per bushel POTATOES $1.50 to $2 per bushel. POTATOES Northern, 70 to 85c. PORK On foot, 7 to 8c per lb; Mess $18 per brl, N. J. & 1 a in Dressed Pork 7c. SAGE 7 to 8c.",
+      "metadata": {
+        "publication_year": 1859,
+        "historical_start": 1859,
+        "historical_end": 1859,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q101_cand_14",
+      "canonical_parent_doc_id": "train_6078",
+      "original_parent_doc_id": "train_6078",
+      "chunk_id": "train_6078_0",
+      "text": "The Committee of Examiners of \"the Agricultural Society of the County of New Castle\" will meet at the house of John Crow, in the town of New Castle, on Monday the 29th instant, at 10 o'clock A. M. in order to examine any Essay which may be submitted to them by any member of the Society, upon the subject of Agriculture, Horticulture, or Husbandry; and in particular, any Essay which may be submitted to them on the prize question, proposed at the last meeting of the Society, in relation to the intrinsic value of Arable Land. Samuel M. Black, Chairman of the Committee. Nov. 7\u2014iaw3t",
+      "metadata": {
+        "publication_year": 1818,
+        "historical_start": 1818,
+        "historical_end": 1818,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q101_cand_15",
+      "canonical_parent_doc_id": "train_14014",
+      "original_parent_doc_id": "train_14014",
+      "chunk_id": "train_14014_0",
+      "text": "Lady Skirmish was own sister to Rosalind, by Phenomenon, out of Gazelle. Phenomenon by Herod, (his dam Phrenzy,) by Eclipse, granddam by Enquirer, great-granddam by Blank. PAUL PRY was bred on the farm of Hon. OLIVER WOLCOTT, of Litchfield, Conn.; is of a beautiful chestnut color, with black tail and mane; is full fifteen and a half hands high; and for lofty carriage, good points, and color, is surpassed by none. Specimens of his Stock are owned by the following gentlemen, viz. Sheldon C. Leavitt, Esq. and Mr. Abijah Skilton, of Bethlehem, and by Messrs. Erastus A. Lord, G. B. Welles, Lyman Wooster, and at the stable of the subscriber. Good pasture provided for Mares, and good attendance given; but accidents and escapes at the risk of the owners. OLIVER S. WOLCOTT. Litchfield, April, 1828. Cw44 CERTIFICATE. This certifies that the premium offered by the \"Agricultural Society for the County of Litchfield,\" \"for the best Colt, under two years old,\" was awarded to Oliver S. Wolcott, Esq. for his colt by Old Duroc, at the Cattle Show and Fair of said Agricultural Society held October 15, 1823. Also\u2014That the Premium offered for the best Stallion, \"having reference to Stock,\" was awarded to Oliver S. Wolcott, Esq. for his Stallion, PAUL PRY, by Old Duroc, at the Cattle Show and Fair, held at Litchfield, October 14, 1826.",
+      "metadata": {
+        "publication_year": 1828,
+        "historical_start": 1828,
+        "historical_end": 1828,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q101_cand_16",
+      "canonical_parent_doc_id": "train_42315",
+      "original_parent_doc_id": "train_42315",
+      "chunk_id": "train_42315_0",
+      "text": "To Joshua Haley, for the best mule under six months old...\" $2.00 To Sylvester Beecher, for the 2nd best do $1.00 To Sylvester Beecher for the best Jack a Diploma and $2.00 To T.H. Beckwith, for the 2nd best do $2.00 To Leverett Norton, for a span of 2 yrs old mules, being highly meritorious they recommend a premium of $2.00 The Committee on Neat cattle Reported, \"that the number of various descriptions of cattle exhibited surpassed that of any former exhibition. The quality too of many of the animals was excellent.\" They awarded premiums as follows: To the township of Edinburgh for the best Team of ten yoke of Oxen $10.00 To R.R. Hutton, for the best yoke of Working Oxen a Diploma and $4.00 To George Goodell, for the 2nd do $3.00 To Joshua Walden, for the 3rd do $2.00 To Hopson Hurd, for the best yoke of 3 yrs old steers $3.00 To Willis Strickland, for the 2nd do $2.00 To James Catlin, for the 3rd do a Vol. of the Ohio Cultivator and $1.00 To George Dewey, for the best yoke of 2 year old steers $2.00 To John Spires, for the best Bull over 2 years old $4.00 To Sylvester Beecher, for the 2nd do $2.00 To Austin Collins, for the best yearling Bull.",
+      "metadata": {
+        "publication_year": 1848,
+        "historical_start": 1848,
+        "historical_end": 1848,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q101_cand_17",
+      "canonical_parent_doc_id": "train_37897",
+      "original_parent_doc_id": "train_37897",
+      "chunk_id": "train_37897_0",
+      "text": "Mehfeld, Sept. 18. THE Third Quarter of the Summer Term of JUVENILE SCHOOL in this place, will commence on Wednesday of the present week. Litchfield, Sept. 10. 1819. Cattle Show and Fair. A CATTLE SHOW and FAIR will be held at James Bishop's in Watertown, on Tuesday the first of October next, for the purpose of buying and selling Cattle, or swapping and matching Oxen and Steers. There will also be offered for sale Working Oxen, Beef and Store Cattle, Young Cattle, Calves, etc. It is desired by subscribers of all those who may have gunteined or odd Steers, to get them together for the purpose of matching them. It is time and trouble of one day to get together to match their as match cattle always sell higher and quicker than others. All those who may have two years old Cattle, or Yearlings, or Calves, please bring them on. There will also be at the Fair four Bakewell Bucks, two of which are lambs, lately purchased by the subscriber, of Thomas Dunn, Esq. of Albany county, N. Y. which he thinks will be worth the attention of the farmers generally. Should the weather be stormy or unpleasant on Tuesday the 1st, it will continue the next day after. GEORGE MERCHANT. Litchfield, Sept. 14. Ladies' Work Baskets. JUST received at the Litchfield Variety Store, a new supply of Ladies' Work Bas kets, of all sizes. Also, an assortment of Chinese Baskets. Sept. 12. E. A. LORD. NOTICE.",
+      "metadata": {
+        "publication_year": 1833,
+        "historical_start": 1833,
+        "historical_end": 1833,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q101_cand_18",
+      "canonical_parent_doc_id": "train_114885",
+      "original_parent_doc_id": "train_114885",
+      "chunk_id": "train_114885_0",
+      "text": "For the best Durham Cow $50 Next \" 35 For the best Devon Cow $50 Next \" 35 For the best Ayrshire $50 Next \" 35 For the best Alderney $50 Next \" 35 For Cow of any other pure breed.... $50 Next \" \" \" ... 35 Premiums will not be awarded in this class unless the milk of the competing Cow has been industriously utilized; any Butter or Cheese, and an average daily yield of 1 lb of Butter, or 3 lbs, new and fresh weighed as ready for market, obtained therefrom for the period of six months, preceding the 1st of September, 1858. Regard will be had in making the awards, to the ages of the animals, the number of Cows kept together, their food and the consequent comparative expense of keeping, and their products. CLASS IV. For the best Cow of any breed, or mixture of breeds, ( from a herd of not less than 3 Cows) which shall have been owned by the competitor from July 1, 1855, to the day of the show, kept for the manufacture of Butter, or Cheese, for a period of six months, immediately preced ing the 1st of Sept., 1856. First premium of $50 Second \" $40",
+      "metadata": {
+        "publication_year": 1856,
+        "historical_start": 1856,
+        "historical_end": 1856,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q101_cand_19",
+      "canonical_parent_doc_id": "train_74793",
+      "original_parent_doc_id": "train_74793",
+      "chunk_id": "train_74793_0",
+      "text": "None is genuine unless signed BUTTS, on the wrapper. For sale by ROJ. TAYLOR, Agent for Newport, Feb 28. MEAN TEMPERATURE OF APRIL, 1819 Thermometer at Sunrise, 42 N, 45 M, 52 P M. Mean Heat of the Month 46 1/2. Quantity of Rain, 1. Thermometer at Sunrise, 48 1/2 A.M, 58 P.M, 54 P.M, 51. Mean Heat of the Month, 53. Quantity of Rain, 2 1/2. At Market\u2014330 Beef Cattle, 37 pairs Working Oxen; 168 Cows and Calves; 500 Sheep; 5000 Swine. Prices\u2014Beef Cattle, extra, $6 30; first quality, $6; second, $5 50; third, $4 75. Working Oxen\u2014$63, 70, 73, 85, 100. Cows and Calves\u2014$17, 19, 24, 26, 31, 37, 40. Sheep\u2014$3, $3 75, 4. One lot of twenty sold at $8 each. Swine\u20144 1/4 and 4 1/2 c. Retail 5 1/4 - 6 1/2 c. In Providence, at Grace Church, 27th ult. by the Rev. Bishop Henshaw, William M. Rodman, Esq., and Miss Eliza N. Tompkins, all of Providence. In Providence, 1st inst., by the Rev. J. Easton Wilford, Mr. Daniel S. Colling and Miss Sophronia Trask; Mr. Heman S. Colling and Miss Mary K. Trask, all of Smithfield, R. I. In East Greenwich, at St. Luke's Church, 1st inst., by Rev. S. M. Crane, Mr. W. N. Burling, of Providence, and Miss Lucy E. Tibbetts, of E. Greenwich.",
+      "metadata": {
+        "publication_year": 1850,
+        "historical_start": 1850,
+        "historical_end": 1850,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q101_cand_20",
+      "canonical_parent_doc_id": "train_22175",
+      "original_parent_doc_id": "train_22175",
+      "chunk_id": "train_22175_0",
+      "text": "Mr. Wilson\u2019s Chapel, during his short stay in Providence, BRIGHTON MARKET\u2014Monday, (Reported for the Boston Patriot). At market 224 Beef Cattle, 20 pairs Working Oxen, 44 Cows and Calves, 200 Sheep, and 300 Swine\u201430 Beef Cattle unsold. Prices\u2014Beef Cattle\u2014Last week's prices except for the best Cattle were not supported. We quote a few pairs extra and very fine at 51s; first quality at 46s 6d a 49 6d; second quality at 40s 6d a 44s; third quality at 35s 6d a 39s 6d. Working Oxen\u2014We notice a few sales, viz.\u201460, 70, 85, and 95. Cows and Calves\u2014Sales at 20, 22, 24, 28, 33, 37 and 46. Sheep\u2014All at market were sold at about $5.50 each. Swine\u2014Sales as follows:\u2014One lot selected at 8 and 7\u00bd\u00a2; one entire lot at 7\u00be a 8\u00bd\u00a2; one selected lot large Barrows at 8\u00bd\u00a2; one at 7\u00bd\u00a2, and one at 7\u00bc at retail; large Hogs 8 a 9\u00bd\u00a2; Shoats 9 and 10\u00bd\u00a2. TO THE BLIND IN BRISTOL. Dr. Williams, the Oculist, requests us to mention that he will be at Mr. Horrox\u2019s hotel, in Bristol, on Saturday next, June 11th, at 5 o\u2019clock, where he will remain till Monday morning at 8 o\u2019clock, for the purpose of giving his opinion on the diseases of the Eye and blindness to all classes, without fee, or certificate. NEWS CONFIRMED, NINE DAYS LATER FROM TEXAS.\u2014The Schr.",
+      "metadata": {
+        "publication_year": 1836,
+        "historical_start": 1836,
+        "historical_end": 1836,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q101_cand_21",
+      "canonical_parent_doc_id": "train_23069",
+      "original_parent_doc_id": "train_23069",
+      "chunk_id": "train_23069_0",
+      "text": "In so large a precinct as to render him very sure of starting in the Had- Indies, he in his drove. I'll rely on i point which I think the western graziers overlook in placing measures, namely, the weight of beef that can be raised on a given quantity of corn or food. The preference is given to the largest animal, the one which carries the greatest weight on the hoof. Here the Devons will take a great deal more from a given quantity of food than the Shorthorns, but it is true there must be a few more of them to carry it. But to the extremes; When in Norfolk, England, I saw some animals Mr. John Bloomfield at Walsham, who has a large farm, a part of the estate of his ancestor (Mr. Coke) is within three or four miles of Norwich, and is acknowledged to be one of the best managed in the county. Mr. Bloomfield is a man of great exactness of",
+      "metadata": {
+        "publication_year": 1839,
+        "historical_start": 1839,
+        "historical_end": 1839,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q101_cand_22",
+      "canonical_parent_doc_id": "train_115217",
+      "original_parent_doc_id": "train_115217",
+      "chunk_id": "train_115217_0",
+      "text": "Mr. Ashley pursued his art and calling in Boston till quite an old man, and maybe setting types there yet\u2014no mean occupation, if done as it should be. \"The Conflagration of Moscow,\" on exhibition at Horticultural Hall, drew a full house last evening. It will be open this evening. Go and see the diorama. Brighton Market\u2014April 9, 1857. At market 860 beef cattle, 90 stores, 1700 sheep and lambs, and 4200 swine. Prices\u2014Beef Cattle-Extra, $9.50; first quality, $9.00; second quality, $8; third quality, $8. Working Oxen\u2014$125, $160 to $190. Milch Cows\u2014$35, $38, $45 to $60; common do $40. Veal Calves\u2014$3, $7 to $9. Two Years Old\u2014$30 to $36. Three Years Old\u2014$40 to $45. Per lb * (None but slaughter at this market.) Calf Skins\u201414c per lb. Tallow\u2014Sales at 10c; Rough, 8c. Sheep and Lambs\u2014$4.50, $6 to 7; Extra, $8 to $12. Pelts\u2014$1.75 to $2 each. Swine\u2014Wholesale, 8\u00bdc; retail, 9 to 10c; still fed, 8c; corn fed, 8\u00bdc per lb. 110 cars came over the Worcester Railroad, 98 over the Fitchburg Railroad, 58 over the Boston and Lowell Railroad, loaded with Cattle, Sheep, Swine, Horses and Mules. Professor Wool's Hair Restorative sold by J. Q. Hill. Kalliston, or Oriental Water, sold by J. Q. Hill. Minim Roux, for toothache, sold by J. Q. Hill. Butter of Cocoa, for chapped lips, sold by J. Q. Hill. Whitcomb's Remedy for Asthma, sold by J. Q. Hill. Oriental Tooth Wash, sold by J. Q. Hill.",
+      "metadata": {
+        "publication_year": 1857,
+        "historical_start": 1857,
+        "historical_end": 1857,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q101_cand_23",
+      "canonical_parent_doc_id": "train_138040",
+      "original_parent_doc_id": "train_138040",
+      "chunk_id": "train_138040_0",
+      "text": "The wide circulation we have obtained assures us that the Farmer already meets the wants of the agricultural community and encourages us to renewed exertions to make it fully deserving of the patronage awarded it. The New England Farmer is published weekly, in folio form. One entire page is occupied exclusively with articles relating to agriculture, nearly all original, and written for our columns by men of practical experience on their own farms. Our leading object is to give the results of practical operations and the knowledge drawn from them and not mere speculations or plausible theories. The remainder of the paper contains: A carefully prepared digest of the News of the Week, as full and accurate as constant care can make it. Miscellaneous Reading for the family circle, always instructive and of good moral tone, as well as entertaining. Market Reports and Prices Current, including the best and only reliable report of the Cambridge and Brighton Cattle Markets, prepared exclusively for our columns at great expense. Editorials, Book-Notices, etc. TERMS OF THE NEW ENGLAND FARMER: Invariably cash in advance. Single copy $2 a year or $3 for 2 years. Two to five copies $1.00 a year each. Six to ten copies $1.50 a year each. Eleven to fifteen copies $1.80 a year each. Sixteen copies and upwards at the rate of $1.60 a year each. Specimen copies and prospectuses sent free to all applicants.",
+      "metadata": {
+        "publication_year": 1863,
+        "historical_start": 1863,
+        "historical_end": 1863,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    }
+  ]
+}

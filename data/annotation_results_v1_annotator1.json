@@ -1,0 +1,686 @@
+{
+    "queries":  [
+                    {
+                        "query_id":  "q5",
+                        "candidates":  [
+                                           {
+                                               "canonical_parent_doc_id":  "train_132",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_1444",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_2204",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_2384",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_2662",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_275",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_2803",
+                                               "relevance_annotator1":  0
+                                           }
+                                       ]
+                    },
+                    {
+                        "query_id":  "q9",
+                        "candidates":  [
+                                           {
+                                               "canonical_parent_doc_id":  "train_1483",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_1649",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_2719",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_2814",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_298",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_403",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_606",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_617",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_645",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_690",
+                                               "relevance_annotator1":  2
+                                           }
+                                       ]
+                    },
+                    {
+                        "query_id":  "q14",
+                        "candidates":  [
+                                           {
+                                               "canonical_parent_doc_id":  "train_1345",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_1573",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_2035",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_2213",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_3526",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_3645",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_550",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_684",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_897",
+                                               "relevance_annotator1":  1
+                                           }
+                                       ]
+                    },
+                    {
+                        "query_id":  "q21",
+                        "candidates":  [
+                                           {
+                                               "canonical_parent_doc_id":  "train_103102",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_109273",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_12697",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_146594",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_27906",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_35326",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_40236",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_58988",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_64269",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_66620",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_67141",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_69055",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_70404",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_70705",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_73598",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_7931",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_7965",
+                                               "relevance_annotator1":  2
+                                           }
+                                       ]
+                    },
+                    {
+                        "query_id":  "q31",
+                        "candidates":  [
+                                           {
+                                               "canonical_parent_doc_id":  "train_104781",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_115650",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_1600",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_1605",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_16863",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_1964",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_21928",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_32195",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_36621",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_51855",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_67629",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_67869",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_81743",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_88506",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_93960",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_95008",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_97055",
+                                               "relevance_annotator1":  2
+                                           }
+                                       ]
+                    },
+                    {
+                        "query_id":  "q42",
+                        "candidates":  [
+                                           {
+                                               "canonical_parent_doc_id":  "train_10392",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_10394",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_113272",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_12813",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_15664",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_17142",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_17792",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_18036",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_18611",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_18949",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_26079",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_27496",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_32069",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_34919",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_37511",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_38306",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_38444",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_39513",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_65918",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_95779",
+                                               "relevance_annotator1":  0
+                                           }
+                                       ]
+                    },
+                    {
+                        "query_id":  "q71",
+                        "candidates":  [
+                                           {
+                                               "canonical_parent_doc_id":  "train_142909",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_142959",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_143714",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_145751",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_146245",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_148511",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_150136",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_150188",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_155191",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_159917",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_161222",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_164028",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_166003",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_168918",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_168927",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_168984",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_169011",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_32269",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_76730",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_79302",
+                                               "relevance_annotator1":  0
+                                           }
+                                       ]
+                    },
+                    {
+                        "query_id":  "q1",
+                        "candidates":  [
+                                           {
+                                               "canonical_parent_doc_id":  "train_103173",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_104621",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_114894",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_120078",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_156674",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_1586",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_20244",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_27780",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_32288",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_33814",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_3849",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_4100",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_72634",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_81341",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_86158",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_87302",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_91325",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_94745",
+                                               "relevance_annotator1":  2
+                                           }
+                                       ]
+                    },
+                    {
+                        "query_id":  "q3",
+                        "candidates":  [
+                                           {
+                                               "canonical_parent_doc_id":  "train_102660",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_111311",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_113483",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_114276",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_127004",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_150174",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_20721",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_25516",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_27170",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_27220",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_38218",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_38739",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_51661",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_55227",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_61195",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_71866",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_73432",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_917",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_94547",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_94745",
+                                               "relevance_annotator1":  0
+                                           }
+                                       ]
+                    },
+                    {
+                        "query_id":  "q101",
+                        "candidates":  [
+                                           {
+                                               "canonical_parent_doc_id":  "train_100747",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_102474",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_104718",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_114885",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_114894",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_125948",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_138635",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_14014",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_37897",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_42315",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_5576",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_6078",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_69473",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_73509",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_74793",
+                                               "relevance_annotator1":  2
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_76306",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_81890",
+                                               "relevance_annotator1":  0
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_93188",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_93196",
+                                               "relevance_annotator1":  1
+                                           },
+                                           {
+                                               "canonical_parent_doc_id":  "train_99956",
+                                               "relevance_annotator1":  0
+                                           }
+                                       ]
+                    }
+                ]
+}

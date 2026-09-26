@@ -1,0 +1,1551 @@
+{
+  "version": "1.0",
+  "annotator": 1,
+  "export_date": "2026-09-26T13:40:41.331Z",
+  "queries": [
+    {
+      "query_id": "q10",
+      "query_text": "tax land assessment 1804 to 1808",
+      "temporal_type": "range",
+      "corpus": "small",
+      "candidates": [
+        {
+          "canonical_parent_doc_id": "train_539",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_509",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_178",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_514",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_531",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_500",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_3491",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        }
+      ]
+    },
+    {
+      "query_id": "q9",
+      "query_text": "political news congress 1800 to 1805",
+      "temporal_type": "range",
+      "corpus": "small",
+      "candidates": [
+        {
+          "canonical_parent_doc_id": "train_617",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_403",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_2719",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_645",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_1649",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_298",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_606",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_690",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_1483",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_2814",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        }
+      ]
+    },
+    {
+      "query_id": "q14",
+      "query_text": "shipping port arrivals after 1805",
+      "temporal_type": "before_after",
+      "corpus": "small",
+      "candidates": [
+        {
+          "canonical_parent_doc_id": "train_2213",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_3526",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_897",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_684",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_1573",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_2035",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_550",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_3645",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_1345",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        }
+      ]
+    },
+    {
+      "query_id": "q33",
+      "query_text": "Erie Canal completion 1825",
+      "temporal_type": "explicit_year",
+      "corpus": "expanded",
+      "candidates": [
+        {
+          "canonical_parent_doc_id": "train_31115",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_68590",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_51236",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_31143",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_17507",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_18160",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_18550",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_17619",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_17713",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_31148",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_26095",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_72714",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_94358",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_151727",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_16194",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_31108",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_24460",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_31105",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_106441",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_28793",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_10184",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_17453",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_142091",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_133243",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        }
+      ]
+    },
+    {
+      "query_id": "q31",
+      "query_text": "Monroe Doctrine foreign policy 1823",
+      "temporal_type": "explicit_year",
+      "corpus": "expanded",
+      "candidates": [
+        {
+          "canonical_parent_doc_id": "train_51855",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_1605",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_97055",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_88506",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_1600",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_81743",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_67869",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_1964",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_21928",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_104781",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_36621",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_32195",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_95008",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_67629",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_16863",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_115650",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_93960",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        }
+      ]
+    },
+    {
+      "query_id": "q42",
+      "query_text": "Trail of Tears Cherokee removal 1838",
+      "temporal_type": "explicit_year",
+      "corpus": "expanded",
+      "candidates": [
+        {
+          "canonical_parent_doc_id": "train_26079",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_17792",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_65918",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_32069",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_39513",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_38306",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_38444",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_10392",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_18611",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_18949",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_17142",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_37511",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_95779",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_113272",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_27496",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_15664",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_34919",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_10394",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_12813",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_18036",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_169784",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_12811",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        }
+      ]
+    },
+    {
+      "query_id": "q71",
+      "query_text": "Civil War Fort Sumter 1861",
+      "temporal_type": "explicit_year",
+      "corpus": "expanded",
+      "candidates": [
+        {
+          "canonical_parent_doc_id": "train_169011",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_168984",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_150136",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_161222",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_159917",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_145751",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_168918",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_142556",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_164028",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_76730",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_129243",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_143714",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_168927",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_149915",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_142959",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_166003",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_156668",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_155191",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_32269",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_148877",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_150188",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_142909",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_164178",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_148511",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_146245",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_66172",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_79302",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_147214",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_156575",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_147484",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        }
+      ]
+    },
+    {
+      "query_id": "q1",
+      "query_text": "strayed horse reward advertisement",
+      "temporal_type": "none",
+      "corpus": "both",
+      "candidates": [
+        {
+          "canonical_parent_doc_id": "train_86158",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_87302",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_4100",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_81341",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_33814",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_1586",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_72634",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_94745",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_32288",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_3849",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_104621",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_91325",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_156674",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_114894",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_27780",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_20244",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_120078",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_103173",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        }
+      ]
+    },
+    {
+      "query_id": "q3",
+      "query_text": "runaway slave reward advertisement",
+      "temporal_type": "none",
+      "corpus": "both",
+      "candidates": [
+        {
+          "canonical_parent_doc_id": "train_38218",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_111311",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_61195",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_917",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_102660",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_51661",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_113483",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_114276",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_73432",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_25516",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_94547",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_38739",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_55227",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_94745",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_20721",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_71866",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_127004",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_150174",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_27170",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_27220",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_10214",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_42600",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        }
+      ]
+    },
+    {
+      "query_id": "q101",
+      "query_text": "agricultural fair prize livestock",
+      "temporal_type": "none",
+      "corpus": "both",
+      "candidates": [
+        {
+          "canonical_parent_doc_id": "train_138635",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_5576",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_100747",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_125948",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_114894",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_69473",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_93196",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_73509",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_76306",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_93188",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_104718",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_99956",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_102474",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_81890",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_6078",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_14014",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_42315",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_37897",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_114885",
+          "relevance_annotator1": 2,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_74793",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_22175",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_23069",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_115217",
+          "relevance_annotator1": 1,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        },
+        {
+          "canonical_parent_doc_id": "train_138040",
+          "relevance_annotator1": 0,
+          "relevance_annotator2": null,
+          "relevance_final": null,
+          "notes_annotator1": "",
+          "notes_annotator2": ""
+        }
+      ]
+    }
+  ]
+}

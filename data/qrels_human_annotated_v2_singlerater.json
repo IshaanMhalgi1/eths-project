@@ -1,0 +1,204 @@
+{
+  "_schema_note": "SINGLE-RATER human qrels (v2 blind pool, annotator 1 only). relevant_doc_ids = binarized at grade >= 1. NO inter-annotator reliability estimate exists for this set.",
+  "_WARNING": "SINGLE RATER. No cohen_kappa is reported because there is no second annotator. Treat as unvalidated single-rater judgments. Do not cite as agreement or as a reliability estimate.",
+  "resolution_method": "SINGLE RATER (annotator 1), binarized at >=1",
+  "n_raters": 1,
+  "cohen_kappa": null,
+  "percent_agreement": null,
+  "n_queries": 10,
+  "n_judgments": 183,
+  "grade_distribution": {
+    "0": 86,
+    "1": 45,
+    "2": 52
+  },
+  "queries": [
+    {
+      "query_id": "q10",
+      "query_text": "tax land assessment 1804 to 1808",
+      "temporal_type": "range",
+      "corpus": "small",
+      "num_candidates": 7,
+      "relevant_doc_ids": [
+        "train_178",
+        "train_3491",
+        "train_500",
+        "train_509",
+        "train_514",
+        "train_531",
+        "train_539"
+      ]
+    },
+    {
+      "query_id": "q9",
+      "query_text": "political news congress 1800 to 1805",
+      "temporal_type": "range",
+      "corpus": "small",
+      "num_candidates": 10,
+      "relevant_doc_ids": [
+        "train_1483",
+        "train_1649",
+        "train_2719",
+        "train_2814",
+        "train_298",
+        "train_403",
+        "train_606",
+        "train_645",
+        "train_690"
+      ]
+    },
+    {
+      "query_id": "q14",
+      "query_text": "shipping port arrivals after 1805",
+      "temporal_type": "before_after",
+      "corpus": "small",
+      "num_candidates": 9,
+      "relevant_doc_ids": [
+        "train_2035",
+        "train_3526",
+        "train_3645",
+        "train_550"
+      ]
+    },
+    {
+      "query_id": "q33",
+      "query_text": "Erie Canal completion 1825",
+      "temporal_type": "explicit_year",
+      "corpus": "expanded",
+      "num_candidates": 24,
+      "relevant_doc_ids": [
+        "train_10184",
+        "train_133243",
+        "train_151727",
+        "train_16194",
+        "train_17453",
+        "train_17619",
+        "train_17713",
+        "train_18160",
+        "train_18550",
+        "train_24460",
+        "train_26095",
+        "train_28793",
+        "train_51236",
+        "train_68590"
+      ]
+    },
+    {
+      "query_id": "q31",
+      "query_text": "Monroe Doctrine foreign policy 1823",
+      "temporal_type": "explicit_year",
+      "corpus": "expanded",
+      "num_candidates": 17,
+      "relevant_doc_ids": [
+        "train_104781",
+        "train_16863",
+        "train_36621",
+        "train_51855",
+        "train_67869",
+        "train_95008",
+        "train_97055"
+      ]
+    },
+    {
+      "query_id": "q42",
+      "query_text": "Trail of Tears Cherokee removal 1838",
+      "temporal_type": "explicit_year",
+      "corpus": "expanded",
+      "num_candidates": 22,
+      "relevant_doc_ids": [
+        "train_10392",
+        "train_10394",
+        "train_12811",
+        "train_12813",
+        "train_169784",
+        "train_17142",
+        "train_17792",
+        "train_18036",
+        "train_26079",
+        "train_32069",
+        "train_34919",
+        "train_39513",
+        "train_65918"
+      ]
+    },
+    {
+      "query_id": "q71",
+      "query_text": "Civil War Fort Sumter 1861",
+      "temporal_type": "explicit_year",
+      "corpus": "expanded",
+      "num_candidates": 30,
+      "relevant_doc_ids": [
+        "train_145751",
+        "train_149915",
+        "train_150136",
+        "train_161222",
+        "train_164028",
+        "train_168918",
+        "train_168984",
+        "train_169011"
+      ]
+    },
+    {
+      "query_id": "q1",
+      "query_text": "strayed horse reward advertisement",
+      "temporal_type": "none",
+      "corpus": "both",
+      "num_candidates": 18,
+      "relevant_doc_ids": [
+        "train_103173",
+        "train_156674",
+        "train_1586",
+        "train_27780",
+        "train_32288",
+        "train_33814",
+        "train_3849",
+        "train_4100",
+        "train_72634",
+        "train_81341",
+        "train_86158",
+        "train_87302",
+        "train_91325",
+        "train_94745"
+      ]
+    },
+    {
+      "query_id": "q3",
+      "query_text": "runaway slave reward advertisement",
+      "temporal_type": "none",
+      "corpus": "both",
+      "num_candidates": 22,
+      "relevant_doc_ids": [
+        "train_102660",
+        "train_111311",
+        "train_113483",
+        "train_27170",
+        "train_38218",
+        "train_38739",
+        "train_42600",
+        "train_51661",
+        "train_55227",
+        "train_61195",
+        "train_917",
+        "train_94547"
+      ]
+    },
+    {
+      "query_id": "q101",
+      "query_text": "agricultural fair prize livestock",
+      "temporal_type": "none",
+      "corpus": "both",
+      "num_candidates": 24,
+      "relevant_doc_ids": [
+        "train_102474",
+        "train_104718",
+        "train_114885",
+        "train_114894",
+        "train_115217",
+        "train_125948",
+        "train_37897",
+        "train_42315",
+        "train_6078"
+      ]
+    }
+  ]
+}

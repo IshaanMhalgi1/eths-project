@@ -1,0 +1,464 @@
+{
+  "query_id": "q33",
+  "query_text": "Erie Canal completion 1825",
+  "temporal_type": "explicit_year",
+  "corpus": "expanded",
+  "candidates": [
+    {
+      "candidate_id": "q33_cand_0",
+      "canonical_parent_doc_id": "train_31115",
+      "original_parent_doc_id": "train_31115",
+      "chunk_id": "train_31115_0",
+      "text": "The total suspension of operations upon the canal that must follow the recent failure to obtain a further subscription from the State of Maryland renders it certain, even if there should be everything done by that State next year that can be asked for by the company, that the canal will not be completed to Cumberland in less than four years from this time. It might easily have been finished in two years with a rate of progress through 1840 and until completion no greater than in 1838 and 1839. (The amount of work done in 1838 and 1839 somewhat exceeded $2,200,000, while the work to do to finish the canal on the 1st of January, 1840, was $2,360,000.) I repeat, the gradual lessening of operations for a few months past, and the total suspension of work for one year, for want of means, will add two years to the time required for the completion of the canal to Cumberland, even if Maryland, a year hence, should do all that the friends of the canal can then desire. There is evidence that cannot be questioned to sustain the assertion just made. It will be recollected that, five years since, when the canal was finished up to dam No. 5, there was a total suspension of work for upwards of a year.",
+      "metadata": {
+        "publication_year": 1840,
+        "historical_start": 1840,
+        "historical_end": 1840,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q33_cand_1",
+      "canonical_parent_doc_id": "train_68590",
+      "original_parent_doc_id": "train_68590",
+      "chunk_id": "train_68590_0",
+      "text": "The hard weather having set in, and the experience already had, having shown the necessity of some additional security to parts of the line of the Alexandria Canal, the navigation of that work, we are requested to say, has been closed, and will not be resumed until further notice. We learn from the Albany Argus that there is every probability of Iron Canal Boats being extensively introduced on the Erie Canal next summer. They draw much less water, and can carry greater cargoes than wooden boats. The result of this improvement will be to increase the capacity of the Canal, and augment the business transacted upon it. It is stated that a firm in Boston intends building, before Spring, six steamers, to be propelled by the Ericsson screw, for the Albany trade. They are to be constructed of iron, and of three hundred tons capacity, and are to run between Troy, Albany, and Boston. They will make the passage, it is thought, in about forty hours. Flour is to be carried in them at fifteen cents a barrel, to the injury perhaps of the Western railroad. The United States iron steam Frigate which was lately constructed at Pittsburg, and transported from thence to the port of Erie, (on Lake Erie) was launched on Tuesday, the 5th instant. She is the first iron vessel launched upon the Lake, and is represented as a handsome affair, of per-",
+      "metadata": {
+        "publication_year": 1843,
+        "historical_start": 1843,
+        "historical_end": 1843,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q33_cand_2",
+      "canonical_parent_doc_id": "train_51236",
+      "original_parent_doc_id": "train_51236",
+      "chunk_id": "train_51236_0",
+      "text": "It gives, undoubtedly, the most correct statement of the size of the great lakes' extent. The entire report is valuable in a commercial point of view\u2014as giving the statistics of the vast region watered by the lakes, and as exhibiting something of its resources and capabilities for a still more extensive and valuable commerce. The entire line of lake coast is 5000 miles, of which 2000 constitute the British coast. The following is the result of the survey of the U. S. Topographical Engineers: Lake Champlain is Greatest width 12 Miles long. Lake Ontario Greatest width 52 Average width 8 190. Lake Erie is Greatest width 57 Average width 38 240. Lake St. Clair is Greatest width 25 Average width 13 18. Lake Huron is Greatest width 105 Average width 70 270. Lake Michigan is Greatest width 83 Average width 58 340. Lake Superior is Greatest width 135 Average width 100 420. These lakes may be considered as connected throughout their whole extent. Lake Champlain connects with Lake Ontario by means of the river Richelieu; the lock and dam navigation of St. Lawrence river; the Ottawa river; the Rideau canal through Canada, and the Champlain and Erie Canal of New York. Lake Ontario is connected with Lake Erie by means of the Welland Canal through Canada, and by means of the Oswego and Erie Canal through New York.",
+      "metadata": {
+        "publication_year": 1848,
+        "historical_start": 1848,
+        "historical_end": 1848,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q33_cand_3",
+      "canonical_parent_doc_id": "train_31143",
+      "original_parent_doc_id": "train_31143",
+      "chunk_id": "train_31143_0",
+      "text": "There should be added, for interest on the sum required to finish the canal, beyond what would otherwise be paid previous to completion, in consequence of three years being required to do the work instead of two years, say $70,000. Total $1,265,000. This sum of $1,265,000 may be regarded as the loss to the State of Maryland, caused by one year's suspension of operations upon the canal. Add two years' interest on the $3,000,000 of stock not owned by the State of Maryland, viz: $360,000, and we have $1,625,000 for the loss to the whole body of stockholders from the suspension of work -equal to upwards of $2,200 per day for each day of the two years that the completion of the canal will be deferred thereby. The above are not speculative calculations - they may be regarded as of a certain and positive character, and in no wise contingent, as time will prove. It is exceedingly to be regretted that so little is known by the citizens of Maryland and others interested, of the present condition of the Chesapeake and Ohio Canal, as regards the work itself. Its great cost, compared with former estimates, is spoken of by many persons as entirely chargeable to the work costing more than it was estimated at.",
+      "metadata": {
+        "publication_year": 1840,
+        "historical_start": 1840,
+        "historical_end": 1840,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q33_cand_4",
+      "canonical_parent_doc_id": "train_17507",
+      "original_parent_doc_id": "train_17507",
+      "chunk_id": "train_17507_0",
+      "text": "Din. tablecloths, oilcloth covers, corded skirts, silk velvet, naddincr canvass, drilling, merino shawls, buck mittens and gloves, woolen socks, hosiery, umbrellas, &c.; Molasses, N. O., P. R. and Havana sugar, young hyson and black Tea, raisins, currants, candles, soap, mustard, coffee, 2 doz. shovels and spades, 3 doz. cast steel axes, 50 kegs cut and wrought nails, &c. Constantine Nov. 15. Cw72 ERIE CANAL TRANSPORTATION: Insured. WASHINGTON LINE. Dows, Carter & Co.- Proprietors, will start a boat from New York and Albany for Buffalo daily. Freight and Passengers forwarded to Rochester, Buffalo, Ohio, Michigan, Illinois, Kentucky, Indiana, and Missouri, with despatch. Refer to Buckley & Noble, Monroe, M. T. Mead, Perrin & Co. Northville, M. T. John Hurlburt, Sault Ste Marie, M. T. John F. Porter & Co. St. Joseph. Rix Robinson, Grand River. H. H. Comstock, Kalamazoo. For Freight or passage, apply to A. H. Gale, New York, 76 Cortlandt street. Dows & Cary, 175 Washington Street, N. York Ly Barker & Co. Rochester, N. Y. U. E. Palmer & Co. Buffalo, N. Y. MESSAGE, Of his Excellency Gov. MASON, delivered at the commencement of the third Session of the Legislature of the State of Michigan. MESSAGE Fellow Citizens of the Senate, and House of Representatives.",
+      "metadata": {
+        "publication_year": 1838,
+        "historical_start": 1838,
+        "historical_end": 1838,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q33_cand_5",
+      "canonical_parent_doc_id": "train_18160",
+      "original_parent_doc_id": "train_18160",
+      "chunk_id": "train_18160_0",
+      "text": "I receive and forward goods to any point on Lake Erie, Huron and Michigan, on the Erie and Ohio Canals and Southwestern Rivers, with promptness and dispatch. Any property intrusted to their care, for sale here, in the New-York or other markets, will receive prompt and especial attention. The usual advances made when required. Merchants' Line on the Lakes. Steamboat Buffalo, Steamboat Constellation, Michigan, Pennsylvania, Sandusky, Victory, Upper Lakes Line. Ship Milwaukee, Ship Julia Palmer, Brig Manhattan, Schr. Lasalle, Schr. Michigan, Hudson, Marengo, N. C. Baldwin, Lake Erie Line of Vessels. Schr. J. Barker, Schr. Lodi, Merchant, Marshall Ney, Gazelle, Napoleon, Nancy Dousman. Erie Canal Merchants Line. Start two boats daily. F. WILKIE, Agent, No. 9 Corlears Slip, N. Y. Washington Line. Start one boat daily. T. P. WATERS, Agent, 121 Broad Street, N. Y. Ohio Canal Eagle Line. Start one boat daily for Portsmouth, and intermediate places. RANSOM, BALDWIN, & CO. Cleveland, Ohio. References. R. Hunter & Co., Albany; J. J. Carter & Co., do.; H. Hunter, Rochester; Ran som, Baldwin, & Co., Cleveland; O. Newberry & Co., Detroit; Newberry & Dole, Chicago; Hollister and Boult, Sandusky; G. D. Dousman & Co., Milwaukee; J. F. Porter, St. Joseph, and Isaac J. Ullmann, Constantine, Mich. A BARGAIN LOOK SHARP.",
+      "metadata": {
+        "publication_year": 1837,
+        "historical_start": 1837,
+        "historical_end": 1837,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q33_cand_6",
+      "canonical_parent_doc_id": "train_18550",
+      "original_parent_doc_id": "train_18550",
+      "chunk_id": "train_18550_0",
+      "text": "Fino and Commission Merchant, at I. Idd stand, foot of Main street, Buffalo. The facilities of this house are surpassed by none engaged in the business, and on the opening of navigation they will be prepared to receive and forward goods to any point on Lake Erie, Huron and Michigan, on the Erie and Ohio Canals and Southwestern Rivers, with promptness and dispatch. Any property intrusted to their care, for sale here, in the New York or other markets, will receive prompt and especial attention. The usual advances made when required. Merchants' Line on the Lakes. Steamboat Buffalo, Steamboat Constellation, Michigan, Pennsylvania, Sandusky, Victory, Upper Lakes Line. Ship Milwaukee, Ship Julia Palmer, Hi Manhattan, Schr. La Salle, Schr. Michigan, Hudson, Marengo, N. V. Baldwin, Lake Erie Line of Vessels. Schr. J. Barker, Schr. Lodi, Merchant, Marshall Ney, Gazelle, Napoleon, Nancy Duncan. Erie Canal Merchants' Line. Start two boats daily. P. WILKIE, Agent, Rochester, N. Y. Washington Line. Start one boat daily. T. P. WATERS, Agent, Ohio Canal Eagle Line. Start one boat daily for Portsmouth, and intermediate places. RANSOM, BALDWIN, & CO. Cleveland, Ohio. References. R. Hunter & Co., Albany; J. J. Carter & Co., do.; H. Hunter, Rochester; Ransom, Baldwin, & Co., Cleveland; O. Newberry &.",
+      "metadata": {
+        "publication_year": 1837,
+        "historical_start": 1837,
+        "historical_end": 1837,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q33_cand_7",
+      "canonical_parent_doc_id": "train_17619",
+      "original_parent_doc_id": "train_17619",
+      "chunk_id": "train_17619_0",
+      "text": "I Erie Canal Merchants Line. Start two boats daily. F. WILKIE, Agent, No. 6 Coenties Slip, N. Y. Washington Line. Start one boat daily. T. P. WATERS, Agent, No. 118 Broad Street, N. Y. Ohio Canal Eagle Line. Start one boat daily for Portsmouth, and intermediate places. RANSOM, BALDWIN, & CO. Cleveland, Ohio. References. R. Hunter & Co., Albany; J. J. Carter & Co., do.; H. Hunter, Rochester; Ran. som, Baldwin, & Co., Cleveland; O. Newberry & Co., Detroit; Newberry & Dole, Chicago; Hollister and Boult, Sandusky; G. D. Dousman & Co., Milwaukie; J. F. Porter, St. Joseph, and Isaac J. Ullmann, Constantine, Mich. 1837. THE STEAMBOAT MICHIGAN, (propelled by two powerful low pressure engines) Archi. bald Allen, Master, will perform her trips for the present season agreeably to the following ar rangements: Leaving Detr't for Buffalo. May. 5, 11, 17, 23, 29. June. 4, 10, 16, 22, 28. July, 4, 10, 16, 22, 28. August, 3, 9, 15, 21, 27. September, 2, 8, 14, 20, 26. October, 2, 8, 14, 20, 26. November, 1, 7, 13, 19. Leaving Buffalo for Detr't. May, 8, 14, 20, 26. June, 1, 7, 13, 19, 25. July, 1, 7, 13, 19, 25, 31. August, 6, 12, 18, 24, 30. September, 5, 11, 17, 23, 29. October, 5, 11, 17, 23, 29. November, 4, 10, 16. NEW LINE OF MAIL STAGES. (Mail carried three times a week,) FROM Coldwater to Michigan City, VIA Centreville, Constantine, Mottville, Bristol, Elkhart, Mishawaka, South.",
+      "metadata": {
+        "publication_year": 1837,
+        "historical_start": 1837,
+        "historical_end": 1837,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q33_cand_8",
+      "canonical_parent_doc_id": "train_17713",
+      "original_parent_doc_id": "train_17713",
+      "chunk_id": "train_17713_0",
+      "text": "18371,,!, rf MOLT, PALMER & CO., (Successors to Barker & Holt,) STORAGE, FORWARDING and Commission Merchants, at old stand, foot of Main street, Buffalo. The facilities of this house are surpassed by none engaged in the business, and the opening of navigation they will be prepared to receive and forward goods to any point on Lake Erie, Huron and Michigan, on the Erie and Ohio Canals and Southwestern Rivers, with promptness and dispatch. Any property entrusted to their care, for sale here, in the New York or other markets, will receive prompt and especial attention. The usual advances made when required. Merchant's Line on the Lakes, Steamboat Buffalo, Steamboat Constellation Michigan, Pennsylvania, Sandusky, Victory, Upper Lakes Line. Ship Maitland, Ship Julia Palmer, Brig Manhattan Belle, Lafayette, Schooner Michigan, Hudson, Marengo, N. C. Baldwin, Lake Erie Line of Vessels, Schooner J. Barker, Schooner Lodi, Merchant, Marshall Ney, Vazelle, Alweca, Nancy Dousman. Erie Canal Merchants Line. Start two boats daily. F. WILKIE, Agent, No. 5 Couitlandt Slip, N. Y. Washington Line. Start one boat daily. T. P. WATERS, Agent, 11 Broad Street, N. Y. Ohio Canal Eagle Line. Start one boat daily for Portsmouth, and intermediate places. RANSOM, BALDWIN, & CO., Cleveland, Ohio. References. Hunter & Co., Albany; J. J. Carter & Co., do.; H.",
+      "metadata": {
+        "publication_year": 1837,
+        "historical_start": 1837,
+        "historical_end": 1837,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q33_cand_9",
+      "canonical_parent_doc_id": "train_31148",
+      "original_parent_doc_id": "train_31148",
+      "chunk_id": "train_31148_0",
+      "text": "I will close this report by repeating that it is my deliberate and sincere opinion that the loss to the State of Maryland, as a stockholder in the Chesapeake and Ohio Canal Company, in consequence of the work not being prosecuted to completion uninterruptedly, and with a sufficiency of means in hand, from January 1st, 1840, onwards at the same rate as in 1838 and 1839, will prove to be a loss of time in the completion of the canal of two years; and a loss, in round numbers, of one million and a quarter of dollars. Respectfully submitted, CHARLES B. FISK, Chief Engineer. EXTRAORDINARY MODEL OF MAN IN ANATOMY. \u2014Dr. Bedford, of this city has just received from Paris, one of the most extraordinary works developing the anatomy and physiology of man\u2014and beautiful woman too \u2014that ever has reached this country. It is called \"La Anatomie Classique,\" and is prepared by Dr. Auzoux, of Paris. This curious piece of mechanism is a full length representation of the human form, with all the bones, sinews, nerves, ligaments, and every other \"part and parcel\" of the internal and external regions of the human system, colored and fashioned exactly as they are in living subject.",
+      "metadata": {
+        "publication_year": 1840,
+        "historical_start": 1840,
+        "historical_end": 1840,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q33_cand_10",
+      "canonical_parent_doc_id": "train_26095",
+      "original_parent_doc_id": "train_26095",
+      "chunk_id": "train_26095_0",
+      "text": "Mr. Woodall moved to this county from Cumberland within a few months past, and is represented to have been a man of great worth, and a member in communion with the Church. He has left a wife and several children, who have been bereaved by this shocking event of their nearest friend and protector, and are entitled to and we hope will receive the sympathy and active aid of the community. \u2014 Warrenton (Pa.) Register. Monishing Fact. \u2014It is a fact that has been proved by figures, that the amount of tonnage in 1832, in the New-York Erie Canal alone, which passed Alexander\u2019s Lock, exceeds the whole amount of tonnage, both foreign and domestic, of the port of New-York in 1833. The tonnage of the port of New-York for 1833, was 53,456 vessels cleared and arrived, 771,846 tons, of which one third departed in ballast; whereas 800,000 tons, by computation, passed Alexander's Lock, without taking into consideration trade stopping above. We remark that in 1833, there passed the lock at Utica 1,609,612 gallons of domestic spirits, and in 1834, the amount was 1,461,051, making a decrease in that article of 148,561, in one year. \u2014 U. S. Gazette. The Liberated Negroes. \u2014The British and Foreign Bible Society is now engaged to give every liberated Negro that can read, a copy of the Psalms and New Testament, and \u00a320,000 will be wanted for this purpose, half of which is not yet raised.",
+      "metadata": {
+        "publication_year": 1835,
+        "historical_start": 1835,
+        "historical_end": 1835,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q33_cand_11",
+      "canonical_parent_doc_id": "train_72714",
+      "original_parent_doc_id": "train_72714",
+      "chunk_id": "train_72714_0",
+      "text": "and Michigan canal,\" passed March 4, provides, That \"any settler on canal lands who has made his improvement previous to the first day of December, 1843, shall not be entitled to the pre-emption rights granted by the provisions of 'an act for the completion of the Illinois and Michigan Canal,\" approved February twenty-first one thousand eight hundred and forty-three.\" The board of trustees in the order referred to among other things prescribe that the applicant for pre-emption shall set forth in his application, sworn to \"the facts in relation to the settlement on the land, or improvements made prior to the act.\" It is also seen that the owner of the improvements upon lands or lots made prior to February, 1843 (except settlers on canal lands), is entitled to purchase the land or lot at its appraised value the time for which could not be extended by the authorities in the land office.",
+      "metadata": {
+        "publication_year": 1847,
+        "historical_start": 1847,
+        "historical_end": 1847,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q33_cand_12",
+      "canonical_parent_doc_id": "train_94358",
+      "original_parent_doc_id": "train_94358",
+      "chunk_id": "train_94358_0",
+      "text": "Amount of duty which will be derived from the aborts when taken out of bond, will amount to $58,494. This shows that trade in Canada partakes a great deal of the spirit and activity of commercial operations in this country. There is no reason why our Canadian neighbors should not even with the facilities they now enjoy through our works of internal improvement, progress more rapidly than is shown in the above returns. Returns of trade and commerce from every other important port in Canada, will, without doubt, exhibit a state of affairs full as favorable as those given above respecting Montreal. Herald Exchange, $500 U. S. 6s, '57, 115; 10 shs Del & Hud Canal 97\u00bd; 100 Long Island R.R. 152; 40 do 157\u00bd; 500 Erie Cons, '71 85; 300 Morris Canal 16\u00bd; 100 do 187; 100 do 70; 500 do 71; 600 do 70\u00bd; 100 Erie, '69 102; 600 do 70\u00bd; 10 sh. Bit of N Amer 102; 400 do 102; Mdgeworth Co 82; 100 do 91\u00bd; 100 Casten Co 120; 200 do 70; 600 do 115; 150 do big 127; 10 do 92; 100 do 121; 12\u00bd Reading R.R. 55; 400 do 64; 300 do 55; 50 Erie RR 19\u00bd; 300 do 55\u00bd; 50 do 57\u00bd.",
+      "metadata": {
+        "publication_year": 1851,
+        "historical_start": 1851,
+        "historical_end": 1851,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q33_cand_13",
+      "canonical_parent_doc_id": "train_151727",
+      "original_parent_doc_id": "train_151727",
+      "chunk_id": "train_151727_0",
+      "text": "A proportion was also made to divide the net proceeds of the three roads for carrying passengers from this city equally between the three companies. The Erie Directors refused to consider such a proposition without a showing up of figures. After some hesitation this was agreed to. It was found that the Erie carried 7,000,000 passengers from this city during the year past, the New York Central 4,000,000, and the Pennsylvania Central 2,000,000. The Erie Company then refused to entertain a proposition, unless the New York Central Road would throw in the net proceeds from its New England passengers, and the Pennsylvania Central would toss in the net proceeds from Philadelphia passengers. This was refused, and the conference broke up without any agreement. In the meantime the Erie Directors took new steps for the extension of its broad gauge to Chicago. An examination of the Atlantic and Great Western Railroad was made, and it was found that the road could be tapped at Akron, and a new road constructed between that point and Toledo, a distance of seventy-five miles. At Toledo an extra rail could be laid to Chicago along the Michigan Southern and Northern Indiana Railroad, and, thus carried out, the broad gauge scheme would be a success.",
+      "metadata": {
+        "publication_year": 1868,
+        "historical_start": 1868,
+        "historical_end": 1868,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q33_cand_14",
+      "canonical_parent_doc_id": "train_16194",
+      "original_parent_doc_id": "train_16194",
+      "chunk_id": "train_16194_0",
+      "text": "In such an event, the canal stretching from the Piscataqua to the St. Lawrence, would vie in importance with the Erie Canal, those of the most stupendous works of internal improvement of modern times, and would be the source of immense profits. But should it yield no more than half the income derived from the Erie Canal, no one would doubt the expediency of constructing it. The general government, should a Dry Dock be erected at Portsmouth, of which there seems to be a reasonable expectation, would doubtless patronize the undertaking, in order to provide the facilities for the transportation of ship timber, of which the forests of New-Hampshire can afford an abundant supply. The productions for transportation have been often, in part, enumerated. They embrace all the varieties, which our section of the Union produces and is capable of producing. To these may be added the mineral products of Strafford and Grafton counties, and future discoveries may disclose mines of wealth, of which we at present are wholly ignorant. The numerous and extensive manufacturing establishments in Strafford county, and which are on the increase, would derive great advantages from the canal, and their proprietors have a deep interest in its promotion. The articles for transportation embrace also all foreign goods and merchandise for home consumption, and the people of the interior would thereby receive their supplies at costs reduced considerably below the present rates.",
+      "metadata": {
+        "publication_year": 1828,
+        "historical_start": 1828,
+        "historical_end": 1828,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q33_cand_15",
+      "canonical_parent_doc_id": "train_31108",
+      "original_parent_doc_id": "train_31108",
+      "chunk_id": "train_31108_0",
+      "text": "Upon these 50 miles, the work is nearly one-half done: or, more precisely, there are in cost, of the 50 miles, equivalent to 24 miles of the canal completed\u2014(on the 1st of this month there had been done on the 50 miles, rejecting fractions, $2,140,000 of work, leaving $2,300,000 to be done.) Regarding, then, the whole distance from Washington to Cumberland, there are equal to 158 miles of the canal finished, and only 20 miles yet to be constructed; that is, there now remains to be constructed but one-seventh of the canal to reach the coal mines at Cumberland. It is admitted, and it is well known, that the canal will barely do more than keep itself in repair and pay for its superintendence until it shall have been finished to Cumberland. But, within a reasonable time after its completion to that place, it is confidently anticipated that it will become a profitable work. If it should not, it will be an exception to all coal canals in this country and in Europe, which have invariably proved to be immensely valuable to their stockholders.",
+      "metadata": {
+        "publication_year": 1840,
+        "historical_start": 1840,
+        "historical_end": 1840,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q33_cand_16",
+      "canonical_parent_doc_id": "train_24460",
+      "original_parent_doc_id": "train_24460",
+      "chunk_id": "train_24460_0",
+      "text": "From Philadelphia to Pittsburgh, by the Columbia railroad and Pennsylvania canals, is 394 miles\u2014276 by Canals and 118 by railroads; the ascent and descent on this route is 5,220 feet; and by the Schuylkill, Union, and Pennsylvania canals, the distance is 411 miles, ascent and descent 4,524 feet, 161 by locks, and 2,570 by inclined planes; and as the latter route is found to be the cheapest transportation, it is adopted for the purpose of this comparison. On this line there are two transshipments, one at Hollidaysburg the other at Johnstown. From tide water at Washington City to Pittsburgh, by the Chesapeake and Ohio Canal, is 341 miles continuous Canal, lockage 3,215 feet; and when the canal shall have reached Cumberland, the distance from tide to the navigable waters of the West, will be only two hundred and fifty eight miles viz: 136 miles by the Chesapeake and Ohio Canal, and 72 from thence by the Cumberland road, to Brownsville, on the Monongahela. The sources of revenue relied on are, 1st. Coal\u2014by far the most productive source of revenue on all canals where found, in Europe and America. 2nd. Lumber\u2014abounding on this canal, and affording one of the principal sources of revenue on the New York Canal. 3rd. Lime of the best quality and at the cheapest rates, made on the line of this work. 4th.",
+      "metadata": {
+        "publication_year": 1835,
+        "historical_start": 1835,
+        "historical_end": 1835,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q33_cand_17",
+      "canonical_parent_doc_id": "train_31105",
+      "original_parent_doc_id": "train_31105",
+      "chunk_id": "train_31105_0",
+      "text": "In obedience to the order of the Board of the 88th ultimo, the Chief Engineer made a report on the present condition of the work in progress on the line of the canal, etc.; which was read, and it was Ordered, That the report be published for the information of the Stockholders of the Company, and of the public generally. Extracts from the journal of proceedings. Test: JNO. P. INGLE, Clerk Chesapeake and Ohio Canal Company. REPORT OF THE CHIEF ENGINEER. CHESAPEAKE AND OHIO CANAL OFFICE, Washington, March 30, 1840. To the President and Directors of the Chesapeake and Ohio Canal Company: GENTLEMEN: Under your resolution of the 30th instant, I have the honor to present the following Report. The resolution calls on the Chief Engineer \"to report upon the present condition of the work in progress on the line of the canal between dam No. 6 and Cumberland; giving his opinion as to the probable increase of expenditure which will be required for the work if it shall now be arrested, and the time within which, in that event, the canal will be opened for navigation from Cumberland to tide-water.\" The distance by the canal line from Washington to Cumberland is 184 miles. The canal has been finished and navigable for a year from Washington to within 50 miles of Cumberland.",
+      "metadata": {
+        "publication_year": 1840,
+        "historical_start": 1840,
+        "historical_end": 1840,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q33_cand_18",
+      "canonical_parent_doc_id": "train_106441",
+      "original_parent_doc_id": "train_106441",
+      "chunk_id": "train_106441_0",
+      "text": "Upon most of this vast tract of land, the higher portions of it will grow the largest kind of wheat, corn, potatoes, etc., and the lower portions, with proper drainage and culture, the heaviest grass, oats, corn, potatoes, hemp, etc. The Detroit and Milwaukee Railroad, now nearly completed, passes through many of these lands, making the third railroad now running entirely through the state from east to west, within a few years, each doing a large and rapidly increasing business. The Sault St. Mary's Ship Canal, connecting, as it does, by water and by railroads, the eastern and southern markets with the untold wealth of the Upper Peninsula, in its minerals, its splendid marble, its fisheries, its soil and timber, with its salubrious climate, must eventually make it one of the richest, most healthful and desirable localities in our country. In anticipation of this, we already see new towns and cities there, liberally projected, founded upon this reasonable and very general expectation. It is now confidently expected that railroads will also soon be built, running from the southern boundaries of the state, north, through Lansing, the capital, and the flourishing young cities of Grand Rapids, Kalamazoo, Flint and Saginaw, and other important places, thus again connecting the southern as well as the eastern market with the rich and extensive lumber regions in the northern parts of the state.",
+      "metadata": {
+        "publication_year": 1858,
+        "historical_start": 1858,
+        "historical_end": 1858,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q33_cand_19",
+      "canonical_parent_doc_id": "train_28793",
+      "original_parent_doc_id": "train_28793",
+      "chunk_id": "train_28793_0",
+      "text": "BUFFALO LINE, Erie Canal. THADDEUS JOY & CO., Proprietor. CONNECTED with steam freight boats and vessels on Lake Erie. The Proprietors and Agents of this line, will contract for the transportation of Goods or Produce at fair rates, and pledge them selves to those who may entrust Property to their care for transportation, that the same shall be forwarded with care and des patch: and that any damage that may oc cur to property shipped by the above line, which the Proprietors may be liable for, shall be adjusted in the most prompt and liberal manner. Authorized Agents: Carpenter & Myers, Toledo. Hiram Jay, No. 18 South-street, N. Y. Thaddeus Joy & Co., Albany. Joy & Webster, Buffalo. Richard Winslow & Co., Cleveland. Hull & Shepard, Massillon. Priest & Page, Little Falls, N. Y. Samuel Adams & Co., Dresden. R. Comstock & Co., Columbus. M. B. Ross & Co., Portsmouth. July 13, 15. TO PHYSICIANS AND PATIENTS: The Blind Piles, Baid to be incurable by external applications. Solomon Hays warrants the contrary. His Liniment will cure Blind Piles. Facts are more stubborn than theories. He solicits all respectable Physicians to try it upon their patients. It will do them no harm, and it is known that physicians who had the honesty to make the trial, have candidly admitted that it has succeeded in every case they have known. Then why not use it? It is the recipe of one of their most respectable members, now deceased.",
+      "metadata": {
+        "publication_year": 1839,
+        "historical_start": 1839,
+        "historical_end": 1839,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q33_cand_20",
+      "canonical_parent_doc_id": "train_10184",
+      "original_parent_doc_id": "train_10184",
+      "chunk_id": "train_10184_0",
+      "text": "In 1800, - - - 3,210 1803, - 4,352 1807, - - - 5,652 1810, - - - - 8,208 1817, - - - 11,209 1820, - - - - 13,474 The number of dwellings, exclusive of public buildings and shops, was, on the 1st of January, 1822, 2,229\u2014of which 1,035 were brick, and 1,184 wood; and the assessed valuation of real property on the 1st of Jan. 1821 was 86,568,726, affording a revenue of 832,843.63; in addition to which there is a revenue of 810,000, arising from the licenses of taverns, hackney coaches, etc. which is appropriated to the support of the poor, of public schools and markets, and to pay the officers of the corporation. CANAL ACROSS JERSEY. The success with which the New York people have apparently met, in their project of constructing, what is termed the Grand Canal, has excited renewed attention to the subject of the long-talked-of Canal through this state, for the purpose of connecting the navigable waters of the Delaware and Raritan rivers, whereby an inland water communication will be established between the cities of Philadelphia and New York. It is said a person offers to construct this canal upon a dead level, from river to river, for the sum of \u00a3250,000.",
+      "metadata": {
+        "publication_year": 1822,
+        "historical_start": 1822,
+        "historical_end": 1822,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q33_cand_21",
+      "canonical_parent_doc_id": "train_17453",
+      "original_parent_doc_id": "train_17453",
+      "chunk_id": "train_17453_0",
+      "text": "Erie Canal- Merchants Line. Start two boats daily. F. WILKIE, Agent, No. 9 Coenties Slip. N. Y. Washington Line. Start one boat daily. T. P. WATERS, Agent, 123 Broad Street, N. Y. Ohio Canal Eagle Line. Start one boat daily for Portsmouth, and intermediate places. RANSOM, BALDWIN, & CO. Cleveland, Ohio. References. R. Hunter & Co., Albany ; J. J. Carter & Co., do.; H. Hunter, Rochester ; Ran. som, Baldwin, & Co., Cleveland ; O. Newberry Co., Detroit; Newberry & Dole, Chicago; Hollister and Boult, Sandusky ; G. D. Dousman & Co., Milwaukee ; J. F. Porter, St. Joseph, and Isaac J. Ullmann, Constantine, Mich. JUST RECEIVED by land from De. troit a prime lot of Cheese Also, a lot of best rice ever brought into the western country ; together with a fresh assortment of Confection, ary, fruit, perfumery, &c, and a complete as. sortment of brushes, all low for cash. ADAMS & APPLETON. Constantine, Jan. 18, 1837. 29 SCHOOL BOOKS, a New Supply. 5J among which are Leather and cloth bound, cheap Testaments ; Definition and common English Readers ; Blake's Historical Reader ; Webster's and Walker's Dictionaries ; Woodbridge's and Olney's Geographies &, Atlases ; Parley's Geography and Tales ; Kirkham's, Murray's and Greenleaf's Grammars ; Daboll's, Ostrander's and Colburn's Arithmetics ; Blake's Natural Philosophy ; Introductory Reader, Juvenile Instructor. Constantine, July 27, 1836. 4 HELP OF ANOTHER. The Kal. amazoo Mutual Insurance Company, in.",
+      "metadata": {
+        "publication_year": 1837,
+        "historical_start": 1837,
+        "historical_end": 1837,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q33_cand_22",
+      "canonical_parent_doc_id": "train_142091",
+      "original_parent_doc_id": "train_142091",
+      "chunk_id": "train_142091_0",
+      "text": "The Secretary of War be, and he is hereby, authorized and directed to cause surveys, with plans and estimates of cost, to be made by an officer or engineers, for a ship canal around the falls of the Ohio river on the Indiana side thereof of suitable location and dimensions for military, naval, and commercial purposes; and also to cause said officer to estimate the expense of completing the Louisville and Portland canal, on the Kentucky side of said falls, according to the plan on which the said canal company is now progressing with said work, and that the expenses of both be defrayed from the sums appropriated in the acts of June twenty-three, eighteen hundred and sixty-six, and March two, eighteen hundred and sixty-seven, for examination and surveys relating to the improvement of harbors and rivers on the northwestern lakes. Approved, March 29, 1867. (Public Resolution\u2014No. 81). Resolution to authorize the Secretary of War Dress Boats for Use at the Mouth of the Mississippi River. Be it resolved by the Senate and House of Representatives of the United States of America in Congress Assembled, That the Secretary of War be, and is hereby, authorized, on the recommendation of the engineer department.",
+      "metadata": {
+        "publication_year": 1868,
+        "historical_start": 1868,
+        "historical_end": 1868,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q33_cand_23",
+      "canonical_parent_doc_id": "train_133243",
+      "original_parent_doc_id": "train_133243",
+      "chunk_id": "train_133243_0",
+      "text": "No reduction will be made in the tax on whiskey or any other prominent article. The report of Gen. Hatch on our inland commerce has been sent to the House by the Secretary of the Treasury. He takes ground against the idea that the enlargement of Canadian canals would benefit Western commerce. It claims to have demonstrated that the Erie canal is naturally the cheapest channel for Western commerce, that it has carried heretofore and will carry hereafter, the bulk of the Western commerce, that the geographical and commercial advantages which have prevented any serious diversion of business from the Erie canal by the Canadian canals will operate more powerfully in future than in the past. The State of New York to secure national aid in favor of its former propositions. NEW YORK. IDWALLS T'POURF.m. kU .i i.ol t-j the poor. There are not less than 4,000 persons. WASHINGTON, Feb. 3.\u2014Mr. Trumbull, from the Judiciary Committee, reported, without amendment, the House bill to regulate the currency. The prospect is for bread. Any contributions for our suffering people will be duly appreciated and properly distributed. The relief commissions are to meet to-day. The result of Assistant Secretary Seward's mission will be laid before the Cabinet today. Gen.",
+      "metadata": {
+        "publication_year": 1867,
+        "historical_start": 1867,
+        "historical_end": 1867,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    }
+  ]
+}

@@ -1,0 +1,426 @@
+{
+  "query_id": "q42",
+  "query_text": "Trail of Tears Cherokee removal 1838",
+  "temporal_type": "explicit_year",
+  "corpus": "expanded",
+  "candidates": [
+    {
+      "candidate_id": "q42_cand_0",
+      "canonical_parent_doc_id": "train_26079",
+      "original_parent_doc_id": "train_26079",
+      "chunk_id": "train_26079_0",
+      "text": "For a while my whole attention was absorbed by the just and glowing picture of infamy and avarice and more than savage cruelty held up to the Senate by the orator, and an inexpressible sympathy for the oppressed and afflicted Indians had choked my own utterance and bedimmed my vision; when, seeking relief for my fullness from the painful contemplation of dishonor and suffering, I turned my eyes across the Chamber, and lo! there sat two of the Cherokee females whom I described to you some weeks since, striving to restrain their tears, and to listen with dignified composure to the story of their wrongs. They were not always successful, for the tears would flow in spite of them. But distressed as they were\u2014agonized as they were, I felt for the time, and so expressed myself to an acquaintance, that I would rather be those two Cherokee women, participating as they did, in the sympathies of all who heard Mr. Clay, than the two Georgia Senators, whose State he exposed to the abhorrence and detestation of the civilized world. \u2014 New-York Commercial Advertiser. The Power of Conscience. \u2014A circumstance was related to us yesterday, which seems to be worthy of narration to our readers.",
+      "metadata": {
+        "publication_year": 1835,
+        "historical_start": 1835,
+        "historical_end": 1835,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q42_cand_1",
+      "canonical_parent_doc_id": "train_17792",
+      "original_parent_doc_id": "train_17792",
+      "chunk_id": "train_17792_0",
+      "text": "A message was received from the President of the United States in relation to the execution of the enclosing the correspondence on the subject between the Secretary of War and Mr. John Ross, of the Cherokee delegation. The documents were read. The Executive offers the delegation very liberal concessions, though not all that they require, on condition that they will assent to the treaty and agree to carry it into effect. The President offers the Cherokees time, two years I believe, in which to complete the removal, provided Congress, at his recommendation, will grant it. He offers to secure to the tribe a perpetual patent for their new territory west of the Mississippi, and promised that no government shall be established over them without their consent. Mr. Clay and Mr. King of Alabama, Mr. Cuthbert and Mr. Lumpkin of Georgia and Mr. Grundy of Tennessee expressed their surprise and indignation at these papers. They had not been aware that any such negotiation was going on, and they severally and solemnly declared that the treaty should be executed forthwith; i.e. in accordance with the President's wishes.",
+      "metadata": {
+        "publication_year": 1838,
+        "historical_start": 1838,
+        "historical_end": 1838,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q42_cand_2",
+      "canonical_parent_doc_id": "train_65918",
+      "original_parent_doc_id": "train_65918",
+      "chunk_id": "train_65918_0",
+      "text": "Editor\u2014Dear Sir\u2014Please inform me through the medium of your pa per, why is it that certain lawyers, Editors, Doctors, Merchants, and a host of others, sign their names so unintelligibly, as to puzzle our old fashion plain writers to decipher them - Ay O Scnonan. [This is a question which we are frequently puzzled to answer ourselves, not only as regards the signatures, (or marks, in which they write. John! A New Cherokee Treaty, We learn by the Cherokee Advocate of January 4th, that a Treaty has been entered into between Maj, Wm, Armstrong, Gov. P, M. Butler, Col, James Logan and Thomas Lo Judge, Esq., Commissioners on the part of the United States, and the Chiefs of the Creek and Seminoles, by which the difficulties between those two Nations and their claims on the United States are satisfactorily adjusted. \"The Treaty, we learn, contains the following stipulations: \"The Seminoles, who have, since their removal from Florida, been scattered among the Creeks and Cherokees, principally, are to be gathered into one district in the Creek country, and form a constituent part of that Nation, preserving, to certain extent, their nationality.",
+      "metadata": {
+        "publication_year": 1845,
+        "historical_start": 1845,
+        "historical_end": 1845,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q42_cand_3",
+      "canonical_parent_doc_id": "train_32069",
+      "original_parent_doc_id": "train_32069",
+      "chunk_id": "train_32069_0",
+      "text": "I will sell at the Court-House door, in the Town of Burnsville, Yancey county, N.C. on the last Monday in June next, 350 acres of LAND, lying on both sides of Caney River, joining lands of Thos. Baker and others, on which Malcom Horton formerly lived, or so much as will satisfy the taxes due for the year 1836, together with the cost of advertising the property of Wm H. Thomas, not listed, valued at $1,000 double tax required. Given under my hand, this 24th of April, 1838. THOS. WILSON, Sh'ff. Yancey Co. May 9, 1838. (Pr. $3 12$.) 184-7t. BY THE GOVERNOR OF N. CAROLINA. WHEREAS, by an Act passed at the last Session of the General Assembly of this State, entitled An Act prescribing the mode of surveying and selling the Lands of this State, lately acquired by treaty with the Cherokee Indians,\" it is made the duty of the Governor, upon the return of the Maps and Field Book of said survey, to the several places as prescribed by said Act, to issue his Proclamation of the time and place of sale; and whereas, the said Maps and Field Books have been returned accordingly.",
+      "metadata": {
+        "publication_year": 1838,
+        "historical_start": 1838,
+        "historical_end": 1838,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q42_cand_4",
+      "canonical_parent_doc_id": "train_39513",
+      "original_parent_doc_id": "train_39513",
+      "chunk_id": "train_39513_0",
+      "text": "For extinguishment of the claims of the Cherokees to their lands in Georgia, per act ninth May, one thousand eight hundred and twenty-eight, forty-six thousand one hundred and four dollars and fifty cents. For carrying into effect the treaty exclud ed with the Creeks, fifteenth November, eighteen hundred and twenty-seven, per act twenty-fourth May, eighteen hundred and twenty-eight, four thousand eight hundred and fifty-seven dollars. For carrying into effect the treaty of sixth May, eighteen hundred and twenty-eight, with the Cherokee Indians, for their removal, etc. from Georgia, per act twenty-fourth May, one thousand eight hundred and twenty-eight, fifty-nine thousand one hundred and thirty four dollars and nineteen cents. For expense of Indian delegations to ex plore the country 'West of the Mississippi, per act twenty-fourth May, eighteen hun dred and twenty-eight, one hundred and fifty nine dollars. For running the Indian boundary line in Florida per act twenty-sixth May, eighteen hundred and twenty-four, one hundred and thirty dollars and forty-nine cents. For purchase of Creek and Cherokee re servations, per act second March, eighteen hundred and twenty-three, twenty-one hun dred dollars. For expense of treating with the Choctaws and Chickasaws, for extinguishment of their title to lands within the limits of Missis sippi, per act twentieth May, eighteen hundred and twenty-six, six hundred and fifty eight dollars. Approved, March 2, 1831. [Public\u2014No. 51.] AN ACT making provision for a subscription to a compilation of Congressional documents.",
+      "metadata": {
+        "publication_year": 1831,
+        "historical_start": 1831,
+        "historical_end": 1831,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q42_cand_5",
+      "canonical_parent_doc_id": "train_38306",
+      "original_parent_doc_id": "train_38306",
+      "chunk_id": "train_38306_0",
+      "text": "An hour passed, and the pastor and his wife mingled their tears at the grave of their child. Sweetly did the star of the east shine on that little mound. As Bolien uncovered his head and gazed upwards, he fervently exclaimed, 'The star of Bethlehem shall be our guide to that land which needeth no star to shine upon it! for the glory of God shall lighten it; and the Lamb is the light thereof.' On hand, and for sale, of the latest fashions, most kinds of usually made in the country warranted good, and as reasonable as can be had in this section. Call and examine for yourselves, at my shop at St. Johnsbury North. IRA ARLINGTON. May 30, 1838. 44 3m THE Partnership heretofore existing, between the subscribers, under the firm of PIKE & FRY, is this day by mutual consent dissolved. All persons having unsettled accounts with said firm, are requested to call and settle the same immediately with John Fry, Jr. who is authorized to settle the whole business of said Partnership. We are under the necessity of saying to those indebted to us that payment must be made immediately. No mistake! BRIGHAM PIKE. JOHN FRY, Jr. Concord, May 12, 1838. 41 tf IMPORTANT. THE TEETHING OF INFANTS. The time of dentition is a most important period of the infant state, and subject to many complaints and dangers.",
+      "metadata": {
+        "publication_year": 1838,
+        "historical_start": 1838,
+        "historical_end": 1838,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q42_cand_6",
+      "canonical_parent_doc_id": "train_38444",
+      "original_parent_doc_id": "train_38444",
+      "chunk_id": "train_38444_0",
+      "text": "Lops and slovens would reflect . D. P., will pay particular attention to In little, they would find there is more in this Cutting for Others to notice. matter than is dreamt of in their philoso- and if properly made up, warranted in fit. they. \" It has a bearing on all things which ro Call and see. He makes up character, including our domestic West Brattleboro, Oct. 10, 1838. 4w0 affections, our patriotism, and even our relig- ion. The Western are remarkably moral; and New Fall Goods. AUSTIN BIRCHARD, HAS just received and is now offering a full and elegant assortment of Foreign and Domestic Piece Goods suited to the fall and winter trade. .Also a large assortment of Crockery China and Glass Wares. ALSO, a full assortment of Teas, and Groceries of all kinds. Particulars hereafter. In the meantime purchasers are invited to call and examine with the assurance that they will find it for their interest to do so before making their purchases. Fayetteville Oct. 17, 1838. BUSHELS of Connecticut QUINCES Just Oct. 15 received and for sale, by HALL, it TOWNSLEY, 1838. steps to pre- - - - - - , , in the removal of the causes of commercial i in iiiiiiiv miiiiiiiiiiii iiiiiiiiii iiii miiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii",
+      "metadata": {
+        "publication_year": 1838,
+        "historical_start": 1838,
+        "historical_end": 1838,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q42_cand_7",
+      "canonical_parent_doc_id": "train_10392",
+      "original_parent_doc_id": "train_10392",
+      "chunk_id": "train_10392_0",
+      "text": "By that agreement all the territory of the State, west of a certain line was ceded, and as a matter of condition the Indian title to lands within the then reserved limits of the State, early as practicable was to be extinguished for the use of Georgia. The Creeks and Cherokees were the only Tribes at that time within the limits of the state; and what their line and boundary of separation then was, appears to be the true point presented for considering, and settling this question. \u2014 If at that period, the boundary by both nations was supposed to be at or near the Buzzard Roost, and to run thence westwardly to Will's Creek; and that its establishment in 1821 was but the mere recognition of what before had been understood by and between the two nations, then should it be admitted, that the Cherokee claim to this disputed territory is fairly established, and the United States is placed under the necessity to protect them against intrusion upon their soil. It is not admitted, that the Creeks and Cherokees were capable to contract, so as to alter their boundary, without the consent of the other parties in interest.",
+      "metadata": {
+        "publication_year": 1829,
+        "historical_start": 1829,
+        "historical_end": 1829,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q42_cand_8",
+      "canonical_parent_doc_id": "train_18611",
+      "original_parent_doc_id": "train_18611",
+      "chunk_id": "train_18611_0",
+      "text": "Said store, is scry convenient, with a good cellar. ALSO\u2014two Tenements conveniently located\u2014one on Summer Street, and one on High Street. Apply to JAMES McLellan. Bath Jan. 16, 1839._3w 43 REMOVAL. Dr. T. G. STOCKBRIDGE, BOARDS at the BATH HOTEL, and has his Office in the Brick Block over Daniel Larrabee's Store. DISSOLUTION. The Copartnership heretofore existing between the undersigned under the firm of Kimballston & McCobb, was, this day dissolved by mutual consent. ORVILLE RICHARDSON, HENRY B. McCOBB. New York, Nov. 19th, 1838. 2m30 Copartnership Notice. The subscribers have this day formed a Copartnership for the transaction of a general Commission business under the firm of Richardson & Co. ORVILLE RICHARDSON, P. RICHARDSON, New York, Nov. 20, 1838. 2tn In VViseasset, Dec. 22d, John Stuart, Esq. aged 60. Copartnership Notice. The copartnership heretofore existing under the firm of P. RUSH & CO. is this day dissolved, by mutual consent. PELIG RUSH, WM J. PREBLE. Boston Dec. 31st, 1838. Copartnership Notice. The Subscribers have this day entered into Copartnership, under the firm of P. RUSH & CO, for the transaction of general commission business, at their stand, No 60 1-2 Long Wharf, Boston. They will pay particular attention to the Lumber Business, and respectfully solicit patronage. PELIG RUSH, GEORGE WOOD. Boston Jan. 1st, 1839. 41 *if JACOB S. SEWALL, ATTORNEY AT LAW, BATH, Lincoln Co., MAINE.",
+      "metadata": {
+        "publication_year": 1839,
+        "historical_start": 1839,
+        "historical_end": 1839,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q42_cand_9",
+      "canonical_parent_doc_id": "train_18949",
+      "original_parent_doc_id": "train_18949",
+      "chunk_id": "train_18949_0",
+      "text": "and all other articles in their line, which will be sold on the most favourable terms and at the lowest TIME-KEEPERS & NAUTICAL INSTRUMENTS of all kinds carefully repaired and CHRONOMETERS RATED. Bath, Nov. 27, 1839. _____ CHAIN. FATHOMS 13 Second hand Chain for sale by D.C. MAGOUN. Oct. 26th, 1838 54 SYNOPSIS OF THE Philadelphia Medical Society's Mode of Curing Disease, From whatever cause arising, (and aiding in the same effect\u2014i.e. producing impure Blood and Fluids), with one, and ONLY ONE MEDICINE; The capability of which has been fully proved beyond the power of malignity, envy, or malice to gainsay. FIRSTLY.\u2014 Pain cannot exist but from CORRUPT HUMORS being located in the identical part where the pain is experienced. These corrupt humors, when in sufficient quantity to overpower the principle of life, are the principal cause of death. It is a solemn truth that corruption terminates the existence of all created beings; the importance of its speedy removal from the body, when by any cause it has accumulated, is therefore self-evident; as not only health, but EXISTENCE being absolutely endangered by its presence. Let us then acknowledge that the only sure means of preventing and curing disease, is the speedy removal of corrupt humors from the body.",
+      "metadata": {
+        "publication_year": 1840,
+        "historical_start": 1840,
+        "historical_end": 1840,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q42_cand_10",
+      "canonical_parent_doc_id": "train_17142",
+      "original_parent_doc_id": "train_17142",
+      "chunk_id": "train_17142_0",
+      "text": "I and Canada; or whether by the treaty of Ghent, the British engaged to evacuate the eastern part of Maine; as to hesitate, whether the Cherokees have the sole and exclusive jurisdiction over their own territory. If the Indians had never been allowed to possess the attributes of men, the case would be very different from what it now is. Long continued encroachments do not indeed furnish a justification of those who make them; but they prove that the oppressors may possibly not perceive the true nature of their oppressive acts, in this matter we cannot offer even the sorry plea of prescription in crime, as an extenuation of our guilt. The precedents, in our own country, are all against us. For two hundred years the Indians have been treated like other men, as to the acknowledgment of their rights and the interpretation of treaties made with them. Cherokees are now living, who have been assured hundreds of times, by the accredited agents of our Government, that the United States would never permit any encroachment to be made upon them; that their country would remain inviolate, as long as they pleased to retain it; and that all treaties were to be executed with the strictest honor and fidelity.",
+      "metadata": {
+        "publication_year": 1830,
+        "historical_start": 1830,
+        "historical_end": 1830,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q42_cand_11",
+      "canonical_parent_doc_id": "train_37511",
+      "original_parent_doc_id": "train_37511",
+      "chunk_id": "train_37511_0",
+      "text": "At this time, to add to his embarrassment and trouble, he was threatened with removal from the office of Probate Judge in his district; an office then worth $200 to $300. Under all these circumstances, he presented his case to three distinguished members of the legislature from this county (all of them his political opponents) and with tears, begged their favor and support. Moved by pity at the narration of his afflictions and dependent circumstances, they did support him, and that too, in opposition to their own political friend, Mr. Strong, who had received the nomination in county meeting by a large majority; and, by their efforts and influence alone, he obtained the appointment. One of the members who thus supported him in his days of adversity alienated, by so doing, the favor of twenty political friends, (they knowing Mr. Phelps at that time, and predicting interference; without reproof for his course received the enviable appellation of \u201cradical number one,\" which title he bore for years afterwards. The third was strongly censured for having thus sustained him. Yet gratitude, honest, heartfelt gratitude, would have been ample recompense for all this. But, sir, how did he show his gratitude for their favors? His conduct was precisely like that of the snake! not of \u201ca snake in the grass\u201d alone, but of the snake in the woodman's bosom!",
+      "metadata": {
+        "publication_year": 1839,
+        "historical_start": 1839,
+        "historical_end": 1839,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q42_cand_12",
+      "canonical_parent_doc_id": "train_95779",
+      "original_parent_doc_id": "train_95779",
+      "chunk_id": "train_95779_0",
+      "text": "To he expended under the direction of the Secretary of the Interior, \"for the thou- and five hundred dollars For the general incidental expenses of the Indian service in California, including two hundred and five of the superintendent and agent and necessary expenses of twenty-one thousand eight hundred and fifty dollars. For the pay of physicians, smiths, carpenters, and laborers on the reservations in California, eighty-two thousand three hundred dollars. For the defense the expenses of the removal and subsistence of Indians of California to the reservations in that State, fifty-five thousand six hundred and fifty dollars. For the expenses of maintaining difficulties and preventing outbreaks in the Territory of Washington, thirty thousand dollars. For the expenses of mending difficulties and preventing outbreaks in the Territory of Washington, ten thousand dollars. For the general incidental expenses of the Indian service in the Territory of Oregon, including subsistence and transportation of annuitants, thirty thousand dollars. For mending difficulties and preventing outbreaks among the Indians in the Territory of Oregon, ten thousand dollars. To enable the Secretary of the Interior to settle and pay the awards of commissioners for spoliations, imprisonment, and for rations and improvements, under the twelfth, thirteenth and sixteenth articles of the Cherokee treaty of twenty-ninth December, eighteen hundred and thirty-five, five thousand seven hundred and twenty-four dollars and thirty-nine cents.",
+      "metadata": {
+        "publication_year": 1857,
+        "historical_start": 1857,
+        "historical_end": 1857,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q42_cand_13",
+      "canonical_parent_doc_id": "train_113272",
+      "original_parent_doc_id": "train_113272",
+      "chunk_id": "train_113272_0",
+      "text": "An act locating the seat of Government at Topeka was passed into a joint resolution memorializing Congress for admission into the Union under the Topeka Constitution. Some territorial County Judges pronounce parts of the census law inoperative. It is reported that Governor Walker has been informed that the constitution will not be submitted to the people. I learn from the Coldwater (Mich.) Journal that a villainous outrage was perpetrated in that village last Sunday morning between 12 and 1 o'clock. The Catholic Church was blown up so that it will be a total loss to the society, being an entire wreck. Two kegs of powder were used for the purpose and placed, one under the middle and the other under the rear wall. The villains were systematic in their arrangements and successful in their execution. From the St. Louis Republican, June 16th. Indian Hostilities on the Plains\u2014An Emigrant Train attacked and destroyed\u2014Four Men Killed\u2014Two Men and one Woman Wounded\u2014The Indians in rear of Colonel Sumner's Command. We have just received a letter from Fort Riley, which we publish below, informing us that an emigrant train has been attacked and destroyed by the Cheyennes Indians, about 80 miles West of that post. It may be recollected that Col. Sumner left Fort Leavenworth some three or four weeks ago, with six companies of Cavalry and two companies of Infantry, for the purpose of making war upon the Cheyennes.",
+      "metadata": {
+        "publication_year": 1857,
+        "historical_start": 1857,
+        "historical_end": 1857,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q42_cand_14",
+      "canonical_parent_doc_id": "train_27496",
+      "original_parent_doc_id": "train_27496",
+      "chunk_id": "train_27496_0",
+      "text": "If any one wants to see me, call at No. 40 Gravier New Orleans. Feb 1, 1838. JOHN DEAN. feb 14 ly SONNARD & CO'S Boston and New Orleans Line of Packet Ships. The new line of ships has been expressly built to run between the above ports, and will be found of suitable draft of water, accommodations for passengers, and every effort will be made to give general satisfaction. The line is composed of the following ships: Cherokee, 415 tons Capt. J Harding, Carolina, 400 do S Lemist, Charleston, 374 do D Eldridge, Columbiana, 625 do G Barker, Seaman, 240 do J Howes, Commodore, 625 do D Humphrey. The above ships are all new, of the first class, copper-fleeted and coppered, commanded by men of great experience, have large accommodations, with a separate ladies' cabin; every attention will be paid to passengers and the very best of stores pro- vided for them. The packets will be towed up and down the Missis- sippi and the strictest punctuality observed in the time of sailing, and should the regular vessels be detained in arriving, other ships equally as good will in all cases be substituted. A share of patron- age is solicited, also the agents pledge themselves to accommodate as much as practicable, to receive and forward goods by said line at the most mod- erate charges, and to advance all expenses on goods shipped, if required. The ships will leave the",
+      "metadata": {
+        "publication_year": 1839,
+        "historical_start": 1839,
+        "historical_end": 1839,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q42_cand_15",
+      "canonical_parent_doc_id": "train_15664",
+      "original_parent_doc_id": "train_15664",
+      "chunk_id": "train_15664_0",
+      "text": "- POETRY. For the N. H. GAZETTE. Mr. Beck\u2014The following \u201ctributary sketch,\u201d was written after the author\u2019s removal from the \u201cverdant banks of the Piscataqua,\u201d The lovely spot\u2014where childhood\u2019s hours Passed cheerfully away. WITH joy I remember\u2014the scene has passed; As on the Piscataqua\u2019s banks I strayed;\u2014 The shadows of evening were falling fast, And silence\u2019s command great Nature obeyed. When the boatman\u2019s cry, and the dashing oars Broke soft on my ear as a magic sound; Till it died away o\u2019er the distant shores, As the night spirit\u2019s murmurs breathed around. The soft gentle zephyrs blew mild and clear, And the buzzing beetle began its hum; The nightingale\u2019s song saluted my ear, And then the deep roll of the distant drum. 'Twas sweet,\u2014as a vision it seemed to me, Where beauty and innocence held their reign; Ah! ne\u2019er such joys again shall I see, While on Swamscut\u2019s dark shores I must remain, SWAMSCUT BARD. TO THE \u201cSWAMSCOT\u201d ENIGMATIST. It is the writer\u2019s great desire, From squabbling civilities to retire; Nor meddle with the half tuned lyre Of \u201cSwamscot.\u201d SWAMSCUT BARD, The lamentations of Ossian and Milton for their loss of sight, have often called forth the praises of genius and the tears of humanity. These, and a sweetly melancholy poem of Rushton\u2019s, are the most eloquent productions which the subject has brought forth. They all follow in the order the names are here written, Ossian\u2019s lamentation is beautifully descriptive.",
+      "metadata": {
+        "publication_year": 1826,
+        "historical_start": 1826,
+        "historical_end": 1826,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q42_cand_16",
+      "canonical_parent_doc_id": "train_34919",
+      "original_parent_doc_id": "train_34919",
+      "chunk_id": "train_34919_0",
+      "text": "The regiments have been concentrated they have made great progress; and the best results may be anticipated from a continuance of this system. During the last season, a part of the troops have been employed in removing Indians from the interjox to the territory assigned to them in the west a duty which they have performed efficiently, and praiseworthy humanity; and that portion of them which has been stationed in Florida continued active operations there throughout the heats of summer. The policy of the United States in regard to the Indians, of which a succinct account is given in my message of 1838, and of the continuity of which I am fully satisfied, has been continued in active operation throughout the whole period of administration. Since the spring of 1837, more than forty thousand Indians have been removed to their homes west of the Mississippi; and I am happy to add, that all accounts concur in representing the result of this measure as eminently beneficial to the people. The emigration of the Seminoles at once has been attended with serious difficulty and occasion bloodshed; hostilities having been commenced by the Indians in Florida, under the apprehension that they would be compelled, by force, to comply with their treaty stipulations. The execution of the treaty at Payne's Landing, signed in 1832, but not ratified until 1834, was postponed at the solicitation of the Indians, until 1835.",
+      "metadata": {
+        "publication_year": 1840,
+        "historical_start": 1840,
+        "historical_end": 1840,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q42_cand_17",
+      "canonical_parent_doc_id": "train_10394",
+      "original_parent_doc_id": "train_10394",
+      "chunk_id": "train_10394_0",
+      "text": "If the Creeks could vary the condition of things, and by altering their boundary, place a part of their country at the disposal of the Cherokees, they could with equal propriety have disposed of the whole; as well as a part, and to any other Tribe of Indians as to the Cherokees. And if it be conceded, that they possessed a power to transfer at all, then was it not necessary for it to take place with the Indians, inasmuch as the concession being made, it would enable them to convey it to any foreign power. The Indians of this country are under the restraints of our laws. It has been so considered, and so acted upon by the judiciary, as well as the legislature. Amongst other restraints is this, and which the Judicial Department of the government has recognized as founded upon the established rules by Great Britain before her acknowledgment of our independence and our own legislation since, that to none other than the government can a sale and transfer of any portion of their soil be made, and that Indian title at best, is to be considered a mere occupancy. If a western line from Suwanny Old Town to the Etowah River, and lay between these tribes, at the date of the compact in 1802.",
+      "metadata": {
+        "publication_year": 1829,
+        "historical_start": 1829,
+        "historical_end": 1829,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q42_cand_18",
+      "canonical_parent_doc_id": "train_12813",
+      "original_parent_doc_id": "train_12813",
+      "chunk_id": "train_12813_0",
+      "text": "\u201cWe know that the treaty is illegal; it has been obtained by unfair means, as our own agents have told us, and that it ought to be annulled, but remember the Georgians have already surveyed the land and they will soon be settled upon it, and we cannot remove them. We know you have justice on your side, but the delicate situation of the Government renders her unable to annul the treaty, unless you cede and relinquish that part of your country claimed by the State of Georgia.\u201d To such language as this what could the Creeks, a poor, weak, and defenseless people answer? They were forced to yield, and consequently their ancient territory has fallen into the hands of strangers. From among many similar instances we will select one other. The State of Georgia, despairing of ever obtaining the Cherokee country by fair and peaceable means, and being encouraged by a successful intrigue towards the Creeks, has laid claim to a portion of our territory. Soon after the claim originated, which was in the Legislature of the State, a surveyor was appointed by the Governor, who, disregarding the protest of the United States\u2019 Agent, ran the line. How sincere the Government was in making the protest, is not for us to say.",
+      "metadata": {
+        "publication_year": 1829,
+        "historical_start": 1829,
+        "historical_end": 1829,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q42_cand_19",
+      "canonical_parent_doc_id": "train_18036",
+      "original_parent_doc_id": "train_18036",
+      "chunk_id": "train_18036_0",
+      "text": "It is an undoubted fact that \"this government (the Mexican) have made, or are making a treaty to engage 8000 Indians to join them. The Cherokees are already engaged.\" There are fourteen or fifteen chiefs, of different tribes, within a few miles of here, who have daily communication with the officers. The commissioners were this morning turned into the common prison with criminals. It is not improbable we shall be invited to take French leave of this country soon. The New Orleans Bee of the same date, says that letters from the same quarter state \"that six American Indian chiefs of the Cherokee tribe, with forty runners, are in close negotiation with Gen. Urrea at Matamoros. The letters have been sent to Washington, and copies to Gen. Gaines. These letters came via Tampico. From the N. O. Courier, Saturday eve. July 33. LATEST FROM MEXICO. The brig Carroll arrived this morning, in eight days from Tampico, brings late Mexican letters, from which it appears that a revolution was inevitable, as will be seen from an extract below, furnished us by a highly respectable commercial house of this city :- Tampico, 15th July, 1836. The whole country is now in a state of convulsion, and in a very short time the former federal government will be proclaimed again. In Guadalajara, Guanajuato, and several other places, revolutionary movements had already taken place, but were suppressed by the military.",
+      "metadata": {
+        "publication_year": 1836,
+        "historical_start": 1836,
+        "historical_end": 1836,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q42_cand_20",
+      "canonical_parent_doc_id": "train_169784",
+      "original_parent_doc_id": "train_169784",
+      "chunk_id": "train_169784_0",
+      "text": "They were moving West with their stock and property, and had reached to rest, feeling secure in their out-of-the-way camp. They were taken completely by surprise and did not have time to get anything away but some stock. I directed they would fight for their pillage, but they made only a feeble effort to stop us. We rushed through the foothills after them about five miles, when we gave up the chase, as our horses had given out. There never was a more complete Indian triumph on the plains. We killed seventy-three, captured seventeen women and children, and head of stock and their whole outfit. They left their lodges standing, with everything in and around them, and this was all accomplished without the loss of a single man on our side. We had great times after our return hunting up Indian curiosities, etc. July 14.?We are now on our way to Fort Sedgwick, but have so many horses, etc., that we are compelled to march slowly. The General expects to reach there late morning of the 11th. New York Herald, The Ways and Means Committee, Their Travels in California. Trip to Calistoga Springs. The General and the New Almaden Quicksilver Wealthy Californians. San Francisco, July 6, 1889. A detailed account of the country traveled over by the gentlemen composing the Committee of Ways and Means since their arrival on the Pacific would make a book.",
+      "metadata": {
+        "publication_year": 1869,
+        "historical_start": 1869,
+        "historical_end": 1869,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    },
+    {
+      "candidate_id": "q42_cand_21",
+      "canonical_parent_doc_id": "train_12811",
+      "original_parent_doc_id": "train_12811",
+      "chunk_id": "train_12811_0",
+      "text": "For our own part, we never thought that the United States in her Federal capacity would come out against the Indians in military array, and say, you must remove. She dare not do such a thing in the face of an enlightened world. But let the candid reader consider the policy, and the effects of this policy on the poor Indians, and then say that the United States are guiltless. It is her unjust measures that we complain of, and which, to our minds, partake of the nature of force. We presume our readers have not forgotten the late Creek controversy. Two Commissioners of the United States, Col. D. G. Campbell, and Maj. J. Merewether succeeded, after a previous failure, to make a fraudulent treaty with a small party of disaffected Creeks, which treaty was afterwards ratified. The Creek nation hereupon made a protest, and it was made fully apparent by them and by the Government\u2019s agents that the treaty was obtained in a fraudulent manner, entered into by persons unauthorized on the part of the Creek nation. The illegality of the treaty was put beyond a question by its subsequent abrogation. But mark the conduct of the Government. What was her language to the poor Cherokees who had gone to the house of their father to ask that common justice may be done towards them by restoring the lands taken away from them by underhanded measures?",
+      "metadata": {
+        "publication_year": 1829,
+        "historical_start": 1829,
+        "historical_end": 1829,
+        "historical_period": null,
+        "location": null
+      },
+      "relevance_annotator1": null,
+      "relevance_annotator2": null,
+      "relevance_final": null,
+      "notes_annotator1": "",
+      "notes_annotator2": ""
+    }
+  ]
+}
