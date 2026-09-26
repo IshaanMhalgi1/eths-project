@@ -16,6 +16,8 @@ from ranking.normalization_stats import NORM_STATS
 from temporal.temporal_parser import TemporalParser
 from ranking.temporal_ranker import calculate_temporal_score
 from api.canonical_docs import get_canonical, CANONICAL_MAP
+from api.loc_images import document_references, resolve_page_image
+from api.autocomplete import suggest as autocomplete_suggest, index_meta as autocomplete_meta
 
 app = FastAPI(title="ETHS Retrieval API")
 
@@ -166,12 +168,54 @@ def get_document(parent_doc_id: str):
             "full_text": full_text,
             "chunks": chunks_sorted,
             "metadata": doc_metadata,
+            # Library of Congress page-image reference, derived from the
+            # chunk provenance URLs. Absent when no chunk carries a
+            # parseable Chronicling America page URL.
+            "source_image": document_references(c.get("provenance") for c in chunks_sorted),
         }
         
     except HTTPException:
         raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error retrieving document: {str(e)}")
+
+
+@app.get("/page-image")
+def get_page_image(lccn: str, date: str, edition: int, sequence: int):
+    """Resolve a Chronicling America page to a browser-displayable JPEG.
+
+    The corpus only yields JP2/PDF URLs, and JP2 is not renderable by browsers,
+    so display requires LOC's IIIF image service. Those identifiers live in the
+    issue manifest, which is resolved here rather than in the browser: this
+    keeps the request same-origin (no CORS) and lets the manifest be fetched from
+    the Internet Archive when loc.gov's WAF refuses this network.
+
+    Resolution is cached per issue. Every failure returns HTTP 200 with
+    available=false and a reason, so the client can degrade to plain LOC links
+    rather than treating absence as an error.
+    """
+    return resolve_page_image(lccn, date, edition, sequence)
+
+
+@app.get("/autocomplete")
+def autocomplete(q: str = "", limit: int = 8):
+    """Prefix-matched query suggestions from the corpus vocabulary.
+
+    Suggestions come only from terms, entities and years that occur in the
+    indexed documents, so autocomplete never proposes a query the corpus cannot
+    answer. Returns an empty list when the prefix is too short or the index has
+    not been built; the frontend treats that as "no dropdown", not an error.
+    """
+    return {
+        "prefix": q,
+        "suggestions": autocomplete_suggest(q, limit),
+    }
+
+
+@app.get("/autocomplete/meta")
+def autocomplete_index_info():
+    """Report what the suggestion index was built from, for verification."""
+    return autocomplete_meta()
 
 
 @app.get("/canonical-map/stats")
