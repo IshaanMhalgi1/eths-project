@@ -13,7 +13,8 @@ function SearchPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [query, setQuery] = useState(searchParams.get("q") || "");
   const [results, setResults] = useState([]);
-  const [explain, setExplain] = useState(searchParams.get("explain") === "true");
+  const [overview, setOverview] = useState(null);
+  const [overviewState, setOverviewState] = useState("idle");  const [explain, setExplain] = useState(searchParams.get("explain") === "true");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const inputRef = useRef(null);
@@ -37,6 +38,40 @@ function SearchPage() {
   // search does not trigger a second identical request.
   const lastSearched = useRef(null);
 
+  // Identifies the newest overview request so a slow reply for an old query
+  // cannot overwrite a newer one.
+  const overviewReq = useRef(0);
+
+  const fetchOverview = (q) => {
+    const reqId = ++overviewReq.current;
+    setOverviewState("loading");
+    setOverview(null);
+    axios
+      .post(`${API_BASE}/overview`, { query: q, size: 10 })
+      .then(({ data }) => {
+        if (reqId !== overviewReq.current) return;
+        setOverview(data);
+        setOverviewState("ready");
+      })
+      .catch((e) => {
+        if (reqId !== overviewReq.current) return;
+        setOverview({
+          status: "unavailable",
+          reason:
+            e?.response?.status
+              ? `http-${e.response.status}`
+              : "network-error",
+        });
+        setOverviewState("ready");
+      });
+  };
+
+  const clearOverview = () => {
+    overviewReq.current += 1;
+    setOverview(null);
+    setOverviewState("idle");
+  };
+
   // Guarded against being used directly as an event handler. `onClick={doSearch}`
   // would pass the click event as searchQuery, and axios would then try to
   // JSON.stringify that SyntheticEvent -- which fails on its circular
@@ -55,6 +90,9 @@ function SearchPage() {
         { query: q, size: 10 }
       );
       setResults(ex ? data.explanations : data.results);
+      // The overview is a separate, non-blocking request: a failed or refused
+      // summary must never turn a successful search into an error state.
+      if (!ex) fetchOverview(q);
     } catch (e) {
       // Report what actually went wrong rather than always blaming the server:
       // a rejected or cancelled request looks identical to a dead backend from
@@ -99,6 +137,9 @@ function SearchPage() {
 
   const handleExplainChange = (e) => {
     setExplain(e.target.checked);
+    // Explainability mode returns score breakdowns rather than passages, so
+    // there is no text for the overview to summarise.
+    if (e.target.checked) clearOverview();
   };
 
   const handleClick = (parentDocId, chunkId) => {
@@ -288,6 +329,13 @@ function SearchPage() {
         </div>
       )}
 
+      <OverviewPanel
+        state={overviewState}
+        overview={overview}
+        results={results}
+        onOpenDocument={handleClick}
+      />
+
       {results.length > 0 && (
         <ol>
           {results.map((r, i) => (
@@ -318,6 +366,225 @@ function SearchPage() {
           ))}
         </ol>
       )}
+    </div>
+  );
+}
+
+const OVERVIEW_REASONS = {
+  "not-configured":
+    "No AI overview model is configured on this server, so no summary is shown. Search results below are unaffected.",
+  timeout: "The overview model did not respond in time, so no summary is shown.",
+  "rate-limited":
+    "The overview model is rate limiting requests right now, so no summary is shown.",
+  unauthorized:
+    "The overview model rejected the configured API key, so no summary is shown.",
+  "network-error":
+    "The overview model could not be reached, so no summary is shown.",
+  "malformed-response":
+    "The overview model returned an unreadable response, so no summary is shown.",
+  "output-too-long":
+    "The overview model returned more text than the limit allows, so no summary is shown.",
+  "reasoning-budget-exhausted":
+    "The overview model used its whole response budget reasoning and returned no answer, so no summary is shown. Raising LLM_MAX_TOKENS usually fixes this.",
+  "empty-response":
+    "The overview model returned an empty response, so no summary is shown.",
+  "no-results":
+    "This query returned no readable passages to summarise.",
+  "model-reported":
+    "The passages retrieved for this query do not contain enough evidence to support a summary.",
+  "no-attributable-claims":
+    "A summary was produced, but no sentence in it could be tied to a source, so it was discarded.",
+  uncited: "every sentence lacked a source citation",
+  unsupported:
+    "the summary repeated claims the source passages do not support",
+  verbatim: "the summary copied the source text instead of paraphrasing it",
+};
+
+// The backend also emits comma-joined reasons (e.g. "uncited,unsupported") and
+// dynamic "http-<status>" codes, neither of which is a key in the map above.
+// Resolve those explicitly so users never see a raw internal string.
+function reasonText(reason) {
+  if (!reason) return null;
+  if (OVERVIEW_REASONS[reason]) return OVERVIEW_REASONS[reason];
+  const parts = String(reason)
+    .split(",")
+    .map((r) => OVERVIEW_REASONS[r.trim()])
+    .filter(Boolean);
+  if (parts.length) {
+    return `The summary was discarded because ${parts.join(", and ")}.`;
+  }
+  if (String(reason).startsWith("http-")) {
+    return `The overview service returned an error (${reason}), so no summary is shown.`;
+  }
+  return `The overview could not be produced (${reason}).`;
+}
+
+function OverviewPanel({ state, overview, results, onOpenDocument }) {
+  const box = {
+    margin: "0 0 1.25rem",
+    padding: "0.85rem 1rem",
+    border: "1px solid #d8dee9",
+    borderRadius: "6px",
+    backgroundColor: "#f8fafc",
+    fontSize: "0.95em",
+  };
+  const noteStyle = { color: "#5b6472", fontStyle: "italic" };
+
+  if (state === "loading") {
+    return (
+      <div style={{ ...box, color: "#5b6472" }} role="status" aria-live="polite">
+        Reading the retrieved passages&hellip;
+      </div>
+    );
+  }
+  if (state !== "ready" || !overview) return null;
+
+  // Match citations by document, not by list position. The overview endpoint
+  // re-runs retrieval server-side so the model can only see server-retrieved
+  // text, which means its sources are not guaranteed to be the ones rendered
+  // below. A citation that is not on screen stays inert and says why, rather
+  // than silently pointing at an unrelated result.
+  const byDoc = new Map();
+  results.forEach((r) => {
+    if (r && r.parent_doc_id) byDoc.set(r.parent_doc_id, r);
+  });
+  const sourceByIndex = new Map(
+    (overview.sources || []).map((s) => [s.index, s])
+  );
+
+  if (overview.status !== "ok" || !overview.claims?.length) {
+    return (
+      <div style={box} role="status" aria-live="polite">
+        <div style={{ fontWeight: 600, marginBottom: "0.25rem" }}>
+          No AI summary
+        </div>
+        <div style={noteStyle}>
+          {reasonText(overview.reason) ||
+            "The overview could not be produced."}
+        </div>
+      </div>
+    );
+  }
+
+  const v = overview.verification || {};
+
+  return (
+    <div style={box}>
+      <div style={{ fontWeight: 600, marginBottom: "0.35rem" }}>
+        AI summary{" "}
+        <span style={{ fontWeight: 400, color: "#5b6472", fontStyle: "italic" }}>
+          — each sentence passed an automatic citation and word-overlap check
+          against the retrieved passages
+        </span>
+      </div>
+
+      <div style={{ lineHeight: 1.65 }}>
+        {overview.claims.map((c, i) => (
+          <span key={i}>
+            {c.text}{" "}
+            {c.citations.map((n) => {
+              const src = sourceByIndex.get(n);
+              const match = src && byDoc.get(src.parent_doc_id);
+              const label = src?.year ? ` (${src.year})` : "";
+              if (match) {
+                return (
+                  <button
+                    key={n}
+                    type="button"
+                    onClick={() => onOpenDocument(match.parent_doc_id, match.chunk_id)}
+                    title={`Open the cited passage${label}`}
+                    style={{
+                      border: "none",
+                      background: "none",
+                      padding: 0,
+                      font: "inherit",
+                      color: "#0066cc",
+                      textDecoration: "underline",
+                      cursor: "pointer",
+                    }}
+                  >
+                    [{n}]
+                  </button>
+                );
+              }
+              return (
+                <span
+                  key={n}
+                  title={`Source ${n}${label} was retrieved for the summary but is not in the results below`}
+                  style={{ color: "#8a94a3", cursor: "help" }}
+                >
+                  [{n}]
+                </span>
+              );
+            })}{" "}
+          </span>
+        ))}
+      </div>
+
+      <details style={{ marginTop: "0.6rem", fontSize: "0.85em", color: "#5b6472" }}>
+        <summary style={{ cursor: "pointer" }}>
+          How this summary was checked
+        </summary>
+        <div style={{ marginTop: "0.35rem" }}>
+          <div>
+            {v.claims_kept} of {v.sentences} generated{" "}
+            {v.sentences === 1 ? "sentence" : "sentences"} kept
+            {v.claims_rejected > 0 && `, ${v.claims_rejected} discarded`}.
+          </div>
+          {v.unsupported_claims?.length > 0 && (
+            <div>Discarded as unsupported by their cited sources:</div>
+          )}
+          {v.unsupported_claims?.map((u, i) => (
+            <div key={i} style={{ fontStyle: "italic", marginLeft: "0.75rem" }}>
+              &ldquo;{u.text}&rdquo; (vocabulary overlap {u.support})
+            </div>
+          ))}
+          {v.uncited_claims > 0 && (
+            <div>
+              {v.uncited_claims} sentence{v.uncited_claims === 1 ? "" : "s"} had
+              no citation and {v.uncited_claims === 1 ? "was" : "were"} discarded.
+            </div>
+          )}
+          {v.verbatim_claims?.length > 0 && (
+            <div>Discarded as copied rather than paraphrased:</div>
+          )}
+          {v.verbatim_claims?.map((c, i) => (
+            <div key={`v${i}`} style={{ fontStyle: "italic", marginLeft: "0.75rem" }}>
+              &ldquo;{c.text}&rdquo; ({c.run} consecutive words shared with a source)
+            </div>
+          ))}
+          {v.invalid_citations?.length > 0 && (
+            <div>Citations to non-existent sources were ignored: {v.invalid_citations.join(", ")}.</div>
+          )}
+          <div style={{ marginTop: "0.35rem" }}>
+            Sources:{" "}
+            {(overview.sources || []).map((s) => (
+              <span key={s.index} style={{ marginRight: "0.6rem" }}>
+                [{s.index}] {s.parent_doc_id}
+                {s.year ? ` (${s.year})` : ""}
+              </span>
+            ))}
+          </div>
+          <div style={{ marginTop: "0.35rem", color: "#8a94a3" }}>
+            Summary is generated from these {overview.sources?.length} retrieved{" "}
+            {overview.sources?.length === 1 ? "passage" : "passages"} only. It is not
+            a substitute for reading them, and it can still be wrong: the checks
+            above are automated word-level filters, so a sentence that reuses
+            source vocabulary while stating the opposite can still get through.
+            Check anything that matters against the passage itself.
+            {v.thresholds && (
+              <>
+                {" "}
+                Thresholds used: keep at word overlap ≥{" "}
+                {v.thresholds.support_min}, drop if any copied run ≥{" "}
+                {v.thresholds.verbatim_max_run} words
+                {v.max_verbatim_run > 0 && ` (longest run seen: ${v.max_verbatim_run})`}.
+              </>
+            )}
+            {overview.model && ` Model: ${overview.model}.`}
+          </div>
+        </div>
+      </details>
     </div>
   );
 }

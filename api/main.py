@@ -2,6 +2,16 @@ import sys
 import os
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
+# python-dotenv is a dependency, but nothing loaded it, so a .env file was
+# silently ignored and the overview key never reached the app. This must run
+# BEFORE api.overview is imported, because that module reads its configuration
+# from the environment at import time.
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -18,6 +28,7 @@ from ranking.temporal_ranker import calculate_temporal_score
 from api.canonical_docs import get_canonical, CANONICAL_MAP
 from api.loc_images import document_references, resolve_page_image
 from api.autocomplete import suggest as autocomplete_suggest, index_meta as autocomplete_meta
+from api.overview import generate_overview
 
 app = FastAPI(title="ETHS Retrieval API")
 
@@ -34,6 +45,31 @@ class QueryRequest(BaseModel):
     query: str
     size: int = 10
 
+class OverviewRequest(BaseModel):
+    query: str
+    size: int = 10
+    max_sources: int = 6
+
+def _dedupe_by_text(results, limit):
+    """Keep the first result for each distinct passage text, up to `limit`.
+
+    Shared by /search and /overview on purpose. The overview assigns source
+    numbers by position, so without this two copies of the same passage would
+    become two independently-cited "sources" and make a single piece of evidence
+    look like corroboration.
+    """
+    clean = []
+    seen_text = set()
+    for r in results:
+        text_key = r.get("text") or ""
+        if text_key in seen_text:
+            continue
+        seen_text.add(text_key)
+        clean.append(r)
+        if len(clean) >= limit:
+            break
+    return clean
+
 @app.get("/")
 def root():
     return {"status": "ETHS API is running"}
@@ -42,30 +78,43 @@ def root():
 def search(req: QueryRequest):
     fetch_size = max(req.size * 3, 30)
     results = final_search(req.query, size=fetch_size)
-    clean = []
-    seen_text = set()
-    for r in results:
-        text_key = r.get("text") or ""
-        if text_key in seen_text:
-            continue
-        seen_text.add(text_key)
-        clean.append({
-            "chunk_id": r.get("chunk_id"),
-            "parent_doc_id": r.get("parent_doc_id"),
-            "text": r.get("text"),
-            "bm25_score": r.get("bm25_score"),
-            "dense_score": r.get("dense_score"),
-            "temporal_score": r.get("temporal_score"),
-            "metadata_score": r.get("metadata_score"),
-            "final_score": r.get("final_score"),
-            "temporal_explanation": r.get("temporal_explanation"),
-            "metadata_explanation": r.get("metadata_explanation"),
-            "historical_start": r.get("historical_start"),
-            "historical_end": r.get("historical_end"),
-        })
-        if len(clean) >= req.size:
-            break
+    clean = [{
+        "chunk_id": r.get("chunk_id"),
+        "parent_doc_id": r.get("parent_doc_id"),
+        "text": r.get("text"),
+        "bm25_score": r.get("bm25_score"),
+        "dense_score": r.get("dense_score"),
+        "temporal_score": r.get("temporal_score"),
+        "metadata_score": r.get("metadata_score"),
+        "final_score": r.get("final_score"),
+        "temporal_explanation": r.get("temporal_explanation"),
+        "metadata_explanation": r.get("metadata_explanation"),
+        "historical_start": r.get("historical_start"),
+        "historical_end": r.get("historical_end"),
+    } for r in _dedupe_by_text(results, req.size)]
     return {"query": req.query, "results": clean}
+
+@app.post("/overview")
+def overview(req: OverviewRequest):
+    """Grounded AI overview of the retrieved results for a query.
+
+    The request carries only a query string. The snippets summarised here are
+    re-retrieved server-side from that query, so a client cannot smuggle in
+    context of its own and have it appear as a grounded, cited summary.
+
+    Note this is not the same as /search's top results: it re-runs retrieval
+    rather than reusing the search response, which is the deliberate cost of
+    keeping the model's input trustworthy. (The hybrid candidate cache makes the
+    second retrieval a cache hit, so this is not a second dense pass.)
+    """
+    if not (req.query or "").strip():
+        raise HTTPException(status_code=400, detail="query is required")
+    results = final_search(req.query, size=max(req.size, 20))
+    results = _dedupe_by_text(results, max(req.size, 20))
+    return generate_overview(
+        req.query, results,
+        max_sources=max(1, min(req.max_sources, 12)),
+    )
 
 @app.post("/explain")
 def explain_query(req: QueryRequest):
