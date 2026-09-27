@@ -1,6 +1,13 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import axios from "axios";
-import { BrowserRouter as Router, Routes, Route, Link, useParams, useNavigate, useSearchParams } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useParams,
+  useNavigate,
+  useSearchParams,
+} from "react-router-dom";
 import { fetchPageImage } from "./locImage";
 import { useSpeechRecognition } from "./useSpeechRecognition";
 import { useAutocomplete } from "./useAutocomplete";
@@ -9,16 +16,110 @@ import { useAutocomplete } from "./useAutocomplete";
 // same-origin. Do not hardcode a backend host here.
 const API_BASE = "/api";
 
+const THEME_KEY = "eths-theme";
+
+// Upper bound on the page-image lookup before falling back to the direct LOC
+// links. Cold resolutions that fall through to the Internet Archive have been
+// observed at ~20s, which is long enough to read as a broken panel.
+const IMAGE_LOOKUP_TIMEOUT_MS = 12000;
+
+/* ---------------------------------------------------------------------------
+ * Theme
+
+ * The initial value is set by an inline script in index.html before first
+ * paint, so there is no white flash on a dark reload. This hook only needs to
+ * keep React's view of the theme in sync afterwards.
+ * ------------------------------------------------------------------------- */
+
+function currentTheme() {
+  if (typeof document === "undefined") return "light";
+  return document.documentElement.getAttribute("data-theme") === "dark"
+    ? "dark"
+    : "light";
+}
+
+function useTheme() {
+  const [theme, setTheme] = useState(currentTheme);
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+    try {
+      localStorage.setItem(THEME_KEY, theme);
+    } catch {
+      // A blocked localStorage (private mode) must not break theming; the
+      // attribute is already applied, so the toggle still works for this visit.
+    }
+  }, [theme]);
+
+  const toggle = useCallback(() => {
+    setTheme((t) => (t === "dark" ? "light" : "dark"));
+  }, []);
+
+  return { theme, toggle };
+}
+
+/* ---------------------------------------------------------------------------
+ * Shared chrome
+ * ------------------------------------------------------------------------- */
+
+function Rail({ brandSub, children, controls }) {
+  return (
+    <aside className="rail">
+      <div>
+        <h1 className="brand">ETHS</h1>
+        <p className="brand-sub">{brandSub}</p>
+      </div>
+      {children}
+      <div className="controls">{controls}</div>
+    </aside>
+  );
+}
+
+function MicButton({ speech }) {
+  if (!speech.supported) return null;
+  return (
+    <button
+      type="button"
+      className="btn btn-icon"
+      data-listening={speech.listening ? "true" : "false"}
+      onClick={() => (speech.listening ? speech.stop() : speech.start())}
+      aria-label={speech.listening ? "Stop dictation" : "Search by voice"}
+      title={speech.listening ? "Stop dictation" : "Search by voice"}
+      aria-pressed={speech.listening}
+    >
+      {speech.listening ? (
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <rect x="6" y="6" width="12" height="12" rx="1.5" />
+        </svg>
+      ) : (
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v5a3 3 0 0 0 3 3Z" />
+          <path d="M18 11a1 1 0 1 0-2 0 4 4 0 0 1-8 0 1 1 0 1 0-2 0 6 6 0 0 0 5 5.9V19H9a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2h-2v-2.1A6 6 0 0 0 18 11Z" />
+        </svg>
+      )}
+    </button>
+  );
+}
+
+/* ---------------------------------------------------------------------------
+ * Search page
+ * ------------------------------------------------------------------------- */
+
 function SearchPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [query, setQuery] = useState(searchParams.get("q") || "");
   const [results, setResults] = useState([]);
   const [overview, setOverview] = useState(null);
-  const [overviewState, setOverviewState] = useState("idle");  const [explain, setExplain] = useState(searchParams.get("explain") === "true");
+  const [overviewState, setOverviewState] = useState("idle");
+  const [explain, setExplain] = useState(searchParams.get("explain") === "true");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  // Bumped on every completed search and used as a React key, so the reveal
+  // sequence replays once per search instead of animating only on mount.
+  const [revealId, setRevealId] = useState(0);
   const inputRef = useRef(null);
   const navigate = useNavigate();
+  const { theme, toggle } = useTheme();
 
   // Speech-to-text is strictly additive: when the browser lacks the Web Speech
   // API, `supported` is false and no microphone control is rendered at all.
@@ -57,10 +158,9 @@ function SearchPage() {
         if (reqId !== overviewReq.current) return;
         setOverview({
           status: "unavailable",
-          reason:
-            e?.response?.status
-              ? `http-${e.response.status}`
-              : "network-error",
+          reason: e?.response?.status
+            ? `http-${e.response.status}`
+            : "network-error",
         });
         setOverviewState("ready");
       });
@@ -85,11 +185,12 @@ function SearchPage() {
     setError(null);
     try {
       const endpoint = ex ? "/explain" : "/search";
-      const { data } = await axios.post(
-        `${API_BASE}${endpoint}`,
-        { query: q, size: 10 }
-      );
+      const { data } = await axios.post(`${API_BASE}${endpoint}`, {
+        query: q,
+        size: 10,
+      });
       setResults(ex ? data.explanations : data.results);
+      setRevealId((n) => n + 1);
       // The overview is a separate, non-blocking request: a failed or refused
       // summary must never turn a successful search into an error state.
       if (!ex) fetchOverview(q);
@@ -104,7 +205,7 @@ function SearchPage() {
         : e?.code === "ERR_CANCELED"
           ? "Search cancelled."
           : e?.request && !e?.response
-            ? "Could not reach the API – is the FastAPI server running?"
+            ? "Could not reach the API - is the FastAPI server running?"
             : e?.message || "Search failed.";
       setError(message);
       console.error(e);
@@ -130,10 +231,6 @@ function SearchPage() {
     }
     // Primitive dependency: stable unless the URL genuinely changes.
   }, [searchStr]);
-
-  const handleQueryChange = (e) => {
-    setQuery(e.target.value);
-  };
 
   const handleExplainChange = (e) => {
     setExplain(e.target.checked);
@@ -168,48 +265,63 @@ function SearchPage() {
   };
 
   return (
-    <div style={{ maxWidth: 800, margin: "2rem auto", fontFamily: "sans-serif" }}>
-      <h1>ETHS – Explainable Temporal Search</h1>
-      <div style={{ marginBottom: "1rem" }}>
-        <div ref={ac.rootRef} style={{ position: "relative", display: "inline-block" }}>
-          <input
-            ref={inputRef}
-            type="text"
-            placeholder="Enter a historical query…"
-            value={query}
-            onChange={handleQueryChange}
-            onKeyDown={handleKeyDown}
-            role="combobox"
-            aria-expanded={ac.open}
-            aria-autocomplete="list"
-            aria-controls="autocomplete-listbox"
-            aria-activedescendant={
-              ac.open && ac.activeIndex >= 0 ? `ac-opt-${ac.activeIndex}` : undefined
-            }
-            autoComplete="off"
-            style={{ width: "70%", padding: "0.5rem" }}
-          />
-          {ac.open && ac.suggestions.length > 0 && (
-            <ul
-              id="autocomplete-listbox"
-              role="listbox"
-              style={{
-                position: "absolute",
-                top: "100%",
-                left: 0,
-                right: 0,
-                margin: "2px 0 0",
-                padding: 0,
-                listStyle: "none",
-                backgroundColor: "#fff",
-                border: "1px solid #d1d5db",
-                borderRadius: "4px",
-                boxShadow: "0 4px 12px rgba(0,0,0,0.12)",
-                zIndex: 20,
-                maxHeight: "240px",
-                overflowY: "auto",
-              }}
+    <div className="shell">
+      <Rail
+        brandSub="Explainable temporal search over 50,000 passages of 19th-century American newspapers."
+        controls={
+          <>
+            <div className="control">
+              <label htmlFor="explain-toggle">Show explainability</label>
+              <input
+                id="explain-toggle"
+                type="checkbox"
+                checked={explain}
+                onChange={handleExplainChange}
+              />
+            </div>
+            <button
+              type="button"
+              className="control-theme"
+              onClick={toggle}
+              aria-pressed={theme === "dark"}
             >
+              {theme === "dark" ? "Light theme" : "Dark theme"}
+            </button>
+          </>
+        }
+      >
+        <div className="composer" ref={ac.rootRef}>
+          <div className="composer-row">
+            <input
+              ref={inputRef}
+              type="text"
+              placeholder="Search the archive"
+              aria-label="Search query"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              onKeyDown={handleKeyDown}
+              role="combobox"
+              aria-expanded={ac.open}
+              aria-autocomplete="list"
+              aria-controls="autocomplete-listbox"
+              aria-activedescendant={
+                ac.open && ac.activeIndex >= 0 ? `ac-opt-${ac.activeIndex}` : undefined
+              }
+              autoComplete="off"
+            />
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={() => doSearch()}
+              disabled={loading}
+            >
+              {loading ? "Searching" : "Search"}
+            </button>
+            <MicButton speech={speech} />
+          </div>
+
+          {ac.open && ac.suggestions.length > 0 && (
+            <ul id="autocomplete-listbox" role="listbox" className="suggest">
               {ac.suggestions.map((s, i) => (
                 <li
                   key={s}
@@ -224,12 +336,6 @@ function SearchPage() {
                     inputRef.current?.focus();
                   }}
                   onMouseEnter={() => ac.setActiveIndex(i)}
-                  style={{
-                    padding: "0.4rem 0.6rem",
-                    cursor: "pointer",
-                    fontSize: "0.95em",
-                    backgroundColor: i === ac.activeIndex ? "#e8f0fe" : "transparent",
-                  }}
                 >
                   {s}
                 </li>
@@ -237,138 +343,126 @@ function SearchPage() {
             </ul>
           )}
         </div>
-        <button onClick={() => doSearch()} disabled={loading} style={{ marginLeft: "0.5rem", padding: "0.5rem 1rem" }}>
-          {loading ? "…working" : "Search"}
-        </button>
-        {speech.supported && (
-          <button
-            type="button"
-            onClick={() => (speech.listening ? speech.stop() : speech.start())}
-            aria-label={speech.listening ? "Stop dictation" : "Search by voice"}
-            title={speech.listening ? "Stop dictation" : "Search by voice"}
-            aria-pressed={speech.listening}
-            style={{
-              marginLeft: "0.5rem",
-              padding: "0.45rem 0.6rem",
-              cursor: "pointer",
-              display: "inline-flex",
-              alignItems: "center",
-              justifyContent: "center",
-              backgroundColor: speech.listening ? "#dc2626" : "#f3f4f6",
-              border: "1px solid #d1d5db",
-              borderRadius: "4px",
-              lineHeight: 0,
-            }}
-          >
-            {speech.listening ? (
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true">
-                <rect x="6" y="6" width="12" height="12" rx="1.5" />
-              </svg>
-            ) : (
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#111827" aria-hidden="true">
-                <path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v5a3 3 0 0 0 3 3Z" />
-                <path d="M18 11a1 1 0 1 0-2 0 4 4 0 0 1-8 0 1 1 0 1 0-2 0 6 6 0 0 0 5 5.9V19H9a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2h-2v-2.1A6 6 0 0 0 18 11Z" />
-              </svg>
-            )}
-          </button>
-        )}
-        <label style={{ marginLeft: "1rem" }}>
-          <input type="checkbox" checked={explain} onChange={handleExplainChange} />
-          Show Explainability
-        </label>
-      </div>
 
-      {error && (
-        <div
-          role="alert"
-          style={{
-            marginTop: "-0.5rem",
-            marginBottom: "0.75rem",
-            fontSize: "0.85em",
-            color: "#b91c1c",
-          }}
-        >
-          {error}
-        </div>
-      )}
-
-      {/* Non-blocking: the search path is never gated on dictation succeeding. */}
-      {speech.supported && (speech.status || speech.interim || speech.needsModel) && (
-        <div
-          role="status"
-          aria-live="polite"
-          style={{
-            fontSize: "0.85em",
-            marginTop: "-0.5rem",
-            marginBottom: "0.75rem",
-            color: speech.status?.kind === "error" ? "#b91c1c" : "#666",
-          }}
-        >
-          {speech.status?.text}
-          {speech.interim && (
-            <span style={{ fontStyle: "italic" }}> {speech.interim}</span>
-          )}
-          {speech.needsModel && (
-            <button
-              type="button"
-              onClick={() => speech.installModel()}
-              disabled={speech.modelBusy}
-              style={{
-                marginLeft: "0.5rem",
-                fontSize: "0.95em",
-                textDecoration: "underline",
-                background: "none",
-                border: "none",
-                color: "#0066cc",
-                cursor: speech.modelBusy ? "default" : "pointer",
-              }}
+        {/* Non-blocking: the search path is never gated on dictation succeeding. */}
+        {speech.supported &&
+          (speech.status || speech.interim || speech.needsModel) && (
+            <div
+              className={`notice${
+                speech.status?.kind === "error" ? " notice-error" : ""
+              }`}
+              role="status"
+              aria-live="polite"
             >
-              {speech.modelBusy ? "downloading…" : "download speech model"}
-            </button>
-          )}
-        </div>
-      )}
-
-      <OverviewPanel
-        state={overviewState}
-        overview={overview}
-        results={results}
-        onOpenDocument={handleClick}
-      />
-
-      {results.length > 0 && (
-        <ol>
-          {results.map((r, i) => (
-            <li key={i} style={{ marginBottom: "1rem" }}>
-              <div style={{ cursor: "pointer" }} onClick={() => handleClick(r.parent_doc_id, r.chunk_id)}>
-                <strong>Snippet:</strong> {r.snippet || r.text?.slice(0, 150) + "…"}
-              </div>
-              {explain && (
-                <div style={{ fontSize: "0.9em", marginTop: "0.5rem" }}>
-                  <strong>Score breakdown:</strong>{" "}
-                  Hybrid {(r["feature_contributions_%"] && r["feature_contributions_%"].hybrid) ?? (r.hybrid_score != null ? (r.hybrid_score * 100).toFixed(1) : "-")} |
-                  {r.temporal_non_discriminating ? (
-                    <span style={{ fontStyle: "italic", color: "#666" }}> Temporal relevance: not distinguishing for this query</span>
-                  ) : (
-                    <span> Temporal {(r["feature_contributions_%"] && r["feature_contributions_%"].temporal) ?? (r.temporal_score != null ? r.temporal_score.toFixed(4) : "-")}</span>
-                  )}
-                  {r.temporal_explanation && (
-                    <span style={{ marginLeft: "0.5rem", color: "#555" }}>({r.temporal_explanation})</span>
-                  )} |
-                  {r.metadata_non_discriminating ? (
-                    <span style={{ fontStyle: "italic", color: "#666" }}> Metadata: not distinguishing (neutral)</span>
-                  ) : (
-                    <span> Metadata {(r["feature_contributions_%"] && r["feature_contributions_%"].metadata) ?? (r.metadata_score != null ? r.metadata_score.toFixed(4) : "-")}</span>
-                  )}
-                </div>
+              {speech.status?.text}
+              {speech.interim && <em> {speech.interim}</em>}
+              {speech.needsModel && (
+                <button
+                  type="button"
+                  className="notice-btn"
+                  onClick={() => speech.installModel()}
+                  disabled={speech.modelBusy}
+                >
+                  {speech.modelBusy ? "downloading…" : "download speech model"}
+                </button>
               )}
-            </li>
-          ))}
-        </ol>
+            </div>
+          )}
+      </Rail>
+
+      <main className="reading">
+        {error && (
+          <div className="alert" role="alert">
+            {error}
+          </div>
+        )}
+
+        <OverviewPanel
+          key={`summary-${revealId}`}
+          revealing={revealId > 0}
+          state={overviewState}
+          overview={overview}
+          results={results}
+          onOpenDocument={handleClick}
+        />
+
+        {results.length > 0 ? (
+          <ol className="result-list" key={`results-${revealId}`}>
+            {results.map((r, i) => (
+              <li
+                key={i}
+                className={`result${revealId > 0 ? " is-revealing" : ""}`}
+                style={{ "--stagger-i": Math.min(i, 8) }}
+              >
+                <button
+                  type="button"
+                  className="result-btn"
+                  onClick={() => handleClick(r.parent_doc_id, r.chunk_id)}
+                >
+                  <div className="result-rank">Passage {i + 1}</div>
+                  <p className="result-text">
+                    {r.snippet || r.text?.slice(0, 150) + "…"}
+                  </p>
+                </button>
+                {explain && <ScoreBreakdown r={r} />}
+              </li>
+            ))}
+          </ol>
+        ) : (
+          !loading &&
+          !error && (
+            <p className="empty">
+              Search a topic, a year, or a phrase. Suggested terms come from the
+              archive's own vocabulary, so anything offered here can be answered.
+            </p>
+          )
+        )}
+      </main>
+    </div>
+  );
+}
+
+/* ---------------------------------------------------------------------------
+ * Explainability score breakdown
+ * ------------------------------------------------------------------------- */
+
+function ScoreBreakdown({ r }) {
+  const hybrid =
+    (r["feature_contributions_%"] && r["feature_contributions_%"].hybrid) ??
+    (r.hybrid_score != null ? (r.hybrid_score * 100).toFixed(1) : null);
+  return (
+    <div className="score">
+      <b>Why this passage:</b> hybrid {hybrid ?? "–"}
+      {r.temporal_non_discriminating ? (
+        <span className="score-idle"> temporal not distinguishing here</span>
+      ) : (
+        <span>
+          {" "}
+          temporal{" "}
+          {(r["feature_contributions_%"] &&
+            r["feature_contributions_%"].temporal) ??
+            (r.temporal_score != null ? r.temporal_score.toFixed(4) : "–")}
+        </span>
+      )}
+      {r.temporal_explanation && <span> ({r.temporal_explanation})</span>}
+      {r.metadata_non_discriminating ? (
+        <span className="score-idle"> metadata neutral</span>
+      ) : (
+        <span>
+          {" "}
+          metadata{" "}
+          {(r["feature_contributions_%"] &&
+            r["feature_contributions_%"].metadata) ??
+            (r.metadata_score != null ? r.metadata_score.toFixed(4) : "–")}
+        </span>
       )}
     </div>
   );
 }
+
+/* ---------------------------------------------------------------------------
+ * AI overview
+ * ------------------------------------------------------------------------- */
 
 const OVERVIEW_REASONS = {
   "not-configured":
@@ -395,8 +489,7 @@ const OVERVIEW_REASONS = {
   "no-attributable-claims":
     "A summary was produced, but no sentence in it could be tied to a source, so it was discarded.",
   uncited: "every sentence lacked a source citation",
-  unsupported:
-    "the summary repeated claims the source passages do not support",
+  unsupported: "the summary repeated claims the source passages do not support",
   verbatim: "the summary copied the source text instead of paraphrasing it",
 };
 
@@ -419,21 +512,18 @@ function reasonText(reason) {
   return `The overview could not be produced (${reason}).`;
 }
 
-function OverviewPanel({ state, overview, results, onOpenDocument }) {
-  const box = {
-    margin: "0 0 1.25rem",
-    padding: "0.85rem 1rem",
-    border: "1px solid #d8dee9",
-    borderRadius: "6px",
-    backgroundColor: "#f8fafc",
-    fontSize: "0.95em",
-  };
-  const noteStyle = { color: "#5b6472", fontStyle: "italic" };
-
+function OverviewPanel({
+  state,
+  overview,
+  results,
+  onOpenDocument,
+  revealing,
+}) {
   if (state === "loading") {
     return (
-      <div style={{ ...box, color: "#5b6472" }} role="status" aria-live="polite">
-        Reading the retrieved passages&hellip;
+      <div className="summary" role="status" aria-live="polite">
+        <h2 className="summary-title">AI summary</h2>
+        <p className="summary-note">Reading the retrieved passages</p>
       </div>
     );
   }
@@ -454,152 +544,141 @@ function OverviewPanel({ state, overview, results, onOpenDocument }) {
 
   if (overview.status !== "ok" || !overview.claims?.length) {
     return (
-      <div style={box} role="status" aria-live="polite">
-        <div style={{ fontWeight: 600, marginBottom: "0.25rem" }}>
-          No AI summary
-        </div>
-        <div style={noteStyle}>
+      <div className="summary">
+        <h2 className="summary-title">AI summary</h2>
+        <p className="summary-note">
           {reasonText(overview.reason) ||
             "The overview could not be produced."}
-        </div>
+        </p>
       </div>
     );
   }
 
   const v = overview.verification || {};
+  const n = overview.sources?.length ?? 0;
 
   return (
-    <div style={box}>
-      <div style={{ fontWeight: 600, marginBottom: "0.35rem" }}>
-        AI summary{" "}
-        <span style={{ fontWeight: 400, color: "#5b6472", fontStyle: "italic" }}>
-          — each sentence passed an automatic citation and word-overlap check
-          against the retrieved passages
+    <section
+      className={`summary${revealing ? " is-revealing" : ""}`}
+      aria-label="AI summary of retrieved passages"
+    >
+      <div className="summary-head">
+        <h2 className="summary-title">AI summary</h2>
+        <span className="summary-meta">
+          {n} {n === 1 ? "passage" : "passages"}
         </span>
       </div>
 
-      <div style={{ lineHeight: 1.65 }}>
+      {/* Reading content: Newsreader, and the claim text stays the model's own
+          wording. Citations are rendered as buttons, not inline text, so they
+          can be operated by keyboard. */}
+      <p className="summary-body">
         {overview.claims.map((c, i) => (
           <span key={i}>
             {c.text}{" "}
-            {c.citations.map((n) => {
-              const src = sourceByIndex.get(n);
+            {c.citations.map((n2) => {
+              const src = sourceByIndex.get(n2);
               const match = src && byDoc.get(src.parent_doc_id);
               const label = src?.year ? ` (${src.year})` : "";
               if (match) {
                 return (
                   <button
-                    key={n}
+                    key={n2}
                     type="button"
-                    onClick={() => onOpenDocument(match.parent_doc_id, match.chunk_id)}
+                    className="cite"
+                    onClick={() =>
+                      onOpenDocument(match.parent_doc_id, match.chunk_id)
+                    }
                     title={`Open the cited passage${label}`}
-                    style={{
-                      border: "none",
-                      background: "none",
-                      padding: 0,
-                      font: "inherit",
-                      color: "#0066cc",
-                      textDecoration: "underline",
-                      cursor: "pointer",
-                    }}
                   >
-                    [{n}]
+                    [{n2}]
                   </button>
                 );
               }
               return (
                 <span
-                  key={n}
-                  title={`Source ${n}${label} was retrieved for the summary but is not in the results below`}
-                  style={{ color: "#8a94a3", cursor: "help" }}
+                  key={n2}
+                  className="cite"
+                  data-unlinked="true"
+                  title={`Source ${n2}${label} was retrieved for the summary but is not in the results below`}
                 >
-                  [{n}]
+                  [{n2}]
                 </span>
               );
             })}{" "}
           </span>
         ))}
-      </div>
+      </p>
 
-      <details style={{ marginTop: "0.6rem", fontSize: "0.85em", color: "#5b6472" }}>
-        <summary style={{ cursor: "pointer" }}>
-          How this summary was checked
-        </summary>
-        <div style={{ marginTop: "0.35rem" }}>
-          <div>
+      <details className="summary-details">
+        <summary>How this summary was checked</summary>
+        <ul className="audit">
+          <li>
             {v.claims_kept} of {v.sentences} generated{" "}
             {v.sentences === 1 ? "sentence" : "sentences"} kept
             {v.claims_rejected > 0 && `, ${v.claims_rejected} discarded`}.
-          </div>
-          {v.unsupported_claims?.length > 0 && (
-            <div>Discarded as unsupported by their cited sources:</div>
-          )}
+          </li>
           {v.unsupported_claims?.map((u, i) => (
-            <div key={i} style={{ fontStyle: "italic", marginLeft: "0.75rem" }}>
-              &ldquo;{u.text}&rdquo; (vocabulary overlap {u.support})
-            </div>
+            <li key={i}>
+              Discarded as unsupported by its cited sources (word overlap{" "}
+              {u.support}): <span className="audit-quote">“{u.text}”</span>
+            </li>
+          ))}
+          {v.verbatim_claims?.map((c, i) => (
+            <li key={`v${i}`}>
+              Discarded as copied rather than paraphrased ({c.run} consecutive
+              words shared): <span className="audit-quote">“{c.text}”</span>
+            </li>
           ))}
           {v.uncited_claims > 0 && (
-            <div>
+            <li>
               {v.uncited_claims} sentence{v.uncited_claims === 1 ? "" : "s"} had
               no citation and {v.uncited_claims === 1 ? "was" : "were"} discarded.
-            </div>
+            </li>
           )}
-          {v.verbatim_claims?.length > 0 && (
-            <div>Discarded as copied rather than paraphrased:</div>
-          )}
-          {v.verbatim_claims?.map((c, i) => (
-            <div key={`v${i}`} style={{ fontStyle: "italic", marginLeft: "0.75rem" }}>
-              &ldquo;{c.text}&rdquo; ({c.run} consecutive words shared with a source)
-            </div>
-          ))}
           {v.invalid_citations?.length > 0 && (
-            <div>Citations to non-existent sources were ignored: {v.invalid_citations.join(", ")}.</div>
+            <li>
+              Citations to non-existent sources were ignored:{" "}
+              {v.invalid_citations.join(", ")}.
+            </li>
           )}
-          <div style={{ marginTop: "0.35rem" }}>
-            Sources:{" "}
-            {(overview.sources || []).map((s) => (
-              <span key={s.index} style={{ marginRight: "0.6rem" }}>
-                [{s.index}] {s.parent_doc_id}
-                {s.year ? ` (${s.year})` : ""}
-              </span>
-            ))}
-          </div>
-          <div style={{ marginTop: "0.35rem", color: "#8a94a3" }}>
-            Summary is generated from these {overview.sources?.length} retrieved{" "}
-            {overview.sources?.length === 1 ? "passage" : "passages"} only. It is not
-            a substitute for reading them, and it can still be wrong: the checks
-            above are automated word-level filters, so a sentence that reuses
-            source vocabulary while stating the opposite can still get through.
-            Check anything that matters against the passage itself.
-            {v.thresholds && (
-              <>
-                {" "}
-                Thresholds used: keep at word overlap ≥{" "}
-                {v.thresholds.support_min}, drop if any copied run ≥{" "}
-                {v.thresholds.verbatim_max_run} words
-                {v.max_verbatim_run > 0 && ` (longest run seen: ${v.max_verbatim_run})`}.
-              </>
-            )}
-            {overview.model && ` Model: ${overview.model}.`}
-          </div>
-        </div>
+        </ul>
+        <p className="summary-note">
+          Generated from these {n} retrieved {n === 1 ? "passage" : "passages"}{" "}
+          only. The checks above are automated word-level filters, so a sentence
+          that reuses source vocabulary while stating the opposite can still get
+          through. Check anything that matters against the passage itself.
+          {overview.model && <> Model: {overview.model}.</>}
+          {v.thresholds && (
+            <>
+              {" "}
+              Thresholds used: word overlap {v.thresholds.support_min}, copied-run{" "}
+              {v.thresholds.verbatim_max_run} words.
+            </>
+          )}
+        </p>
       </details>
-    </div>
+    </section>
   );
 }
+
+/* ---------------------------------------------------------------------------
+ * Page image
+ * ------------------------------------------------------------------------- */
 
 function SourceImagePanel({ sourceImage }) {
   const [imgState, setImgState] = useState("idle"); // idle | loading | ready | failed
   const [imgUrl, setImgUrl] = useState(null);
   const [imgReason, setImgReason] = useState(null);
 
-  const page =
-    sourceImage && sourceImage.available ? sourceImage.primary : null;
+  const page = sourceImage && sourceImage.available ? sourceImage.primary : null;
   const key = page ? `${page.lccn}|${page.date}|${page.edition}|${page.sequence}` : "";
 
   // Resolve the displayable JPEG via the backend, which can reach the LOC
-  // manifest even when the browser cannot.
+  // manifest even when the browser cannot. A cache miss can take ~20s while the
+  // Internet Archive fallback is tried, so the lookup is bounded: without this
+  // the panel can sit on "Loading" indefinitely, which is worse than showing the
+  // honest fallback links that are already rendered either way.
   useEffect(() => {
     if (!page) {
       setImgState("idle");
@@ -608,12 +687,22 @@ function SourceImagePanel({ sourceImage }) {
       return undefined;
     }
     const ac = new AbortController();
+    let settled = false;
     setImgState("loading");
     setImgUrl(null);
     setImgReason(null);
+    const timer = setTimeout(() => {
+      if (settled) return;
+      settled = true;
+      ac.abort();
+      setImgReason("image-lookup-timeout");
+      setImgState("failed");
+    }, IMAGE_LOOKUP_TIMEOUT_MS);
     fetchPageImage({ ...page, signal: ac.signal })
       .then((r) => {
-        if (ac.signal.aborted) return;
+        if (settled) return;
+        settled = true;
+        clearTimeout(timer);
         if (r.available) {
           setImgUrl(r.imageUrl);
           setImgState("ready");
@@ -623,32 +712,24 @@ function SourceImagePanel({ sourceImage }) {
         }
       })
       .catch(() => {
-        if (!ac.signal.aborted) setImgState("failed");
+        if (settled) return;
+        settled = true;
+        clearTimeout(timer);
+        setImgState("failed");
       });
-    return () => ac.abort();
+    return () => {
+      clearTimeout(timer);
+      ac.abort();
+    };
   }, [key]);
 
   if (!sourceImage) return null;
 
-  const linkStyle = {
-    color: "#0066cc",
-    fontSize: "0.9em",
-    marginRight: "1rem",
-    whiteSpace: "nowrap",
-  };
-  const wrap = {
-    marginTop: "0.75rem",
-    paddingTop: "0.75rem",
-    borderTop: "1px solid #eee",
-  };
-
   // Honest unavailable state: no fabricated placeholder, no broken image.
   if (!sourceImage.available) {
     return (
-      <div style={wrap}>
-        <div style={{ fontSize: "0.9em", color: "#888", fontStyle: "italic" }}>
-          Page image unavailable for this document.
-        </div>
+      <div className="scan-status">
+        Page image unavailable for this document.
       </div>
     );
   }
@@ -656,84 +737,72 @@ function SourceImagePanel({ sourceImage }) {
   const extraPages = sourceImage.pages.length - 1;
 
   return (
-    <div style={wrap}>
-      <div style={{ fontSize: "0.9em", color: "#444" }}>
-        <strong>Page image:</strong>{" "}
-        <span style={{ color: "#666" }}>
-          Library of Congress, {page.label}
-          {sourceImage.newspaper ? ` (${sourceImage.newspaper})` : ""}
-        </span>
-      </div>
-
-      {imgState === "ready" && imgUrl && (
-        <div style={{ marginTop: "0.6rem" }}>
+    <section className="scan" aria-label="Scanned newspaper page">
+      <div className="scan-frame">
+        {imgState === "ready" && imgUrl && (
           <img
             src={imgUrl}
             alt={`Scanned newspaper page: ${page.label}`}
             onError={() => setImgState("failed")}
-            style={{
-              display: "block",
-              maxWidth: "100%",
-              maxHeight: "60vh",
-              border: "1px solid #ddd",
-              borderRadius: "4px",
-              backgroundColor: "#fff",
-            }}
           />
-        </div>
-      )}
+        )}
+        {imgState === "loading" && (
+          <p className="scan-status">Loading page image</p>
+        )}
+        {imgState === "failed" && (
+          <p className="scan-status">
+            <em>
+              The page scan could not be loaded from loc.gov. The links below open
+              it on the Library of Congress site.
+            </em>
+            {imgReason && <div>reason: {imgReason}</div>}          </p>
+        )}
 
-      {imgState === "loading" && (
-        <div style={{ marginTop: "0.6rem", fontSize: "0.9em", color: "#888" }}>
-          Loading page image&hellip;
+        <div className="scan-meta">
+          <span>
+            Library of Congress, {page.label}
+            {sourceImage.newspaper ? ` (${sourceImage.newspaper})` : ""}
+          </span>
+          <span>Scans are served by the Library of Congress.</span>
         </div>
-      )}
 
-      {imgState === "failed" && (
-        <div style={{ marginTop: "0.6rem", fontSize: "0.9em", color: "#888" }}>
-          <em>
-            The page scan could not be loaded from loc.gov. The links below open
-            it on the Library of Congress site.
-          </em>
-          {imgReason && (
-            <div style={{ fontSize: "0.8em", color: "#aaa", marginTop: "0.2rem" }}>
-              reason: {imgReason}
-            </div>
-          )}
+        <div className="scan-links">
+          <a href={page.resource_page} target="_blank" rel="noopener noreferrer">
+            Open on loc.gov
+          </a>
+          <a href={page.legacy_jp2} target="_blank" rel="noopener noreferrer">
+            Download JP2
+          </a>
+          <a href={page.issue_gallery} target="_blank" rel="noopener noreferrer">
+            View full issue
+          </a>
         </div>
-      )}
 
-      <div style={{ marginTop: "0.6rem" }}>
-        <a href={page.resource_page} target="_blank" rel="noopener noreferrer" style={linkStyle}>
-          Open on loc.gov &nearr;
-        </a>
-        <a href={page.legacy_jp2} target="_blank" rel="noopener noreferrer" style={linkStyle}>
-          Download JP2
-        </a>
-        <a href={page.issue_gallery} target="_blank" rel="noopener noreferrer" style={linkStyle}>
-          View full issue
-        </a>
+        {extraPages > 0 && (
+          <p className="scan-extra">
+            This document spans {sourceImage.pages.length} scanned pages:{" "}
+            {sourceImage.pages.map((pg, i) => (
+              <span key={`${pg.date}-${pg.edition}-${pg.sequence}`}>
+                {i > 0 && ", "}
+                <a
+                  href={pg.resource_page}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  page {pg.sequence}
+                </a>
+              </span>
+            ))}
+          </p>
+        )}
       </div>
-
-      {extraPages > 0 && (
-        <div style={{ marginTop: "0.4rem", fontSize: "0.85em", color: "#666" }}>
-          This document spans {sourceImage.pages.length} scanned pages:{" "}
-          {sourceImage.pages.map((pg, i) => (
-            <span key={`${pg.date}-${pg.edition}-${pg.sequence}`}>
-              {i > 0 && ", "}
-              <a href={pg.resource_page} target="_blank" rel="noopener noreferrer" style={{ color: "#0066cc" }}>
-                p.{pg.sequence}
-              </a>
-            </span>
-          ))}
-        </div>
-      )}
-      <div style={{ marginTop: "0.4rem", fontSize: "0.8em", color: "#999" }}>
-        Scans are served by the Library of Congress.
-      </div>
-    </div>
+    </section>
   );
 }
+
+/* ---------------------------------------------------------------------------
+ * Document view
+ * ------------------------------------------------------------------------- */
 
 function DocumentView() {
   const { parent_doc_id } = useParams();
@@ -743,6 +812,7 @@ function DocumentView() {
   const [highlightChunkId, setHighlightChunkId] = useState(null);
   const highlightRef = useRef(null);
   const navigate = useNavigate();
+  const { theme, toggle } = useTheme();
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -766,14 +836,15 @@ function DocumentView() {
     fetchDocument();
   }, [parent_doc_id]);
 
-  // Scroll to highlighted chunk after render
+  // Scroll to the matched chunk and let its one-time pulse play. The pulse is a
+  // single non-repeating animation, so no class teardown is needed afterwards.
   useEffect(() => {
     if (highlightChunkId && highlightRef.current) {
-      const element = highlightRef.current.querySelector(`[data-chunk-id="${highlightChunkId}"]`);
+      const element = highlightRef.current.querySelector(
+        `[data-chunk-id="${highlightChunkId}"]`
+      );
       if (element) {
         element.scrollIntoView({ behavior: "smooth", block: "center" });
-        element.classList.add("highlighted-chunk");
-        setTimeout(() => element.classList.remove("highlighted-chunk"), 3000);
       }
     }
   }, [document, highlightChunkId]);
@@ -784,106 +855,127 @@ function DocumentView() {
 
   if (loading) {
     return (
-      <div style={{ maxWidth: 800, margin: "2rem auto", fontFamily: "sans-serif", textAlign: "center" }}>
-        <h1>Loading document…</h1>
+      <div className="shell">
+        <Rail
+          brandSub="Explainable temporal search over 19th-century American newspapers."
+          controls={
+            <button type="button" className="control-theme" onClick={toggle}>
+              {theme === "dark" ? "Light theme" : "Dark theme"}
+            </button>
+          }
+        >
+          <button type="button" className="back-link" onClick={handleBack}>
+            Back to search
+          </button>
+        </Rail>
+        <main className="reading">
+          <p className="doc-loading">Loading document</p>
+        </main>
       </div>
     );
   }
 
   if (error) {
     return (
-      <div style={{ maxWidth: 800, margin: "2rem auto", fontFamily: "sans-serif", textAlign: "center" }}>
-        <h1>Document Not Found</h1>
-        <p style={{ color: "#666" }}>{error}</p>
-        <p><button onClick={handleBack} style={{ color: "#0066cc", background: "none", border: "none", cursor: "pointer", fontSize: "1rem" }}>← Back to search</button></p>
+      <div className="shell">
+        <Rail
+          brandSub="Explainable temporal search over 19th-century American newspapers."
+          controls={
+            <button type="button" className="control-theme" onClick={toggle}>
+              {theme === "dark" ? "Light theme" : "Dark theme"}
+            </button>
+          }
+        >
+          <button type="button" className="back-link" onClick={handleBack}>
+            Back to search
+          </button>
+        </Rail>
+        <main className="reading">
+          <h1 className="doc-title">Document not found</h1>
+          <p className="summary-note">{error}</p>
+        </main>
       </div>
     );
   }
 
+  const m = document.metadata || {};
+  const facts = [
+    m.publication_year && { label: "Year", value: m.publication_year },
+    m.historical_start &&
+      m.historical_end && {
+        label: "Historical range",
+        value: `${m.historical_start}–${m.historical_end}`,
+      },
+    m.num_chunks && { label: "Passages", value: m.num_chunks },
+  ].filter(Boolean);
+
   return (
-    <div style={{ maxWidth: 900, margin: "2rem auto", fontFamily: "sans-serif" }}>
-      <div style={{ marginBottom: "1rem" }}>
-        <button onClick={handleBack} style={{ color: "#0066cc", background: "none", border: "none", cursor: "pointer", fontSize: "1rem", textDecoration: "underline" }}>← Back to search</button>
-      </div>
-      
-      <div style={{ 
-        border: "1px solid #ddd", 
-        borderRadius: "8px", 
-        padding: "1.5rem",
-        backgroundColor: "#fafafa"
-      }}>
-        <h2 style={{ marginTop: 0, marginBottom: "0.5rem" }}>
-          Document: {document.parent_doc_id}
-        </h2>
-        <div style={{ color: "#666", fontSize: "0.9em", marginBottom: "1rem" }}>
-          {document.metadata.publication_year && <span>Year: {document.metadata.publication_year}</span>}
-          {document.metadata.historical_start && document.metadata.historical_end && (
-            <span style={{ marginLeft: "1rem" }}>
-              Historical: {document.metadata.historical_start}–{document.metadata.historical_end}
-            </span>
-          )}
-          {document.metadata.num_chunks && (
-            <span style={{ marginLeft: "1rem" }}>Chunks: {document.metadata.num_chunks}</span>
-          )}
-          {document.metadata.provenance && (
-            <div style={{ marginTop: "0.5rem" }}>
-              <a href={document.metadata.provenance} target="_blank" rel="noopener noreferrer" style={{ color: "#0066cc" }}>
-                Source: {document.metadata.provenance}
-              </a>
-            </div>
-          )}
-        </div>
+    <div className="shell">
+      <Rail
+        brandSub="Document view"
+        controls={
+          <>
+            <button type="button" className="back-link" onClick={handleBack}>
+              Back to search
+            </button>
+            <button type="button" className="control-theme" onClick={toggle}>
+              {theme === "dark" ? "Light theme" : "Dark theme"}
+            </button>
+          </>
+        }
+      >
+        {facts.length > 0 && (
+          <dl className="rail-facts">
+            {facts.map((f) => (
+              <div className="rail-fact" key={f.label}>
+                <dt>{f.label}</dt>
+                <dd>{f.value}</dd>
+              </div>
+            ))}
+          </dl>
+        )}
+        {m.provenance && (
+          <p className="rail-note">
+            <a
+              href={m.provenance}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Source record
+            </a>
+          </p>
+        )}
+      </Rail>
+
+      <main className="reading">
+        <header className="doc-head">
+          <h1 className="doc-title">{document.parent_doc_id}</h1>
+        </header>
 
         <SourceImagePanel sourceImage={document.source_image} />
-        
-        <div 
-          ref={highlightRef}
-          style={{ 
-            whiteSpace: "pre-wrap", 
-            lineHeight: "1.6",
-            fontSize: "0.95rem",
-            maxHeight: "70vh",
-            overflowY: "auto",
-            padding: "1rem",
-            backgroundColor: "white",
-            border: "1px solid #eee",
-            borderRadius: "4px"
-          }}
-        >
-          {document.chunks.map((chunk, idx) => (
-            <div 
+
+        <div ref={highlightRef} className="doc-text">
+          {document.chunks.map((chunk) => (
+            <div
               key={chunk.chunk_id}
               data-chunk-id={chunk.chunk_id}
-              style={{ 
-                marginBottom: "1rem",
-                padding: "0.5rem",
-                borderLeft: highlightChunkId === chunk.chunk_id ? "4px solid #ffcc00" : "4px solid transparent",
-                backgroundColor: highlightChunkId === chunk.chunk_id ? "#fffde7" : "transparent",
-                transition: "all 0.3s ease"
-              }}
+              className={`chunk${
+                highlightChunkId === chunk.chunk_id ? " is-match is-pulsing" : ""
+              }`}
             >
-              <div style={{ fontSize: "0.75rem", color: "#999", marginBottom: "0.25rem" }}>
-                Chunk: {chunk.chunk_id}
-              </div>
+              <div className="chunk-tag">Passage {chunk.chunk_id}</div>
               <div>{chunk.text}</div>
             </div>
           ))}
         </div>
-      </div>
-
-      <style jsx>{`
-        .highlighted-chunk {
-          animation: highlight-pulse 1s ease-in-out;
-        }
-        @keyframes highlight-pulse {
-          0% { background-color: #fffde7; border-left-color: #ffcc00; }
-          50% { background-color: #fff9c4; border-left-color: #f9a825; }
-          100% { background-color: #fffde7; border-left-color: #ffcc00; }
-        }
-      `}</style>
+      </main>
     </div>
   );
 }
+
+/* ---------------------------------------------------------------------------
+ * Routes
+ * ------------------------------------------------------------------------- */
 
 export default function App() {
   return (

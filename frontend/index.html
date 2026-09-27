@@ -3,7 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ETHS – Explainable Temporal Search</title>
+    <title>ETHS — Explainable Temporal Search</title>
+
+    <!-- Newsreader for reading content, Public Sans for UI chrome. Public Sans is
+         the US federal government's own open-source typeface, which is the right
+         provenance for a corpus sourced from the Library of Congress. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      // Applied before first paint so a dark-theme reload never flashes white.
+      // Kept inline and tiny on purpose: it must run before the CSS paints.
+      (function () {
+        try {
+          var stored = localStorage.getItem("eths-theme");
+          var theme =
+            stored === "light" || stored === "dark"
+              ? stored
+              : window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

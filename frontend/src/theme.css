@@ -1,0 +1,918 @@
+/* ==========================================================================
+   ETHS — visual design system
+
+   One orchestrated reading surface: a narrow instrument rail on the left,
+   a wider reading pane on the right. Type is split by role -- Newsreader for
+   anything the user *reads* (archival prose is already dense and needs a
+   reading face), Public Sans for anything they *operate* (input, buttons,
+   metadata). Both are Google's, and Public Sans is the US federal
+   government's own open-source face, which is the right provenance given the
+   Library of Congress source data.
+
+   Motion is deliberately rationed: one reveal sequence per search, one pulse
+   on a matched chunk. Everything is inert under prefers-reduced-motion.
+   ========================================================================== */
+
+:root {
+  /* Palette. Cool-neutral paper, not warm cream; the scans supply the warmth. */
+  --bg: #fafaf8;
+  --ink: #1a1d29;
+  --accent: #2b3a67;
+  --accent-hover: #1f2b4d;
+  --citation-highlight: #e8b94a;
+  --muted: #6b7280;
+  --border: #e3e1da;
+  /* Interactive control boundaries need 3:1 against the surface they sit on
+     (WCAG 1.4.11). --border alone measures 1.25:1 on white, which is fine for
+     a decorative rule but not for the edge of an input you must be able to see. */
+  --border-strong: #767b87;
+  --surface: #ffffff;
+  --danger: #b3261e;
+
+  /* Tints derived from the palette, for states that need a wash rather than
+     a new hue. Kept as tokens so dark mode can invert them coherently. */
+  --accent-wash: rgba(43, 58, 103, 0.06);
+  --danger-wash: rgba(179, 38, 30, 0.07);
+  --highlight-wash: rgba(232, 185, 74, 0.22);
+  --shadow-scan: 0 1px 2px rgba(26, 29, 41, 0.08), 0 8px 24px rgba(26, 29, 41, 0.1);
+  --shadow-panel: 0 1px 2px rgba(26, 29, 41, 0.05);
+
+  /* Modular scale, 1.25 from a 16px base. */
+  --step--1: 0.8rem;    /* 12.8 - micro labels */
+  --step-0: 1rem;       /* 16   - UI chrome base */
+  --step-1: 1.25rem;    /* 20   - body prose */
+  --step-2: 1.5625rem;  /* 25   - result titles */
+  --step-3: 1.953rem;   /* 31   - page title */
+  --step-4: 2.441rem;   /* 39   - display, rail brand */
+
+  --font-ui: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-read: "Newsreader", Georgia, "Times New Roman", serif;
+
+  --rail-w: 20rem;      /* 320px - top of the brief's 280-320px rail range */
+  --measure: 68ch;      /* reading line length, under the ~75ch target */
+  --radius: 6px;
+  --radius-lg: 10px;
+
+  --ease: cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+[data-theme="dark"] {
+  /* Inverted but still neutral-warm. Not #111 with a neon accent: the accent
+     is a desaturated periwinkle that holds contrast on dark without glowing. */
+  --bg: #14161f;
+  --ink: #edeef2;
+  --accent: #7c8fc9;
+  --accent-hover: #9aa9db;
+  --citation-highlight: #d9a63e;
+  --muted: #9098ab;
+  --border: #2b3040;
+  --border-strong: #767f96;
+  --surface: #1b1e2a;
+  --danger: #e2796f;
+
+  --accent-wash: rgba(124, 143, 201, 0.1);
+  --danger-wash: rgba(226, 121, 111, 0.1);
+  --highlight-wash: rgba(217, 166, 62, 0.2);
+  --shadow-scan: 0 1px 2px rgba(0, 0, 0, 0.5), 0 10px 30px rgba(0, 0, 0, 0.45);
+  --shadow-panel: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+/* --------------------------------------------------------------------------
+   Base
+   -------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* Set from JS before paint so a dark-theme reload never flashes white. */
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: var(--step-0);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Focus visibility is an accessibility floor, not a decoration. Two-tone ring
+   so it survives on both the light surface and the dark one. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+::selection {
+  background: var(--accent-wash);
+}
+
+/* --------------------------------------------------------------------------
+   Shell: instrument rail + reading pane
+   -------------------------------------------------------------------------- */
+
+.shell {
+  display: grid;
+  grid-template-columns: var(--rail-w) minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+/* The rail is a working surface, not a sidebar full of equal-weight cards, so
+   it sits on the background with a single dividing rule. */
+.rail {
+  position: sticky;
+  top: 0;
+  align-self: start;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 1.75rem 1.25rem 2rem;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.brand {
+  font-family: var(--font-read);
+  font-size: var(--step-4);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  margin: 0;
+  font-weight: 500;
+}
+
+.brand-sub {
+  margin: 0.45rem 0 0;
+  font-size: var(--step--1);
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+/* --------------------------------------------------------------------------
+   Search composer
+   -------------------------------------------------------------------------- */
+
+.composer {
+  position: relative;
+}
+
+.composer-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: stretch;
+}
+
+/* The query field is the rail's primary control, so it claims the full width
+   on its own line and the Search button and microphone sit beneath it. Sharing
+   one line squeezed the field to roughly 130px, too narrow to read the
+   placeholder and the typed query at once. */
+.composer input[type="text"] {
+  flex: 1 1 100%;
+  min-width: 0;
+  font: inherit;
+  font-size: var(--step-1);
+  line-height: 1.2;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  padding: 0.8rem 0.9rem;
+  min-height: 3rem;
+  box-shadow: var(--shadow-panel);
+  transition: border-color 140ms var(--ease), box-shadow 140ms var(--ease);
+}
+
+/* Second row: Search takes the slack so the pair reads as one control. */
+.composer-row .btn-primary {
+  flex: 1 1 auto;
+  min-height: 2.5rem;
+}
+
+.composer input[type="text"]::placeholder {
+  color: var(--muted);
+}
+
+.composer input[type="text"]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+  border-color: var(--accent);
+}
+
+.btn {
+  font: inherit;
+  font-size: var(--step-0);
+  line-height: 1;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  padding: 0.6rem 0.9rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-panel);
+  transition: background-color 120ms var(--ease), border-color 120ms var(--ease);
+}
+
+.btn:hover:not(:disabled) {
+  border-color: var(--accent);
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+[data-theme="dark"] .btn-primary {
+  color: #14161f;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 0.65rem;
+  line-height: 0;
+  flex: 0 0 auto;
+}
+
+.btn-icon[data-listening="true"] {
+  background: var(--danger);
+  border-color: var(--danger);
+  color: #fff;
+}
+
+/* Autocomplete: anchored to the input, opens upward-agnostic (downward) and
+   inherits the surface so it reads as part of the composer. */
+.suggest {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  z-index: 30;
+  margin: 0;
+  padding: 0.25rem;
+  list-style: none;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 20px rgba(26, 29, 41, 0.12);
+  max-height: 16rem;
+  overflow-y: auto;
+}
+
+[data-theme="dark"] .suggest {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.suggest li {
+  padding: 0.4rem 0.55rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.suggest li[aria-selected="true"] {
+  background: var(--accent-wash);
+  color: var(--accent);
+}
+
+/* --------------------------------------------------------------------------
+   Rail controls
+   -------------------------------------------------------------------------- */
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-top: auto;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--ink);
+}
+
+.control label {
+  cursor: pointer;
+}
+
+.control input[type="checkbox"] {
+  width: 1.05rem;
+  height: 1.05rem;
+  accent-color: var(--accent);
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+.control-theme {
+  justify-content: flex-start;
+  gap: 0.5rem;
+  color: var(--muted);
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  font-size: 0.85rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.control-theme:hover {
+  color: var(--accent);
+}
+
+.rail-note {
+  font-size: var(--step--1);
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.rail-facts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.rail-fact dt {
+  font-size: var(--step--1);
+  color: var(--muted);
+  margin: 0 0 0.1rem;
+}
+
+.rail-fact dd {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+/* --------------------------------------------------------------------------
+   Reading pane
+   -------------------------------------------------------------------------- */
+
+.reading {
+  padding: 2.25rem 2.75rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  min-width: 0;
+}
+
+.reading > * {
+  /* Reading content is width-constrained, not stretched to the pane. */
+  max-width: var(--measure);
+}
+
+/* The summary is the one element that reads as a distinct object: a sheet of
+   paper on the background, with a rule rather than a uniform card shadow so it
+   does not join the generic rounded-card set. */
+.summary {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  padding: 1.35rem 1.5rem;
+  box-shadow: var(--shadow-panel);
+}
+
+.summary-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+.summary-title {
+  font-family: var(--font-ui);
+  font-size: var(--step-0);
+  font-weight: 600;
+  margin: 0;
+}
+
+.summary-meta {
+  font-size: var(--step--1);
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.summary-body {
+  font-family: var(--font-read);
+  font-size: var(--step-1);
+  line-height: 1.68;
+  margin: 0;
+  color: var(--ink);
+}
+
+.summary-note {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0.85rem 0 0;
+  line-height: 1.55;
+}
+
+.summary-details {
+  margin-top: 0.9rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.summary-details summary {
+  cursor: pointer;
+  color: var(--accent);
+}
+
+.summary-details summary:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.audit {
+  margin: 0.6rem 0 0;
+  padding-left: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.audit li {
+  line-height: 1.5;
+}
+
+.audit-quote {
+  font-family: var(--font-read);
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+.cite {
+  font: inherit;
+  color: var(--accent);
+  background: none;
+  border: none;
+  padding: 0 0.1rem;
+  cursor: pointer;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.85em;
+  vertical-align: 0.15em;
+}
+
+.cite:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.cite[data-unlinked="true"] {
+  color: var(--muted);
+  cursor: help;
+  text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------
+   Results
+   -------------------------------------------------------------------------- */
+
+.result-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* Results are separated by whitespace and a short rule, not by identical
+   floating cards -- they are a list of passages, not independent objects. */
+.result {
+  padding: 1.05rem 0 1.15rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.result:first-child {
+  padding-top: 0.25rem;
+}
+
+.result-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+}
+
+.result-rank {
+  font-size: var(--step--1);
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  margin: 0 0 0.3rem;
+}
+
+.result-text {
+  font-family: var(--font-read);
+  font-size: var(--step-1);
+  line-height: 1.6;
+  margin: 0;
+  color: var(--ink);
+}
+
+.result-btn:hover .result-text {
+  color: var(--accent);
+}
+
+/* Explainability: an indented, quieter block that reads as an annotation on
+   the passage rather than competing with it. */
+.score {
+  margin: 0.7rem 0 0;
+  padding-left: 0.85rem;
+  border-left: 2px solid var(--border);
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.score b {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.score-idle {
+  font-style: italic;
+}
+
+/* --------------------------------------------------------------------------
+   States
+   -------------------------------------------------------------------------- */
+
+.alert {
+  border-left: 3px solid var(--danger);
+  background: var(--danger-wash);
+  color: var(--danger);
+  padding: 0.7rem 0.9rem;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.notice {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.notice-error {
+  color: var(--danger);
+}
+
+.notice-btn {
+  font: inherit;
+  font-size: 0.95em;
+  color: var(--accent);
+  background: none;
+  border: none;
+  padding: 0 0.4rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.empty {
+  font-family: var(--font-read);
+  font-size: var(--step-1);
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   Document view
+   -------------------------------------------------------------------------- */
+
+.doc-head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.doc-title {
+  font-family: var(--font-read);
+  font-size: var(--step-2);
+  line-height: 1.25;
+  margin: 0;
+  font-weight: 500;
+}
+
+.back-link {
+  font: inherit;
+  font-size: 0.9rem;
+  color: var(--accent);
+  background: none;
+  border: none;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.back-link:hover {
+  color: var(--accent-hover);
+}
+
+/* The scan is the most distinctive asset in the product, so it is allowed to
+   break the measure and carry real weight. Everything else stays narrow. */
+.scan {
+  max-width: none;
+  width: min(100%, 54rem);
+}
+
+.scan-frame {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  padding: 0.85rem;
+  box-shadow: var(--shadow-scan);
+}
+
+.scan img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border-radius: 1px;
+}
+
+.scan-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.1rem;
+  margin-top: 0.8rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.scan-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.1rem;
+  margin-top: 0.35rem;
+}
+
+.scan-links a {
+  color: var(--accent);
+  text-underline-offset: 3px;
+}
+
+.scan-status {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 0.7rem;
+  line-height: 1.5;
+}
+
+.scan-status em {
+  font-style: italic;
+}
+
+.scan-extra {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+.scan-extra a {
+  color: var(--accent);
+  text-underline-offset: 3px;
+}
+
+/* Document text: a continuous reading column, not a stack of bordered cards. */
+.doc-text {
+  font-family: var(--font-read);
+  font-size: var(--step-1);
+  line-height: 1.7;
+  color: var(--ink);
+}
+
+.chunk {
+  padding: 0.5rem 0 0.5rem 0.9rem;
+  margin-bottom: 0.85rem;
+  border-left: 2px solid transparent;
+}
+
+.chunk-tag {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.chunk.is-match {
+  border-left-color: var(--citation-highlight);
+  background: var(--highlight-wash);
+  padding-left: 0.9rem;
+  border-radius: 0 3px 3px 0;
+}
+
+.doc-loading {
+  font-family: var(--font-read);
+  font-size: var(--step-2);
+  color: var(--muted);
+  text-align: center;
+  padding: 5rem 0;
+}
+
+/* --------------------------------------------------------------------------
+   Motion
+
+   One reveal per search: the summary settles first, then passages stagger in
+   beneath it. Delays are handed in per item via --stagger-i so the sequence
+   is a single orchestrated moment rather than independent animations.
+   -------------------------------------------------------------------------- */
+
+/* Amplitude matters more than duration for whether motion reads as motion: a
+   6px rise finished almost before the eye registered it. 14px of travel plus a
+   whisper of scale reads clearly while staying calm. */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.summary.is-revealing {
+  animation: rise-in 420ms var(--ease) both;
+  animation-delay: 160ms;
+}
+
+.result.is-revealing {
+  animation: rise-in 420ms var(--ease) both;
+  animation-delay: calc(320ms + var(--stagger-i, 0) * 50ms);
+}
+
+@keyframes chunk-attract {
+  0% {
+    background: var(--highlight-wash);
+  }
+  40% {
+    background: var(--citation-highlight);
+  }
+  100% {
+    background: var(--highlight-wash);
+  }
+}
+
+/* Plays once on load to point the eye, then rests on the soft wash. */
+.chunk.is-match.is-pulsing {
+  animation: chunk-attract 1400ms var(--ease) 1 both;
+}
+
+/* --------------------------------------------------------------------------
+   Ambient motion
+
+   The reveal above is the only moment the page narrates itself. These are the
+   quieter, always-on cues: theme changes cross-fade instead of snapping, and
+   interactive surfaces answer the pointer. Without them the reading room
+   felt inert between searches, which read as "no animation" at all.
+   -------------------------------------------------------------------------- */
+
+body,
+.rail,
+.reading,
+.summary,
+.result,
+.suggest,
+.composer input[type="text"] {
+  transition: background-color 240ms var(--ease), color 240ms var(--ease),
+    border-color 240ms var(--ease), box-shadow 240ms var(--ease);
+}
+
+.result-btn {
+  transition: transform 160ms var(--ease);
+}
+
+.result-btn:hover,
+.result-btn:focus-visible {
+  transform: translateX(3px);
+}
+
+.btn,
+.cite,
+.back-link,
+.control-theme,
+.suggest li {
+  transition: background-color 140ms var(--ease), color 140ms var(--ease),
+    border-color 140ms var(--ease), transform 140ms var(--ease);
+}
+
+.btn-primary:active:not(:disabled),
+.btn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .summary.is-revealing,
+  .result.is-revealing {
+    animation: none;
+  }
+
+  .result-btn:hover,
+  .result-btn:focus-visible,
+  .btn-primary:active:not(:disabled),
+  .btn:active:not(:disabled) {
+    transform: none;
+  }
+
+  .chunk.is-match.is-pulsing {
+    animation: none;
+    background: var(--highlight-wash);
+  }
+
+  * {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Narrow viewports: collapse to a single column. The rail becomes a top band
+   and stops being sticky, since a 300px sidebar on a phone is just a wall.
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .shell {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .rail {
+    position: static;
+    height: auto;
+    overflow: visible;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 1.35rem 1.15rem 1.5rem;
+    gap: 1.15rem;
+  }
+
+  .brand {
+    font-size: var(--step-3);
+  }
+
+  .controls {
+    margin-top: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.9rem 1.25rem;
+  }
+
+  .reading {
+    padding: 1.5rem 1.15rem 3rem;
+    gap: 1.4rem;
+  }
+
+  .scan {
+    width: 100%;
+  }
+}
