@@ -9,6 +9,7 @@ import {
   useSearchParams,
 } from "react-router-dom";
 import { fetchPageImage } from "./locImage";
+import Timeline from "./Timeline";
 import { useSpeechRecognition } from "./useSpeechRecognition";
 import { useAutocomplete } from "./useAutocomplete";
 
@@ -117,6 +118,18 @@ function SearchPage() {
   // Bumped on every completed search and used as a React key, so the reveal
   // sequence replays once per search instead of animating only on mount.
   const [revealId, setRevealId] = useState(0);
+  // Year range chosen on the timeline, applied server-side as a retrieval
+  // constraint. It lives in the URL so a shared link reproduces the same
+  // result set, and so back/forward moves through range selections.
+  const [yearRange, setYearRange] = useState(() => {
+    const p = searchParams.get("y0");
+    const q = searchParams.get("y1");
+    return p && q ? { start: Number(p), end: Number(q) } : null;
+  });
+  // Precomputed decade density for the timeline's context track.
+  const [density, setDensity] = useState(null);
+  const densityLoaded = useRef(false);
+  const resultRefs = useRef([]);
   const inputRef = useRef(null);
   const navigate = useNavigate();
   const { theme, toggle } = useTheme();
@@ -143,12 +156,16 @@ function SearchPage() {
   // cannot overwrite a newer one.
   const overviewReq = useRef(0);
 
-  const fetchOverview = (q) => {
+  const fetchOverview = (q, yr) => {
     const reqId = ++overviewReq.current;
     setOverviewState("loading");
     setOverview(null);
     axios
-      .post(`${API_BASE}/overview`, { query: q, size: 10 })
+      .post(`${API_BASE}/overview`, {
+        query: q,
+        size: 10,
+        ...(yr ? { year_start: yr.start, year_end: yr.end } : {}),
+      })
       .then(({ data }) => {
         if (reqId !== overviewReq.current) return;
         setOverview(data);
@@ -176,11 +193,14 @@ function SearchPage() {
   // would pass the click event as searchQuery, and axios would then try to
   // JSON.stringify that SyntheticEvent -- which fails on its circular
   // references to the originating DOM node. Only accept a real query string.
-  const doSearch = async (searchQuery, searchExplain) => {
+  const doSearch = async (searchQuery, searchExplain, range) => {
     const q = typeof searchQuery === "string" ? searchQuery : query;
     const ex = typeof searchExplain === "boolean" ? searchExplain : explain;
+    // `range` is passed explicitly by timeline interactions; otherwise fall
+    // back to whatever range is currently applied.
+    const yr = range === undefined ? yearRange : range;
     if (!q) return;
-    lastSearched.current = `${q}|${ex}`;
+    lastSearched.current = `${q}|${ex}|${yr?.start ?? ""}-${yr?.end ?? ""}`;
     setLoading(true);
     setError(null);
     try {
@@ -188,12 +208,16 @@ function SearchPage() {
       const { data } = await axios.post(`${API_BASE}${endpoint}`, {
         query: q,
         size: 10,
+        // The range is sent to the server, never applied here: filtering the
+        // results already in hand would misreport what the archive holds
+        // outside the current top-K.
+        ...(yr ? { year_start: yr.start, year_end: yr.end } : {}),
       });
       setResults(ex ? data.explanations : data.results);
       setRevealId((n) => n + 1);
       // The overview is a separate, non-blocking request: a failed or refused
       // summary must never turn a successful search into an error state.
-      if (!ex) fetchOverview(q);
+      if (!ex) fetchOverview(q, yr);
     } catch (e) {
       // Report what actually went wrong rather than always blaming the server:
       // a rejected or cancelled request looks identical to a dead backend from
@@ -212,7 +236,11 @@ function SearchPage() {
     }
     setLoading(false);
     // Update URL with query (without triggering navigation)
-    setSearchParams({ q, explain: ex ? "true" : "false" });
+    setSearchParams({
+      q,
+      explain: ex ? "true" : "false",
+      ...(yr ? { y0: String(yr.start), y1: String(yr.end) } : {}),
+    });
   };
 
   // Auto-search when the URL query changes (handles back/forward navigation).
@@ -220,17 +248,60 @@ function SearchPage() {
     const params = new URLSearchParams(searchStr);
     const urlQuery = params.get("q");
     const urlExplain = params.get("explain") === "true";
+    const y0 = params.get("y0");
+    const y1 = params.get("y1");
+    const urlRange = y0 && y1 ? { start: Number(y0), end: Number(y1) } : null;
     if (urlQuery && urlQuery !== query) {
       setQuery(urlQuery);
     }
     if (urlExplain !== explain) {
       setExplain(urlExplain);
     }
-    if (urlQuery && lastSearched.current !== `${urlQuery}|${urlExplain}`) {
-      doSearch(urlQuery, urlExplain);
+    if (
+      urlQuery &&
+      lastSearched.current !== `${urlQuery}|${urlExplain}|${y0 ?? ""}-${y1 ?? ""}`
+    ) {
+      setYearRange(urlRange);
+      doSearch(urlQuery, urlExplain, urlRange);
     }
     // Primitive dependency: stable unless the URL genuinely changes.
   }, [searchStr]);
+
+  // Decade density is precomputed and identical for every search, so it is
+  // fetched once per session rather than per query.
+  useEffect(() => {
+    if (densityLoaded.current) return;
+    densityLoaded.current = true;
+    axios
+      .get(`${API_BASE}/corpus/decade-density`)
+      .then(({ data }) => setDensity(data))
+      .catch(() => setDensity(null));
+  }, []);
+
+  // A range chosen on the timeline re-runs the search through the same server
+  // path as a typed query, rather than narrowing the results already held.
+  const handleSelectRange = (range) => {
+    setYearRange(range);
+    doSearch(undefined, undefined, range);
+  };
+
+  const handleClearRange = () => {
+    setYearRange(null);
+    doSearch(undefined, undefined, null);
+  };
+
+  // Clicking a marker scrolls its passage into view and flashes it, so the
+  // chart and the list stay in step.
+  const handleFocusResult = (index) => {
+    const el = resultRefs.current[index];
+    if (!el) return;
+    el.scrollIntoView({ behavior: "smooth", block: "center" });
+    el.classList.remove("is-flash");
+    // Force a reflow so re-adding the class restarts the flash animation.
+    void el.offsetWidth;
+    el.classList.add("is-flash");
+    window.setTimeout(() => el.classList.remove("is-flash"), 1800);
+  };
 
   const handleExplainChange = (e) => {
     setExplain(e.target.checked);
@@ -377,6 +448,21 @@ function SearchPage() {
           </div>
         )}
 
+        {/* Shown whenever a search has run, including one that returned
+            nothing: a year range with no documents is exactly when the density
+            band is most informative, so hiding it would hide the context that
+            explains the empty result. */}
+        {!explain && revealId > 0 && (
+          <Timeline
+            density={density}
+            results={results}
+            activeRange={yearRange}
+            onSelectRange={handleSelectRange}
+            onClearRange={handleClearRange}
+            onFocusResult={handleFocusResult}
+          />
+        )}
+
         <OverviewPanel
           key={`summary-${revealId}`}
           revealing={revealId > 0}
@@ -391,6 +477,9 @@ function SearchPage() {
             {results.map((r, i) => (
               <li
                 key={i}
+                ref={(el) => {
+                  resultRefs.current[i] = el;
+                }}
                 className={`result${revealId > 0 ? " is-revealing" : ""}`}
                 style={{ "--stagger-i": Math.min(i, 8) }}
               >

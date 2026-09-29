@@ -8,4 +8,15 @@ opensearch:
     username: admin
     password: ${OPENSEARCH_PASSWORD}
 corpus_start_year: 1800
-corpus_end_year: 1900
+# Exclusive upper bound: the filter is CORPUS_START_YEAR <= yr < CORPUS_END_YEAR.
+# 1870 therefore means the corpus spans 1800-1869 inclusive, which is what the
+# indexed artifact actually contains.
+#
+# This was 1900, asserting a 100-year corpus. The build silently produced only
+# 1800-1869 because preprocess_expanded.py processed decades in ascending order
+# and hit its MAX_CHUNKS break while in the 1860s, never reaching the 1870s.
+# The root cause is fixed in preprocessing/preprocess_expanded.py (per-decade
+# budget, no global break, coverage validation over expected decades), but the
+# corpus has not been rebuilt. Until it is, 1870 is the accurate bound.
+# See CORPUS_COVERAGE_FINDINGS.md.
+corpus_end_year: 1870

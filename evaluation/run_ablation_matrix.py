@@ -11,12 +11,23 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
 from evaluation.ablation_rankers import get_ranker, CORPUS_CONFIG, RANKERS
 
-# Load qrels for both corpora
-with open('data/qrels.json') as f:
+# Load qrels for both corpora.
+#
+# The small arm must read qrels_small.json (19 queries). data/qrels.json is
+# byte-identical to qrels_expanded.json (110 entries, 90 with references), so
+# reading it here labelled 'small' silently ran both arms on the same 90
+# expanded queries. That reproduced R@10=0.1022 / MRR=0.1411 for the small
+# index instead of the R@10=0.2947 / MRR=0.3289 in the stored matrix, which
+# matches qrels_small.json. This matches CORPUS_CONFIG['small'] in
+# ablation_rankers.py, which also points at qrels_small.json.
+with open('data/qrels_small.json') as f:
     qrels_small = [q for q in json.load(f) if q.get('relevant_doc_ids')]
 
 with open('data/qrels_expanded.json') as f:
     qrels_expanded = [q for q in json.load(f) if q.get('relevant_doc_ids')]
+
+print(f"small qrels: {len(qrels_small)} queries")
+print(f"expanded qrels: {len(qrels_expanded)} queries")
 
 QRELS = {
     'small': qrels_small,

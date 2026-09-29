@@ -47,24 +47,35 @@ def calculate_metadata_score(doc_period: str, doc_location: str, query_periods: 
         
     return score, (",".join(explanation_parts) if explanation_parts else "no_metadata_match")
 
-def final_search(query: str, size: int = 10, w_hybrid=0.7, w_temp=0.2, w_meta=0.1):
+def final_search(query: str, size: int = 10, w_hybrid=0.7, w_temp=0.2, w_meta=0.1,
+                 year_start=None, year_end=None):
     """
     Final ranker with global z-score normalization (respecting RRF precedent).
-    
+
     Architecture:
     - Hybrid RRF score is the base (already calibrated rank-fusion of BM25+Dense).
     - Temporal and Metadata are global z-score normalized and added as adjustments.
     - The hybrid RRF score is kept in its natural scale [0, ~0.016].
     - Temporal z-scores are scaled by hybrid_std to be comparable adjustments.
     - Weights: hybrid=0.7, temporal=0.2, metadata=0.1 (sum=1.0)
+
+    An optional year range restricts the candidate pool at retrieval time. It
+    also becomes the temporal intent used for scoring: a range the user picked
+    deliberately is a stronger statement of intent than a year the parser
+    scraped out of the query text, so it takes precedence. Documents nearer the
+    centre of the chosen range are therefore promoted within it.
     """
     temporal_intent = parser.parse(query)
     query_start = temporal_intent.get('start_year')
     query_end = temporal_intent.get('end_year')
     meta_intent = extract_metadata_intent(query)
-    
+
+    if year_start is not None or year_end is not None:
+        query_start = year_start if year_start is not None else query_start
+        query_end = year_end if year_end is not None else query_end
+
     # Get shared hybrid candidates
-    hybrid_res = get_hybrid_candidates(query)
+    hybrid_res = get_hybrid_candidates(query, year_start=year_start, year_end=year_end)
     
     # Calculate raw temporal and metadata scores
     for r in hybrid_res:

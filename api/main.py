@@ -28,6 +28,7 @@ from ranking.temporal_ranker import calculate_temporal_score
 from api.canonical_docs import get_canonical, CANONICAL_MAP
 from api.loc_images import document_references, resolve_page_image
 from api.autocomplete import suggest as autocomplete_suggest, index_meta as autocomplete_meta
+from api.corpus_stats import decade_density as corpus_density
 from api.overview import generate_overview
 
 app = FastAPI(title="ETHS Retrieval API")
@@ -44,11 +45,17 @@ app.add_middleware(
 class QueryRequest(BaseModel):
     query: str
     size: int = 10
+    # Optional hard year constraint, applied during retrieval rather than as a
+    # post-hoc filter over the results already returned.
+    year_start: int | None = None
+    year_end: int | None = None
 
 class OverviewRequest(BaseModel):
     query: str
     size: int = 10
     max_sources: int = 6
+    year_start: int | None = None
+    year_end: int | None = None
 
 def _dedupe_by_text(results, limit):
     """Keep the first result for each distinct passage text, up to `limit`.
@@ -77,7 +84,10 @@ def root():
 @app.post("/search")
 def search(req: QueryRequest):
     fetch_size = max(req.size * 3, 30)
-    results = final_search(req.query, size=fetch_size)
+    results = final_search(
+        req.query, size=fetch_size,
+        year_start=req.year_start, year_end=req.year_end,
+    )
     clean = [{
         "chunk_id": r.get("chunk_id"),
         "parent_doc_id": r.get("parent_doc_id"),
@@ -89,10 +99,14 @@ def search(req: QueryRequest):
         "final_score": r.get("final_score"),
         "temporal_explanation": r.get("temporal_explanation"),
         "metadata_explanation": r.get("metadata_explanation"),
+        "publication_year": r.get("publication_year"),
         "historical_start": r.get("historical_start"),
         "historical_end": r.get("historical_end"),
     } for r in _dedupe_by_text(results, req.size)]
-    return {"query": req.query, "results": clean}
+    applied = None
+    if req.year_start is not None or req.year_end is not None:
+        applied = {"year_start": req.year_start, "year_end": req.year_end}
+    return {"query": req.query, "results": clean, "year_range": applied}
 
 @app.post("/overview")
 def overview(req: OverviewRequest):
@@ -109,7 +123,14 @@ def overview(req: OverviewRequest):
     """
     if not (req.query or "").strip():
         raise HTTPException(status_code=400, detail="query is required")
-    results = final_search(req.query, size=max(req.size, 20))
+    # The same year range the results list is showing is applied here, so the
+    # summary always describes the passages the user can actually see. A summary
+    # of the unfiltered corpus beside a filtered result list would be describing
+    # a different set of evidence than the one on screen.
+    results = final_search(
+        req.query, size=max(req.size, 20),
+        year_start=req.year_start, year_end=req.year_end,
+    )
     results = _dedupe_by_text(results, max(req.size, 20))
     return generate_overview(
         req.query, results,
@@ -265,6 +286,27 @@ def autocomplete(q: str = "", limit: int = 8):
 def autocomplete_index_info():
     """Report what the suggestion index was built from, for verification."""
     return autocomplete_meta()
+
+
+@app.get("/corpus/decade-density")
+def corpus_decade_density(corpus: str = "expanded"):
+    """Per-decade document density for the timeline's background layer.
+
+    Served from a precomputed artifact rather than aggregated live, so the
+    context band costs the same regardless of corpus size. The returned range
+    reflects the years actually present, which is not the same as the
+    configured corpus_end_year: the indexed data stops short of it.
+
+    Returns 503 rather than an empty payload when the artifact has not been
+    built, so the client can distinguish "not built" from "no documents".
+    """
+    payload = corpus_density(corpus)
+    if payload is None:
+        raise HTTPException(
+            status_code=503,
+            detail="decade density artifact not built; run evaluation/build_decade_density.py",
+        )
+    return payload
 
 
 @app.get("/canonical-map/stats")

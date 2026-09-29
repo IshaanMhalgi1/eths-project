@@ -125,34 +125,55 @@ def main():
             prop = len(docs_by_decade[d]) / total_late_docs if total_late_docs > 0 else 0
             target_per_decade[d] = min_per_decade + int(remaining * prop)
     
+    # The min-plus-proportional allocation above can overshoot MAX_CHUNKS,
+    # because every decade is guaranteed min_per_decade before the
+    # proportional remainder is distributed. Scale the targets down so the
+    # per-decade budgets sum to at most MAX_CHUNKS.
+    total_target = sum(target_per_decade.values())
+    if total_target > MAX_CHUNKS:
+        scale = MAX_CHUNKS / total_target
+        for d in decades:
+            target_per_decade[d] = max(1, int(target_per_decade[d] * scale))
+        print(f"Scaled targets by {scale:.3f} to fit MAX_CHUNKS={MAX_CHUNKS}")
+
     print("\nTarget chunks per decade:")
     for d in decades:
         print(f"  {d}s: {target_per_decade[d]}")
     print(f"Total target: {sum(target_per_decade.values())}")
-    
-    # Sample documents per decade
+
+    # Sample documents per decade, keeping each decade's sample separate so
+    # the chunk budget can be enforced per decade below.
     import random
     random.seed(42)
-    selected_docs = []
+    sampled_by_decade = {}
     for d in decades:
         docs = docs_by_decade[d]
         target = target_per_decade[d]
         # Each doc yields ~1-2 chunks on average, so sample 2x docs
         sample_size = min(len(docs), target * 2)
         sampled = random.sample(docs, sample_size)
-        selected_docs.extend(sampled)
+        sampled_by_decade[d] = sampled
         print(f"  {d}s: sampled {len(sampled)} docs (target {target} chunks)")
-    
-    # Process all selected documents
+
+    # Process documents under a per-decade chunk budget.
+    #
+    # This must not be a single global MAX_CHUNKS break over an
+    # ascending-decade document list. That ordering let whichever decades came
+    # first consume the entire budget, so every later decade was dropped
+    # silently. Bounding each decade by its own target guarantees no decade
+    # can starve another, and the total stays within MAX_CHUNKS by
+    # construction.
     all_chunks = []
-    for doc in selected_docs:
-        all_chunks.extend(process_document(doc))
-        if len(all_chunks) >= MAX_CHUNKS:
-            break
-    
-    # Limit to max_chunks
-    all_chunks = all_chunks[:MAX_CHUNKS]
-    
+    for d in decades:
+        budget = target_per_decade[d]
+        produced = 0
+        for doc in sampled_by_decade[d]:
+            new_chunks = process_document(doc)
+            all_chunks.extend(new_chunks)
+            produced += len(new_chunks)
+            if produced >= budget:
+                break
+
     # Report actual decade distribution
     actual_decades = defaultdict(int)
     for c in all_chunks:
@@ -164,14 +185,45 @@ def main():
     for d in sorted(actual_decades):
         pct = actual_decades[d] / len(all_chunks) * 100
         print(f"  {d}s: {actual_decades[d]} ({pct:.1f}%)")
-    
-    # Check for sparse decades (<5%)
+
+    # Coverage validation over every decade the configured corpus range
+    # promises, not just the decades that happen to appear.
+    #
+    # Iterating actual_decades here cannot detect a missing decade: a decade
+    # with zero chunks is absent from that dict, so it never gets reported.
+    # That is how the 1870s-1890s were dropped without any warning appearing.
+    expected_decades = list(range(
+        (CORPUS_START_YEAR // 10) * 10, CORPUS_END_YEAR, 10
+    ))
+
+    missing = [d for d in expected_decades if actual_decades.get(d, 0) == 0]
+    print(f"\nExpected decades ({CORPUS_START_YEAR}-{CORPUS_END_YEAR}): {len(expected_decades)}")
+    print(f"Decades present in output: {len(actual_decades)}")
+    if missing:
+        print(f"  ERROR: {len(missing)} expected decade(s) produced ZERO chunks: "
+              f"{', '.join(f'{d}s' for d in missing)}")
+        print(f"  The corpus does not cover its configured year range.")
+    else:
+        print("  OK: every expected decade produced chunks.")
+
     print("\nSparse decade check (<5% of corpus):")
-    for d in sorted(actual_decades):
-        pct = actual_decades[d] / len(all_chunks) * 100
+    any_sparse = False
+    for d in expected_decades:
+        n = actual_decades.get(d, 0)
+        pct = n / len(all_chunks) * 100
         if pct < 5:
-            print(f"  WARNING: {d}s only {pct:.1f}%")
-    
+            any_sparse = True
+            print(f"  WARNING: {d}s only {pct:.1f}% ({n} chunks)")
+    if not any_sparse:
+        print("  OK: no expected decade below 5%.")
+
+    if missing:
+        raise SystemExit(
+            f"Aborting: {len(missing)} expected decade(s) produced zero chunks "
+            f"({', '.join(f'{d}s' for d in missing)}). Refusing to write a corpus "
+            f"that does not span {CORPUS_START_YEAR}-{CORPUS_END_YEAR}."
+        )
+
     # Compute embeddings
     print(f"\nComputing embeddings for {len(all_chunks)} chunks...")
     texts = [c['text'] for c in all_chunks]

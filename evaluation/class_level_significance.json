@@ -1,0 +1,2137 @@
+{
+  "n_resamples": 50000,
+  "seed": 20260928,
+  "bonferroni": "over C(k,2) class-pair contrasts per corpus",
+  "strict_alpha_reference": 0.0005555555555555556,
+  "corpora": {
+    "small": {
+      "n_queries": 19,
+      "n_classes": 8,
+      "n_class_pairs": 28,
+      "bonferroni_alpha": 0.0017857142857142859,
+      "classes": [
+        {
+          "class_id": 0,
+          "members": [
+            "BM25",
+            "MetadataOnly"
+          ],
+          "size": 2,
+          "representative": "BM25"
+        },
+        {
+          "class_id": 1,
+          "members": [
+            "Dense"
+          ],
+          "size": 1,
+          "representative": "Dense"
+        },
+        {
+          "class_id": 2,
+          "members": [
+            "Hybrid",
+            "Hybrid+Metadata"
+          ],
+          "size": 2,
+          "representative": "Hybrid"
+        },
+        {
+          "class_id": 3,
+          "members": [
+            "Hybrid+Temporal"
+          ],
+          "size": 1,
+          "representative": "Hybrid+Temporal"
+        },
+        {
+          "class_id": 4,
+          "members": [
+            "Final"
+          ],
+          "size": 1,
+          "representative": "Final"
+        },
+        {
+          "class_id": 5,
+          "members": [
+            "BM25+Temporal"
+          ],
+          "size": 1,
+          "representative": "BM25+Temporal"
+        },
+        {
+          "class_id": 6,
+          "members": [
+            "Dense+Temporal"
+          ],
+          "size": 1,
+          "representative": "Dense+Temporal"
+        },
+        {
+          "class_id": 7,
+          "members": [
+            "TemporalOnly"
+          ],
+          "size": 1,
+          "representative": "TemporalOnly"
+        }
+      ],
+      "cluster_definition": {
+        "unit": "query decade (median year in query text)",
+        "labels": [
+          "1800s",
+          "1810s",
+          "no_year"
+        ],
+        "sizes": {
+          "1800s": 11,
+          "1810s": 1,
+          "no_year": 7
+        },
+        "n_clusters": 3,
+        "min_cluster_size": 1,
+        "degenerate": true
+      },
+      "contrasts": [
+        {
+          "a": "BM25",
+          "b": "Dense",
+          "metrics": {
+            "recall": {
+              "delta": 0.15789473684210525,
+              "better": "BM25",
+              "effect": 0.15789473684210525,
+              "ci95_query_lo": -0.03157894736842105,
+              "ci95_query_hi": 0.35789473684210527,
+              "p_query": 0.10143797124057519,
+              "ci95_cluster_lo": 0.0,
+              "ci95_cluster_hi": 0.34285714285714286,
+              "p_cluster": 0.07447851042979141,
+              "sign_pos": 5,
+              "sign_n": 9,
+              "p_sign": 1.0,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": 0.20739348370927319,
+              "better": "BM25",
+              "effect": 0.20739348370927319,
+              "ci95_query_lo": 0.03634085213032581,
+              "ci95_query_hi": 0.41040100250626566,
+              "p_query": 0.013599728005439892,
+              "ci95_cluster_lo": 0.0,
+              "ci95_cluster_hi": 0.40476190476190477,
+              "p_cluster": 0.0750384992300154,
+              "sign_pos": 5,
+              "sign_n": 7,
+              "p_sign": 0.453125,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            }
+          }
+        },
+        {
+          "a": "BM25",
+          "b": "Hybrid",
+          "metrics": {
+            "recall": {
+              "delta": -0.021052631578947375,
+              "better": "Hybrid",
+              "effect": 0.021052631578947375,
+              "ci95_query_lo": -0.042105263157894736,
+              "ci95_query_hi": 0.0736842105263158,
+              "p_query": 0.45543089138217235,
+              "ci95_cluster_lo": -0.0,
+              "ci95_cluster_hi": 0.028571428571428574,
+              "p_cluster": 0.0759184816303674,
+              "sign_pos": 1,
+              "sign_n": 5,
+              "p_sign": 0.375,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": -0.014097744360902255,
+              "better": "Hybrid",
+              "effect": 0.014097744360902255,
+              "ci95_query_lo": -0.013157894736842105,
+              "ci95_query_hi": 0.04135338345864661,
+              "p_query": 0.3246735065298694,
+              "ci95_cluster_lo": -0.0,
+              "ci95_cluster_hi": 0.017857142857142856,
+              "p_cluster": 0.07251854962900742,
+              "sign_pos": 1,
+              "sign_n": 4,
+              "p_sign": 0.625,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            }
+          }
+        },
+        {
+          "a": "BM25",
+          "b": "Hybrid+Temporal",
+          "metrics": {
+            "recall": {
+              "delta": -0.09473684210526316,
+              "better": "Hybrid+Temporal",
+              "effect": 0.09473684210526316,
+              "ci95_query_lo": 0.03157894736842106,
+              "ci95_query_hi": 0.16842105263157894,
+              "p_query": 0.0005199896002079958,
+              "ci95_cluster_lo": -0.0,
+              "ci95_cluster_hi": 0.14545454545454545,
+              "p_cluster": 0.0741985160296794,
+              "sign_pos": 0,
+              "sign_n": 7,
+              "p_sign": 0.015625,
+              "survive_query": true,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": true,
+              "conclusion_changes": true
+            },
+            "mrr": {
+              "delta": -0.07199248120300752,
+              "better": "Hybrid+Temporal",
+              "effect": 0.07199248120300752,
+              "ci95_query_lo": 0.015037593984962405,
+              "ci95_query_hi": 0.1588345864661654,
+              "p_query": 0.0012399752004959902,
+              "ci95_cluster_lo": -0.0,
+              "ci95_cluster_hi": 0.11298701298701298,
+              "p_cluster": 0.07387852242955141,
+              "sign_pos": 0,
+              "sign_n": 6,
+              "p_sign": 0.03125,
+              "survive_query": true,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": true
+            }
+          }
+        },
+        {
+          "a": "BM25",
+          "b": "Final",
+          "metrics": {
+            "recall": {
+              "delta": -0.09473684210526316,
+              "better": "Final",
+              "effect": 0.09473684210526316,
+              "ci95_query_lo": 0.03157894736842106,
+              "ci95_query_hi": 0.16842105263157894,
+              "p_query": 0.0005199896002079958,
+              "ci95_cluster_lo": -0.0,
+              "ci95_cluster_hi": 0.14545454545454545,
+              "p_cluster": 0.07671846563068739,
+              "sign_pos": 0,
+              "sign_n": 7,
+              "p_sign": 0.015625,
+              "survive_query": true,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": true,
+              "conclusion_changes": true
+            },
+            "mrr": {
+              "delta": -0.04567669172932331,
+              "better": "Final",
+              "effect": 0.04567669172932331,
+              "ci95_query_lo": 0.014097744360902255,
+              "ci95_query_hi": 0.07988721804511278,
+              "p_query": 0.0012399752004959902,
+              "ci95_cluster_lo": -0.0,
+              "ci95_cluster_hi": 0.06753246753246754,
+              "p_cluster": 0.07487850242995141,
+              "sign_pos": 0,
+              "sign_n": 6,
+              "p_sign": 0.03125,
+              "survive_query": true,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": true
+            }
+          }
+        },
+        {
+          "a": "BM25",
+          "b": "BM25+Temporal",
+          "metrics": {
+            "recall": {
+              "delta": -0.05263157894736842,
+              "better": "BM25+Temporal",
+              "effect": 0.05263157894736842,
+              "ci95_query_lo": -0.0,
+              "ci95_query_hi": 0.14736842105263157,
+              "p_query": 0.24359512809743805,
+              "ci95_cluster_lo": -0.0,
+              "ci95_cluster_hi": 0.09090909090909091,
+              "p_cluster": 0.5901081978360433,
+              "sign_pos": 0,
+              "sign_n": 2,
+              "p_sign": 0.5,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": -0.09736842105263159,
+              "better": "BM25+Temporal",
+              "effect": 0.09736842105263159,
+              "ci95_query_lo": -0.0,
+              "ci95_query_hi": 0.23684210526315788,
+              "p_query": 0.0751184976300474,
+              "ci95_cluster_lo": -0.0,
+              "ci95_cluster_hi": 0.1681818181818182,
+              "p_cluster": 0.5887482250354993,
+              "sign_pos": 0,
+              "sign_n": 3,
+              "p_sign": 0.25,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            }
+          }
+        },
+        {
+          "a": "BM25",
+          "b": "Dense+Temporal",
+          "metrics": {
+            "recall": {
+              "delta": 0.15789473684210525,
+              "better": "BM25",
+              "effect": 0.15789473684210525,
+              "ci95_query_lo": -0.03157894736842105,
+              "ci95_query_hi": 0.35789473684210527,
+              "p_query": 0.10143797124057519,
+              "ci95_cluster_lo": 0.0,
+              "ci95_cluster_hi": 0.34285714285714286,
+              "p_cluster": 0.07383852322953541,
+              "sign_pos": 5,
+              "sign_n": 9,
+              "p_sign": 1.0,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": 0.20739348370927319,
+              "better": "BM25",
+              "effect": 0.20739348370927319,
+              "ci95_query_lo": 0.03634085213032581,
+              "ci95_query_hi": 0.41040100250626566,
+              "p_query": 0.013599728005439892,
+              "ci95_cluster_lo": 0.0,
+              "ci95_cluster_hi": 0.40476190476190477,
+              "p_cluster": 0.07375852482950342,
+              "sign_pos": 5,
+              "sign_n": 7,
+              "p_sign": 0.453125,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            }
+          }
+        },
+        {
+          "a": "BM25",
+          "b": "TemporalOnly",
+          "metrics": {
+            "recall": {
+              "delta": -0.05263157894736842,
+              "better": "TemporalOnly",
+              "effect": 0.05263157894736842,
+              "ci95_query_lo": -0.0,
+              "ci95_query_hi": 0.14736842105263157,
+              "p_query": 0.24359512809743805,
+              "ci95_cluster_lo": -0.0,
+              "ci95_cluster_hi": 0.09090909090909091,
+              "p_cluster": 0.5893082138357233,
+              "sign_pos": 0,
+              "sign_n": 2,
+              "p_sign": 0.5,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": -0.09736842105263159,
+              "better": "TemporalOnly",
+              "effect": 0.09736842105263159,
+              "ci95_query_lo": -0.0,
+              "ci95_query_hi": 0.23684210526315788,
+              "p_query": 0.0751184976300474,
+              "ci95_cluster_lo": -0.0,
+              "ci95_cluster_hi": 0.1681818181818182,
+              "p_cluster": 0.5897882042359153,
+              "sign_pos": 0,
+              "sign_n": 3,
+              "p_sign": 0.25,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            }
+          }
+        },
+        {
+          "a": "Dense",
+          "b": "Hybrid",
+          "metrics": {
+            "recall": {
+              "delta": -0.17894736842105263,
+              "better": "Hybrid",
+              "effect": 0.17894736842105263,
+              "ci95_query_lo": 0.02105263157894737,
+              "ci95_query_hi": 0.35789473684210527,
+              "p_query": 0.02231955360892782,
+              "ci95_cluster_lo": -0.0,
+              "ci95_cluster_hi": 0.37142857142857144,
+              "p_cluster": 0.07695846083078338,
+              "sign_pos": 4,
+              "sign_n": 11,
+              "p_sign": 0.548828125,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": -0.22149122807017546,
+              "better": "Hybrid",
+              "effect": 0.22149122807017546,
+              "ci95_query_lo": 0.054824561403508776,
+              "ci95_query_hi": 0.42105263157894735,
+              "p_query": 0.003959920801583968,
+              "ci95_cluster_lo": -0.0,
+              "ci95_cluster_hi": 0.4226190476190476,
+              "p_cluster": 0.07411851762964741,
+              "sign_pos": 1,
+              "sign_n": 8,
+              "p_sign": 0.0703125,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            }
+          }
+        },
+        {
+          "a": "Dense",
+          "b": "Hybrid+Temporal",
+          "metrics": {
+            "recall": {
+              "delta": -0.25263157894736843,
+              "better": "Hybrid+Temporal",
+              "effect": 0.25263157894736843,
+              "ci95_query_lo": 0.07368421052631578,
+              "ci95_query_hi": 0.4526315789473684,
+              "p_query": 0.003639927201455971,
+              "ci95_cluster_lo": -0.0,
+              "ci95_cluster_hi": 0.37142857142857144,
+              "p_cluster": 0.07387852242955141,
+              "sign_pos": 4,
+              "sign_n": 13,
+              "p_sign": 0.266845703125,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": -0.2793859649122807,
+              "better": "Hybrid+Temporal",
+              "effect": 0.2793859649122807,
+              "ci95_query_lo": 0.09956140350877193,
+              "ci95_query_hi": 0.4868421052631579,
+              "p_query": 0.00047999040019199615,
+              "ci95_cluster_lo": -0.0,
+              "ci95_cluster_hi": 0.4226190476190476,
+              "p_cluster": 0.07231855362892742,
+              "sign_pos": 1,
+              "sign_n": 10,
+              "p_sign": 0.021484375,
+              "survive_query": true,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": true,
+              "conclusion_changes": true
+            }
+          }
+        },
+        {
+          "a": "Dense",
+          "b": "Final",
+          "metrics": {
+            "recall": {
+              "delta": -0.25263157894736843,
+              "better": "Final",
+              "effect": 0.25263157894736843,
+              "ci95_query_lo": 0.07368421052631578,
+              "ci95_query_hi": 0.4526315789473684,
+              "p_query": 0.003639927201455971,
+              "ci95_cluster_lo": -0.0,
+              "ci95_cluster_hi": 0.37142857142857144,
+              "p_cluster": 0.07583848323033539,
+              "sign_pos": 4,
+              "sign_n": 13,
+              "p_sign": 0.266845703125,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": -0.2530701754385965,
+              "better": "Final",
+              "effect": 0.2530701754385965,
+              "ci95_query_lo": 0.08421052631578947,
+              "ci95_query_hi": 0.4451754385964913,
+              "p_query": 0.0005999880002399952,
+              "ci95_cluster_lo": -0.0,
+              "ci95_cluster_hi": 0.4226190476190476,
+              "p_cluster": 0.0742385152296954,
+              "sign_pos": 1,
+              "sign_n": 10,
+              "p_sign": 0.021484375,
+              "survive_query": true,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": true
+            }
+          }
+        },
+        {
+          "a": "Dense",
+          "b": "BM25+Temporal",
+          "metrics": {
+            "recall": {
+              "delta": -0.21052631578947367,
+              "better": "BM25+Temporal",
+              "effect": 0.21052631578947367,
+              "ci95_query_lo": 0.010526315789473696,
+              "ci95_query_hi": 0.42105263157894735,
+              "p_query": 0.035399292014159714,
+              "ci95_cluster_lo": -0.0,
+              "ci95_cluster_hi": 0.34285714285714286,
+              "p_cluster": 0.0742385152296954,
+              "sign_pos": 4,
+              "sign_n": 11,
+              "p_sign": 0.548828125,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": -0.30476190476190473,
+              "better": "BM25+Temporal",
+              "effect": 0.30476190476190473,
+              "ci95_query_lo": 0.09774436090225565,
+              "ci95_query_hi": 0.5240601503759399,
+              "p_query": 0.0011999760004799903,
+              "ci95_cluster_lo": -0.0,
+              "ci95_cluster_hi": 0.40476190476190477,
+              "p_cluster": 0.07623847523049539,
+              "sign_pos": 2,
+              "sign_n": 9,
+              "p_sign": 0.1796875,
+              "survive_query": true,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": true
+            }
+          }
+        },
+        {
+          "a": "Dense",
+          "b": "Dense+Temporal",
+          "metrics": {
+            "recall": {
+              "delta": 0.0,
+              "better": null,
+              "effect": 0.0,
+              "ci95_query_lo": 0.0,
+              "ci95_query_hi": 0.0,
+              "p_query": 1.0,
+              "ci95_cluster_lo": 0.0,
+              "ci95_cluster_hi": 0.0,
+              "p_cluster": 1.0,
+              "sign_pos": 0,
+              "sign_n": 0,
+              "p_sign": 1.0,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": 0.0,
+              "better": null,
+              "effect": 0.0,
+              "ci95_query_lo": 0.0,
+              "ci95_query_hi": 0.0,
+              "p_query": 1.0,
+              "ci95_cluster_lo": 0.0,
+              "ci95_cluster_hi": 0.0,
+              "p_cluster": 1.0,
+              "sign_pos": 0,
+              "sign_n": 0,
+              "p_sign": 1.0,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            }
+          }
+        },
+        {
+          "a": "Dense",
+          "b": "TemporalOnly",
+          "metrics": {
+            "recall": {
+              "delta": -0.21052631578947367,
+              "better": "TemporalOnly",
+              "effect": 0.21052631578947367,
+              "ci95_query_lo": 0.010526315789473696,
+              "ci95_query_hi": 0.42105263157894735,
+              "p_query": 0.035399292014159714,
+              "ci95_cluster_lo": -0.0,
+              "ci95_cluster_hi": 0.34285714285714286,
+              "p_cluster": 0.07427851442971141,
+              "sign_pos": 4,
+              "sign_n": 11,
+              "p_sign": 0.548828125,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": -0.30476190476190473,
+              "better": "TemporalOnly",
+              "effect": 0.30476190476190473,
+              "ci95_query_lo": 0.09774436090225565,
+              "ci95_query_hi": 0.5240601503759399,
+              "p_query": 0.0011999760004799903,
+              "ci95_cluster_lo": -0.0,
+              "ci95_cluster_hi": 0.40476190476190477,
+              "p_cluster": 0.0755184896302074,
+              "sign_pos": 2,
+              "sign_n": 9,
+              "p_sign": 0.1796875,
+              "survive_query": true,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": true
+            }
+          }
+        },
+        {
+          "a": "Hybrid",
+          "b": "Hybrid+Temporal",
+          "metrics": {
+            "recall": {
+              "delta": -0.07368421052631578,
+              "better": "Hybrid+Temporal",
+              "effect": 0.07368421052631578,
+              "ci95_query_lo": -0.0,
+              "ci95_query_hi": 0.16842105263157894,
+              "p_query": 0.0751184976300474,
+              "ci95_cluster_lo": -0.0,
+              "ci95_cluster_hi": 0.1272727272727273,
+              "p_cluster": 0.5862282754344913,
+              "sign_pos": 0,
+              "sign_n": 3,
+              "p_sign": 0.25,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": -0.05789473684210527,
+              "better": "Hybrid+Temporal",
+              "effect": 0.05789473684210527,
+              "ci95_query_lo": -0.0,
+              "ci95_query_hi": 0.15657894736842107,
+              "p_query": 0.0751184976300474,
+              "ci95_cluster_lo": -0.0,
+              "ci95_cluster_hi": 0.1,
+              "p_cluster": 0.5920681586368273,
+              "sign_pos": 0,
+              "sign_n": 3,
+              "p_sign": 0.25,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            }
+          }
+        },
+        {
+          "a": "Hybrid",
+          "b": "Final",
+          "metrics": {
+            "recall": {
+              "delta": -0.07368421052631578,
+              "better": "Final",
+              "effect": 0.07368421052631578,
+              "ci95_query_lo": -0.0,
+              "ci95_query_hi": 0.16842105263157894,
+              "p_query": 0.0751184976300474,
+              "ci95_cluster_lo": -0.0,
+              "ci95_cluster_hi": 0.1272727272727273,
+              "p_cluster": 0.5960680786384273,
+              "sign_pos": 0,
+              "sign_n": 3,
+              "p_sign": 0.25,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": -0.031578947368421054,
+              "better": "Final",
+              "effect": 0.031578947368421054,
+              "ci95_query_lo": -0.0,
+              "ci95_query_hi": 0.07763157894736843,
+              "p_query": 0.0751184976300474,
+              "ci95_cluster_lo": -0.0,
+              "ci95_cluster_hi": 0.05454545454545454,
+              "p_cluster": 0.5943081138377232,
+              "sign_pos": 0,
+              "sign_n": 3,
+              "p_sign": 0.25,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            }
+          }
+        },
+        {
+          "a": "Hybrid",
+          "b": "BM25+Temporal",
+          "metrics": {
+            "recall": {
+              "delta": -0.03157894736842105,
+              "better": "BM25+Temporal",
+              "effect": 0.03157894736842105,
+              "ci95_query_lo": -0.05263157894736843,
+              "ci95_query_hi": 0.14736842105263157,
+              "p_query": 0.6505069898602028,
+              "ci95_cluster_lo": -0.028571428571428574,
+              "ci95_cluster_hi": 0.07272727272727272,
+              "p_cluster": 0.5963080738385232,
+              "sign_pos": 4,
+              "sign_n": 7,
+              "p_sign": 1.0,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": -0.08327067669172933,
+              "better": "BM25+Temporal",
+              "effect": 0.08327067669172933,
+              "ci95_query_lo": -0.02819548872180451,
+              "ci95_query_hi": 0.23590225563909778,
+              "p_query": 0.2237555248895022,
+              "ci95_cluster_lo": -0.017857142857142856,
+              "ci95_cluster_hi": 0.15519480519480522,
+              "p_cluster": 0.5979080418391632,
+              "sign_pos": 3,
+              "sign_n": 6,
+              "p_sign": 1.0,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            }
+          }
+        },
+        {
+          "a": "Hybrid",
+          "b": "Dense+Temporal",
+          "metrics": {
+            "recall": {
+              "delta": 0.17894736842105263,
+              "better": "Hybrid",
+              "effect": 0.17894736842105263,
+              "ci95_query_lo": 0.02105263157894737,
+              "ci95_query_hi": 0.35789473684210527,
+              "p_query": 0.02231955360892782,
+              "ci95_cluster_lo": 0.0,
+              "ci95_cluster_hi": 0.37142857142857144,
+              "p_cluster": 0.0741985160296794,
+              "sign_pos": 7,
+              "sign_n": 11,
+              "p_sign": 0.548828125,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": 0.22149122807017546,
+              "better": "Hybrid",
+              "effect": 0.22149122807017546,
+              "ci95_query_lo": 0.054824561403508776,
+              "ci95_query_hi": 0.42105263157894735,
+              "p_query": 0.003959920801583968,
+              "ci95_cluster_lo": 0.0,
+              "ci95_cluster_hi": 0.4226190476190476,
+              "p_cluster": 0.07211855762884742,
+              "sign_pos": 7,
+              "sign_n": 8,
+              "p_sign": 0.0703125,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            }
+          }
+        },
+        {
+          "a": "Hybrid",
+          "b": "TemporalOnly",
+          "metrics": {
+            "recall": {
+              "delta": -0.03157894736842105,
+              "better": "TemporalOnly",
+              "effect": 0.03157894736842105,
+              "ci95_query_lo": -0.05263157894736843,
+              "ci95_query_hi": 0.14736842105263157,
+              "p_query": 0.6505069898602028,
+              "ci95_cluster_lo": -0.028571428571428574,
+              "ci95_cluster_hi": 0.07272727272727272,
+              "p_cluster": 0.5921881562368753,
+              "sign_pos": 4,
+              "sign_n": 7,
+              "p_sign": 1.0,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": -0.08327067669172933,
+              "better": "TemporalOnly",
+              "effect": 0.08327067669172933,
+              "ci95_query_lo": -0.02819548872180451,
+              "ci95_query_hi": 0.23590225563909778,
+              "p_query": 0.2237555248895022,
+              "ci95_cluster_lo": -0.017857142857142856,
+              "ci95_cluster_hi": 0.15519480519480522,
+              "p_cluster": 0.5933881322373552,
+              "sign_pos": 3,
+              "sign_n": 6,
+              "p_sign": 1.0,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            }
+          }
+        },
+        {
+          "a": "Hybrid+Temporal",
+          "b": "Final",
+          "metrics": {
+            "recall": {
+              "delta": 0.0,
+              "better": null,
+              "effect": 0.0,
+              "ci95_query_lo": 0.0,
+              "ci95_query_hi": 0.0,
+              "p_query": 1.0,
+              "ci95_cluster_lo": 0.0,
+              "ci95_cluster_hi": 0.0,
+              "p_cluster": 1.0,
+              "sign_pos": 0,
+              "sign_n": 0,
+              "p_sign": 1.0,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": 0.02631578947368421,
+              "better": "Hybrid+Temporal",
+              "effect": 0.02631578947368421,
+              "ci95_query_lo": 0.0,
+              "ci95_query_hi": 0.07894736842105263,
+              "p_query": 0.7099458010839783,
+              "ci95_cluster_lo": 0.0,
+              "ci95_cluster_hi": 0.045454545454545456,
+              "p_cluster": 0.5893882122357553,
+              "sign_pos": 1,
+              "sign_n": 1,
+              "p_sign": 1.0,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            }
+          }
+        },
+        {
+          "a": "Hybrid+Temporal",
+          "b": "BM25+Temporal",
+          "metrics": {
+            "recall": {
+              "delta": 0.042105263157894736,
+              "better": "Hybrid+Temporal",
+              "effect": 0.042105263157894736,
+              "ci95_query_lo": -1.1686558153949016e-17,
+              "ci95_query_hi": 0.08421052631578949,
+              "p_query": 0.11779764404711905,
+              "ci95_cluster_lo": 0.0,
+              "ci95_cluster_hi": 0.05454545454545454,
+              "p_cluster": 0.0737985240295194,
+              "sign_pos": 5,
+              "sign_n": 6,
+              "p_sign": 0.21875,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": -0.025375939849624062,
+              "better": "BM25+Temporal",
+              "effect": 0.025375939849624062,
+              "ci95_query_lo": -0.040413533834586464,
+              "ci95_query_hi": 0.13157894736842105,
+              "p_query": 0.7350652986940261,
+              "ci95_cluster_lo": -0.017857142857142856,
+              "ci95_cluster_hi": 0.0551948051948052,
+              "p_cluster": 0.5924281514369713,
+              "sign_pos": 3,
+              "sign_n": 4,
+              "p_sign": 0.625,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            }
+          }
+        },
+        {
+          "a": "Hybrid+Temporal",
+          "b": "Dense+Temporal",
+          "metrics": {
+            "recall": {
+              "delta": 0.25263157894736843,
+              "better": "Hybrid+Temporal",
+              "effect": 0.25263157894736843,
+              "ci95_query_lo": 0.07368421052631578,
+              "ci95_query_hi": 0.4526315789473684,
+              "p_query": 0.003639927201455971,
+              "ci95_cluster_lo": 0.0,
+              "ci95_cluster_hi": 0.37142857142857144,
+              "p_cluster": 0.06839863202735945,
+              "sign_pos": 9,
+              "sign_n": 13,
+              "p_sign": 0.266845703125,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": 0.2793859649122807,
+              "better": "Hybrid+Temporal",
+              "effect": 0.2793859649122807,
+              "ci95_query_lo": 0.09956140350877193,
+              "ci95_query_hi": 0.4868421052631579,
+              "p_query": 0.00047999040019199615,
+              "ci95_cluster_lo": 0.0,
+              "ci95_cluster_hi": 0.4226190476190476,
+              "p_cluster": 0.07103857922841543,
+              "sign_pos": 9,
+              "sign_n": 10,
+              "p_sign": 0.021484375,
+              "survive_query": true,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": true,
+              "conclusion_changes": true
+            }
+          }
+        },
+        {
+          "a": "Hybrid+Temporal",
+          "b": "TemporalOnly",
+          "metrics": {
+            "recall": {
+              "delta": 0.042105263157894736,
+              "better": "Hybrid+Temporal",
+              "effect": 0.042105263157894736,
+              "ci95_query_lo": -1.1686558153949016e-17,
+              "ci95_query_hi": 0.08421052631578949,
+              "p_query": 0.11779764404711905,
+              "ci95_cluster_lo": 0.0,
+              "ci95_cluster_hi": 0.05454545454545454,
+              "p_cluster": 0.0739985200295994,
+              "sign_pos": 5,
+              "sign_n": 6,
+              "p_sign": 0.21875,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": -0.025375939849624062,
+              "better": "TemporalOnly",
+              "effect": 0.025375939849624062,
+              "ci95_query_lo": -0.040413533834586464,
+              "ci95_query_hi": 0.13157894736842105,
+              "p_query": 0.7350652986940261,
+              "ci95_cluster_lo": -0.017857142857142856,
+              "ci95_cluster_hi": 0.0551948051948052,
+              "p_cluster": 0.5952680946381073,
+              "sign_pos": 3,
+              "sign_n": 4,
+              "p_sign": 0.625,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            }
+          }
+        },
+        {
+          "a": "Final",
+          "b": "BM25+Temporal",
+          "metrics": {
+            "recall": {
+              "delta": 0.042105263157894736,
+              "better": "Final",
+              "effect": 0.042105263157894736,
+              "ci95_query_lo": -1.1686558153949016e-17,
+              "ci95_query_hi": 0.08421052631578949,
+              "p_query": 0.11779764404711905,
+              "ci95_cluster_lo": 0.0,
+              "ci95_cluster_hi": 0.05454545454545454,
+              "p_cluster": 0.07275854482910342,
+              "sign_pos": 5,
+              "sign_n": 6,
+              "p_sign": 0.21875,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": -0.051691729323308275,
+              "better": "BM25+Temporal",
+              "effect": 0.051691729323308275,
+              "ci95_query_lo": -0.03383458646616541,
+              "ci95_query_hi": 0.17011278195488722,
+              "p_query": 0.35807283854322913,
+              "ci95_cluster_lo": -0.017857142857142856,
+              "ci95_cluster_hi": 0.10064935064935066,
+              "p_cluster": 0.6003079938401232,
+              "sign_pos": 3,
+              "sign_n": 5,
+              "p_sign": 1.0,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            }
+          }
+        },
+        {
+          "a": "Final",
+          "b": "Dense+Temporal",
+          "metrics": {
+            "recall": {
+              "delta": 0.25263157894736843,
+              "better": "Final",
+              "effect": 0.25263157894736843,
+              "ci95_query_lo": 0.07368421052631578,
+              "ci95_query_hi": 0.4526315789473684,
+              "p_query": 0.003639927201455971,
+              "ci95_cluster_lo": 0.0,
+              "ci95_cluster_hi": 0.37142857142857144,
+              "p_cluster": 0.07651846963060739,
+              "sign_pos": 9,
+              "sign_n": 13,
+              "p_sign": 0.266845703125,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": 0.2530701754385965,
+              "better": "Final",
+              "effect": 0.2530701754385965,
+              "ci95_query_lo": 0.08421052631578947,
+              "ci95_query_hi": 0.4451754385964913,
+              "p_query": 0.0005999880002399952,
+              "ci95_cluster_lo": 0.0,
+              "ci95_cluster_hi": 0.4226190476190476,
+              "p_cluster": 0.0747585048299034,
+              "sign_pos": 9,
+              "sign_n": 10,
+              "p_sign": 0.021484375,
+              "survive_query": true,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": true
+            }
+          }
+        },
+        {
+          "a": "Final",
+          "b": "TemporalOnly",
+          "metrics": {
+            "recall": {
+              "delta": 0.042105263157894736,
+              "better": "Final",
+              "effect": 0.042105263157894736,
+              "ci95_query_lo": -1.1686558153949016e-17,
+              "ci95_query_hi": 0.08421052631578949,
+              "p_query": 0.11779764404711905,
+              "ci95_cluster_lo": 0.0,
+              "ci95_cluster_hi": 0.05454545454545454,
+              "p_cluster": 0.07411851762964741,
+              "sign_pos": 5,
+              "sign_n": 6,
+              "p_sign": 0.21875,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": -0.051691729323308275,
+              "better": "TemporalOnly",
+              "effect": 0.051691729323308275,
+              "ci95_query_lo": -0.03383458646616541,
+              "ci95_query_hi": 0.17011278195488722,
+              "p_query": 0.35807283854322913,
+              "ci95_cluster_lo": -0.017857142857142856,
+              "ci95_cluster_hi": 0.10064935064935066,
+              "p_cluster": 0.5933481330373392,
+              "sign_pos": 3,
+              "sign_n": 5,
+              "p_sign": 1.0,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            }
+          }
+        },
+        {
+          "a": "BM25+Temporal",
+          "b": "Dense+Temporal",
+          "metrics": {
+            "recall": {
+              "delta": 0.21052631578947367,
+              "better": "BM25+Temporal",
+              "effect": 0.21052631578947367,
+              "ci95_query_lo": 0.010526315789473696,
+              "ci95_query_hi": 0.42105263157894735,
+              "p_query": 0.035399292014159714,
+              "ci95_cluster_lo": 0.0,
+              "ci95_cluster_hi": 0.34285714285714286,
+              "p_cluster": 0.07315853682926342,
+              "sign_pos": 7,
+              "sign_n": 11,
+              "p_sign": 0.548828125,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": 0.30476190476190473,
+              "better": "BM25+Temporal",
+              "effect": 0.30476190476190473,
+              "ci95_query_lo": 0.09774436090225565,
+              "ci95_query_hi": 0.5240601503759399,
+              "p_query": 0.0011999760004799903,
+              "ci95_cluster_lo": 0.0,
+              "ci95_cluster_hi": 0.40476190476190477,
+              "p_cluster": 0.0751984960300794,
+              "sign_pos": 7,
+              "sign_n": 9,
+              "p_sign": 0.1796875,
+              "survive_query": true,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": true
+            }
+          }
+        },
+        {
+          "a": "BM25+Temporal",
+          "b": "TemporalOnly",
+          "metrics": {
+            "recall": {
+              "delta": 0.0,
+              "better": null,
+              "effect": 0.0,
+              "ci95_query_lo": 0.0,
+              "ci95_query_hi": 0.0,
+              "p_query": 1.0,
+              "ci95_cluster_lo": 0.0,
+              "ci95_cluster_hi": 0.0,
+              "p_cluster": 1.0,
+              "sign_pos": 0,
+              "sign_n": 0,
+              "p_sign": 1.0,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": 0.0,
+              "better": null,
+              "effect": 0.0,
+              "ci95_query_lo": 0.0,
+              "ci95_query_hi": 0.0,
+              "p_query": 1.0,
+              "ci95_cluster_lo": 0.0,
+              "ci95_cluster_hi": 0.0,
+              "p_cluster": 1.0,
+              "sign_pos": 0,
+              "sign_n": 0,
+              "p_sign": 1.0,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            }
+          }
+        },
+        {
+          "a": "Dense+Temporal",
+          "b": "TemporalOnly",
+          "metrics": {
+            "recall": {
+              "delta": -0.21052631578947367,
+              "better": "TemporalOnly",
+              "effect": 0.21052631578947367,
+              "ci95_query_lo": 0.010526315789473696,
+              "ci95_query_hi": 0.42105263157894735,
+              "p_query": 0.035399292014159714,
+              "ci95_cluster_lo": -0.0,
+              "ci95_cluster_hi": 0.34285714285714286,
+              "p_cluster": 0.07387852242955141,
+              "sign_pos": 4,
+              "sign_n": 11,
+              "p_sign": 0.548828125,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": -0.30476190476190473,
+              "better": "TemporalOnly",
+              "effect": 0.30476190476190473,
+              "ci95_query_lo": 0.09774436090225565,
+              "ci95_query_hi": 0.5240601503759399,
+              "p_query": 0.0011999760004799903,
+              "ci95_cluster_lo": -0.0,
+              "ci95_cluster_hi": 0.40476190476190477,
+              "p_cluster": 0.07743845123097538,
+              "sign_pos": 2,
+              "sign_n": 9,
+              "p_sign": 0.1796875,
+              "survive_query": true,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": true
+            }
+          }
+        }
+      ],
+      "n_survive_recall_query": 2,
+      "n_survive_recall_cluster": 0,
+      "n_survive_recall_sign": 0,
+      "n_survive_recall_strict": 2,
+      "n_changes_recall": 2,
+      "n_survive_mrr_query": 10,
+      "n_survive_mrr_cluster": 0,
+      "n_survive_mrr_sign": 0,
+      "n_changes_mrr": 10,
+      "changes_recall": [
+        {
+          "a": "BM25",
+          "b": "Hybrid+Temporal",
+          "query": true,
+          "cluster": false,
+          "sign": false
+        },
+        {
+          "a": "BM25",
+          "b": "Final",
+          "query": true,
+          "cluster": false,
+          "sign": false
+        }
+      ]
+    },
+    "expanded": {
+      "n_queries": 88,
+      "n_classes": 6,
+      "n_class_pairs": 15,
+      "bonferroni_alpha": 0.0033333333333333335,
+      "classes": [
+        {
+          "class_id": 0,
+          "members": [
+            "BM25",
+            "Hybrid",
+            "Hybrid+Metadata",
+            "MetadataOnly"
+          ],
+          "size": 4,
+          "representative": "BM25"
+        },
+        {
+          "class_id": 1,
+          "members": [
+            "Dense"
+          ],
+          "size": 1,
+          "representative": "Dense"
+        },
+        {
+          "class_id": 2,
+          "members": [
+            "BM25+Temporal",
+            "Hybrid+Temporal"
+          ],
+          "size": 2,
+          "representative": "Hybrid+Temporal"
+        },
+        {
+          "class_id": 3,
+          "members": [
+            "Final"
+          ],
+          "size": 1,
+          "representative": "Final"
+        },
+        {
+          "class_id": 4,
+          "members": [
+            "Dense+Temporal"
+          ],
+          "size": 1,
+          "representative": "Dense+Temporal"
+        },
+        {
+          "class_id": 5,
+          "members": [
+            "TemporalOnly"
+          ],
+          "size": 1,
+          "representative": "TemporalOnly"
+        }
+      ],
+      "cluster_definition": {
+        "unit": "query decade (median year in query text)",
+        "labels": [
+          "1800s",
+          "1810s",
+          "1820s",
+          "1830s",
+          "1840s",
+          "1850s",
+          "1860s",
+          "no_year"
+        ],
+        "sizes": {
+          "1800s": 11,
+          "1810s": 9,
+          "1820s": 9,
+          "1830s": 10,
+          "1840s": 9,
+          "1850s": 9,
+          "1860s": 11,
+          "no_year": 20
+        },
+        "n_clusters": 8,
+        "min_cluster_size": 9,
+        "degenerate": false
+      },
+      "contrasts": [
+        {
+          "a": "BM25",
+          "b": "Dense",
+          "metrics": {
+            "recall": {
+              "delta": 0.20454545454545456,
+              "better": "BM25",
+              "effect": 0.20454545454545456,
+              "ci95_query_lo": 0.13863636363636364,
+              "ci95_query_hi": 0.2727272727272727,
+              "p_query": 3.999920001599968e-05,
+              "ci95_cluster_lo": 0.09736842105263159,
+              "ci95_cluster_hi": 0.2912621359223301,
+              "p_cluster": 3.999920001599968e-05,
+              "sign_pos": 39,
+              "sign_n": 42,
+              "p_sign": 5.631591193377972e-09,
+              "survive_query": true,
+              "survive_cluster": true,
+              "survive_sign": true,
+              "survive_strict_query": true,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": 0.19691558441558443,
+              "better": "BM25",
+              "effect": 0.19691558441558443,
+              "ci95_query_lo": 0.10938830266955268,
+              "ci95_query_hi": 0.2857149621212122,
+              "p_query": 3.999920001599968e-05,
+              "ci95_cluster_lo": 0.05354497354497354,
+              "ci95_cluster_hi": 0.3333420547706262,
+              "p_cluster": 0.004519909601807964,
+              "sign_pos": 38,
+              "sign_n": 44,
+              "p_sign": 9.430375484953402e-07,
+              "survive_query": true,
+              "survive_cluster": false,
+              "survive_sign": true,
+              "survive_strict_query": true,
+              "conclusion_changes": true
+            }
+          }
+        },
+        {
+          "a": "BM25",
+          "b": "Hybrid+Temporal",
+          "metrics": {
+            "recall": {
+              "delta": -0.09772727272727272,
+              "better": "Hybrid+Temporal",
+              "effect": 0.09772727272727272,
+              "ci95_query_lo": 0.05909090909090909,
+              "ci95_query_hi": 0.1431818181818182,
+              "p_query": 3.999920001599968e-05,
+              "ci95_cluster_lo": 0.06666666666666667,
+              "ci95_cluster_hi": 0.13783783783783782,
+              "p_cluster": 3.999920001599968e-05,
+              "sign_pos": 0,
+              "sign_n": 23,
+              "p_sign": 2.384185791015625e-07,
+              "survive_query": true,
+              "survive_cluster": true,
+              "survive_sign": true,
+              "survive_strict_query": true,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": -0.17303391053391054,
+              "better": "Hybrid+Temporal",
+              "effect": 0.17303391053391054,
+              "ci95_query_lo": 0.11255411255411256,
+              "ci95_query_hi": 0.2389880952380952,
+              "p_query": 3.999920001599968e-05,
+              "ci95_cluster_lo": 0.09642499642499641,
+              "ci95_cluster_hi": 0.2681788931788932,
+              "p_cluster": 3.999920001599968e-05,
+              "sign_pos": 0,
+              "sign_n": 27,
+              "p_sign": 1.4901161193847656e-08,
+              "survive_query": true,
+              "survive_cluster": true,
+              "survive_sign": true,
+              "survive_strict_query": true,
+              "conclusion_changes": false
+            }
+          }
+        },
+        {
+          "a": "BM25",
+          "b": "Final",
+          "metrics": {
+            "recall": {
+              "delta": -0.06818181818181818,
+              "better": "Final",
+              "effect": 0.06818181818181818,
+              "ci95_query_lo": 0.03863636363636364,
+              "ci95_query_hi": 0.10227272727272728,
+              "p_query": 3.999920001599968e-05,
+              "ci95_cluster_lo": 0.04954128440366973,
+              "ci95_cluster_hi": 0.088,
+              "p_cluster": 3.999920001599968e-05,
+              "sign_pos": 0,
+              "sign_n": 19,
+              "p_sign": 3.814697265625e-06,
+              "survive_query": true,
+              "survive_cluster": true,
+              "survive_sign": true,
+              "survive_strict_query": true,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": -0.13869949494949496,
+              "better": "Final",
+              "effect": 0.13869949494949496,
+              "ci95_query_lo": 0.08666125541125541,
+              "ci95_query_hi": 0.19571631493506494,
+              "p_query": 3.999920001599968e-05,
+              "ci95_cluster_lo": 0.0726235063313715,
+              "ci95_cluster_hi": 0.2227106227106227,
+              "p_cluster": 3.999920001599968e-05,
+              "sign_pos": 0,
+              "sign_n": 25,
+              "p_sign": 5.960464477539063e-08,
+              "survive_query": true,
+              "survive_cluster": true,
+              "survive_sign": true,
+              "survive_strict_query": true,
+              "conclusion_changes": false
+            }
+          }
+        },
+        {
+          "a": "BM25",
+          "b": "Dense+Temporal",
+          "metrics": {
+            "recall": {
+              "delta": 0.17045454545454544,
+              "better": "BM25",
+              "effect": 0.17045454545454544,
+              "ci95_query_lo": 0.10681818181818183,
+              "ci95_query_hi": 0.23636363636363636,
+              "p_query": 3.999920001599968e-05,
+              "ci95_cluster_lo": 0.057894736842105256,
+              "ci95_cluster_hi": 0.2685185185185185,
+              "p_cluster": 0.0001999960000799984,
+              "sign_pos": 36,
+              "sign_n": 42,
+              "p_sign": 2.8288777684792876e-06,
+              "survive_query": true,
+              "survive_cluster": true,
+              "survive_sign": true,
+              "survive_strict_query": true,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": 0.17566287878787878,
+              "better": "BM25",
+              "effect": 0.17566287878787878,
+              "ci95_query_lo": 0.08700385551948053,
+              "ci95_query_hi": 0.26509751533189035,
+              "p_query": 0.00011999760004799904,
+              "ci95_cluster_lo": 0.031363549435838585,
+              "ci95_cluster_hi": 0.3106755710414247,
+              "p_cluster": 0.014119717605647886,
+              "sign_pos": 38,
+              "sign_n": 46,
+              "p_sign": 9.24769992138863e-06,
+              "survive_query": true,
+              "survive_cluster": false,
+              "survive_sign": true,
+              "survive_strict_query": true,
+              "conclusion_changes": true
+            }
+          }
+        },
+        {
+          "a": "BM25",
+          "b": "TemporalOnly",
+          "metrics": {
+            "recall": {
+              "delta": -0.09772727272727272,
+              "better": "TemporalOnly",
+              "effect": 0.09772727272727272,
+              "ci95_query_lo": 0.05909090909090909,
+              "ci95_query_hi": 0.1431818181818182,
+              "p_query": 3.999920001599968e-05,
+              "ci95_cluster_lo": 0.06666666666666668,
+              "ci95_cluster_hi": 0.13766233766233762,
+              "p_cluster": 3.999920001599968e-05,
+              "sign_pos": 0,
+              "sign_n": 23,
+              "p_sign": 2.384185791015625e-07,
+              "survive_query": true,
+              "survive_cluster": true,
+              "survive_sign": true,
+              "survive_strict_query": true,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": -0.17303391053391054,
+              "better": "TemporalOnly",
+              "effect": 0.17303391053391054,
+              "ci95_query_lo": 0.11255411255411256,
+              "ci95_query_hi": 0.2389880952380952,
+              "p_query": 3.999920001599968e-05,
+              "ci95_cluster_lo": 0.09644191297208535,
+              "ci95_cluster_hi": 0.2670217209690894,
+              "p_cluster": 3.999920001599968e-05,
+              "sign_pos": 0,
+              "sign_n": 27,
+              "p_sign": 1.4901161193847656e-08,
+              "survive_query": true,
+              "survive_cluster": true,
+              "survive_sign": true,
+              "survive_strict_query": true,
+              "conclusion_changes": false
+            }
+          }
+        },
+        {
+          "a": "Dense",
+          "b": "Hybrid+Temporal",
+          "metrics": {
+            "recall": {
+              "delta": -0.3022727272727273,
+              "better": "Hybrid+Temporal",
+              "effect": 0.3022727272727273,
+              "ci95_query_lo": 0.2318181818181818,
+              "ci95_query_hi": 0.3772727272727272,
+              "p_query": 3.999920001599968e-05,
+              "ci95_cluster_lo": 0.21904440154440133,
+              "ci95_cluster_hi": 0.36599999999999994,
+              "p_cluster": 3.999920001599968e-05,
+              "sign_pos": 0,
+              "sign_n": 50,
+              "p_sign": 1.7763568394002505e-15,
+              "survive_query": true,
+              "survive_cluster": true,
+              "survive_sign": true,
+              "survive_strict_query": true,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": -0.369949494949495,
+              "better": "Hybrid+Temporal",
+              "effect": 0.369949494949495,
+              "ci95_query_lo": 0.2734848484848485,
+              "ci95_query_hi": 0.46572127525252527,
+              "p_query": 3.999920001599968e-05,
+              "ci95_cluster_lo": 0.2263306377923976,
+              "ci95_cluster_hi": 0.5040084388185654,
+              "p_cluster": 3.999920001599968e-05,
+              "sign_pos": 2,
+              "sign_n": 49,
+              "p_sign": 4.355626970209414e-12,
+              "survive_query": true,
+              "survive_cluster": true,
+              "survive_sign": true,
+              "survive_strict_query": true,
+              "conclusion_changes": false
+            }
+          }
+        },
+        {
+          "a": "Dense",
+          "b": "Final",
+          "metrics": {
+            "recall": {
+              "delta": -0.2727272727272727,
+              "better": "Final",
+              "effect": 0.2727272727272727,
+              "ci95_query_lo": 0.20454545454545456,
+              "ci95_query_hi": 0.3431818181818182,
+              "p_query": 3.999920001599968e-05,
+              "ci95_cluster_lo": 0.17297297297297298,
+              "ci95_cluster_hi": 0.3470588235294118,
+              "p_cluster": 3.999920001599968e-05,
+              "sign_pos": 0,
+              "sign_n": 47,
+              "p_sign": 1.4210854715202004e-14,
+              "survive_query": true,
+              "survive_cluster": true,
+              "survive_sign": true,
+              "survive_strict_query": true,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": -0.3356150793650794,
+              "better": "Final",
+              "effect": 0.3356150793650794,
+              "ci95_query_lo": 0.24175662878787874,
+              "ci95_query_hi": 0.4294108495670996,
+              "p_query": 3.999920001599968e-05,
+              "ci95_cluster_lo": 0.18734335839598995,
+              "ci95_cluster_hi": 0.47627865961199284,
+              "p_cluster": 7.999840003199936e-05,
+              "sign_pos": 2,
+              "sign_n": 47,
+              "p_sign": 1.6044054973463062e-11,
+              "survive_query": true,
+              "survive_cluster": true,
+              "survive_sign": true,
+              "survive_strict_query": true,
+              "conclusion_changes": false
+            }
+          }
+        },
+        {
+          "a": "Dense",
+          "b": "Dense+Temporal",
+          "metrics": {
+            "recall": {
+              "delta": -0.034090909090909095,
+              "better": "Dense+Temporal",
+              "effect": 0.034090909090909095,
+              "ci95_query_lo": 0.011363636363636364,
+              "ci95_query_hi": 0.06363636363636364,
+              "p_query": 0.00015999680006399873,
+              "ci95_cluster_lo": 0.013793103448275864,
+              "ci95_cluster_hi": 0.06067415730337079,
+              "p_cluster": 7.999840003199936e-05,
+              "sign_pos": 0,
+              "sign_n": 9,
+              "p_sign": 0.00390625,
+              "survive_query": true,
+              "survive_cluster": true,
+              "survive_sign": false,
+              "survive_strict_query": true,
+              "conclusion_changes": true
+            },
+            "mrr": {
+              "delta": -0.021252705627705627,
+              "better": "Dense+Temporal",
+              "effect": 0.021252705627705627,
+              "ci95_query_lo": 0.007778679653679654,
+              "ci95_query_hi": 0.03831236471861472,
+              "p_query": 0.0003599928001439971,
+              "ci95_cluster_lo": 0.011008836524300441,
+              "ci95_cluster_hi": 0.035103785103785104,
+              "p_cluster": 0.00015999680006399873,
+              "sign_pos": 0,
+              "sign_n": 9,
+              "p_sign": 0.00390625,
+              "survive_query": true,
+              "survive_cluster": true,
+              "survive_sign": false,
+              "survive_strict_query": true,
+              "conclusion_changes": true
+            }
+          }
+        },
+        {
+          "a": "Dense",
+          "b": "TemporalOnly",
+          "metrics": {
+            "recall": {
+              "delta": -0.3022727272727273,
+              "better": "TemporalOnly",
+              "effect": 0.3022727272727273,
+              "ci95_query_lo": 0.2318181818181818,
+              "ci95_query_hi": 0.3772727272727272,
+              "p_query": 3.999920001599968e-05,
+              "ci95_cluster_lo": 0.2189189189189189,
+              "ci95_cluster_hi": 0.366,
+              "p_cluster": 3.999920001599968e-05,
+              "sign_pos": 0,
+              "sign_n": 50,
+              "p_sign": 1.7763568394002505e-15,
+              "survive_query": true,
+              "survive_cluster": true,
+              "survive_sign": true,
+              "survive_strict_query": true,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": -0.369949494949495,
+              "better": "TemporalOnly",
+              "effect": 0.369949494949495,
+              "ci95_query_lo": 0.2734848484848485,
+              "ci95_query_hi": 0.46572127525252527,
+              "p_query": 3.999920001599968e-05,
+              "ci95_cluster_lo": 0.2261437908496732,
+              "ci95_cluster_hi": 0.5069958847736625,
+              "p_cluster": 3.999920001599968e-05,
+              "sign_pos": 2,
+              "sign_n": 49,
+              "p_sign": 4.355626970209414e-12,
+              "survive_query": true,
+              "survive_cluster": true,
+              "survive_sign": true,
+              "survive_strict_query": true,
+              "conclusion_changes": false
+            }
+          }
+        },
+        {
+          "a": "Hybrid+Temporal",
+          "b": "Final",
+          "metrics": {
+            "recall": {
+              "delta": 0.029545454545454545,
+              "better": "Hybrid+Temporal",
+              "effect": 0.029545454545454545,
+              "ci95_query_lo": 0.009090909090909092,
+              "ci95_query_hi": 0.05454545454545456,
+              "p_query": 0.0005599888002239956,
+              "ci95_cluster_lo": 0.008,
+              "ci95_cluster_hi": 0.06133333333333333,
+              "p_cluster": 0.000879982400351993,
+              "sign_pos": 8,
+              "sign_n": 8,
+              "p_sign": 0.0078125,
+              "survive_query": true,
+              "survive_cluster": true,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": true
+            },
+            "mrr": {
+              "delta": 0.034334415584415585,
+              "better": "Hybrid+Temporal",
+              "effect": 0.034334415584415585,
+              "ci95_query_lo": 0.007954545454545454,
+              "ci95_query_hi": 0.0681026785714287,
+              "p_query": 0.003919921601567969,
+              "ci95_cluster_lo": 0.008426966292134831,
+              "ci95_cluster_hi": 0.06846011131725417,
+              "p_cluster": 0.007599848003039939,
+              "sign_pos": 6,
+              "sign_n": 6,
+              "p_sign": 0.03125,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            }
+          }
+        },
+        {
+          "a": "Hybrid+Temporal",
+          "b": "Dense+Temporal",
+          "metrics": {
+            "recall": {
+              "delta": 0.2681818181818182,
+              "better": "Hybrid+Temporal",
+              "effect": 0.2681818181818182,
+              "ci95_query_lo": 0.19772727272727272,
+              "ci95_query_hi": 0.34090909090909094,
+              "p_query": 3.999920001599968e-05,
+              "ci95_cluster_lo": 0.1763157894736842,
+              "ci95_cluster_hi": 0.3436893203883496,
+              "p_cluster": 3.999920001599968e-05,
+              "sign_pos": 47,
+              "sign_n": 49,
+              "p_sign": 4.355626970209414e-12,
+              "survive_query": true,
+              "survive_cluster": true,
+              "survive_sign": true,
+              "survive_strict_query": true,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": 0.3486967893217893,
+              "better": "Hybrid+Temporal",
+              "effect": 0.3486967893217893,
+              "ci95_query_lo": 0.25229471049783553,
+              "ci95_query_hi": 0.4440207882395382,
+              "p_query": 3.999920001599968e-05,
+              "ci95_cluster_lo": 0.21134259259259258,
+              "ci95_cluster_hi": 0.47798777931311426,
+              "p_cluster": 3.999920001599968e-05,
+              "sign_pos": 47,
+              "sign_n": 52,
+              "p_sign": 1.2848229147266466e-09,
+              "survive_query": true,
+              "survive_cluster": true,
+              "survive_sign": true,
+              "survive_strict_query": true,
+              "conclusion_changes": false
+            }
+          }
+        },
+        {
+          "a": "Hybrid+Temporal",
+          "b": "TemporalOnly",
+          "metrics": {
+            "recall": {
+              "delta": 0.0,
+              "better": null,
+              "effect": 0.0,
+              "ci95_query_lo": 0.0,
+              "ci95_query_hi": 0.0,
+              "p_query": 1.0,
+              "ci95_cluster_lo": 0.0,
+              "ci95_cluster_hi": 0.0,
+              "p_cluster": 1.0,
+              "sign_pos": 0,
+              "sign_n": 0,
+              "p_sign": 1.0,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": 0.0,
+              "better": null,
+              "effect": 0.0,
+              "ci95_query_lo": 0.0,
+              "ci95_query_hi": 0.0,
+              "p_query": 1.0,
+              "ci95_cluster_lo": 0.0,
+              "ci95_cluster_hi": 0.0,
+              "p_cluster": 1.0,
+              "sign_pos": 0,
+              "sign_n": 0,
+              "p_sign": 1.0,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            }
+          }
+        },
+        {
+          "a": "Final",
+          "b": "Dense+Temporal",
+          "metrics": {
+            "recall": {
+              "delta": 0.23863636363636365,
+              "better": "Final",
+              "effect": 0.23863636363636365,
+              "ci95_query_lo": 0.17272727272727273,
+              "ci95_query_hi": 0.30909090909090914,
+              "p_query": 3.999920001599968e-05,
+              "ci95_cluster_lo": 0.136,
+              "ci95_cluster_hi": 0.3213707165109037,
+              "p_cluster": 3.999920001599968e-05,
+              "sign_pos": 45,
+              "sign_n": 48,
+              "p_sign": 1.312585595769633e-10,
+              "survive_query": true,
+              "survive_cluster": true,
+              "survive_sign": true,
+              "survive_strict_query": true,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": 0.31436237373737375,
+              "better": "Final",
+              "effect": 0.31436237373737375,
+              "ci95_query_lo": 0.22139238365800862,
+              "ci95_query_hi": 0.40753111471861475,
+              "p_query": 3.999920001599968e-05,
+              "ci95_cluster_lo": 0.16973684210526316,
+              "ci95_cluster_hi": 0.44864163614163616,
+              "p_cluster": 7.999840003199936e-05,
+              "sign_pos": 45,
+              "sign_n": 50,
+              "p_sign": 4.209852022540872e-09,
+              "survive_query": true,
+              "survive_cluster": true,
+              "survive_sign": true,
+              "survive_strict_query": true,
+              "conclusion_changes": false
+            }
+          }
+        },
+        {
+          "a": "Final",
+          "b": "TemporalOnly",
+          "metrics": {
+            "recall": {
+              "delta": -0.029545454545454545,
+              "better": "TemporalOnly",
+              "effect": 0.029545454545454545,
+              "ci95_query_lo": 0.009090909090909092,
+              "ci95_query_hi": 0.05454545454545456,
+              "p_query": 0.0005599888002239956,
+              "ci95_cluster_lo": 0.00816326530612245,
+              "ci95_cluster_hi": 0.061908866995073884,
+              "p_cluster": 0.0006399872002559949,
+              "sign_pos": 0,
+              "sign_n": 8,
+              "p_sign": 0.0078125,
+              "survive_query": true,
+              "survive_cluster": true,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": true
+            },
+            "mrr": {
+              "delta": -0.034334415584415585,
+              "better": "TemporalOnly",
+              "effect": 0.034334415584415585,
+              "ci95_query_lo": 0.007954545454545454,
+              "ci95_query_hi": 0.06810267857142857,
+              "p_query": 0.003919921601567969,
+              "ci95_cluster_lo": 0.008426966292134831,
+              "ci95_cluster_hi": 0.06823308270676692,
+              "p_cluster": 0.009159816803663927,
+              "sign_pos": 0,
+              "sign_n": 6,
+              "p_sign": 0.03125,
+              "survive_query": false,
+              "survive_cluster": false,
+              "survive_sign": false,
+              "survive_strict_query": false,
+              "conclusion_changes": false
+            }
+          }
+        },
+        {
+          "a": "Dense+Temporal",
+          "b": "TemporalOnly",
+          "metrics": {
+            "recall": {
+              "delta": -0.2681818181818182,
+              "better": "TemporalOnly",
+              "effect": 0.2681818181818182,
+              "ci95_query_lo": 0.19772727272727272,
+              "ci95_query_hi": 0.34090909090909094,
+              "p_query": 3.999920001599968e-05,
+              "ci95_cluster_lo": 0.1763157894736842,
+              "ci95_cluster_hi": 0.34313725490196073,
+              "p_cluster": 3.999920001599968e-05,
+              "sign_pos": 2,
+              "sign_n": 49,
+              "p_sign": 4.355626970209414e-12,
+              "survive_query": true,
+              "survive_cluster": true,
+              "survive_sign": true,
+              "survive_strict_query": true,
+              "conclusion_changes": false
+            },
+            "mrr": {
+              "delta": -0.3486967893217893,
+              "better": "TemporalOnly",
+              "effect": 0.3486967893217893,
+              "ci95_query_lo": 0.2522947104978355,
+              "ci95_query_hi": 0.4440207882395382,
+              "p_query": 3.999920001599968e-05,
+              "ci95_cluster_lo": 0.21116307634164774,
+              "ci95_cluster_hi": 0.4797909407665505,
+              "p_cluster": 3.999920001599968e-05,
+              "sign_pos": 5,
+              "sign_n": 52,
+              "p_sign": 1.2848229147266466e-09,
+              "survive_query": true,
+              "survive_cluster": true,
+              "survive_sign": true,
+              "survive_strict_query": true,
+              "conclusion_changes": false
+            }
+          }
+        }
+      ],
+      "n_survive_recall_query": 14,
+      "n_survive_recall_cluster": 14,
+      "n_survive_recall_sign": 11,
+      "n_survive_recall_strict": 12,
+      "n_changes_recall": 3,
+      "n_survive_mrr_query": 12,
+      "n_survive_mrr_cluster": 10,
+      "n_survive_mrr_sign": 11,
+      "n_changes_mrr": 3,
+      "changes_recall": [
+        {
+          "a": "Dense",
+          "b": "Dense+Temporal",
+          "query": true,
+          "cluster": true,
+          "sign": false
+        },
+        {
+          "a": "Hybrid+Temporal",
+          "b": "Final",
+          "query": true,
+          "cluster": true,
+          "sign": false
+        },
+        {
+          "a": "Final",
+          "b": "TemporalOnly",
+          "query": true,
+          "cluster": true,
+          "sign": false
+        }
+      ]
+    }
+  }
+}

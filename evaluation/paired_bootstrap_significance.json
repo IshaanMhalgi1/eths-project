@@ -1,0 +1,2502 @@
+{
+  "method": "paired bootstrap on per-query metric differences",
+  "n_contrasts": 90,
+  "n_contrasts_per_corpus": 45,
+  "n_resamples": 50000,
+  "seed": 20260928,
+  "bonferroni_alpha": 0.0005555555555555556,
+  "test": "two-sided, +1 correction",
+  "corpora": {
+    "small": {
+      "n_queries": 19,
+      "contrasts": [
+        {
+          "a": "BM25",
+          "b": "Dense",
+          "recall": {
+            "p": 0.10143797124057519,
+            "obs_diff": 0.1577576842105263,
+            "survives_bonferroni": false,
+            "better": "BM25",
+            "worse": "Dense"
+          },
+          "mrr": {
+            "p": 0.013599728005439892,
+            "obs_diff": 0.20726899749373434,
+            "survives_bonferroni": false,
+            "better": "BM25",
+            "worse": "Dense"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": 0.1571631578947369,
+          "changed": false
+        },
+        {
+          "a": "BM25",
+          "b": "Hybrid",
+          "recall": {
+            "p": 0.45543089138217235,
+            "obs_diff": -0.020924631578947375,
+            "survives_bonferroni": false,
+            "better": "Hybrid",
+            "worse": "BM25"
+          },
+          "mrr": {
+            "p": 0.3246735065298694,
+            "obs_diff": -0.014059116541353382,
+            "survives_bonferroni": false,
+            "better": "Hybrid",
+            "worse": "BM25"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.02394947368421052,
+          "changed": false
+        },
+        {
+          "a": "BM25",
+          "b": "Hybrid+Temporal",
+          "recall": {
+            "p": 0.0005199896002079958,
+            "obs_diff": -0.09454105263157896,
+            "survives_bonferroni": true,
+            "better": "Hybrid+Temporal",
+            "worse": "BM25"
+          },
+          "mrr": {
+            "p": 0.0012399752004959902,
+            "obs_diff": -0.07200785338345864,
+            "survives_bonferroni": false,
+            "better": "Hybrid+Temporal",
+            "worse": "BM25"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.09665368421052623,
+          "changed": true
+        },
+        {
+          "a": "BM25",
+          "b": "Hybrid+Metadata",
+          "recall": {
+            "p": 0.45543089138217235,
+            "obs_diff": -0.020924631578947375,
+            "survives_bonferroni": false,
+            "better": "Hybrid+Metadata",
+            "worse": "BM25"
+          },
+          "mrr": {
+            "p": 0.3246735065298694,
+            "obs_diff": -0.014059116541353382,
+            "survives_bonferroni": false,
+            "better": "Hybrid+Metadata",
+            "worse": "BM25"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.020158947368421,
+          "changed": false
+        },
+        {
+          "a": "BM25",
+          "b": "Final",
+          "recall": {
+            "p": 0.0005199896002079958,
+            "obs_diff": -0.09454105263157896,
+            "survives_bonferroni": true,
+            "better": "Final",
+            "worse": "BM25"
+          },
+          "mrr": {
+            "p": 0.0012399752004959902,
+            "obs_diff": -0.04564574812030074,
+            "survives_bonferroni": false,
+            "better": "Final",
+            "worse": "BM25"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.09613999999999995,
+          "changed": true
+        },
+        {
+          "a": "BM25",
+          "b": "BM25+Temporal",
+          "recall": {
+            "p": 0.24359512809743805,
+            "obs_diff": -0.05246863157894737,
+            "survives_bonferroni": false,
+            "better": "BM25+Temporal",
+            "worse": "BM25"
+          },
+          "mrr": {
+            "p": 0.0751184976300474,
+            "obs_diff": -0.09723768421052631,
+            "survives_bonferroni": false,
+            "better": "BM25+Temporal",
+            "worse": "BM25"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.05298631578947366,
+          "changed": false
+        },
+        {
+          "a": "BM25",
+          "b": "Dense+Temporal",
+          "recall": {
+            "p": 0.10143797124057519,
+            "obs_diff": 0.1577576842105263,
+            "survives_bonferroni": false,
+            "better": "BM25",
+            "worse": "Dense+Temporal"
+          },
+          "mrr": {
+            "p": 0.013599728005439892,
+            "obs_diff": 0.20726899749373434,
+            "survives_bonferroni": false,
+            "better": "BM25",
+            "worse": "Dense+Temporal"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": 0.1562968421052632,
+          "changed": false
+        },
+        {
+          "a": "BM25",
+          "b": "TemporalOnly",
+          "recall": {
+            "p": 0.24359512809743805,
+            "obs_diff": -0.05246863157894737,
+            "survives_bonferroni": false,
+            "better": "TemporalOnly",
+            "worse": "BM25"
+          },
+          "mrr": {
+            "p": 0.0751184976300474,
+            "obs_diff": -0.09723768421052631,
+            "survives_bonferroni": false,
+            "better": "TemporalOnly",
+            "worse": "BM25"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.054403157894736764,
+          "changed": false
+        },
+        {
+          "a": "BM25",
+          "b": "MetadataOnly",
+          "recall": {
+            "p": 1.0,
+            "obs_diff": 0.0,
+            "survives_bonferroni": false,
+            "better": null,
+            "worse": null
+          },
+          "mrr": {
+            "p": 1.0,
+            "obs_diff": 0.0,
+            "survives_bonferroni": false,
+            "better": null,
+            "worse": null
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.00045894736842100325,
+          "changed": false
+        },
+        {
+          "a": "Dense",
+          "b": "Hybrid",
+          "recall": {
+            "p": 0.02231955360892782,
+            "obs_diff": -0.1786823157894737,
+            "survives_bonferroni": false,
+            "better": "Hybrid",
+            "worse": "Dense"
+          },
+          "mrr": {
+            "p": 0.003959920801583968,
+            "obs_diff": -0.2213281140350877,
+            "survives_bonferroni": false,
+            "better": "Hybrid",
+            "worse": "Dense"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.18111263157894741,
+          "changed": false
+        },
+        {
+          "a": "Dense",
+          "b": "Hybrid+Temporal",
+          "recall": {
+            "p": 0.003639927201455971,
+            "obs_diff": -0.2522987368421053,
+            "survives_bonferroni": false,
+            "better": "Hybrid+Temporal",
+            "worse": "Dense"
+          },
+          "mrr": {
+            "p": 0.00047999040019199615,
+            "obs_diff": -0.279276850877193,
+            "survives_bonferroni": true,
+            "better": "Hybrid+Temporal",
+            "worse": "Dense"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.2538168421052631,
+          "changed": false
+        },
+        {
+          "a": "Dense",
+          "b": "Hybrid+Metadata",
+          "recall": {
+            "p": 0.02231955360892782,
+            "obs_diff": -0.1786823157894737,
+            "survives_bonferroni": false,
+            "better": "Hybrid+Metadata",
+            "worse": "Dense"
+          },
+          "mrr": {
+            "p": 0.003959920801583968,
+            "obs_diff": -0.2213281140350877,
+            "survives_bonferroni": false,
+            "better": "Hybrid+Metadata",
+            "worse": "Dense"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.1773221052631579,
+          "changed": false
+        },
+        {
+          "a": "Dense",
+          "b": "Final",
+          "recall": {
+            "p": 0.003639927201455971,
+            "obs_diff": -0.2522987368421053,
+            "survives_bonferroni": false,
+            "better": "Final",
+            "worse": "Dense"
+          },
+          "mrr": {
+            "p": 0.0005999880002399952,
+            "obs_diff": -0.2529147456140351,
+            "survives_bonferroni": false,
+            "better": "Final",
+            "worse": "Dense"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.25330315789473684,
+          "changed": false
+        },
+        {
+          "a": "Dense",
+          "b": "BM25+Temporal",
+          "recall": {
+            "p": 0.035399292014159714,
+            "obs_diff": -0.21022631578947368,
+            "survives_bonferroni": false,
+            "better": "BM25+Temporal",
+            "worse": "Dense"
+          },
+          "mrr": {
+            "p": 0.0011999760004799903,
+            "obs_diff": -0.30450668170426065,
+            "survives_bonferroni": false,
+            "better": "BM25+Temporal",
+            "worse": "Dense"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.21014947368421055,
+          "changed": false
+        },
+        {
+          "a": "Dense",
+          "b": "Dense+Temporal",
+          "recall": {
+            "p": 1.0,
+            "obs_diff": 0.0,
+            "survives_bonferroni": false,
+            "better": null,
+            "worse": null
+          },
+          "mrr": {
+            "p": 1.0,
+            "obs_diff": 0.0,
+            "survives_bonferroni": false,
+            "better": null,
+            "worse": null
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.0008663157894736873,
+          "changed": false
+        },
+        {
+          "a": "Dense",
+          "b": "TemporalOnly",
+          "recall": {
+            "p": 0.035399292014159714,
+            "obs_diff": -0.21022631578947368,
+            "survives_bonferroni": false,
+            "better": "TemporalOnly",
+            "worse": "Dense"
+          },
+          "mrr": {
+            "p": 0.0011999760004799903,
+            "obs_diff": -0.30450668170426065,
+            "survives_bonferroni": false,
+            "better": "TemporalOnly",
+            "worse": "Dense"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.21156631578947366,
+          "changed": false
+        },
+        {
+          "a": "Dense",
+          "b": "MetadataOnly",
+          "recall": {
+            "p": 0.10143797124057519,
+            "obs_diff": -0.1577576842105263,
+            "survives_bonferroni": false,
+            "better": "MetadataOnly",
+            "worse": "Dense"
+          },
+          "mrr": {
+            "p": 0.013599728005439892,
+            "obs_diff": -0.20726899749373434,
+            "survives_bonferroni": false,
+            "better": "MetadataOnly",
+            "worse": "Dense"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.1576221052631579,
+          "changed": false
+        },
+        {
+          "a": "Hybrid",
+          "b": "Hybrid+Temporal",
+          "recall": {
+            "p": 0.0751184976300474,
+            "obs_diff": -0.07361642105263158,
+            "survives_bonferroni": false,
+            "better": "Hybrid+Temporal",
+            "worse": "Hybrid"
+          },
+          "mrr": {
+            "p": 0.0751184976300474,
+            "obs_diff": -0.05794873684210526,
+            "survives_bonferroni": false,
+            "better": "Hybrid+Temporal",
+            "worse": "Hybrid"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.0727042105263157,
+          "changed": false
+        },
+        {
+          "a": "Hybrid",
+          "b": "Hybrid+Metadata",
+          "recall": {
+            "p": 1.0,
+            "obs_diff": 0.0,
+            "survives_bonferroni": false,
+            "better": null,
+            "worse": null
+          },
+          "mrr": {
+            "p": 1.0,
+            "obs_diff": 0.0,
+            "survives_bonferroni": false,
+            "better": null,
+            "worse": null
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": 0.003790526315789522,
+          "changed": false
+        },
+        {
+          "a": "Hybrid",
+          "b": "Final",
+          "recall": {
+            "p": 0.0751184976300474,
+            "obs_diff": -0.07361642105263158,
+            "survives_bonferroni": false,
+            "better": "Final",
+            "worse": "Hybrid"
+          },
+          "mrr": {
+            "p": 0.0751184976300474,
+            "obs_diff": -0.031586631578947366,
+            "survives_bonferroni": false,
+            "better": "Final",
+            "worse": "Hybrid"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.07219052631578943,
+          "changed": false
+        },
+        {
+          "a": "Hybrid",
+          "b": "BM25+Temporal",
+          "recall": {
+            "p": 0.6505069898602028,
+            "obs_diff": -0.031544,
+            "survives_bonferroni": false,
+            "better": "BM25+Temporal",
+            "worse": "Hybrid"
+          },
+          "mrr": {
+            "p": 0.2237555248895022,
+            "obs_diff": -0.08317856766917293,
+            "survives_bonferroni": false,
+            "better": "BM25+Temporal",
+            "worse": "Hybrid"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.02903684210526314,
+          "changed": false
+        },
+        {
+          "a": "Hybrid",
+          "b": "Dense+Temporal",
+          "recall": {
+            "p": 0.02231955360892782,
+            "obs_diff": 0.1786823157894737,
+            "survives_bonferroni": false,
+            "better": "Hybrid",
+            "worse": "Dense+Temporal"
+          },
+          "mrr": {
+            "p": 0.003959920801583968,
+            "obs_diff": 0.2213281140350877,
+            "survives_bonferroni": false,
+            "better": "Hybrid",
+            "worse": "Dense+Temporal"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": 0.18024631578947373,
+          "changed": false
+        },
+        {
+          "a": "Hybrid",
+          "b": "TemporalOnly",
+          "recall": {
+            "p": 0.6505069898602028,
+            "obs_diff": -0.031544,
+            "survives_bonferroni": false,
+            "better": "TemporalOnly",
+            "worse": "Hybrid"
+          },
+          "mrr": {
+            "p": 0.2237555248895022,
+            "obs_diff": -0.08317856766917293,
+            "survives_bonferroni": false,
+            "better": "TemporalOnly",
+            "worse": "Hybrid"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.030453684210526244,
+          "changed": false
+        },
+        {
+          "a": "Hybrid",
+          "b": "MetadataOnly",
+          "recall": {
+            "p": 0.45543089138217235,
+            "obs_diff": 0.020924631578947375,
+            "survives_bonferroni": false,
+            "better": "Hybrid",
+            "worse": "MetadataOnly"
+          },
+          "mrr": {
+            "p": 0.3246735065298694,
+            "obs_diff": 0.014059116541353382,
+            "survives_bonferroni": false,
+            "better": "Hybrid",
+            "worse": "MetadataOnly"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": 0.023490526315789517,
+          "changed": false
+        },
+        {
+          "a": "Hybrid+Temporal",
+          "b": "Hybrid+Metadata",
+          "recall": {
+            "p": 0.0751184976300474,
+            "obs_diff": 0.07361642105263158,
+            "survives_bonferroni": false,
+            "better": "Hybrid+Temporal",
+            "worse": "Hybrid+Metadata"
+          },
+          "mrr": {
+            "p": 0.0751184976300474,
+            "obs_diff": 0.05794873684210526,
+            "survives_bonferroni": false,
+            "better": "Hybrid+Temporal",
+            "worse": "Hybrid+Metadata"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": 0.07649473684210523,
+          "changed": false
+        },
+        {
+          "a": "Hybrid+Temporal",
+          "b": "Final",
+          "recall": {
+            "p": 1.0,
+            "obs_diff": 0.0,
+            "survives_bonferroni": false,
+            "better": null,
+            "worse": null
+          },
+          "mrr": {
+            "p": 0.7099458010839783,
+            "obs_diff": 0.026362105263157895,
+            "survives_bonferroni": false,
+            "better": "Hybrid+Temporal",
+            "worse": "Final"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": 0.0005136842105262773,
+          "changed": false
+        },
+        {
+          "a": "Hybrid+Temporal",
+          "b": "BM25+Temporal",
+          "recall": {
+            "p": 0.11779764404711905,
+            "obs_diff": 0.04207242105263158,
+            "survives_bonferroni": false,
+            "better": "Hybrid+Temporal",
+            "worse": "BM25+Temporal"
+          },
+          "mrr": {
+            "p": 0.7350652986940261,
+            "obs_diff": -0.025229830827067673,
+            "survives_bonferroni": false,
+            "better": "BM25+Temporal",
+            "worse": "Hybrid+Temporal"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": 0.043667368421052566,
+          "changed": false
+        },
+        {
+          "a": "Hybrid+Temporal",
+          "b": "Dense+Temporal",
+          "recall": {
+            "p": 0.003639927201455971,
+            "obs_diff": 0.2522987368421053,
+            "survives_bonferroni": false,
+            "better": "Hybrid+Temporal",
+            "worse": "Dense+Temporal"
+          },
+          "mrr": {
+            "p": 0.00047999040019199615,
+            "obs_diff": 0.279276850877193,
+            "survives_bonferroni": true,
+            "better": "Hybrid+Temporal",
+            "worse": "Dense+Temporal"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": 0.2529505263157894,
+          "changed": false
+        },
+        {
+          "a": "Hybrid+Temporal",
+          "b": "TemporalOnly",
+          "recall": {
+            "p": 0.11779764404711905,
+            "obs_diff": 0.04207242105263158,
+            "survives_bonferroni": false,
+            "better": "Hybrid+Temporal",
+            "worse": "TemporalOnly"
+          },
+          "mrr": {
+            "p": 0.7350652986940261,
+            "obs_diff": -0.025229830827067673,
+            "survives_bonferroni": false,
+            "better": "TemporalOnly",
+            "worse": "Hybrid+Temporal"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": 0.04225052631578946,
+          "changed": false
+        },
+        {
+          "a": "Hybrid+Temporal",
+          "b": "MetadataOnly",
+          "recall": {
+            "p": 0.0005199896002079958,
+            "obs_diff": 0.09454105263157896,
+            "survives_bonferroni": true,
+            "better": "Hybrid+Temporal",
+            "worse": "MetadataOnly"
+          },
+          "mrr": {
+            "p": 0.0012399752004959902,
+            "obs_diff": 0.07200785338345864,
+            "survives_bonferroni": false,
+            "better": "Hybrid+Temporal",
+            "worse": "MetadataOnly"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": 0.09619473684210522,
+          "changed": true
+        },
+        {
+          "a": "Hybrid+Metadata",
+          "b": "Final",
+          "recall": {
+            "p": 0.0751184976300474,
+            "obs_diff": -0.07361642105263158,
+            "survives_bonferroni": false,
+            "better": "Final",
+            "worse": "Hybrid+Metadata"
+          },
+          "mrr": {
+            "p": 0.0751184976300474,
+            "obs_diff": -0.031586631578947366,
+            "survives_bonferroni": false,
+            "better": "Final",
+            "worse": "Hybrid+Metadata"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.07598105263157895,
+          "changed": false
+        },
+        {
+          "a": "Hybrid+Metadata",
+          "b": "BM25+Temporal",
+          "recall": {
+            "p": 0.6505069898602028,
+            "obs_diff": -0.031544,
+            "survives_bonferroni": false,
+            "better": "BM25+Temporal",
+            "worse": "Hybrid+Metadata"
+          },
+          "mrr": {
+            "p": 0.2237555248895022,
+            "obs_diff": -0.08317856766917293,
+            "survives_bonferroni": false,
+            "better": "BM25+Temporal",
+            "worse": "Hybrid+Metadata"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.03282736842105266,
+          "changed": false
+        },
+        {
+          "a": "Hybrid+Metadata",
+          "b": "Dense+Temporal",
+          "recall": {
+            "p": 0.02231955360892782,
+            "obs_diff": 0.1786823157894737,
+            "survives_bonferroni": false,
+            "better": "Hybrid+Metadata",
+            "worse": "Dense+Temporal"
+          },
+          "mrr": {
+            "p": 0.003959920801583968,
+            "obs_diff": 0.2213281140350877,
+            "survives_bonferroni": false,
+            "better": "Hybrid+Metadata",
+            "worse": "Dense+Temporal"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": 0.1764557894736842,
+          "changed": false
+        },
+        {
+          "a": "Hybrid+Metadata",
+          "b": "TemporalOnly",
+          "recall": {
+            "p": 0.6505069898602028,
+            "obs_diff": -0.031544,
+            "survives_bonferroni": false,
+            "better": "TemporalOnly",
+            "worse": "Hybrid+Metadata"
+          },
+          "mrr": {
+            "p": 0.2237555248895022,
+            "obs_diff": -0.08317856766917293,
+            "survives_bonferroni": false,
+            "better": "TemporalOnly",
+            "worse": "Hybrid+Metadata"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.034244210526315766,
+          "changed": false
+        },
+        {
+          "a": "Hybrid+Metadata",
+          "b": "MetadataOnly",
+          "recall": {
+            "p": 0.45543089138217235,
+            "obs_diff": 0.020924631578947375,
+            "survives_bonferroni": false,
+            "better": "Hybrid+Metadata",
+            "worse": "MetadataOnly"
+          },
+          "mrr": {
+            "p": 0.3246735065298694,
+            "obs_diff": 0.014059116541353382,
+            "survives_bonferroni": false,
+            "better": "Hybrid+Metadata",
+            "worse": "MetadataOnly"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": 0.019699999999999995,
+          "changed": false
+        },
+        {
+          "a": "Final",
+          "b": "BM25+Temporal",
+          "recall": {
+            "p": 0.11779764404711905,
+            "obs_diff": 0.04207242105263158,
+            "survives_bonferroni": false,
+            "better": "Final",
+            "worse": "BM25+Temporal"
+          },
+          "mrr": {
+            "p": 0.35807283854322913,
+            "obs_diff": -0.051591936090225575,
+            "survives_bonferroni": false,
+            "better": "BM25+Temporal",
+            "worse": "Final"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": 0.04315368421052629,
+          "changed": false
+        },
+        {
+          "a": "Final",
+          "b": "Dense+Temporal",
+          "recall": {
+            "p": 0.003639927201455971,
+            "obs_diff": 0.2522987368421053,
+            "survives_bonferroni": false,
+            "better": "Final",
+            "worse": "Dense+Temporal"
+          },
+          "mrr": {
+            "p": 0.0005999880002399952,
+            "obs_diff": 0.2529147456140351,
+            "survives_bonferroni": false,
+            "better": "Final",
+            "worse": "Dense+Temporal"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": 0.2524368421052632,
+          "changed": false
+        },
+        {
+          "a": "Final",
+          "b": "TemporalOnly",
+          "recall": {
+            "p": 0.11779764404711905,
+            "obs_diff": 0.04207242105263158,
+            "survives_bonferroni": false,
+            "better": "Final",
+            "worse": "TemporalOnly"
+          },
+          "mrr": {
+            "p": 0.35807283854322913,
+            "obs_diff": -0.051591936090225575,
+            "survives_bonferroni": false,
+            "better": "TemporalOnly",
+            "worse": "Final"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": 0.04173684210526318,
+          "changed": false
+        },
+        {
+          "a": "Final",
+          "b": "MetadataOnly",
+          "recall": {
+            "p": 0.0005199896002079958,
+            "obs_diff": 0.09454105263157896,
+            "survives_bonferroni": true,
+            "better": "Final",
+            "worse": "MetadataOnly"
+          },
+          "mrr": {
+            "p": 0.0012399752004959902,
+            "obs_diff": 0.04564574812030074,
+            "survives_bonferroni": false,
+            "better": "Final",
+            "worse": "MetadataOnly"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": 0.09568105263157894,
+          "changed": true
+        },
+        {
+          "a": "BM25+Temporal",
+          "b": "Dense+Temporal",
+          "recall": {
+            "p": 0.035399292014159714,
+            "obs_diff": 0.21022631578947368,
+            "survives_bonferroni": false,
+            "better": "BM25+Temporal",
+            "worse": "Dense+Temporal"
+          },
+          "mrr": {
+            "p": 0.0011999760004799903,
+            "obs_diff": 0.30450668170426065,
+            "survives_bonferroni": false,
+            "better": "BM25+Temporal",
+            "worse": "Dense+Temporal"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": 0.20928315789473687,
+          "changed": false
+        },
+        {
+          "a": "BM25+Temporal",
+          "b": "TemporalOnly",
+          "recall": {
+            "p": 1.0,
+            "obs_diff": 0.0,
+            "survives_bonferroni": false,
+            "better": null,
+            "worse": null
+          },
+          "mrr": {
+            "p": 1.0,
+            "obs_diff": 0.0,
+            "survives_bonferroni": false,
+            "better": null,
+            "worse": null
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.0014168421052631053,
+          "changed": false
+        },
+        {
+          "a": "BM25+Temporal",
+          "b": "MetadataOnly",
+          "recall": {
+            "p": 0.24359512809743805,
+            "obs_diff": 0.05246863157894737,
+            "survives_bonferroni": false,
+            "better": "BM25+Temporal",
+            "worse": "MetadataOnly"
+          },
+          "mrr": {
+            "p": 0.0751184976300474,
+            "obs_diff": 0.09723768421052631,
+            "survives_bonferroni": false,
+            "better": "BM25+Temporal",
+            "worse": "MetadataOnly"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": 0.052527368421052656,
+          "changed": false
+        },
+        {
+          "a": "Dense+Temporal",
+          "b": "TemporalOnly",
+          "recall": {
+            "p": 0.035399292014159714,
+            "obs_diff": -0.21022631578947368,
+            "survives_bonferroni": false,
+            "better": "TemporalOnly",
+            "worse": "Dense+Temporal"
+          },
+          "mrr": {
+            "p": 0.0011999760004799903,
+            "obs_diff": -0.30450668170426065,
+            "survives_bonferroni": false,
+            "better": "TemporalOnly",
+            "worse": "Dense+Temporal"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.21069999999999997,
+          "changed": false
+        },
+        {
+          "a": "Dense+Temporal",
+          "b": "MetadataOnly",
+          "recall": {
+            "p": 0.10143797124057519,
+            "obs_diff": -0.1577576842105263,
+            "survives_bonferroni": false,
+            "better": "MetadataOnly",
+            "worse": "Dense+Temporal"
+          },
+          "mrr": {
+            "p": 0.013599728005439892,
+            "obs_diff": -0.20726899749373434,
+            "survives_bonferroni": false,
+            "better": "MetadataOnly",
+            "worse": "Dense+Temporal"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.1567557894736842,
+          "changed": false
+        },
+        {
+          "a": "TemporalOnly",
+          "b": "MetadataOnly",
+          "recall": {
+            "p": 0.24359512809743805,
+            "obs_diff": 0.05246863157894737,
+            "survives_bonferroni": false,
+            "better": "TemporalOnly",
+            "worse": "MetadataOnly"
+          },
+          "mrr": {
+            "p": 0.0751184976300474,
+            "obs_diff": 0.09723768421052631,
+            "survives_bonferroni": false,
+            "better": "TemporalOnly",
+            "worse": "MetadataOnly"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": 0.05394421052631576,
+          "changed": false
+        }
+      ],
+      "survivors_recall": [
+        [
+          "BM25",
+          "Hybrid+Temporal",
+          -0.09454105263157896,
+          0.0005199896002079958
+        ],
+        [
+          "BM25",
+          "Final",
+          -0.09454105263157896,
+          0.0005199896002079958
+        ],
+        [
+          "Hybrid+Temporal",
+          "MetadataOnly",
+          0.09454105263157896,
+          0.0005199896002079958
+        ],
+        [
+          "Final",
+          "MetadataOnly",
+          0.09454105263157896,
+          0.0005199896002079958
+        ]
+      ],
+      "survivors_mrr": [
+        [
+          "Dense",
+          "Hybrid+Temporal",
+          -0.279276850877193,
+          0.00047999040019199615
+        ],
+        [
+          "Hybrid+Temporal",
+          "Dense+Temporal",
+          0.279276850877193,
+          0.00047999040019199615
+        ]
+      ],
+      "status_changes": [
+        {
+          "contrast": "('BM25', 'Hybrid+Temporal')",
+          "ci_overlap": false,
+          "paired_bootstrap": true,
+          "p": 0.0005199896002079958,
+          "obs_diff": -0.09454105263157896
+        },
+        {
+          "contrast": "('BM25', 'Final')",
+          "ci_overlap": false,
+          "paired_bootstrap": true,
+          "p": 0.0005199896002079958,
+          "obs_diff": -0.09454105263157896
+        },
+        {
+          "contrast": "('Hybrid+Temporal', 'MetadataOnly')",
+          "ci_overlap": false,
+          "paired_bootstrap": true,
+          "p": 0.0005199896002079958,
+          "obs_diff": 0.09454105263157896
+        },
+        {
+          "contrast": "('Final', 'MetadataOnly')",
+          "ci_overlap": false,
+          "paired_bootstrap": true,
+          "p": 0.0005199896002079958,
+          "obs_diff": 0.09454105263157896
+        }
+      ]
+    },
+    "expanded": {
+      "n_queries": 88,
+      "contrasts": [
+        {
+          "a": "BM25",
+          "b": "Dense",
+          "recall": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": 0.20431050000000003,
+            "survives_bonferroni": true,
+            "better": "BM25",
+            "worse": "Dense"
+          },
+          "mrr": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": 0.19654874945887443,
+            "survives_bonferroni": true,
+            "better": "BM25",
+            "worse": "Dense"
+          },
+          "ci_overlap_significant": true,
+          "ci_overlap_diff": 0.20458681818181818,
+          "changed": false
+        },
+        {
+          "a": "BM25",
+          "b": "Hybrid",
+          "recall": {
+            "p": 1.0,
+            "obs_diff": 0.0,
+            "survives_bonferroni": false,
+            "better": null,
+            "worse": null
+          },
+          "mrr": {
+            "p": 1.0,
+            "obs_diff": 0.0,
+            "survives_bonferroni": false,
+            "better": null,
+            "worse": null
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.00029000000000001247,
+          "changed": false
+        },
+        {
+          "a": "BM25",
+          "b": "Hybrid+Temporal",
+          "recall": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.09771327272727275,
+            "survives_bonferroni": true,
+            "better": "Hybrid+Temporal",
+            "worse": "BM25"
+          },
+          "mrr": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.17294117983405483,
+            "survives_bonferroni": true,
+            "better": "Hybrid+Temporal",
+            "worse": "BM25"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.09749204545454548,
+          "changed": true
+        },
+        {
+          "a": "BM25",
+          "b": "Hybrid+Metadata",
+          "recall": {
+            "p": 1.0,
+            "obs_diff": 0.0,
+            "survives_bonferroni": false,
+            "better": null,
+            "worse": null
+          },
+          "mrr": {
+            "p": 1.0,
+            "obs_diff": 0.0,
+            "survives_bonferroni": false,
+            "better": null,
+            "worse": null
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.000778863636363647,
+          "changed": false
+        },
+        {
+          "a": "BM25",
+          "b": "Final",
+          "recall": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.06819022727272728,
+            "survives_bonferroni": true,
+            "better": "Final",
+            "worse": "BM25"
+          },
+          "mrr": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.13867032431457432,
+            "survives_bonferroni": true,
+            "better": "Final",
+            "worse": "BM25"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.06818977272727278,
+          "changed": true
+        },
+        {
+          "a": "BM25",
+          "b": "BM25+Temporal",
+          "recall": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.09771327272727275,
+            "survives_bonferroni": true,
+            "better": "BM25+Temporal",
+            "worse": "BM25"
+          },
+          "mrr": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.17294117983405483,
+            "survives_bonferroni": true,
+            "better": "BM25+Temporal",
+            "worse": "BM25"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.09748818181818181,
+          "changed": true
+        },
+        {
+          "a": "BM25",
+          "b": "Dense+Temporal",
+          "recall": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": 0.17025181818181817,
+            "survives_bonferroni": true,
+            "better": "BM25",
+            "worse": "Dense+Temporal"
+          },
+          "mrr": {
+            "p": 0.00011999760004799904,
+            "obs_diff": 0.17528204491341992,
+            "survives_bonferroni": true,
+            "better": "BM25",
+            "worse": "Dense+Temporal"
+          },
+          "ci_overlap_significant": true,
+          "ci_overlap_diff": 0.17027227272727272,
+          "changed": false
+        },
+        {
+          "a": "BM25",
+          "b": "TemporalOnly",
+          "recall": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.09771327272727275,
+            "survives_bonferroni": true,
+            "better": "TemporalOnly",
+            "worse": "BM25"
+          },
+          "mrr": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.17294117983405483,
+            "survives_bonferroni": true,
+            "better": "TemporalOnly",
+            "worse": "BM25"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.09835500000000003,
+          "changed": true
+        },
+        {
+          "a": "BM25",
+          "b": "MetadataOnly",
+          "recall": {
+            "p": 1.0,
+            "obs_diff": 0.0,
+            "survives_bonferroni": false,
+            "better": null,
+            "worse": null
+          },
+          "mrr": {
+            "p": 1.0,
+            "obs_diff": 0.0,
+            "survives_bonferroni": false,
+            "better": null,
+            "worse": null
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": 0.00021795454545453508,
+          "changed": false
+        },
+        {
+          "a": "Dense",
+          "b": "Hybrid",
+          "recall": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.20431050000000003,
+            "survives_bonferroni": true,
+            "better": "Hybrid",
+            "worse": "Dense"
+          },
+          "mrr": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.19654874945887443,
+            "survives_bonferroni": true,
+            "better": "Hybrid",
+            "worse": "Dense"
+          },
+          "ci_overlap_significant": true,
+          "ci_overlap_diff": -0.2048768181818182,
+          "changed": false
+        },
+        {
+          "a": "Dense",
+          "b": "Hybrid+Temporal",
+          "recall": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.3020237727272727,
+            "survives_bonferroni": true,
+            "better": "Hybrid+Temporal",
+            "worse": "Dense"
+          },
+          "mrr": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.3694899292929293,
+            "survives_bonferroni": true,
+            "better": "Hybrid+Temporal",
+            "worse": "Dense"
+          },
+          "ci_overlap_significant": true,
+          "ci_overlap_diff": -0.30207886363636366,
+          "changed": false
+        },
+        {
+          "a": "Dense",
+          "b": "Hybrid+Metadata",
+          "recall": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.20431050000000003,
+            "survives_bonferroni": true,
+            "better": "Hybrid+Metadata",
+            "worse": "Dense"
+          },
+          "mrr": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.19654874945887443,
+            "survives_bonferroni": true,
+            "better": "Hybrid+Metadata",
+            "worse": "Dense"
+          },
+          "ci_overlap_significant": true,
+          "ci_overlap_diff": -0.20536568181818182,
+          "changed": false
+        },
+        {
+          "a": "Dense",
+          "b": "Final",
+          "recall": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.2725007272727273,
+            "survives_bonferroni": true,
+            "better": "Final",
+            "worse": "Dense"
+          },
+          "mrr": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.3352190737734488,
+            "survives_bonferroni": true,
+            "better": "Final",
+            "worse": "Dense"
+          },
+          "ci_overlap_significant": true,
+          "ci_overlap_diff": -0.27277659090909095,
+          "changed": false
+        },
+        {
+          "a": "Dense",
+          "b": "BM25+Temporal",
+          "recall": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.3020237727272727,
+            "survives_bonferroni": true,
+            "better": "BM25+Temporal",
+            "worse": "Dense"
+          },
+          "mrr": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.3694899292929293,
+            "survives_bonferroni": true,
+            "better": "BM25+Temporal",
+            "worse": "Dense"
+          },
+          "ci_overlap_significant": true,
+          "ci_overlap_diff": -0.302075,
+          "changed": false
+        },
+        {
+          "a": "Dense",
+          "b": "Dense+Temporal",
+          "recall": {
+            "p": 0.00015999680006399873,
+            "obs_diff": -0.03405868181818182,
+            "survives_bonferroni": true,
+            "better": "Dense+Temporal",
+            "worse": "Dense"
+          },
+          "mrr": {
+            "p": 0.0003599928001439971,
+            "obs_diff": -0.021266704545454544,
+            "survives_bonferroni": true,
+            "better": "Dense+Temporal",
+            "worse": "Dense"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.03431454545454546,
+          "changed": true
+        },
+        {
+          "a": "Dense",
+          "b": "TemporalOnly",
+          "recall": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.3020237727272727,
+            "survives_bonferroni": true,
+            "better": "TemporalOnly",
+            "worse": "Dense"
+          },
+          "mrr": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.3694899292929293,
+            "survives_bonferroni": true,
+            "better": "TemporalOnly",
+            "worse": "Dense"
+          },
+          "ci_overlap_significant": true,
+          "ci_overlap_diff": -0.3029418181818182,
+          "changed": false
+        },
+        {
+          "a": "Dense",
+          "b": "MetadataOnly",
+          "recall": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.20431050000000003,
+            "survives_bonferroni": true,
+            "better": "MetadataOnly",
+            "worse": "Dense"
+          },
+          "mrr": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.19654874945887443,
+            "survives_bonferroni": true,
+            "better": "MetadataOnly",
+            "worse": "Dense"
+          },
+          "ci_overlap_significant": true,
+          "ci_overlap_diff": -0.20436886363636364,
+          "changed": false
+        },
+        {
+          "a": "Hybrid",
+          "b": "Hybrid+Temporal",
+          "recall": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.09771327272727275,
+            "survives_bonferroni": true,
+            "better": "Hybrid+Temporal",
+            "worse": "Hybrid"
+          },
+          "mrr": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.17294117983405483,
+            "survives_bonferroni": true,
+            "better": "Hybrid+Temporal",
+            "worse": "Hybrid"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.09720204545454547,
+          "changed": true
+        },
+        {
+          "a": "Hybrid",
+          "b": "Hybrid+Metadata",
+          "recall": {
+            "p": 1.0,
+            "obs_diff": 0.0,
+            "survives_bonferroni": false,
+            "better": null,
+            "worse": null
+          },
+          "mrr": {
+            "p": 1.0,
+            "obs_diff": 0.0,
+            "survives_bonferroni": false,
+            "better": null,
+            "worse": null
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.0004888636363636345,
+          "changed": false
+        },
+        {
+          "a": "Hybrid",
+          "b": "Final",
+          "recall": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.06819022727272728,
+            "survives_bonferroni": true,
+            "better": "Final",
+            "worse": "Hybrid"
+          },
+          "mrr": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.13867032431457432,
+            "survives_bonferroni": true,
+            "better": "Final",
+            "worse": "Hybrid"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.06789977272727277,
+          "changed": true
+        },
+        {
+          "a": "Hybrid",
+          "b": "BM25+Temporal",
+          "recall": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.09771327272727275,
+            "survives_bonferroni": true,
+            "better": "BM25+Temporal",
+            "worse": "Hybrid"
+          },
+          "mrr": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.17294117983405483,
+            "survives_bonferroni": true,
+            "better": "BM25+Temporal",
+            "worse": "Hybrid"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.0971981818181818,
+          "changed": true
+        },
+        {
+          "a": "Hybrid",
+          "b": "Dense+Temporal",
+          "recall": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": 0.17025181818181817,
+            "survives_bonferroni": true,
+            "better": "Hybrid",
+            "worse": "Dense+Temporal"
+          },
+          "mrr": {
+            "p": 0.00011999760004799904,
+            "obs_diff": 0.17528204491341992,
+            "survives_bonferroni": true,
+            "better": "Hybrid",
+            "worse": "Dense+Temporal"
+          },
+          "ci_overlap_significant": true,
+          "ci_overlap_diff": 0.17056227272727273,
+          "changed": false
+        },
+        {
+          "a": "Hybrid",
+          "b": "TemporalOnly",
+          "recall": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.09771327272727275,
+            "survives_bonferroni": true,
+            "better": "TemporalOnly",
+            "worse": "Hybrid"
+          },
+          "mrr": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.17294117983405483,
+            "survives_bonferroni": true,
+            "better": "TemporalOnly",
+            "worse": "Hybrid"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.09806500000000001,
+          "changed": true
+        },
+        {
+          "a": "Hybrid",
+          "b": "MetadataOnly",
+          "recall": {
+            "p": 1.0,
+            "obs_diff": 0.0,
+            "survives_bonferroni": false,
+            "better": null,
+            "worse": null
+          },
+          "mrr": {
+            "p": 1.0,
+            "obs_diff": 0.0,
+            "survives_bonferroni": false,
+            "better": null,
+            "worse": null
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": 0.0005079545454545475,
+          "changed": false
+        },
+        {
+          "a": "Hybrid+Temporal",
+          "b": "Hybrid+Metadata",
+          "recall": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": 0.09771327272727275,
+            "survives_bonferroni": true,
+            "better": "Hybrid+Temporal",
+            "worse": "Hybrid+Metadata"
+          },
+          "mrr": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": 0.17294117983405483,
+            "survives_bonferroni": true,
+            "better": "Hybrid+Temporal",
+            "worse": "Hybrid+Metadata"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": 0.09671318181818184,
+          "changed": true
+        },
+        {
+          "a": "Hybrid+Temporal",
+          "b": "Final",
+          "recall": {
+            "p": 0.0005599888002239956,
+            "obs_diff": 0.029523045454545455,
+            "survives_bonferroni": false,
+            "better": "Hybrid+Temporal",
+            "worse": "Final"
+          },
+          "mrr": {
+            "p": 0.003919921601567969,
+            "obs_diff": 0.03427085551948052,
+            "survives_bonferroni": false,
+            "better": "Hybrid+Temporal",
+            "worse": "Final"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": 0.029302272727272705,
+          "changed": false
+        },
+        {
+          "a": "Hybrid+Temporal",
+          "b": "BM25+Temporal",
+          "recall": {
+            "p": 1.0,
+            "obs_diff": 0.0,
+            "survives_bonferroni": false,
+            "better": null,
+            "worse": null
+          },
+          "mrr": {
+            "p": 1.0,
+            "obs_diff": 0.0,
+            "survives_bonferroni": false,
+            "better": null,
+            "worse": null
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": 3.8636363636768145e-06,
+          "changed": false
+        },
+        {
+          "a": "Hybrid+Temporal",
+          "b": "Dense+Temporal",
+          "recall": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": 0.26796509090909093,
+            "survives_bonferroni": true,
+            "better": "Hybrid+Temporal",
+            "worse": "Dense+Temporal"
+          },
+          "mrr": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": 0.34822322474747475,
+            "survives_bonferroni": true,
+            "better": "Hybrid+Temporal",
+            "worse": "Dense+Temporal"
+          },
+          "ci_overlap_significant": true,
+          "ci_overlap_diff": 0.26776431818181823,
+          "changed": false
+        },
+        {
+          "a": "Hybrid+Temporal",
+          "b": "TemporalOnly",
+          "recall": {
+            "p": 1.0,
+            "obs_diff": 0.0,
+            "survives_bonferroni": false,
+            "better": null,
+            "worse": null
+          },
+          "mrr": {
+            "p": 1.0,
+            "obs_diff": 0.0,
+            "survives_bonferroni": false,
+            "better": null,
+            "worse": null
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.0008629545454545418,
+          "changed": false
+        },
+        {
+          "a": "Hybrid+Temporal",
+          "b": "MetadataOnly",
+          "recall": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": 0.09771327272727275,
+            "survives_bonferroni": true,
+            "better": "Hybrid+Temporal",
+            "worse": "MetadataOnly"
+          },
+          "mrr": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": 0.17294117983405483,
+            "survives_bonferroni": true,
+            "better": "Hybrid+Temporal",
+            "worse": "MetadataOnly"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": 0.09771000000000002,
+          "changed": true
+        },
+        {
+          "a": "Hybrid+Metadata",
+          "b": "Final",
+          "recall": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.06819022727272728,
+            "survives_bonferroni": true,
+            "better": "Final",
+            "worse": "Hybrid+Metadata"
+          },
+          "mrr": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.13867032431457432,
+            "survives_bonferroni": true,
+            "better": "Final",
+            "worse": "Hybrid+Metadata"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.06741090909090913,
+          "changed": true
+        },
+        {
+          "a": "Hybrid+Metadata",
+          "b": "BM25+Temporal",
+          "recall": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.09771327272727275,
+            "survives_bonferroni": true,
+            "better": "BM25+Temporal",
+            "worse": "Hybrid+Metadata"
+          },
+          "mrr": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.17294117983405483,
+            "survives_bonferroni": true,
+            "better": "BM25+Temporal",
+            "worse": "Hybrid+Metadata"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.09670931818181816,
+          "changed": true
+        },
+        {
+          "a": "Hybrid+Metadata",
+          "b": "Dense+Temporal",
+          "recall": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": 0.17025181818181817,
+            "survives_bonferroni": true,
+            "better": "Hybrid+Metadata",
+            "worse": "Dense+Temporal"
+          },
+          "mrr": {
+            "p": 0.00011999760004799904,
+            "obs_diff": 0.17528204491341992,
+            "survives_bonferroni": true,
+            "better": "Hybrid+Metadata",
+            "worse": "Dense+Temporal"
+          },
+          "ci_overlap_significant": true,
+          "ci_overlap_diff": 0.17105113636363636,
+          "changed": false
+        },
+        {
+          "a": "Hybrid+Metadata",
+          "b": "TemporalOnly",
+          "recall": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.09771327272727275,
+            "survives_bonferroni": true,
+            "better": "TemporalOnly",
+            "worse": "Hybrid+Metadata"
+          },
+          "mrr": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.17294117983405483,
+            "survives_bonferroni": true,
+            "better": "TemporalOnly",
+            "worse": "Hybrid+Metadata"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.09757613636363638,
+          "changed": true
+        },
+        {
+          "a": "Hybrid+Metadata",
+          "b": "MetadataOnly",
+          "recall": {
+            "p": 1.0,
+            "obs_diff": 0.0,
+            "survives_bonferroni": false,
+            "better": null,
+            "worse": null
+          },
+          "mrr": {
+            "p": 1.0,
+            "obs_diff": 0.0,
+            "survives_bonferroni": false,
+            "better": null,
+            "worse": null
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": 0.000996818181818182,
+          "changed": false
+        },
+        {
+          "a": "Final",
+          "b": "BM25+Temporal",
+          "recall": {
+            "p": 0.0005599888002239956,
+            "obs_diff": -0.029523045454545455,
+            "survives_bonferroni": false,
+            "better": "BM25+Temporal",
+            "worse": "Final"
+          },
+          "mrr": {
+            "p": 0.003919921601567969,
+            "obs_diff": -0.03427085551948052,
+            "survives_bonferroni": false,
+            "better": "BM25+Temporal",
+            "worse": "Final"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.029298409090909028,
+          "changed": false
+        },
+        {
+          "a": "Final",
+          "b": "Dense+Temporal",
+          "recall": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": 0.23844204545454548,
+            "survives_bonferroni": true,
+            "better": "Final",
+            "worse": "Dense+Temporal"
+          },
+          "mrr": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": 0.3139523692279942,
+            "survives_bonferroni": true,
+            "better": "Final",
+            "worse": "Dense+Temporal"
+          },
+          "ci_overlap_significant": true,
+          "ci_overlap_diff": 0.2384620454545455,
+          "changed": false
+        },
+        {
+          "a": "Final",
+          "b": "TemporalOnly",
+          "recall": {
+            "p": 0.0005599888002239956,
+            "obs_diff": -0.029523045454545455,
+            "survives_bonferroni": false,
+            "better": "TemporalOnly",
+            "worse": "Final"
+          },
+          "mrr": {
+            "p": 0.003919921601567969,
+            "obs_diff": -0.03427085551948052,
+            "survives_bonferroni": false,
+            "better": "TemporalOnly",
+            "worse": "Final"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.030165227272727246,
+          "changed": false
+        },
+        {
+          "a": "Final",
+          "b": "MetadataOnly",
+          "recall": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": 0.06819022727272728,
+            "survives_bonferroni": true,
+            "better": "Final",
+            "worse": "MetadataOnly"
+          },
+          "mrr": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": 0.13867032431457432,
+            "survives_bonferroni": true,
+            "better": "Final",
+            "worse": "MetadataOnly"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": 0.06840772727272731,
+          "changed": true
+        },
+        {
+          "a": "BM25+Temporal",
+          "b": "Dense+Temporal",
+          "recall": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": 0.26796509090909093,
+            "survives_bonferroni": true,
+            "better": "BM25+Temporal",
+            "worse": "Dense+Temporal"
+          },
+          "mrr": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": 0.34822322474747475,
+            "survives_bonferroni": true,
+            "better": "BM25+Temporal",
+            "worse": "Dense+Temporal"
+          },
+          "ci_overlap_significant": true,
+          "ci_overlap_diff": 0.2677604545454545,
+          "changed": false
+        },
+        {
+          "a": "BM25+Temporal",
+          "b": "TemporalOnly",
+          "recall": {
+            "p": 1.0,
+            "obs_diff": 0.0,
+            "survives_bonferroni": false,
+            "better": null,
+            "worse": null
+          },
+          "mrr": {
+            "p": 1.0,
+            "obs_diff": 0.0,
+            "survives_bonferroni": false,
+            "better": null,
+            "worse": null
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": -0.0008668181818182186,
+          "changed": false
+        },
+        {
+          "a": "BM25+Temporal",
+          "b": "MetadataOnly",
+          "recall": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": 0.09771327272727275,
+            "survives_bonferroni": true,
+            "better": "BM25+Temporal",
+            "worse": "MetadataOnly"
+          },
+          "mrr": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": 0.17294117983405483,
+            "survives_bonferroni": true,
+            "better": "BM25+Temporal",
+            "worse": "MetadataOnly"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": 0.09770613636363634,
+          "changed": true
+        },
+        {
+          "a": "Dense+Temporal",
+          "b": "TemporalOnly",
+          "recall": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.26796509090909093,
+            "survives_bonferroni": true,
+            "better": "TemporalOnly",
+            "worse": "Dense+Temporal"
+          },
+          "mrr": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.34822322474747475,
+            "survives_bonferroni": true,
+            "better": "TemporalOnly",
+            "worse": "Dense+Temporal"
+          },
+          "ci_overlap_significant": true,
+          "ci_overlap_diff": -0.2686272727272727,
+          "changed": false
+        },
+        {
+          "a": "Dense+Temporal",
+          "b": "MetadataOnly",
+          "recall": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": -0.17025181818181817,
+            "survives_bonferroni": true,
+            "better": "MetadataOnly",
+            "worse": "Dense+Temporal"
+          },
+          "mrr": {
+            "p": 0.00011999760004799904,
+            "obs_diff": -0.17528204491341992,
+            "survives_bonferroni": true,
+            "better": "MetadataOnly",
+            "worse": "Dense+Temporal"
+          },
+          "ci_overlap_significant": true,
+          "ci_overlap_diff": -0.17005431818181818,
+          "changed": false
+        },
+        {
+          "a": "TemporalOnly",
+          "b": "MetadataOnly",
+          "recall": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": 0.09771327272727275,
+            "survives_bonferroni": true,
+            "better": "TemporalOnly",
+            "worse": "MetadataOnly"
+          },
+          "mrr": {
+            "p": 3.999920001599968e-05,
+            "obs_diff": 0.17294117983405483,
+            "survives_bonferroni": true,
+            "better": "TemporalOnly",
+            "worse": "MetadataOnly"
+          },
+          "ci_overlap_significant": false,
+          "ci_overlap_diff": 0.09857295454545456,
+          "changed": true
+        }
+      ],
+      "survivors_recall": [
+        [
+          "BM25",
+          "Dense",
+          0.20431050000000003,
+          3.999920001599968e-05
+        ],
+        [
+          "BM25",
+          "Hybrid+Temporal",
+          -0.09771327272727275,
+          3.999920001599968e-05
+        ],
+        [
+          "BM25",
+          "Final",
+          -0.06819022727272728,
+          3.999920001599968e-05
+        ],
+        [
+          "BM25",
+          "BM25+Temporal",
+          -0.09771327272727275,
+          3.999920001599968e-05
+        ],
+        [
+          "BM25",
+          "Dense+Temporal",
+          0.17025181818181817,
+          3.999920001599968e-05
+        ],
+        [
+          "BM25",
+          "TemporalOnly",
+          -0.09771327272727275,
+          3.999920001599968e-05
+        ],
+        [
+          "Dense",
+          "Hybrid",
+          -0.20431050000000003,
+          3.999920001599968e-05
+        ],
+        [
+          "Dense",
+          "Hybrid+Temporal",
+          -0.3020237727272727,
+          3.999920001599968e-05
+        ],
+        [
+          "Dense",
+          "Hybrid+Metadata",
+          -0.20431050000000003,
+          3.999920001599968e-05
+        ],
+        [
+          "Dense",
+          "Final",
+          -0.2725007272727273,
+          3.999920001599968e-05
+        ],
+        [
+          "Dense",
+          "BM25+Temporal",
+          -0.3020237727272727,
+          3.999920001599968e-05
+        ],
+        [
+          "Dense",
+          "Dense+Temporal",
+          -0.03405868181818182,
+          0.00015999680006399873
+        ],
+        [
+          "Dense",
+          "TemporalOnly",
+          -0.3020237727272727,
+          3.999920001599968e-05
+        ],
+        [
+          "Dense",
+          "MetadataOnly",
+          -0.20431050000000003,
+          3.999920001599968e-05
+        ],
+        [
+          "Hybrid",
+          "Hybrid+Temporal",
+          -0.09771327272727275,
+          3.999920001599968e-05
+        ],
+        [
+          "Hybrid",
+          "Final",
+          -0.06819022727272728,
+          3.999920001599968e-05
+        ],
+        [
+          "Hybrid",
+          "BM25+Temporal",
+          -0.09771327272727275,
+          3.999920001599968e-05
+        ],
+        [
+          "Hybrid",
+          "Dense+Temporal",
+          0.17025181818181817,
+          3.999920001599968e-05
+        ],
+        [
+          "Hybrid",
+          "TemporalOnly",
+          -0.09771327272727275,
+          3.999920001599968e-05
+        ],
+        [
+          "Hybrid+Temporal",
+          "Hybrid+Metadata",
+          0.09771327272727275,
+          3.999920001599968e-05
+        ],
+        [
+          "Hybrid+Temporal",
+          "Dense+Temporal",
+          0.26796509090909093,
+          3.999920001599968e-05
+        ],
+        [
+          "Hybrid+Temporal",
+          "MetadataOnly",
+          0.09771327272727275,
+          3.999920001599968e-05
+        ],
+        [
+          "Hybrid+Metadata",
+          "Final",
+          -0.06819022727272728,
+          3.999920001599968e-05
+        ],
+        [
+          "Hybrid+Metadata",
+          "BM25+Temporal",
+          -0.09771327272727275,
+          3.999920001599968e-05
+        ],
+        [
+          "Hybrid+Metadata",
+          "Dense+Temporal",
+          0.17025181818181817,
+          3.999920001599968e-05
+        ],
+        [
+          "Hybrid+Metadata",
+          "TemporalOnly",
+          -0.09771327272727275,
+          3.999920001599968e-05
+        ],
+        [
+          "Final",
+          "Dense+Temporal",
+          0.23844204545454548,
+          3.999920001599968e-05
+        ],
+        [
+          "Final",
+          "MetadataOnly",
+          0.06819022727272728,
+          3.999920001599968e-05
+        ],
+        [
+          "BM25+Temporal",
+          "Dense+Temporal",
+          0.26796509090909093,
+          3.999920001599968e-05
+        ],
+        [
+          "BM25+Temporal",
+          "MetadataOnly",
+          0.09771327272727275,
+          3.999920001599968e-05
+        ],
+        [
+          "Dense+Temporal",
+          "TemporalOnly",
+          -0.26796509090909093,
+          3.999920001599968e-05
+        ],
+        [
+          "Dense+Temporal",
+          "MetadataOnly",
+          -0.17025181818181817,
+          3.999920001599968e-05
+        ],
+        [
+          "TemporalOnly",
+          "MetadataOnly",
+          0.09771327272727275,
+          3.999920001599968e-05
+        ]
+      ],
+      "survivors_mrr": [
+        [
+          "BM25",
+          "Dense",
+          0.19654874945887443,
+          3.999920001599968e-05
+        ],
+        [
+          "BM25",
+          "Hybrid+Temporal",
+          -0.17294117983405483,
+          3.999920001599968e-05
+        ],
+        [
+          "BM25",
+          "Final",
+          -0.13867032431457432,
+          3.999920001599968e-05
+        ],
+        [
+          "BM25",
+          "BM25+Temporal",
+          -0.17294117983405483,
+          3.999920001599968e-05
+        ],
+        [
+          "BM25",
+          "Dense+Temporal",
+          0.17528204491341992,
+          0.00011999760004799904
+        ],
+        [
+          "BM25",
+          "TemporalOnly",
+          -0.17294117983405483,
+          3.999920001599968e-05
+        ],
+        [
+          "Dense",
+          "Hybrid",
+          -0.19654874945887443,
+          3.999920001599968e-05
+        ],
+        [
+          "Dense",
+          "Hybrid+Temporal",
+          -0.3694899292929293,
+          3.999920001599968e-05
+        ],
+        [
+          "Dense",
+          "Hybrid+Metadata",
+          -0.19654874945887443,
+          3.999920001599968e-05
+        ],
+        [
+          "Dense",
+          "Final",
+          -0.3352190737734488,
+          3.999920001599968e-05
+        ],
+        [
+          "Dense",
+          "BM25+Temporal",
+          -0.3694899292929293,
+          3.999920001599968e-05
+        ],
+        [
+          "Dense",
+          "Dense+Temporal",
+          -0.021266704545454544,
+          0.0003599928001439971
+        ],
+        [
+          "Dense",
+          "TemporalOnly",
+          -0.3694899292929293,
+          3.999920001599968e-05
+        ],
+        [
+          "Dense",
+          "MetadataOnly",
+          -0.19654874945887443,
+          3.999920001599968e-05
+        ],
+        [
+          "Hybrid",
+          "Hybrid+Temporal",
+          -0.17294117983405483,
+          3.999920001599968e-05
+        ],
+        [
+          "Hybrid",
+          "Final",
+          -0.13867032431457432,
+          3.999920001599968e-05
+        ],
+        [
+          "Hybrid",
+          "BM25+Temporal",
+          -0.17294117983405483,
+          3.999920001599968e-05
+        ],
+        [
+          "Hybrid",
+          "Dense+Temporal",
+          0.17528204491341992,
+          0.00011999760004799904
+        ],
+        [
+          "Hybrid",
+          "TemporalOnly",
+          -0.17294117983405483,
+          3.999920001599968e-05
+        ],
+        [
+          "Hybrid+Temporal",
+          "Hybrid+Metadata",
+          0.17294117983405483,
+          3.999920001599968e-05
+        ],
+        [
+          "Hybrid+Temporal",
+          "Dense+Temporal",
+          0.34822322474747475,
+          3.999920001599968e-05
+        ],
+        [
+          "Hybrid+Temporal",
+          "MetadataOnly",
+          0.17294117983405483,
+          3.999920001599968e-05
+        ],
+        [
+          "Hybrid+Metadata",
+          "Final",
+          -0.13867032431457432,
+          3.999920001599968e-05
+        ],
+        [
+          "Hybrid+Metadata",
+          "BM25+Temporal",
+          -0.17294117983405483,
+          3.999920001599968e-05
+        ],
+        [
+          "Hybrid+Metadata",
+          "Dense+Temporal",
+          0.17528204491341992,
+          0.00011999760004799904
+        ],
+        [
+          "Hybrid+Metadata",
+          "TemporalOnly",
+          -0.17294117983405483,
+          3.999920001599968e-05
+        ],
+        [
+          "Final",
+          "Dense+Temporal",
+          0.3139523692279942,
+          3.999920001599968e-05
+        ],
+        [
+          "Final",
+          "MetadataOnly",
+          0.13867032431457432,
+          3.999920001599968e-05
+        ],
+        [
+          "BM25+Temporal",
+          "Dense+Temporal",
+          0.34822322474747475,
+          3.999920001599968e-05
+        ],
+        [
+          "BM25+Temporal",
+          "MetadataOnly",
+          0.17294117983405483,
+          3.999920001599968e-05
+        ],
+        [
+          "Dense+Temporal",
+          "TemporalOnly",
+          -0.34822322474747475,
+          3.999920001599968e-05
+        ],
+        [
+          "Dense+Temporal",
+          "MetadataOnly",
+          -0.17528204491341992,
+          0.00011999760004799904
+        ],
+        [
+          "TemporalOnly",
+          "MetadataOnly",
+          0.17294117983405483,
+          3.999920001599968e-05
+        ]
+      ],
+      "status_changes": [
+        {
+          "contrast": "('BM25', 'Hybrid+Temporal')",
+          "ci_overlap": false,
+          "paired_bootstrap": true,
+          "p": 3.999920001599968e-05,
+          "obs_diff": -0.09771327272727275
+        },
+        {
+          "contrast": "('BM25', 'Final')",
+          "ci_overlap": false,
+          "paired_bootstrap": true,
+          "p": 3.999920001599968e-05,
+          "obs_diff": -0.06819022727272728
+        },
+        {
+          "contrast": "('BM25', 'BM25+Temporal')",
+          "ci_overlap": false,
+          "paired_bootstrap": true,
+          "p": 3.999920001599968e-05,
+          "obs_diff": -0.09771327272727275
+        },
+        {
+          "contrast": "('BM25', 'TemporalOnly')",
+          "ci_overlap": false,
+          "paired_bootstrap": true,
+          "p": 3.999920001599968e-05,
+          "obs_diff": -0.09771327272727275
+        },
+        {
+          "contrast": "('Dense', 'Dense+Temporal')",
+          "ci_overlap": false,
+          "paired_bootstrap": true,
+          "p": 0.00015999680006399873,
+          "obs_diff": -0.03405868181818182
+        },
+        {
+          "contrast": "('Hybrid', 'Hybrid+Temporal')",
+          "ci_overlap": false,
+          "paired_bootstrap": true,
+          "p": 3.999920001599968e-05,
+          "obs_diff": -0.09771327272727275
+        },
+        {
+          "contrast": "('Hybrid', 'Final')",
+          "ci_overlap": false,
+          "paired_bootstrap": true,
+          "p": 3.999920001599968e-05,
+          "obs_diff": -0.06819022727272728
+        },
+        {
+          "contrast": "('Hybrid', 'BM25+Temporal')",
+          "ci_overlap": false,
+          "paired_bootstrap": true,
+          "p": 3.999920001599968e-05,
+          "obs_diff": -0.09771327272727275
+        },
+        {
+          "contrast": "('Hybrid', 'TemporalOnly')",
+          "ci_overlap": false,
+          "paired_bootstrap": true,
+          "p": 3.999920001599968e-05,
+          "obs_diff": -0.09771327272727275
+        },
+        {
+          "contrast": "('Hybrid+Temporal', 'Hybrid+Metadata')",
+          "ci_overlap": false,
+          "paired_bootstrap": true,
+          "p": 3.999920001599968e-05,
+          "obs_diff": 0.09771327272727275
+        },
+        {
+          "contrast": "('Hybrid+Temporal', 'MetadataOnly')",
+          "ci_overlap": false,
+          "paired_bootstrap": true,
+          "p": 3.999920001599968e-05,
+          "obs_diff": 0.09771327272727275
+        },
+        {
+          "contrast": "('Hybrid+Metadata', 'Final')",
+          "ci_overlap": false,
+          "paired_bootstrap": true,
+          "p": 3.999920001599968e-05,
+          "obs_diff": -0.06819022727272728
+        },
+        {
+          "contrast": "('Hybrid+Metadata', 'BM25+Temporal')",
+          "ci_overlap": false,
+          "paired_bootstrap": true,
+          "p": 3.999920001599968e-05,
+          "obs_diff": -0.09771327272727275
+        },
+        {
+          "contrast": "('Hybrid+Metadata', 'TemporalOnly')",
+          "ci_overlap": false,
+          "paired_bootstrap": true,
+          "p": 3.999920001599968e-05,
+          "obs_diff": -0.09771327272727275
+        },
+        {
+          "contrast": "('Final', 'MetadataOnly')",
+          "ci_overlap": false,
+          "paired_bootstrap": true,
+          "p": 3.999920001599968e-05,
+          "obs_diff": 0.06819022727272728
+        },
+        {
+          "contrast": "('BM25+Temporal', 'MetadataOnly')",
+          "ci_overlap": false,
+          "paired_bootstrap": true,
+          "p": 3.999920001599968e-05,
+          "obs_diff": 0.09771327272727275
+        },
+        {
+          "contrast": "('TemporalOnly', 'MetadataOnly')",
+          "ci_overlap": false,
+          "paired_bootstrap": true,
+          "p": 3.999920001599968e-05,
+          "obs_diff": 0.09771327272727275
+        }
+      ]
+    }
+  }
+}

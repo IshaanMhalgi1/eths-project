@@ -1,0 +1,38 @@
+{
+  "5": {
+    "n_refs": 432,
+    "mean_refs_per_query": 4.91,
+    "mean_overlap": 2.176,
+    "median_overlap": 2.0,
+    "min_overlap": 1,
+    "frac_overlap_le_1": 0.2523,
+    "frac_overlap_le_2": 0.6736
+  },
+  "10": {
+    "n_refs": 850,
+    "mean_refs_per_query": 9.66,
+    "mean_overlap": 2.047,
+    "median_overlap": 2.0,
+    "min_overlap": 1,
+    "frac_overlap_le_1": 0.3024,
+    "frac_overlap_le_2": 0.7318
+  },
+  "20": {
+    "n_refs": 1581,
+    "mean_refs_per_query": 17.97,
+    "mean_overlap": 1.899,
+    "median_overlap": 2.0,
+    "min_overlap": 1,
+    "frac_overlap_le_1": 0.3618,
+    "frac_overlap_le_2": 0.7982
+  },
+  "50": {
+    "n_refs": 3274,
+    "mean_refs_per_query": 37.2,
+    "mean_overlap": 1.766,
+    "median_overlap": 2.0,
+    "min_overlap": 1,
+    "frac_overlap_le_1": 0.4123,
+    "frac_overlap_le_2": 0.8681
+  }
+}

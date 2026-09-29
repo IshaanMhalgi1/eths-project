@@ -1,0 +1,1441 @@
+{
+  "n_queries": 88,
+  "cluster_definition": {
+    "rule": "median of all 4-digit years 1800-1869 in the query text, floored to decade; \"no_year\" if the text contains none",
+    "note": "no_year is a catch-all mixing non-temporal queries with era-named queries whose intent the parser resolves without a literal year"
+  },
+  "clusters": {
+    "1800s": {
+      "n_queries": 11,
+      "query_ids": [
+        "q5",
+        "q6",
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q12",
+        "q13",
+        "q14",
+        "q15"
+      ],
+      "temporal_types": {
+        "before_after": 3,
+        "explicit_year": 4,
+        "range": 4
+      },
+      "n_with_parser_temporal_intent": 11,
+      "n_without_temporal_intent": 0,
+      "mean_refs_per_query": 5.0
+    },
+    "1810s": {
+      "n_queries": 9,
+      "query_ids": [
+        "q16",
+        "q21",
+        "q22",
+        "q23",
+        "q24",
+        "q26",
+        "q27",
+        "q29",
+        "q30"
+      ],
+      "temporal_types": {
+        "before_after": 1,
+        "explicit_year": 7,
+        "range": 1
+      },
+      "n_with_parser_temporal_intent": 9,
+      "n_without_temporal_intent": 0,
+      "mean_refs_per_query": 4.56
+    },
+    "1820s": {
+      "n_queries": 9,
+      "query_ids": [
+        "q31",
+        "q32",
+        "q33",
+        "q34",
+        "q35",
+        "q37",
+        "q38",
+        "q39",
+        "q40"
+      ],
+      "temporal_types": {
+        "explicit_year": 7,
+        "range": 2
+      },
+      "n_with_parser_temporal_intent": 9,
+      "n_without_temporal_intent": 0,
+      "mean_refs_per_query": 5.0
+    },
+    "1830s": {
+      "n_queries": 10,
+      "query_ids": [
+        "q41",
+        "q42",
+        "q43",
+        "q44",
+        "q45",
+        "q46",
+        "q47",
+        "q48",
+        "q49",
+        "q50"
+      ],
+      "temporal_types": {
+        "explicit_year": 10
+      },
+      "n_with_parser_temporal_intent": 10,
+      "n_without_temporal_intent": 0,
+      "mean_refs_per_query": 5.0
+    },
+    "1840s": {
+      "n_queries": 9,
+      "query_ids": [
+        "q51",
+        "q52",
+        "q53",
+        "q54",
+        "q55",
+        "q56",
+        "q58",
+        "q59",
+        "q60"
+      ],
+      "temporal_types": {
+        "explicit_year": 8,
+        "range": 1
+      },
+      "n_with_parser_temporal_intent": 9,
+      "n_without_temporal_intent": 0,
+      "mean_refs_per_query": 4.56
+    },
+    "1850s": {
+      "n_queries": 9,
+      "query_ids": [
+        "q61",
+        "q62",
+        "q63",
+        "q64",
+        "q65",
+        "q67",
+        "q68",
+        "q69",
+        "q70"
+      ],
+      "temporal_types": {
+        "explicit_year": 8,
+        "range": 1
+      },
+      "n_with_parser_temporal_intent": 9,
+      "n_without_temporal_intent": 0,
+      "mean_refs_per_query": 5.0
+    },
+    "1860s": {
+      "n_queries": 11,
+      "query_ids": [
+        "q66",
+        "q71",
+        "q72",
+        "q73",
+        "q74",
+        "q75",
+        "q76",
+        "q77",
+        "q78",
+        "q79",
+        "q80"
+      ],
+      "temporal_types": {
+        "explicit_year": 11
+      },
+      "n_with_parser_temporal_intent": 11,
+      "n_without_temporal_intent": 0,
+      "mean_refs_per_query": 5.0
+    },
+    "no_year": {
+      "n_queries": 20,
+      "query_ids": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q17",
+        "q18",
+        "q19",
+        "q20",
+        "q25",
+        "q57",
+        "q101",
+        "q102",
+        "q103",
+        "q104",
+        "q105",
+        "q106",
+        "q107",
+        "q108",
+        "q109",
+        "q110"
+      ],
+      "temporal_types": {
+        "none": 14,
+        "period": 6
+      },
+      "n_with_parser_temporal_intent": 4,
+      "n_without_temporal_intent": 16,
+      "mean_refs_per_query": 5.0
+    }
+  },
+  "per_cluster_effects": {
+    "1800s": {
+      "n": 11,
+      "temporal(beta=0.5) vs BM25-family": 0.09090909090909091,
+      "TemporalOnly vs BM25-family": 0.09090909090909091,
+      "Final vs BM25-family": 0.09090909090909091,
+      "BM25-family vs Dense": 0.23636363636363636,
+      "temporal vs Dense": 0.32727272727272727,
+      "temporal vs Dense+Temporal": 0.2727272727272727,
+      "Dense+Temporal vs Dense": 0.05454545454545456
+    },
+    "1810s": {
+      "n": 9,
+      "temporal(beta=0.5) vs BM25-family": 0.1111111111111111,
+      "TemporalOnly vs BM25-family": 0.1111111111111111,
+      "Final vs BM25-family": 0.1111111111111111,
+      "BM25-family vs Dense": 0.13333333333333333,
+      "temporal vs Dense": 0.24444444444444446,
+      "temporal vs Dense+Temporal": 0.13333333333333333,
+      "Dense+Temporal vs Dense": 0.1111111111111111
+    },
+    "1820s": {
+      "n": 9,
+      "temporal(beta=0.5) vs BM25-family": 0.2,
+      "TemporalOnly vs BM25-family": 0.2,
+      "Final vs BM25-family": 0.06666666666666667,
+      "BM25-family vs Dense": 0.0,
+      "temporal vs Dense": 0.2,
+      "temporal vs Dense+Temporal": 0.2,
+      "Dense+Temporal vs Dense": 0.0
+    },
+    "1830s": {
+      "n": 10,
+      "temporal(beta=0.5) vs BM25-family": 0.06000000000000001,
+      "TemporalOnly vs BM25-family": 0.06000000000000001,
+      "Final vs BM25-family": 0.06000000000000001,
+      "BM25-family vs Dense": 0.22000000000000003,
+      "temporal vs Dense": 0.2800000000000001,
+      "temporal vs Dense+Temporal": 0.22000000000000003,
+      "Dense+Temporal vs Dense": 0.06000000000000001
+    },
+    "1840s": {
+      "n": 9,
+      "temporal(beta=0.5) vs BM25-family": 0.08888888888888889,
+      "TemporalOnly vs BM25-family": 0.08888888888888889,
+      "Final vs BM25-family": 0.06666666666666667,
+      "BM25-family vs Dense": 6.1679056923619804e-18,
+      "temporal vs Dense": 0.08888888888888889,
+      "temporal vs Dense+Temporal": 0.06666666666666668,
+      "Dense+Temporal vs Dense": 0.02222222222222223
+    },
+    "1850s": {
+      "n": 9,
+      "temporal(beta=0.5) vs BM25-family": 0.15555555555555556,
+      "TemporalOnly vs BM25-family": 0.15555555555555556,
+      "Final vs BM25-family": 0.08888888888888889,
+      "BM25-family vs Dense": 0.15555555555555556,
+      "temporal vs Dense": 0.3111111111111111,
+      "temporal vs Dense+Temporal": 0.2666666666666667,
+      "Dense+Temporal vs Dense": 0.044444444444444446
+    },
+    "1860s": {
+      "n": 11,
+      "temporal(beta=0.5) vs BM25-family": 0.10909090909090909,
+      "TemporalOnly vs BM25-family": 0.10909090909090909,
+      "Final vs BM25-family": 0.07272727272727274,
+      "BM25-family vs Dense": 0.27272727272727276,
+      "temporal vs Dense": 0.38181818181818183,
+      "temporal vs Dense+Temporal": 0.38181818181818183,
+      "Dense+Temporal vs Dense": 0.0
+    },
+    "no_year": {
+      "n": 20,
+      "temporal(beta=0.5) vs BM25-family": 0.04,
+      "TemporalOnly vs BM25-family": 0.04,
+      "Final vs BM25-family": 0.030000000000000006,
+      "BM25-family vs Dense": 0.38,
+      "temporal vs Dense": 0.42000000000000004,
+      "temporal vs Dense+Temporal": 0.41,
+      "Dense+Temporal vs Dense": 0.01
+    }
+  },
+  "per_query_breakdown": {
+    "temporal(beta=0.5) vs BM25-family": {
+      "improved": 23,
+      "unchanged": 65,
+      "worse": 0,
+      "mean_diff": 0.09772727272727272,
+      "mean_diff_no_year": 0.04
+    },
+    "TemporalOnly vs BM25-family": {
+      "improved": 23,
+      "unchanged": 65,
+      "worse": 0,
+      "mean_diff": 0.09772727272727272,
+      "mean_diff_no_year": 0.04
+    },
+    "Final vs BM25-family": {
+      "improved": 19,
+      "unchanged": 69,
+      "worse": 0,
+      "mean_diff": 0.06818181818181818,
+      "mean_diff_no_year": 0.030000000000000006
+    },
+    "BM25-family vs Dense": {
+      "improved": 39,
+      "unchanged": 46,
+      "worse": 3,
+      "mean_diff": 0.20454545454545456,
+      "mean_diff_no_year": 0.38
+    },
+    "temporal vs Dense": {
+      "improved": 50,
+      "unchanged": 38,
+      "worse": 0,
+      "mean_diff": 0.3022727272727273,
+      "mean_diff_no_year": 0.42000000000000004
+    },
+    "temporal vs Dense+Temporal": {
+      "improved": 47,
+      "unchanged": 39,
+      "worse": 2,
+      "mean_diff": 0.2681818181818182,
+      "mean_diff_no_year": 0.41
+    },
+    "Dense+Temporal vs Dense": {
+      "improved": 9,
+      "unchanged": 79,
+      "worse": 0,
+      "mean_diff": 0.034090909090909095,
+      "mean_diff_no_year": 0.01
+    }
+  },
+  "rows": [
+    {
+      "query_id": "q1",
+      "temporal_type": "none",
+      "text": "strayed horse reward advertisement",
+      "cluster": "no_year",
+      "literal_years": [],
+      "parser_start": null,
+      "parser_end": null,
+      "has_temporal_intent": false,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q2",
+      "temporal_type": "none",
+      "text": "flour and grain market prices",
+      "cluster": "no_year",
+      "literal_years": [],
+      "parser_start": null,
+      "parser_end": null,
+      "has_temporal_intent": false,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q3",
+      "temporal_type": "none",
+      "text": "runaway slave reward advertisement",
+      "cluster": "no_year",
+      "literal_years": [],
+      "parser_start": null,
+      "parser_end": null,
+      "has_temporal_intent": false,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q4",
+      "temporal_type": "none",
+      "text": "military officer appointments",
+      "cluster": "no_year",
+      "literal_years": [],
+      "parser_start": null,
+      "parser_end": null,
+      "has_temporal_intent": false,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q5",
+      "temporal_type": "explicit_year",
+      "text": "obituaries deaths 1806",
+      "cluster": "1800s",
+      "literal_years": [
+        1806
+      ],
+      "parser_start": 1806,
+      "parser_end": 1806,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q6",
+      "temporal_type": "explicit_year",
+      "text": "real estate land for sale 1807",
+      "cluster": "1800s",
+      "literal_years": [
+        1807
+      ],
+      "parser_start": 1807,
+      "parser_end": 1807,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q7",
+      "temporal_type": "explicit_year",
+      "text": "ship arrivals cargo from Europe 1803",
+      "cluster": "1800s",
+      "literal_years": [
+        1803
+      ],
+      "parser_start": 1803,
+      "parser_end": 1803,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q8",
+      "temporal_type": "explicit_year",
+      "text": "new store goods for sale 1803",
+      "cluster": "1800s",
+      "literal_years": [
+        1803
+      ],
+      "parser_start": 1803,
+      "parser_end": 1803,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q9",
+      "temporal_type": "range",
+      "text": "political news congress 1800 to 1805",
+      "cluster": "1800s",
+      "literal_years": [
+        1800,
+        1805
+      ],
+      "parser_start": 1800,
+      "parser_end": 1805,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q10",
+      "temporal_type": "range",
+      "text": "tax land assessment 1804 to 1808",
+      "cluster": "1800s",
+      "literal_years": [
+        1804,
+        1808
+      ],
+      "parser_start": 1804,
+      "parser_end": 1808,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q11",
+      "temporal_type": "range",
+      "text": "legal public notice sheriff 1800 1810",
+      "cluster": "1800s",
+      "literal_years": [
+        1800,
+        1810
+      ],
+      "parser_start": 1800,
+      "parser_end": 1810,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q12",
+      "temporal_type": "range",
+      "text": "weather storm floods 1805 to 1810",
+      "cluster": "1800s",
+      "literal_years": [
+        1805,
+        1810
+      ],
+      "parser_start": 1805,
+      "parser_end": 1810,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q13",
+      "temporal_type": "before_after",
+      "text": "news dispatches France Europe before 1808",
+      "cluster": "1800s",
+      "literal_years": [
+        1808
+      ],
+      "parser_start": 0,
+      "parser_end": 1807,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q14",
+      "temporal_type": "before_after",
+      "text": "shipping port arrivals after 1805",
+      "cluster": "1800s",
+      "literal_years": [
+        1805
+      ],
+      "parser_start": 1806,
+      "parser_end": 2026,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q15",
+      "temporal_type": "before_after",
+      "text": "medicines apothecary bitters since 1802",
+      "cluster": "1800s",
+      "literal_years": [
+        1802
+      ],
+      "parser_start": 1803,
+      "parser_end": 2026,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q16",
+      "temporal_type": "before_after",
+      "text": "poetry verse published before 1810",
+      "cluster": "1810s",
+      "literal_years": [
+        1810
+      ],
+      "parser_start": 0,
+      "parser_end": 1809,
+      "has_temporal_intent": true,
+      "n_refs": 1
+    },
+    {
+      "query_id": "q17",
+      "temporal_type": "period",
+      "text": "European war news Jeffersonian Era",
+      "cluster": "no_year",
+      "literal_years": [],
+      "parser_start": 1801,
+      "parser_end": 1809,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q18",
+      "temporal_type": "period",
+      "text": "election campaign republican Early Republic",
+      "cluster": "no_year",
+      "literal_years": [],
+      "parser_start": 1789,
+      "parser_end": 1824,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q19",
+      "temporal_type": "period",
+      "text": "trade embargo Britain Jefferson administration",
+      "cluster": "no_year",
+      "literal_years": [],
+      "parser_start": 1801,
+      "parser_end": 1809,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q20",
+      "temporal_type": "period",
+      "text": "letters editor public opinion Early National Period",
+      "cluster": "no_year",
+      "literal_years": [],
+      "parser_start": 1789,
+      "parser_end": 1824,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q21",
+      "temporal_type": "explicit_year",
+      "text": "War of 1812 navy battles",
+      "cluster": "1810s",
+      "literal_years": [
+        1812
+      ],
+      "parser_start": 1812,
+      "parser_end": 1812,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q22",
+      "temporal_type": "explicit_year",
+      "text": "British blockade American ports 1813",
+      "cluster": "1810s",
+      "literal_years": [
+        1813
+      ],
+      "parser_start": 1813,
+      "parser_end": 1813,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q23",
+      "temporal_type": "explicit_year",
+      "text": "Treaty of Ghent peace negotiations 1814",
+      "cluster": "1810s",
+      "literal_years": [
+        1814
+      ],
+      "parser_start": 1814,
+      "parser_end": 1814,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q24",
+      "temporal_type": "explicit_year",
+      "text": "Battle of New Orleans Jackson 1815",
+      "cluster": "1810s",
+      "literal_years": [
+        1815
+      ],
+      "parser_start": 1815,
+      "parser_end": 1815,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q25",
+      "temporal_type": "period",
+      "text": "Era of Good Feelings Monroe presidency",
+      "cluster": "no_year",
+      "literal_years": [],
+      "parser_start": null,
+      "parser_end": null,
+      "has_temporal_intent": false,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q26",
+      "temporal_type": "range",
+      "text": "Missouri Compromise debates 1819 1820",
+      "cluster": "1810s",
+      "literal_years": [
+        1819,
+        1820
+      ],
+      "parser_start": 1819,
+      "parser_end": 1820,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q27",
+      "temporal_type": "explicit_year",
+      "text": "steamboat navigation Mississippi River 1817",
+      "cluster": "1810s",
+      "literal_years": [
+        1817
+      ],
+      "parser_start": 1817,
+      "parser_end": 1817,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q29",
+      "temporal_type": "explicit_year",
+      "text": "Adams Onis Treaty Florida 1819",
+      "cluster": "1810s",
+      "literal_years": [
+        1819
+      ],
+      "parser_start": 1819,
+      "parser_end": 1819,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q30",
+      "temporal_type": "explicit_year",
+      "text": "coroner inquest sudden death 1815",
+      "cluster": "1810s",
+      "literal_years": [
+        1815
+      ],
+      "parser_start": 1815,
+      "parser_end": 1815,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q31",
+      "temporal_type": "explicit_year",
+      "text": "Monroe Doctrine foreign policy 1823",
+      "cluster": "1820s",
+      "literal_years": [
+        1823
+      ],
+      "parser_start": 1823,
+      "parser_end": 1823,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q32",
+      "temporal_type": "explicit_year",
+      "text": "corrupt bargain election 1824 Adams Jackson",
+      "cluster": "1820s",
+      "literal_years": [
+        1824
+      ],
+      "parser_start": 1824,
+      "parser_end": 1824,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q33",
+      "temporal_type": "explicit_year",
+      "text": "Erie Canal completion 1825",
+      "cluster": "1820s",
+      "literal_years": [
+        1825
+      ],
+      "parser_start": 1825,
+      "parser_end": 1825,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q34",
+      "temporal_type": "explicit_year",
+      "text": "railroad construction Baltimore Ohio 1828",
+      "cluster": "1820s",
+      "literal_years": [
+        1828
+      ],
+      "parser_start": 1828,
+      "parser_end": 1828,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q35",
+      "temporal_type": "explicit_year",
+      "text": "tariff abominations nullification crisis 1828",
+      "cluster": "1820s",
+      "literal_years": [
+        1828
+      ],
+      "parser_start": 1828,
+      "parser_end": 1828,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q37",
+      "temporal_type": "range",
+      "text": "Lafayette tour United States 1824 1825",
+      "cluster": "1820s",
+      "literal_years": [
+        1824,
+        1825
+      ],
+      "parser_start": 1824,
+      "parser_end": 1825,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q38",
+      "temporal_type": "explicit_year",
+      "text": "Sunday mail controversy sabbath 1829",
+      "cluster": "1820s",
+      "literal_years": [
+        1829
+      ],
+      "parser_start": 1829,
+      "parser_end": 1829,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q39",
+      "temporal_type": "range",
+      "text": "Indian removal debates Georgia 1828 1830",
+      "cluster": "1820s",
+      "literal_years": [
+        1828,
+        1830
+      ],
+      "parser_start": 1828,
+      "parser_end": 1830,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q40",
+      "temporal_type": "explicit_year",
+      "text": "Masonic anti-Masonic party 1826",
+      "cluster": "1820s",
+      "literal_years": [
+        1826
+      ],
+      "parser_start": 1826,
+      "parser_end": 1826,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q41",
+      "temporal_type": "explicit_year",
+      "text": "Jackson Bank War veto 1832",
+      "cluster": "1830s",
+      "literal_years": [
+        1832
+      ],
+      "parser_start": 1832,
+      "parser_end": 1832,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q42",
+      "temporal_type": "explicit_year",
+      "text": "Trail of Tears Cherokee removal 1838",
+      "cluster": "1830s",
+      "literal_years": [
+        1838
+      ],
+      "parser_start": 1838,
+      "parser_end": 1838,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q43",
+      "temporal_type": "explicit_year",
+      "text": "abolitionist movement Liberator Garrison 1831",
+      "cluster": "1830s",
+      "literal_years": [
+        1831
+      ],
+      "parser_start": 1831,
+      "parser_end": 1831,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q44",
+      "temporal_type": "explicit_year",
+      "text": "Panic of 1837 financial crisis",
+      "cluster": "1830s",
+      "literal_years": [
+        1837
+      ],
+      "parser_start": 1837,
+      "parser_end": 1837,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q45",
+      "temporal_type": "explicit_year",
+      "text": "Texas independence revolution 1836",
+      "cluster": "1830s",
+      "literal_years": [
+        1836
+      ],
+      "parser_start": 1836,
+      "parser_end": 1836,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q46",
+      "temporal_type": "explicit_year",
+      "text": "Mormon settlement Missouri Illinois 1839",
+      "cluster": "1830s",
+      "literal_years": [
+        1839
+      ],
+      "parser_start": 1839,
+      "parser_end": 1839,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q47",
+      "temporal_type": "explicit_year",
+      "text": "patent office inventions agriculture 1836",
+      "cluster": "1830s",
+      "literal_years": [
+        1836
+      ],
+      "parser_start": 1836,
+      "parser_end": 1836,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q48",
+      "temporal_type": "explicit_year",
+      "text": "colera epidemic prevention 1832",
+      "cluster": "1830s",
+      "literal_years": [
+        1832
+      ],
+      "parser_start": 1832,
+      "parser_end": 1832,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q49",
+      "temporal_type": "explicit_year",
+      "text": "Whig party formation opposition 1834",
+      "cluster": "1830s",
+      "literal_years": [
+        1834
+      ],
+      "parser_start": 1834,
+      "parser_end": 1834,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q50",
+      "temporal_type": "explicit_year",
+      "text": "Samuel Morse telegraph demonstration 1838",
+      "cluster": "1830s",
+      "literal_years": [
+        1838
+      ],
+      "parser_start": 1838,
+      "parser_end": 1838,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q51",
+      "temporal_type": "range",
+      "text": "Mexican American War 1846 1848",
+      "cluster": "1840s",
+      "literal_years": [
+        1846,
+        1848
+      ],
+      "parser_start": 1846,
+      "parser_end": 1848,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q52",
+      "temporal_type": "explicit_year",
+      "text": "Oregon Trail pioneers westward 1843",
+      "cluster": "1840s",
+      "literal_years": [
+        1843
+      ],
+      "parser_start": 1843,
+      "parser_end": 1843,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q53",
+      "temporal_type": "explicit_year",
+      "text": "gold rush California forty niners 1849",
+      "cluster": "1840s",
+      "literal_years": [
+        1849
+      ],
+      "parser_start": 1849,
+      "parser_end": 1849,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q54",
+      "temporal_type": "explicit_year",
+      "text": "Irish potato famine immigration 1847",
+      "cluster": "1840s",
+      "literal_years": [
+        1847
+      ],
+      "parser_start": 1847,
+      "parser_end": 1847,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q55",
+      "temporal_type": "explicit_year",
+      "text": "Seneca Falls women rights convention 1848",
+      "cluster": "1840s",
+      "literal_years": [
+        1848
+      ],
+      "parser_start": 1848,
+      "parser_end": 1848,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q56",
+      "temporal_type": "explicit_year",
+      "text": "telegraph lines expansion 1844",
+      "cluster": "1840s",
+      "literal_years": [
+        1844
+      ],
+      "parser_start": 1844,
+      "parser_end": 1844,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q57",
+      "temporal_type": "period",
+      "text": "Manifest Destiny Polk administration",
+      "cluster": "no_year",
+      "literal_years": [],
+      "parser_start": null,
+      "parser_end": null,
+      "has_temporal_intent": false,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q58",
+      "temporal_type": "explicit_year",
+      "text": "Wilmot Proviso slavery territories 1846",
+      "cluster": "1840s",
+      "literal_years": [
+        1846
+      ],
+      "parser_start": 1846,
+      "parser_end": 1846,
+      "has_temporal_intent": true,
+      "n_refs": 1
+    },
+    {
+      "query_id": "q59",
+      "temporal_type": "explicit_year",
+      "text": "railroad mania stock speculation 1847",
+      "cluster": "1840s",
+      "literal_years": [
+        1847
+      ],
+      "parser_start": 1847,
+      "parser_end": 1847,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q60",
+      "temporal_type": "explicit_year",
+      "text": "Cholera epidemic New York 1849",
+      "cluster": "1840s",
+      "literal_years": [
+        1849
+      ],
+      "parser_start": 1849,
+      "parser_end": 1849,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q61",
+      "temporal_type": "explicit_year",
+      "text": "Compromise of 1850 Fugitive Slave Act",
+      "cluster": "1850s",
+      "literal_years": [
+        1850
+      ],
+      "parser_start": 1850,
+      "parser_end": 1850,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q62",
+      "temporal_type": "explicit_year",
+      "text": "Kansas Nebraska Act popular sovereignty 1854",
+      "cluster": "1850s",
+      "literal_years": [
+        1854
+      ],
+      "parser_start": 1854,
+      "parser_end": 1854,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q63",
+      "temporal_type": "explicit_year",
+      "text": "Dred Scott decision Supreme Court 1857",
+      "cluster": "1850s",
+      "literal_years": [
+        1857
+      ],
+      "parser_start": 1857,
+      "parser_end": 1857,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q64",
+      "temporal_type": "explicit_year",
+      "text": "Lincoln Douglas debates Illinois 1858",
+      "cluster": "1850s",
+      "literal_years": [
+        1858
+      ],
+      "parser_start": 1858,
+      "parser_end": 1858,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q65",
+      "temporal_type": "explicit_year",
+      "text": "John Brown raid Harpers Ferry 1859",
+      "cluster": "1850s",
+      "literal_years": [
+        1859
+      ],
+      "parser_start": 1859,
+      "parser_end": 1859,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q66",
+      "temporal_type": "explicit_year",
+      "text": "Pony Express mail delivery 1860",
+      "cluster": "1860s",
+      "literal_years": [
+        1860
+      ],
+      "parser_start": 1860,
+      "parser_end": 1860,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q67",
+      "temporal_type": "explicit_year",
+      "text": "Know Nothing party nativism 1855",
+      "cluster": "1850s",
+      "literal_years": [
+        1855
+      ],
+      "parser_start": 1855,
+      "parser_end": 1855,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q68",
+      "temporal_type": "explicit_year",
+      "text": "transcontinental railroad surveys 1853",
+      "cluster": "1850s",
+      "literal_years": [
+        1853
+      ],
+      "parser_start": 1853,
+      "parser_end": 1853,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q69",
+      "temporal_type": "range",
+      "text": "crimean war European news 1854 1856",
+      "cluster": "1850s",
+      "literal_years": [
+        1854,
+        1856
+      ],
+      "parser_start": 1854,
+      "parser_end": 1856,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q70",
+      "temporal_type": "explicit_year",
+      "text": "cotton market prices Liverpool 1850",
+      "cluster": "1850s",
+      "literal_years": [
+        1850
+      ],
+      "parser_start": 1850,
+      "parser_end": 1850,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q71",
+      "temporal_type": "explicit_year",
+      "text": "Civil War Fort Sumter 1861",
+      "cluster": "1860s",
+      "literal_years": [
+        1861
+      ],
+      "parser_start": 1861,
+      "parser_end": 1865,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q72",
+      "temporal_type": "explicit_year",
+      "text": "Emancipation Proclamation 1863",
+      "cluster": "1860s",
+      "literal_years": [
+        1863
+      ],
+      "parser_start": 1863,
+      "parser_end": 1863,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q73",
+      "temporal_type": "explicit_year",
+      "text": "Gettysburg battle casualties 1863",
+      "cluster": "1860s",
+      "literal_years": [
+        1863
+      ],
+      "parser_start": 1863,
+      "parser_end": 1863,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q74",
+      "temporal_type": "explicit_year",
+      "text": "Sherman march to sea 1864",
+      "cluster": "1860s",
+      "literal_years": [
+        1864
+      ],
+      "parser_start": 1864,
+      "parser_end": 1864,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q75",
+      "temporal_type": "explicit_year",
+      "text": "Lincoln assassination 1865",
+      "cluster": "1860s",
+      "literal_years": [
+        1865
+      ],
+      "parser_start": 1865,
+      "parser_end": 1865,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q76",
+      "temporal_type": "explicit_year",
+      "text": "Reconstruction acts Congress 1867",
+      "cluster": "1860s",
+      "literal_years": [
+        1867
+      ],
+      "parser_start": 1865,
+      "parser_end": 1877,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q77",
+      "temporal_type": "explicit_year",
+      "text": "transcontinental railroad completed 1869",
+      "cluster": "1860s",
+      "literal_years": [
+        1869
+      ],
+      "parser_start": 1869,
+      "parser_end": 1869,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q78",
+      "temporal_type": "explicit_year",
+      "text": "Homestead Act western settlement 1862",
+      "cluster": "1860s",
+      "literal_years": [
+        1862
+      ],
+      "parser_start": 1862,
+      "parser_end": 1862,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q79",
+      "temporal_type": "explicit_year",
+      "text": "Morrill Land Grant colleges 1862",
+      "cluster": "1860s",
+      "literal_years": [
+        1862
+      ],
+      "parser_start": 1862,
+      "parser_end": 1862,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q80",
+      "temporal_type": "explicit_year",
+      "text": "freedmen bureau education 1866",
+      "cluster": "1860s",
+      "literal_years": [
+        1866
+      ],
+      "parser_start": 1866,
+      "parser_end": 1866,
+      "has_temporal_intent": true,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q101",
+      "temporal_type": "none",
+      "text": "agricultural fair prize livestock",
+      "cluster": "no_year",
+      "literal_years": [],
+      "parser_start": null,
+      "parser_end": null,
+      "has_temporal_intent": false,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q102",
+      "temporal_type": "none",
+      "text": "temperance pledge total abstinence",
+      "cluster": "no_year",
+      "literal_years": [],
+      "parser_start": null,
+      "parser_end": null,
+      "has_temporal_intent": false,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q103",
+      "temporal_type": "none",
+      "text": "marriage license ceremony announcement",
+      "cluster": "no_year",
+      "literal_years": [],
+      "parser_start": null,
+      "parser_end": null,
+      "has_temporal_intent": false,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q104",
+      "temporal_type": "none",
+      "text": "church revival camp meeting",
+      "cluster": "no_year",
+      "literal_years": [],
+      "parser_start": null,
+      "parser_end": null,
+      "has_temporal_intent": false,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q105",
+      "temporal_type": "none",
+      "text": "patent medicine cure all remedy",
+      "cluster": "no_year",
+      "literal_years": [],
+      "parser_start": null,
+      "parser_end": null,
+      "has_temporal_intent": false,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q106",
+      "temporal_type": "none",
+      "text": "fire engine company volunteer",
+      "cluster": "no_year",
+      "literal_years": [],
+      "parser_start": null,
+      "parser_end": null,
+      "has_temporal_intent": false,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q107",
+      "temporal_type": "none",
+      "text": "school examination commencement exercises",
+      "cluster": "no_year",
+      "literal_years": [],
+      "parser_start": null,
+      "parser_end": null,
+      "has_temporal_intent": false,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q108",
+      "temporal_type": "none",
+      "text": "theater performance benefit concert",
+      "cluster": "no_year",
+      "literal_years": [],
+      "parser_start": null,
+      "parser_end": null,
+      "has_temporal_intent": false,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q109",
+      "temporal_type": "none",
+      "text": "merchant tailor clothing advertisement",
+      "cluster": "no_year",
+      "literal_years": [],
+      "parser_start": null,
+      "parser_end": null,
+      "has_temporal_intent": false,
+      "n_refs": 5
+    },
+    {
+      "query_id": "q110",
+      "temporal_type": "none",
+      "text": "lost found stray animals reward",
+      "cluster": "no_year",
+      "literal_years": [],
+      "parser_start": null,
+      "parser_end": null,
+      "has_temporal_intent": false,
+      "n_refs": 5
+    }
+  ]
+}

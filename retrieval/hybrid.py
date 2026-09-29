@@ -7,18 +7,25 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from retrieval.bm25 import search_bm25
 from retrieval.dense import search_dense
 
-def search_hybrid(query: str, size: int = 10, alpha: float = 0.5, index_name: str = None):
+def search_hybrid(query: str, size: int = 10, alpha: float = 0.5, index_name: str = None,
+                  year_start=None, year_end=None):
     """
     Combines BM25 and Dense scores with a tunable alpha.
     Final Score = alpha * BM25_norm + (1 - alpha) * Dense_norm
+
+    An optional year range filters both retrievers before fusion, so the
+    candidate pool itself is restricted to the selected years rather than
+    ranked over the whole corpus and trimmed afterwards.
     """
     if index_name is None:
         from retrieval.bm25 import DEFAULT_INDEX
         index_name = DEFAULT_INDEX
     # Fetch more candidates to ensure good overlap
     fetch_size = size * 2
-    bm25_res = search_bm25(query, size=fetch_size, index_name=index_name)
-    dense_res = search_dense(query, size=fetch_size, index_name=index_name)
+    bm25_res = search_bm25(query, size=fetch_size, index_name=index_name,
+                           year_start=year_start, year_end=year_end)
+    dense_res = search_dense(query, size=fetch_size, index_name=index_name,
+                             year_start=year_start, year_end=year_end)
     
     # Assign ranks instead of min-max scaling
     bm25_ranks = {r['chunk_id']: rank + 1 for rank, r in enumerate(bm25_res)}

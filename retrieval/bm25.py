@@ -17,15 +17,38 @@ client = OpenSearch(
     ssl_show_warn=False
 )
 
-def search_bm25(query: str, size: int = 10, index_name: str = DEFAULT_INDEX):
-    body = {
-        "size": size,
-        "query": {
-            "match": {
-                "text": query
-            }
+def year_range_filter(year_start=None, year_end=None):
+    """Range clause on publication_year, or None when no constraint is given.
+
+    Filtering on publication_year (rather than the historical window) keeps the
+    constraint consistent with the year the timeline plots for each result. A
+    document with no publication year cannot be confirmed to sit inside a
+    selected range, so a hard filter excludes it rather than quietly including
+    something the user cannot see positioned.
+    """
+    if year_start is None and year_end is None:
+        return None
+    bounds = {}
+    if year_start is not None:
+        bounds['gte'] = int(year_start)
+    if year_end is not None:
+        bounds['lte'] = int(year_end)
+    return {"range": {"publication_year": bounds}}
+
+
+def search_bm25(query: str, size: int = 10, index_name: str = DEFAULT_INDEX,
+                year_start=None, year_end=None):
+    text_clause = {"match": {"text": query}}
+    rng = year_range_filter(year_start, year_end)
+    if rng is None:
+        body = {"size": size, "query": text_clause}
+    else:
+        body = {
+            "size": size,
+            "query": {
+                "bool": {"must": [text_clause], "filter": [rng]}
+            },
         }
-    }
     response = client.search(index=index_name, body=body)
     hits = response['hits']['hits']
     results = []

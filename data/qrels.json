@@ -988,18 +988,6 @@
     "relevant_doc_ids": []
   },
   {
-    "query_id": "q89",
-    "query_text": "women suffrage movement 1870s",
-    "temporal_type": "range",
-    "relevant_doc_ids": [
-      "train_164705",
-      "train_13906",
-      "train_13903",
-      "train_13905",
-      "train_13904"
-    ]
-  },
-  {
     "query_id": "q90",
     "query_text": "yellow fever epidemic Memphis 1878",
     "temporal_type": "explicit_year",
@@ -1046,18 +1034,6 @@
     "query_text": "typewriter commercial production 1884",
     "temporal_type": "explicit_year",
     "relevant_doc_ids": []
-  },
-  {
-    "query_id": "q98",
-    "query_text": "bicycle craze transportation 1880s",
-    "temporal_type": "range",
-    "relevant_doc_ids": [
-      "train_433",
-      "train_432",
-      "train_431",
-      "train_429",
-      "train_428"
-    ]
   },
   {
     "query_id": "q99",

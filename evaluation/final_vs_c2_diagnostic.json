@@ -1,0 +1,129 @@
+{
+  "n_queries": 88,
+  "variants": {
+    "VAR-0_final_config": {
+      "weights": [
+        0.7,
+        0.2,
+        0.1
+      ]
+    },
+    "VAR-A_metadata_zero_renormalised": {
+      "weights": [
+        0.777778,
+        0.222222,
+        0.0
+      ]
+    },
+    "VAR-B_match_C2": {
+      "weights": [
+        0.7,
+        0.5,
+        0.0
+      ]
+    }
+  },
+  "identity_vs_hybrid_temporal": {
+    "VAR-0": {
+      "top50": 18,
+      "top10": 32,
+      "n": 88
+    },
+    "VAR-A": {
+      "top50": 18,
+      "top10": 32,
+      "n": 88
+    },
+    "VAR-B": {
+      "top50": 88,
+      "top10": 88,
+      "n": 88
+    }
+  },
+  "c2_internal_identity": {
+    "top50": 88,
+    "n": 88
+  },
+  "metadata_constant_queries": 88,
+  "metadata_varies_queries": 0,
+  "queries_with_parsed_periods": [
+    {
+      "query_id": "q17",
+      "parsed_periods": [
+        "Jeffersonian Era"
+      ],
+      "n_docs": 50,
+      "n_matched": 0,
+      "docs_with_period_field": 0,
+      "raw_values": [
+        0.0
+      ],
+      "temporal_type": "period"
+    },
+    {
+      "query_id": "q18",
+      "parsed_periods": [
+        "Early Republic"
+      ],
+      "n_docs": 50,
+      "n_matched": 0,
+      "docs_with_period_field": 0,
+      "raw_values": [
+        0.0
+      ],
+      "temporal_type": "period"
+    },
+    {
+      "query_id": "q19",
+      "parsed_periods": [
+        "Jeffersonian Era"
+      ],
+      "n_docs": 50,
+      "n_matched": 0,
+      "docs_with_period_field": 0,
+      "raw_values": [
+        0.0
+      ],
+      "temporal_type": "period"
+    },
+    {
+      "query_id": "q20",
+      "parsed_periods": [
+        "Early Republic"
+      ],
+      "n_docs": 50,
+      "n_matched": 0,
+      "docs_with_period_field": 0,
+      "raw_values": [
+        0.0
+      ],
+      "temporal_type": "period"
+    },
+    {
+      "query_id": "q71",
+      "parsed_periods": [
+        "American Civil War"
+      ],
+      "n_docs": 50,
+      "n_matched": 0,
+      "docs_with_period_field": 0,
+      "raw_values": [
+        0.0
+      ],
+      "temporal_type": "explicit_year"
+    },
+    {
+      "query_id": "q76",
+      "parsed_periods": [
+        "Reconstruction Era"
+      ],
+      "n_docs": 50,
+      "n_matched": 0,
+      "docs_with_period_field": 0,
+      "raw_values": [
+        0.0
+      ],
+      "temporal_type": "explicit_year"
+    }
+  ]
+}

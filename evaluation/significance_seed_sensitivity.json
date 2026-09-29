@@ -1,0 +1,803 @@
+{
+  "method": "paired bootstrap re-tested under independent resample matrices",
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "n_resamples": 50000,
+  "bonferroni_alpha": 0.0005555555555555556,
+  "corpora": {
+    "small": {
+      "n_queries": 19,
+      "metrics": {
+        "recall": {
+          "n_stable_survivors": 4,
+          "n_flips_across_seeds": 0,
+          "flipping": [],
+          "stable": [
+            {
+              "a": "BM25",
+              "b": "Hybrid+Temporal",
+              "obs_diff": -0.09473684210526316,
+              "p_median": 0.0003999920001599968,
+              "p_min": 0.0002799944001119978,
+              "p_max": 0.0004399912001759965,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "BM25",
+              "b": "Final",
+              "obs_diff": -0.09473684210526316,
+              "p_median": 0.0003999920001599968,
+              "p_min": 0.0002799944001119978,
+              "p_max": 0.0004399912001759965,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Hybrid+Temporal",
+              "b": "MetadataOnly",
+              "obs_diff": 0.09473684210526316,
+              "p_median": 0.0003999920001599968,
+              "p_min": 0.0002799944001119978,
+              "p_max": 0.0004399912001759965,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Final",
+              "b": "MetadataOnly",
+              "obs_diff": 0.09473684210526316,
+              "p_median": 0.0003999920001599968,
+              "p_min": 0.0002799944001119978,
+              "p_max": 0.0004399912001759965,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            }
+          ]
+        },
+        "mrr": {
+          "n_stable_survivors": 0,
+          "n_flips_across_seeds": 2,
+          "flipping": [
+            {
+              "a": "Dense",
+              "b": "Hybrid+Temporal",
+              "obs_diff": -0.2793859649122807,
+              "p_median": 0.0005999880002399952,
+              "p_min": 0.0005199896002079958,
+              "p_max": 0.0006799864002719945,
+              "stable_survivor": false,
+              "flips_across_seeds": true
+            },
+            {
+              "a": "Hybrid+Temporal",
+              "b": "Dense+Temporal",
+              "obs_diff": 0.2793859649122807,
+              "p_median": 0.0005999880002399952,
+              "p_min": 0.0005199896002079958,
+              "p_max": 0.0006799864002719945,
+              "stable_survivor": false,
+              "flips_across_seeds": true
+            }
+          ],
+          "stable": []
+        }
+      }
+    },
+    "expanded": {
+      "n_queries": 88,
+      "metrics": {
+        "recall": {
+          "n_stable_survivors": 33,
+          "n_flips_across_seeds": 3,
+          "flipping": [
+            {
+              "a": "Hybrid+Temporal",
+              "b": "Final",
+              "obs_diff": 0.029545454545454545,
+              "p_median": 0.0004399912001759965,
+              "p_min": 0.0003599928001439971,
+              "p_max": 0.0006799864002719945,
+              "stable_survivor": false,
+              "flips_across_seeds": true
+            },
+            {
+              "a": "Final",
+              "b": "BM25+Temporal",
+              "obs_diff": -0.029545454545454545,
+              "p_median": 0.0004399912001759965,
+              "p_min": 0.0003599928001439971,
+              "p_max": 0.0006799864002719945,
+              "stable_survivor": false,
+              "flips_across_seeds": true
+            },
+            {
+              "a": "Final",
+              "b": "TemporalOnly",
+              "obs_diff": -0.029545454545454545,
+              "p_median": 0.0004399912001759965,
+              "p_min": 0.0003599928001439971,
+              "p_max": 0.0006799864002719945,
+              "stable_survivor": false,
+              "flips_across_seeds": true
+            }
+          ],
+          "stable": [
+            {
+              "a": "BM25",
+              "b": "Dense",
+              "obs_diff": 0.20454545454545456,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "BM25",
+              "b": "Hybrid+Temporal",
+              "obs_diff": -0.09772727272727272,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "BM25",
+              "b": "Final",
+              "obs_diff": -0.06818181818181818,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "BM25",
+              "b": "BM25+Temporal",
+              "obs_diff": -0.09772727272727272,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "BM25",
+              "b": "Dense+Temporal",
+              "obs_diff": 0.17045454545454544,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "BM25",
+              "b": "TemporalOnly",
+              "obs_diff": -0.09772727272727272,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Dense",
+              "b": "Hybrid",
+              "obs_diff": -0.20454545454545456,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Dense",
+              "b": "Hybrid+Temporal",
+              "obs_diff": -0.3022727272727273,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Dense",
+              "b": "Hybrid+Metadata",
+              "obs_diff": -0.20454545454545456,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Dense",
+              "b": "Final",
+              "obs_diff": -0.2727272727272727,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Dense",
+              "b": "BM25+Temporal",
+              "obs_diff": -0.3022727272727273,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Dense",
+              "b": "Dense+Temporal",
+              "obs_diff": -0.034090909090909095,
+              "p_median": 0.00023999520009599807,
+              "p_min": 0.0001999960000799984,
+              "p_max": 0.0002799944001119978,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Dense",
+              "b": "TemporalOnly",
+              "obs_diff": -0.3022727272727273,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Dense",
+              "b": "MetadataOnly",
+              "obs_diff": -0.20454545454545456,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Hybrid",
+              "b": "Hybrid+Temporal",
+              "obs_diff": -0.09772727272727272,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Hybrid",
+              "b": "Final",
+              "obs_diff": -0.06818181818181818,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Hybrid",
+              "b": "BM25+Temporal",
+              "obs_diff": -0.09772727272727272,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Hybrid",
+              "b": "Dense+Temporal",
+              "obs_diff": 0.17045454545454544,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Hybrid",
+              "b": "TemporalOnly",
+              "obs_diff": -0.09772727272727272,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Hybrid+Temporal",
+              "b": "Hybrid+Metadata",
+              "obs_diff": 0.09772727272727272,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Hybrid+Temporal",
+              "b": "Dense+Temporal",
+              "obs_diff": 0.2681818181818182,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Hybrid+Temporal",
+              "b": "MetadataOnly",
+              "obs_diff": 0.09772727272727272,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Hybrid+Metadata",
+              "b": "Final",
+              "obs_diff": -0.06818181818181818,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Hybrid+Metadata",
+              "b": "BM25+Temporal",
+              "obs_diff": -0.09772727272727272,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Hybrid+Metadata",
+              "b": "Dense+Temporal",
+              "obs_diff": 0.17045454545454544,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Hybrid+Metadata",
+              "b": "TemporalOnly",
+              "obs_diff": -0.09772727272727272,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Final",
+              "b": "Dense+Temporal",
+              "obs_diff": 0.23863636363636365,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Final",
+              "b": "MetadataOnly",
+              "obs_diff": 0.06818181818181818,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "BM25+Temporal",
+              "b": "Dense+Temporal",
+              "obs_diff": 0.2681818181818182,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "BM25+Temporal",
+              "b": "MetadataOnly",
+              "obs_diff": 0.09772727272727272,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Dense+Temporal",
+              "b": "TemporalOnly",
+              "obs_diff": -0.2681818181818182,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Dense+Temporal",
+              "b": "MetadataOnly",
+              "obs_diff": -0.17045454545454544,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "TemporalOnly",
+              "b": "MetadataOnly",
+              "obs_diff": 0.09772727272727272,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            }
+          ]
+        },
+        "mrr": {
+          "n_stable_survivors": 33,
+          "n_flips_across_seeds": 0,
+          "flipping": [],
+          "stable": [
+            {
+              "a": "BM25",
+              "b": "Dense",
+              "obs_diff": 0.19691558441558443,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 0.00011999760004799904,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "BM25",
+              "b": "Hybrid+Temporal",
+              "obs_diff": -0.17303391053391054,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "BM25",
+              "b": "Final",
+              "obs_diff": -0.13869949494949496,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "BM25",
+              "b": "BM25+Temporal",
+              "obs_diff": -0.17303391053391054,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "BM25",
+              "b": "Dense+Temporal",
+              "obs_diff": 0.17566287878787878,
+              "p_median": 0.0001999960000799984,
+              "p_min": 0.00011999760004799904,
+              "p_max": 0.00023999520009599807,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "BM25",
+              "b": "TemporalOnly",
+              "obs_diff": -0.17303391053391054,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Dense",
+              "b": "Hybrid",
+              "obs_diff": -0.19691558441558443,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 0.00011999760004799904,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Dense",
+              "b": "Hybrid+Temporal",
+              "obs_diff": -0.369949494949495,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Dense",
+              "b": "Hybrid+Metadata",
+              "obs_diff": -0.19691558441558443,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 0.00011999760004799904,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Dense",
+              "b": "Final",
+              "obs_diff": -0.3356150793650794,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Dense",
+              "b": "BM25+Temporal",
+              "obs_diff": -0.369949494949495,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Dense",
+              "b": "Dense+Temporal",
+              "obs_diff": -0.021252705627705627,
+              "p_median": 0.00015999680006399873,
+              "p_min": 0.00011999760004799904,
+              "p_max": 0.0001999960000799984,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Dense",
+              "b": "TemporalOnly",
+              "obs_diff": -0.369949494949495,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Dense",
+              "b": "MetadataOnly",
+              "obs_diff": -0.19691558441558443,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 0.00011999760004799904,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Hybrid",
+              "b": "Hybrid+Temporal",
+              "obs_diff": -0.17303391053391054,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Hybrid",
+              "b": "Final",
+              "obs_diff": -0.13869949494949496,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Hybrid",
+              "b": "BM25+Temporal",
+              "obs_diff": -0.17303391053391054,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Hybrid",
+              "b": "Dense+Temporal",
+              "obs_diff": 0.17566287878787878,
+              "p_median": 0.0001999960000799984,
+              "p_min": 0.00011999760004799904,
+              "p_max": 0.00023999520009599807,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Hybrid",
+              "b": "TemporalOnly",
+              "obs_diff": -0.17303391053391054,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Hybrid+Temporal",
+              "b": "Hybrid+Metadata",
+              "obs_diff": 0.17303391053391054,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Hybrid+Temporal",
+              "b": "Dense+Temporal",
+              "obs_diff": 0.3486967893217893,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Hybrid+Temporal",
+              "b": "MetadataOnly",
+              "obs_diff": 0.17303391053391054,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Hybrid+Metadata",
+              "b": "Final",
+              "obs_diff": -0.13869949494949496,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Hybrid+Metadata",
+              "b": "BM25+Temporal",
+              "obs_diff": -0.17303391053391054,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Hybrid+Metadata",
+              "b": "Dense+Temporal",
+              "obs_diff": 0.17566287878787878,
+              "p_median": 0.0001999960000799984,
+              "p_min": 0.00011999760004799904,
+              "p_max": 0.00023999520009599807,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Hybrid+Metadata",
+              "b": "TemporalOnly",
+              "obs_diff": -0.17303391053391054,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Final",
+              "b": "Dense+Temporal",
+              "obs_diff": 0.31436237373737375,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Final",
+              "b": "MetadataOnly",
+              "obs_diff": 0.13869949494949496,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "BM25+Temporal",
+              "b": "Dense+Temporal",
+              "obs_diff": 0.3486967893217893,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "BM25+Temporal",
+              "b": "MetadataOnly",
+              "obs_diff": 0.17303391053391054,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Dense+Temporal",
+              "b": "TemporalOnly",
+              "obs_diff": -0.3486967893217893,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "Dense+Temporal",
+              "b": "MetadataOnly",
+              "obs_diff": -0.17566287878787878,
+              "p_median": 0.0001999960000799984,
+              "p_min": 0.00011999760004799904,
+              "p_max": 0.00023999520009599807,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            },
+            {
+              "a": "TemporalOnly",
+              "b": "MetadataOnly",
+              "obs_diff": 0.17303391053391054,
+              "p_median": 3.999920001599968e-05,
+              "p_min": 3.999920001599968e-05,
+              "p_max": 3.999920001599968e-05,
+              "stable_survivor": true,
+              "flips_across_seeds": false
+            }
+          ]
+        }
+      }
+    }
+  }
+}

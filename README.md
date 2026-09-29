@@ -27,7 +27,7 @@ A retrieval pipeline for 19th-century newspaper QA that combines BM25 lexical se
 >   corpus share the same 5-document reference, so none is credited for a document
 >   a competitor is not. That is the *only* thing the shared reference
 >   guarantees — it does **not** establish that within-corpus orderings are safe.
->   The cap also does **not** penalise methods equally: on the 100-year corpus
+>   The cap also does **not** penalise methods equally: on the 70-year corpus
 >   BM25 reaches 37% of the reference in its top-20 while Dense reaches only
 >   **11%**. The headline BM25-over-Dense gap is therefore **inflated by an
 >   unknown amount, and whether it survives at all is not determinable from a
@@ -93,6 +93,20 @@ These numbers are inflated because retrieving any one of the 5 reprinted copies 
 **Note on Final Ranker:** Final Ranker and Temporal Ranker produce identical Recall/MRR on the current eval set because they share the same hybrid base (70% weight) and same temporal adjustment — they differ only in temporal weight (0.2 vs 0.3) and metadata (0.1, neutral). This is a design consequence, not a bug.
 
 **Critical finding — temporal re-ranking is net-negative:** Across three independent debugging passes (original ranker, normalization fix, wiring fix), including temporal reranking at any material weight consistently drops MRR relative to pure Hybrid (0.412 → ~0.28–0.29). This is a replicated result, not an artifact of the bugs that were fixed along the way, and suggests the current temporal reranking approach may be net-negative for this task on this eval set.
+
+> **⚠️ SUPERSEDED 2026-09-28 — this finding was a stale-baseline error, not a
+> replication.** The 0.412 Hybrid MRR it compares against was measured at
+> `fetch_size=20`, a configuration later abandoned (see the fetch_size=50 finding
+> below). Under the standardised pipeline Hybrid was **0.249**, and the
+> contemporaneous table shows temporal β=0.4–0.5 reaching **0.290** — i.e.
+> temporal was *ahead*, not behind. The comparison differenced two incompatible
+> pipeline configurations. The "three independent debugging passes" re-ran the
+> temporal arm each time while the Hybrid baseline went unversioned, so the
+> result was never actually replicated.
+>
+> Current measurement on the corrected 10-year corpus (n=19, α=0.7): Hybrid 0.343
+> → Temporal β=0.5 **0.412**. Temporal is positive. See
+> `TEMPORAL_RERANKING_FINDING_REPORT.md`.
 
 **Grid search provenance:** The grid search (`evaluation/grid_search.py`) tested `beta_temporal ∈ {0.1, 0.2, 0.3, 0.4, 0.5}` but **did not include β=0 (temporal off)** as a candidate. The reported "optimal" β=0.3 was only the best among nonzero temporal weights. When β=0 is added to the search space with standardized fetch_size=50, pure Hybrid (β=0) MRR=0.249 is exceeded only by β=0.4–0.5 (MRR=0.290). The previously reported optimum was only the best among configurations that included temporal weight.
 
@@ -211,7 +225,7 @@ Frontend hard-refresh (`Ctrl+Shift+R`) after rebuild to avoid stale bundles.
 
 3. **Temporal corpus is narrow:** All documents fall within 1800–1810, so temporal re-ranking can only distinguish queries with explicit year constraints; broader period queries see little temporal signal.
 
-4. **Eval qrels lexical bias (applies to both corpora):** The qrels for both the 1800–1810 and 1800–1900 corpora were built using independent term-overlap matching (`generate_independent_qrels.py`, `generate_expanded_qrels.py`), NOT retriever outputs. While this avoids circularity (retriever → qrels → eval), term-overlap favors BM25 lexically — queries and relevant docs share surface words by construction. This is the same bias flagged as bug #6 on the original corpus. A non-lexical qrels method (human annotation) is needed to fully isolate retriever quality from lexical matching.
+4. **Eval qrels lexical bias (applies to both corpora):** The qrels for both the 1800–1810 and 1800–1869 corpora were built using independent term-overlap matching (`generate_independent_qrels.py`, `generate_expanded_qrels.py`), NOT retriever outputs. While this avoids circularity (retriever → qrels → eval), term-overlap favors BM25 lexically — queries and relevant docs share surface words by construction. This is the same bias flagged as bug #6 on the original corpus. A non-lexical qrels method (human annotation) is needed to fully isolate retriever quality from lexical matching.
 
    **INVESTIGATION IN PROGRESS.** A 10-query human-annotated pilot (`HUMAN_QRELS_VALIDATION.md`, 2026-09-26) did not reproduce the BM25-over-Dense gap measured here, raising a real question about how much of that advantage is qrels-driven. The pilot is **not** sufficient to overturn the 90-query results below and has identified confounds (retriever scores were visible to annotators; 2 of 10 queries were previously spot-checked, one with chance-level agreement; n=10, κ=0.452). Treat the term-overlap-qrels numbers in this README as **under active challenge**, not as settled and not as refuted.
 
@@ -223,18 +237,40 @@ Frontend hard-refresh (`Ctrl+Shift+R`) after rebuild to avoid stale bundles.
 
    The one substantive positive signal: judged relevance declines monotonically with **retriever** rank (BM25 72%→20%, Hybrid 72%→20%, Dense 67%→44% across rank bands 1-5/6-10/11-20), so the blind pool carries real signal rather than noise.
 
-   **Additional finding that weakens limitation #4 itself.** The term-overlap qrels are **truncated at exactly 5 relevant documents per query** (`{5: 19}` in `qrels_small.json`, `{5: 88, 1: 2, 0: 20}` in `qrels_expanded.json`) and are **corpus-dependent**: for the 19 queries in both files, the small- and expanded-corpus references share almost nothing. They are therefore not a complete relevance judgment, and overlap statistics computed against them (including the Jaccard figures in `HUMAN_QRELS_VALIDATION.md` §6) are not valid measurements of pool quality. 20 of 110 expanded queries have no reference documents at all. This makes human inter-annotator agreement the *only* remaining reliability signal, and it raises rather than lowers the priority of obtaining annotator 2. See `HUMAN_QRELS_VALIDATION.md` §6b.
+   **Additional finding that weakens limitation #4 itself.** The term-overlap qrels are **truncated at exactly 5 relevant documents per query** (`{5: 19}` in `qrels_small.json`, `{5: 88, 0: 20}` in `qrels_expanded.json`) and are **corpus-dependent**: for the 19 queries in both files, the small- and expanded-corpus references share almost nothing. They are therefore not a complete relevance judgment, and overlap statistics computed against them (including the Jaccard figures in `HUMAN_QRELS_VALIDATION.md` §6) are not valid measurements of pool quality. 20 of the 108 expanded queries have no reference documents at all. A further two (`q89`, `q98` — 1870s/1880s range queries) carried references dated 1802–1867 and were removed as unsatisfiable on a corpus ending at 1869; the scored set is 88. This makes human inter-annotator agreement the *only* remaining reliability signal, and it raises rather than lowers the priority of obtaining annotator 2. See `HUMAN_QRELS_VALIDATION.md` §6b.
 
-## Priority 2: Corpus Expansion to 1800–1900 (2026-09-12)
+## Priority 2: Corpus Expansion to 1800–1869 (2026-09-12, corrected 2026-09-28)
 
-Expanded corpus from 10-year (1800–1810, ~2,000 chunks) to full 19th century (1800–1900, 50,000 chunks) using stratified decade sampling (all decades ≥5% of corpus). Re-ran full eval pipeline with 90 queries (75–100 target) built via independent term-overlap matching (no retriever circularity).
+Expanded corpus from 10-year (1800–1810, ~2,000 chunks) toward the 19th century, targeting 50,000 chunks via decade-stratified sampling. Re-ran full eval pipeline with queries built via independent term-overlap matching (no retriever circularity).
+
+> **⚠️ CORRECTION 2026-09-28 — the expansion did not reach 1900.**
+> The built corpus spans **1800–1869 (70 years)**, not 1800–1900. No document
+> dated 1870 or later was ever indexed. Cause: `preprocessing/preprocess_expanded.py`
+> iterated decades in ascending order and applied a single global cap
+> (`if len(all_chunks) >= MAX_CHUNKS: break`); the corpus filled during the 1860s,
+> the break fired, and the 1870s onward were never built. The coverage check
+> iterated only decades present in its output, so a zero-document decade could
+> never be reported as missing. The source data was not the constraint —
+> `Bhawna/ChroniclingAmericaQA` holds **273,010 documents dated 1870+**.
+> **Root cause fixed; corpus not rebuilt.** `corpus_end_year` corrected
+> 1900 → 1870 (exclusive, i.e. 1800–1869 inclusive). See `CORPUS_COVERAGE_FINDINGS.md`.
 
 ### Expanded Corpus Stats
 - **Chunks:** 50,000 (vs 2,000)
-- **Decade distribution:** 1800s 7%, 1810s 8%, 1820s 12%, 1830s 17%, 1840s 20%, 1850s 23%, 1860s 13%, 1870s–1890s sparse (<5% each)
+- **Decade distribution (measured):** 1800s 3,543 (7.1%), 1810s 4,016 (8.0%), 1820s 6,000 (12.0%), 1830s 8,288 (16.6%), 1840s 9,900 (19.8%), 1850s–1860s the remainder
+- **1870s–1890s: absent, not sparse.** The earlier "all decades ≥5%" claim measured only decades that existed. These decades are **unmeasured**, not measured below 5%.
 - **Deduplication:** 0 chunk-ID dupes, 25 parent-doc-ID dupes (same-year), 11,416 full-text dupes (all same-decade, no cross-decade reprints found)
 
-### Eval Results (90 queries, fetch_size=50, shared pool, global z-score)
+### Eval Results — SUPERSEDED, see `TEMPORAL_RERANKING_FINDING_REPORT.md`
+
+The table below is the original n=90 run. It has been **re-measured on n=88** with the
+corpus and query set corrected. Current numbers are in
+`TEMPORAL_RERANKING_FINDING_REPORT.md` and `ABLATION_MATRIX_REPORT_V3.md`.
+Retained for traceability only.
+
+<details><summary>Original n=90 run (superseded)</summary>
+
+#### Original (n=90 queries, fetch_size=50, shared pool, global z-score)
 
 | Method | P@10 | Recall@10 [95% CI] | MRR [95% CI] |
 |--------|------|-----------|-----|
@@ -256,13 +292,15 @@ Expanded corpus from 10-year (1800–1810, ~2,000 chunks) to full 19th century (
 
 1. **BM25 dominates:** Pure BM25 (MRR=0.322) outperforms all Hybrid RRF configurations. RRF parameter sweep (k∈{10,20,40,60,80,100}, α∈[0,1]) confirms **no Hybrid configuration beats BM25** — best Hybrid = pure BM25 (α=1.0). Dense alone MRR=0.130.
 
-2. **Temporal reranking is STRONGLY POSITIVE** (opposite of 1800–1810 finding): Grid search (β∈{0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0}) on expanded corpus + 90 queries: optimal β=0.5 (MRR=0.387, Recall@10=0.269) vs β=0 (MRR=0.204). MRR plateaus at β=0.5 and stays flat through β=1.0 — optimum is not at grid edge. Temporal signal is now discriminative across 100 years of content. **Bootstrap confirms temporal reranking benefit is significant** (β=0.5 vs β=0: diff=+0.118 Recall@10, +0.174 MRR, both p<0.05).
+2. **~~Temporal reranking is STRONGLY POSITIVE.~~ CORRECTED 2026-09-28.** Re-measured on n=88 over a 70-year corpus: temporal reranking improves **its own hybrid base** substantially (+0.120 Recall@10, +0.178 MRR, both p<0.001) but **does not significantly beat BM25** (−0.005 Recall@10, p=0.87; +0.056 MRR, p=0.20) — it *ties* BM25. The claim of being "strongly positive" overstated the evidence. MRR is also **flat from β=0.5 through β=1.0**, which is the signature of the base retriever ceasing to influence the ordering (a weighting artifact, not a tuned optimum), not evidence of a genuine optimum.
 
 3. **All three eval paths agree on pure-Hybrid baseline:** 
    - `metrics.py` (shared pool): Hybrid MRR=0.167
    - `grid_search.py` β=0 (shared pool): Hybrid MRR=0.204
    - `bootstrap_significance.py` Hybrid row: MRR=0.167
    - Minor discrepancy between grid search and metrics/bootstrap under investigation (different temporal scoring paths), but all agree Hybrid < BM25.
+
+</details>
 
 ### Content Coverage Check
 - **Native American content:** Substantial — Cherokee (200), Sioux (85), Apache (25), Navajo (13), Comanche (16), Iroquois (26), Creek (1,026), Seminole (82), Choctaw (55), Chickasaw (38), tribe (377), reservation (248), treaty (983), Custer (9), Indian Territory (10).
@@ -271,4 +309,4 @@ Expanded corpus from 10-year (1800–1810, ~2,000 chunks) to full 19th century (
 ### Updated Architecture Notes
 - **Ranker weights re-tuned on expanded corpus:** Grid search optimal β=0.5 (temporal weight), suggesting `alpha_hybrid=0.5, beta_temporal=0.5` for Temporal Ranker. Final Ranker weights should be revisited.
 - **RRF parameters:** No k/α combination restored Hybrid ≥ BM25. Consider dropping RRF fusion or using BM25-only for this corpus.
-- **Eval stability:** 90 queries narrowed CIs enough for significant pairwise results (BM25 > Hybrid, Temporal > Hybrid(β=0), BM25 > Dense, Temporal > Dense).
+- **Eval stability:** 88 queries (after removing 2 unsatisfiable ones) narrowed CIs enough for significant pairwise results (BM25 > Hybrid, Temporal > Hybrid(β=0), BM25 > Dense, Temporal > Dense).

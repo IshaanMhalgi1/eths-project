@@ -246,7 +246,7 @@ CORPUS_CONFIG = {
         'dense_temporal': {'alpha_dense': 0.7, 'beta_temporal': 0.3},
     },
     'expanded': {
-        'name': '1800-1900',
+        'name': '1800-1869',
         'index_name': DEFAULT_INDEX,
         'qrels_path': os.path.join(os.path.dirname(__file__), '..', 'data', 'qrels_expanded.json'),
         'hybrid': {'alpha': 1.0},
@@ -257,6 +257,20 @@ CORPUS_CONFIG = {
         'dense_temporal': {'alpha_dense': 0.7, 'beta_temporal': 0.5},
     }
 }
+
+
+RANKERS = [
+    'BM25',
+    'Dense',
+    'Hybrid',
+    'Hybrid+Temporal',
+    'Hybrid+Metadata',
+    'Final',
+    'BM25+Temporal',
+    'Dense+Temporal',
+    'TemporalOnly',
+    'MetadataOnly',
+]
 
 
 def get_ranker(name, corpus='expanded'):
