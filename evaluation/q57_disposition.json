@@ -1,0 +1,60 @@
+{
+  "defect": "q57 references are 1829-1839, 0/5 inside Manifest Destiny (1843-1853), and match on the token \"administration\" rather than the topic",
+  "scenarios": {
+    "A_current (n=88, q57 as-is)": {
+      "BM25": {
+        "recall": 0.275,
+        "mrr": 0.31825396825396823
+      },
+      "TemporalOnly": {
+        "recall": 0.3727272727272728,
+        "mrr": 0.4912878787878787
+      },
+      "Hybrid+Temporal": {
+        "recall": 0.3727272727272728,
+        "mrr": 0.4912878787878787
+      }
+    },
+    "B_exclude (n=87, q57 dropped)": {
+      "BM25": {
+        "recall": 0.27586206896551724,
+        "mrr": 0.3190384966247035
+      },
+      "TemporalOnly": {
+        "recall": 0.37471264367816093,
+        "mrr": 0.49406130268199233
+      },
+      "Hybrid+Temporal": {
+        "recall": 0.37471264367816093,
+        "mrr": 0.49406130268199233
+      }
+    },
+    "C_hand-correct (n=88, q57 era-aligned)": {
+      "BM25": {
+        "recall": 0.2727272727272727,
+        "mrr": 0.3154130591630592
+      },
+      "TemporalOnly": {
+        "recall": 0.3704545454545455,
+        "mrr": 0.4884469696969696
+      },
+      "Hybrid+Temporal": {
+        "recall": 0.3704545454545455,
+        "mrr": 0.4884469696969696
+      }
+    }
+  },
+  "headline_effect_by_scenario": {
+    "A_current (n=88, q57 as-is)": 0.09772727272727277,
+    "B_exclude (n=87, q57 dropped)": 0.09885057471264369,
+    "C_hand-correct (n=88, q57 era-aligned)": 0.09772727272727277
+  },
+  "counterfactual_corrected_ids": [
+    "train_45209",
+    "train_45207",
+    "train_70428",
+    "train_71649",
+    "train_53841"
+  ],
+  "recommendation": null
+}

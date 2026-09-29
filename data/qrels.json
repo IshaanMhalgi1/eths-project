@@ -286,7 +286,7 @@
   {
     "query_id": "q25",
     "query_text": "Era of Good Feelings Monroe presidency",
-    "temporal_type": "period",
+    "temporal_type": "none",
     "relevant_doc_ids": [
       "train_11441",
       "train_11440",
@@ -653,18 +653,6 @@
       "train_54403",
       "train_54564",
       "train_60100"
-    ]
-  },
-  {
-    "query_id": "q57",
-    "query_text": "Manifest Destiny Polk administration",
-    "temporal_type": "period",
-    "relevant_doc_ids": [
-      "train_11240",
-      "train_35772",
-      "train_27203",
-      "train_30135",
-      "train_36776"
     ]
   },
   {

@@ -13,12 +13,25 @@ K=5 MUST REPRODUCE THE CURRENT FILE EXACTLY. That is asserted, not assumed. This
 holds for data/qrels_expanded.json (verified: 0/108 mismatches) and the sweep runs
 there. It does NOT hold for data/qrels_small.json, which is excluded: its
 references are consecutive chunk ids of the same kind (`train_257..train_261`,
-`train_141..train_145`) that match neither generate_expanded_qrels.py's
-overlap ranking nor generate_qrels.py's self-referential construction -- 19/19
-mismatches under both, and 19/19 still after restricting the pool to the small
-index's own 3,543 documents. The small reference's generator is not present in
-the repository, so no depth sweep over it would be a controlled comparison. It is
-reported as excluded rather than approximated.
+`train_141..train_145`) -- 19/19 mismatches under generate_expanded_qrels.py, and
+19/19 still after restricting the pool to the small index's own 3,543 documents.
+
+That exclusion was first recorded as an unresolved provenance gap. It is not one.
+evaluation/verify_small_qrels_provenance.py establishes that data/qrels_small.json
+is HAND-CURATED by design: it is qrels_original.json minus q18 verbatim, its 5-id
+sets are seed-and-expand from the single human-verified top-1 BM25 hits in the
+first committed qrels.json (all 19 seeds retained, at position 1), and two of its
+query texts were rewritten by hand against the documents they point at (q1 "lost
+pocket book reward" -> "strayed horse reward advertisement"; q5 "obituaries deaths
+1807" -> "obituaries deaths 1806", where all five references are dated 1806).
+
+The reference is therefore not reproducible BECAUSE IT IS HAND-MADE. A K parameter
+only means something for a generated reference, so there is no controlled sweep to
+run over this one. It is reported as excluded rather than approximated -- and the
+exclusion is now a statement about instrument type, not a defect. Note the
+consequence: the small arm is a hand-adjudicated reference and the expanded arm is
+a generated one, so the two arms are not comparable instruments and their
+disagreement is a finding rather than a replication.
 
 Retrieval does not depend on K, so each ranker's deduplicated top-10 is computed
 ONCE and scored against every K's reference. That also guarantees all depths see
@@ -195,8 +208,10 @@ def main():
         print(f"  candidate pool sizes: min={min(lens)} max={max(lens)} "
               f"mean={np.mean(lens):.1f}")
 
-    # Exclude the small corpus: its reference is not reproducible at K=5 by any
-    # generator in the repo, so a depth sweep over it would not be controlled.
+    # Exclude the small corpus: its reference is hand-curated rather than
+    # generated (see verify_small_qrels_provenance.py), so a K sweep over it
+    # would not be controlled. K parameterizes a generator that produced this
+    # file; it did not.
     excluded = {}
     with open(os.path.join(REPO, 'data', 'qrels_small.json'), encoding='utf-8') as f:
         small_cur = json.load(f)
@@ -208,9 +223,14 @@ def main():
     excluded['small'] = {
         'n_queries': len(small_cur),
         'k5_mismatches': n_bad,
-        'reason': 'reference not reproducible at K=5 by generate_expanded_qrels.py '
-                  'logic; consecutive train_* chunk ids suggest a different, '
-                  'absent generator. Excluded rather than approximated.'}
+        'reason': 'reference is hand-curated, not generated: qrels_original.json '
+                  'minus q18 verbatim, 5-id sets seeded by the human-verified '
+                  'top-1 BM25 hits of the first committed qrels.json (19/19 seeds '
+                  'retained at position 1), with q1 and q5 query texts rewritten '
+                  'by hand against their documents. See '
+                  'evaluation/verify_small_qrels_provenance.py. K parameterizes a '
+                  'generator that did not produce this file, so no controlled '
+                  'sweep exists; excluded rather than approximated.'}
     print(f"\nsmall corpus EXCLUDED: {n_bad}/{len(small_cur)} K=5 mismatches")
 
     # ---------------- generate + verify K=5 reproduces current ----------------

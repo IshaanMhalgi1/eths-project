@@ -2,20 +2,34 @@
 
 Query set
 ---------
-data/qrels_expanded.json holds 108 entries after removing q89 and q98. Of the
-remaining, 88 carry reference documents; the other 20 are q28, q36 and the 18
+data/qrels_expanded.json holds 107 entries after removing q57, q89 and q98. Of the
+remaining, 87 carry reference documents; the other 20 are q28, q36 and the 18
 late-decade queries whose term-overlap match produced nothing once the corpus
-was understood to end at 1869. The evaluation filters to the 88.
+was understood to end at 1869. The evaluation filters to the 87.
 
 q89 ("women suffrage movement 1870s") and q98 ("bicycle craze transportation
 1880s") were dropped because both are range-type queries with no parseable
 year, so qrel generation fell back to raw term overlap and labelled documents
 from 1802-1867 as relevant to 1870s/1880s topics.
 
+q57 ("Manifest Destiny Polk administration") was dropped on separate grounds: its
+reference documents are dated 1829-1839, every one of them predating Manifest
+Destiny (1843-1853) and the Polk administration (1845-49) by 4-14 years, and
+inspection shows they matched on the token "administration" rather than the
+topic. The query and its reference set contradict each other, so no system can
+be said to answer it correctly. Hand-correcting was considered and measured
+(evaluation/q57_disposition.py) and rejected: scoping the reference to the era
+drops q57's own Recall@10 to 0.0000, because the era-appropriate documents are
+not reachable by the term matching that built the set. The query is real and
+should return in the human-qrels round; its reference set is not repairable
+without a human relevance judgment.
+
 Baseline
 --------
 The stored ablation_matrix_results_v2.json was computed on n=90 (the 88 plus
-q89/q98). Both are reported here so the effect of dropping the two is visible.
+q89/q98). Both are reported here so the effect of dropping the queries is
+visible. The prior n=88 figure is also reported so the incremental effect of
+removing q57 alone is visible.
 
 Metric definitions are copied verbatim from evaluation/rrf_sweep.py.
 """
@@ -82,8 +96,8 @@ def main():
     print(f"scored queries (n)      : {len(qrels)}")
     print(f"skipped, no references  : {len(noref)}")
     print(f"  {', '.join(noref)}")
-    assert not ({"q89", "q98"} & {q['query_id'] for q in raw}), \
-        "q89/q98 should have been dropped"
+    assert not ({"q57", "q89", "q98"} & {q['query_id'] for q in raw}), \
+        "q57/q89/q98 should have been dropped"
 
     print(f"\n{'='*72}\nFINAL expanded-corpus results (n={len(qrels)})\n{'='*72}")
     print(f"{'Ranker':<18}{'MRR':>9}{'dMRR':>9}{'R@10':>9}{'dR@10':>9}{'P@10':>9}")
@@ -112,8 +126,8 @@ def main():
               'w', encoding='utf-8') as f:
         json.dump({'n_scored': len(qrels), 'n_file_entries': len(raw),
                    'skipped_no_references': noref,
-                   'dropped_as_unsatisfiable': ['q89', 'q98'],
-                   'final_n88': out, 'stored_n90_baseline': STORED_N90},
+                   'dropped_as_unsatisfiable': ['q57', 'q89', 'q98'],
+                   'final_n87': out, 'stored_n90_baseline': STORED_N90},
                   f, indent=2)
     print("\nwrote evaluation/qrel_exclusion_impact.json")
 

@@ -1,8 +1,12 @@
 {
-  "n_queries": 88,
+  "n_queries": 87,
   "cluster_definition": {
     "rule": "median of all 4-digit years 1800-1869 in the query text, floored to decade; \"no_year\" if the text contains none",
     "note": "no_year is a catch-all mixing non-temporal queries with era-named queries whose intent the parser resolves without a literal year"
+  },
+  "constraint_definition": {
+    "rule": "parser.is_constrained: a year window was resolved AND it covers <95% of the corpus year span (1800-1869, 70 years)",
+    "note": "a resolved window that covers >=95% of the span cannot separate candidates and is counted as unconstrained"
   },
   "clusters": {
     "1800s": {
@@ -25,8 +29,10 @@
         "explicit_year": 4,
         "range": 4
       },
-      "n_with_parser_temporal_intent": 11,
-      "n_without_temporal_intent": 0,
+      "n_with_parser_temporal_intent": 10,
+      "n_without_temporal_intent": 1,
+      "n_window_resolved": 11,
+      "n_window_resolved_but_not_discriminating": 1,
       "mean_refs_per_query": 5.0
     },
     "1810s": {
@@ -49,6 +55,8 @@
       },
       "n_with_parser_temporal_intent": 9,
       "n_without_temporal_intent": 0,
+      "n_window_resolved": 9,
+      "n_window_resolved_but_not_discriminating": 0,
       "mean_refs_per_query": 4.56
     },
     "1820s": {
@@ -70,6 +78,8 @@
       },
       "n_with_parser_temporal_intent": 9,
       "n_without_temporal_intent": 0,
+      "n_window_resolved": 9,
+      "n_window_resolved_but_not_discriminating": 0,
       "mean_refs_per_query": 5.0
     },
     "1830s": {
@@ -91,6 +101,8 @@
       },
       "n_with_parser_temporal_intent": 10,
       "n_without_temporal_intent": 0,
+      "n_window_resolved": 10,
+      "n_window_resolved_but_not_discriminating": 0,
       "mean_refs_per_query": 5.0
     },
     "1840s": {
@@ -112,6 +124,8 @@
       },
       "n_with_parser_temporal_intent": 9,
       "n_without_temporal_intent": 0,
+      "n_window_resolved": 9,
+      "n_window_resolved_but_not_discriminating": 0,
       "mean_refs_per_query": 4.56
     },
     "1850s": {
@@ -133,6 +147,8 @@
       },
       "n_with_parser_temporal_intent": 9,
       "n_without_temporal_intent": 0,
+      "n_window_resolved": 9,
+      "n_window_resolved_but_not_discriminating": 0,
       "mean_refs_per_query": 5.0
     },
     "1860s": {
@@ -155,10 +171,12 @@
       },
       "n_with_parser_temporal_intent": 11,
       "n_without_temporal_intent": 0,
+      "n_window_resolved": 11,
+      "n_window_resolved_but_not_discriminating": 0,
       "mean_refs_per_query": 5.0
     },
     "no_year": {
-      "n_queries": 20,
+      "n_queries": 19,
       "query_ids": [
         "q1",
         "q2",
@@ -169,7 +187,6 @@
         "q19",
         "q20",
         "q25",
-        "q57",
         "q101",
         "q102",
         "q103",
@@ -182,11 +199,13 @@
         "q110"
       ],
       "temporal_types": {
-        "none": 14,
-        "period": 6
+        "none": 15,
+        "period": 4
       },
       "n_with_parser_temporal_intent": 4,
-      "n_without_temporal_intent": 16,
+      "n_without_temporal_intent": 15,
+      "n_window_resolved": 4,
+      "n_window_resolved_but_not_discriminating": 0,
       "mean_refs_per_query": 5.0
     }
   },
@@ -262,65 +281,65 @@
       "Dense+Temporal vs Dense": 0.0
     },
     "no_year": {
-      "n": 20,
-      "temporal(beta=0.5) vs BM25-family": 0.04,
-      "TemporalOnly vs BM25-family": 0.04,
-      "Final vs BM25-family": 0.030000000000000006,
-      "BM25-family vs Dense": 0.38,
-      "temporal vs Dense": 0.42000000000000004,
-      "temporal vs Dense+Temporal": 0.41,
-      "Dense+Temporal vs Dense": 0.01
+      "n": 19,
+      "temporal(beta=0.5) vs BM25-family": 0.042105263157894736,
+      "TemporalOnly vs BM25-family": 0.042105263157894736,
+      "Final vs BM25-family": 0.03157894736842106,
+      "BM25-family vs Dense": 0.38947368421052636,
+      "temporal vs Dense": 0.431578947368421,
+      "temporal vs Dense+Temporal": 0.42105263157894735,
+      "Dense+Temporal vs Dense": 0.010526315789473684
     }
   },
   "per_query_breakdown": {
     "temporal(beta=0.5) vs BM25-family": {
       "improved": 23,
-      "unchanged": 65,
+      "unchanged": 64,
       "worse": 0,
-      "mean_diff": 0.09772727272727272,
-      "mean_diff_no_year": 0.04
+      "mean_diff": 0.09885057471264368,
+      "mean_diff_no_year": 0.042105263157894736
     },
     "TemporalOnly vs BM25-family": {
       "improved": 23,
-      "unchanged": 65,
+      "unchanged": 64,
       "worse": 0,
-      "mean_diff": 0.09772727272727272,
-      "mean_diff_no_year": 0.04
+      "mean_diff": 0.09885057471264368,
+      "mean_diff_no_year": 0.042105263157894736
     },
     "Final vs BM25-family": {
       "improved": 19,
-      "unchanged": 69,
+      "unchanged": 68,
       "worse": 0,
-      "mean_diff": 0.06818181818181818,
-      "mean_diff_no_year": 0.030000000000000006
+      "mean_diff": 0.06896551724137931,
+      "mean_diff_no_year": 0.03157894736842106
     },
     "BM25-family vs Dense": {
-      "improved": 39,
+      "improved": 38,
       "unchanged": 46,
       "worse": 3,
-      "mean_diff": 0.20454545454545456,
-      "mean_diff_no_year": 0.38
+      "mean_diff": 0.20459770114942524,
+      "mean_diff_no_year": 0.38947368421052636
     },
     "temporal vs Dense": {
-      "improved": 50,
+      "improved": 49,
       "unchanged": 38,
       "worse": 0,
-      "mean_diff": 0.3022727272727273,
-      "mean_diff_no_year": 0.42000000000000004
+      "mean_diff": 0.303448275862069,
+      "mean_diff_no_year": 0.431578947368421
     },
     "temporal vs Dense+Temporal": {
-      "improved": 47,
+      "improved": 46,
       "unchanged": 39,
       "worse": 2,
-      "mean_diff": 0.2681818181818182,
-      "mean_diff_no_year": 0.41
+      "mean_diff": 0.26896551724137935,
+      "mean_diff_no_year": 0.42105263157894735
     },
     "Dense+Temporal vs Dense": {
       "improved": 9,
-      "unchanged": 79,
+      "unchanged": 78,
       "worse": 0,
-      "mean_diff": 0.034090909090909095,
-      "mean_diff_no_year": 0.01
+      "mean_diff": 0.034482758620689655,
+      "mean_diff_no_year": 0.010526315789473684
     }
   },
   "rows": [
@@ -332,7 +351,9 @@
       "literal_years": [],
       "parser_start": null,
       "parser_end": null,
+      "corpus_coverage": null,
       "has_temporal_intent": false,
+      "window_resolved": false,
       "n_refs": 5
     },
     {
@@ -343,7 +364,9 @@
       "literal_years": [],
       "parser_start": null,
       "parser_end": null,
+      "corpus_coverage": null,
       "has_temporal_intent": false,
+      "window_resolved": false,
       "n_refs": 5
     },
     {
@@ -354,7 +377,9 @@
       "literal_years": [],
       "parser_start": null,
       "parser_end": null,
+      "corpus_coverage": null,
       "has_temporal_intent": false,
+      "window_resolved": false,
       "n_refs": 5
     },
     {
@@ -365,7 +390,9 @@
       "literal_years": [],
       "parser_start": null,
       "parser_end": null,
+      "corpus_coverage": null,
       "has_temporal_intent": false,
+      "window_resolved": false,
       "n_refs": 5
     },
     {
@@ -378,7 +405,9 @@
       ],
       "parser_start": 1806,
       "parser_end": 1806,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -391,7 +420,9 @@
       ],
       "parser_start": 1807,
       "parser_end": 1807,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -404,7 +435,9 @@
       ],
       "parser_start": 1803,
       "parser_end": 1803,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -417,7 +450,9 @@
       ],
       "parser_start": 1803,
       "parser_end": 1803,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -431,7 +466,9 @@
       ],
       "parser_start": 1800,
       "parser_end": 1805,
+      "corpus_coverage": 0.08571428571428572,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -445,7 +482,9 @@
       ],
       "parser_start": 1804,
       "parser_end": 1808,
+      "corpus_coverage": 0.07142857142857142,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -459,7 +498,9 @@
       ],
       "parser_start": 1800,
       "parser_end": 1810,
+      "corpus_coverage": 0.15714285714285714,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -473,7 +514,9 @@
       ],
       "parser_start": 1805,
       "parser_end": 1810,
+      "corpus_coverage": 0.08571428571428572,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -484,9 +527,11 @@
       "literal_years": [
         1808
       ],
-      "parser_start": 0,
+      "parser_start": 1800,
       "parser_end": 1807,
+      "corpus_coverage": 0.11428571428571428,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -498,8 +543,10 @@
         1805
       ],
       "parser_start": 1806,
-      "parser_end": 2026,
+      "parser_end": 1869,
+      "corpus_coverage": 0.9142857142857143,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -511,8 +558,10 @@
         1802
       ],
       "parser_start": 1803,
-      "parser_end": 2026,
-      "has_temporal_intent": true,
+      "parser_end": 1869,
+      "corpus_coverage": 0.9571428571428572,
+      "has_temporal_intent": false,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -523,9 +572,11 @@
       "literal_years": [
         1810
       ],
-      "parser_start": 0,
+      "parser_start": 1800,
       "parser_end": 1809,
+      "corpus_coverage": 0.14285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 1
     },
     {
@@ -536,7 +587,9 @@
       "literal_years": [],
       "parser_start": 1801,
       "parser_end": 1809,
+      "corpus_coverage": 0.12857142857142856,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -547,7 +600,9 @@
       "literal_years": [],
       "parser_start": 1789,
       "parser_end": 1824,
+      "corpus_coverage": 0.35714285714285715,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -558,7 +613,9 @@
       "literal_years": [],
       "parser_start": 1801,
       "parser_end": 1809,
+      "corpus_coverage": 0.12857142857142856,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -569,7 +626,9 @@
       "literal_years": [],
       "parser_start": 1789,
       "parser_end": 1824,
+      "corpus_coverage": 0.35714285714285715,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -582,7 +641,9 @@
       ],
       "parser_start": 1812,
       "parser_end": 1812,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -595,7 +656,9 @@
       ],
       "parser_start": 1813,
       "parser_end": 1813,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -608,7 +671,9 @@
       ],
       "parser_start": 1814,
       "parser_end": 1814,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -621,18 +686,22 @@
       ],
       "parser_start": 1815,
       "parser_end": 1815,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
       "query_id": "q25",
-      "temporal_type": "period",
+      "temporal_type": "none",
       "text": "Era of Good Feelings Monroe presidency",
       "cluster": "no_year",
       "literal_years": [],
       "parser_start": null,
       "parser_end": null,
+      "corpus_coverage": null,
       "has_temporal_intent": false,
+      "window_resolved": false,
       "n_refs": 5
     },
     {
@@ -646,7 +715,9 @@
       ],
       "parser_start": 1819,
       "parser_end": 1820,
+      "corpus_coverage": 0.02857142857142857,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -659,7 +730,9 @@
       ],
       "parser_start": 1817,
       "parser_end": 1817,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -672,7 +745,9 @@
       ],
       "parser_start": 1819,
       "parser_end": 1819,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -685,7 +760,9 @@
       ],
       "parser_start": 1815,
       "parser_end": 1815,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -698,7 +775,9 @@
       ],
       "parser_start": 1823,
       "parser_end": 1823,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -711,7 +790,9 @@
       ],
       "parser_start": 1824,
       "parser_end": 1824,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -724,7 +805,9 @@
       ],
       "parser_start": 1825,
       "parser_end": 1825,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -737,7 +820,9 @@
       ],
       "parser_start": 1828,
       "parser_end": 1828,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -750,7 +835,9 @@
       ],
       "parser_start": 1828,
       "parser_end": 1828,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -764,7 +851,9 @@
       ],
       "parser_start": 1824,
       "parser_end": 1825,
+      "corpus_coverage": 0.02857142857142857,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -777,7 +866,9 @@
       ],
       "parser_start": 1829,
       "parser_end": 1829,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -791,7 +882,9 @@
       ],
       "parser_start": 1828,
       "parser_end": 1830,
+      "corpus_coverage": 0.04285714285714286,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -804,7 +897,9 @@
       ],
       "parser_start": 1826,
       "parser_end": 1826,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -817,7 +912,9 @@
       ],
       "parser_start": 1832,
       "parser_end": 1832,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -830,7 +927,9 @@
       ],
       "parser_start": 1838,
       "parser_end": 1838,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -843,7 +942,9 @@
       ],
       "parser_start": 1831,
       "parser_end": 1831,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -856,7 +957,9 @@
       ],
       "parser_start": 1837,
       "parser_end": 1837,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -869,7 +972,9 @@
       ],
       "parser_start": 1836,
       "parser_end": 1836,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -882,7 +987,9 @@
       ],
       "parser_start": 1839,
       "parser_end": 1839,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -895,7 +1002,9 @@
       ],
       "parser_start": 1836,
       "parser_end": 1836,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -908,7 +1017,9 @@
       ],
       "parser_start": 1832,
       "parser_end": 1832,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -921,7 +1032,9 @@
       ],
       "parser_start": 1834,
       "parser_end": 1834,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -934,7 +1047,9 @@
       ],
       "parser_start": 1838,
       "parser_end": 1838,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -948,7 +1063,9 @@
       ],
       "parser_start": 1846,
       "parser_end": 1848,
+      "corpus_coverage": 0.04285714285714286,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -961,7 +1078,9 @@
       ],
       "parser_start": 1843,
       "parser_end": 1843,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -974,7 +1093,9 @@
       ],
       "parser_start": 1849,
       "parser_end": 1849,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -987,7 +1108,9 @@
       ],
       "parser_start": 1847,
       "parser_end": 1847,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -1000,7 +1123,9 @@
       ],
       "parser_start": 1848,
       "parser_end": 1848,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -1013,18 +1138,9 @@
       ],
       "parser_start": 1844,
       "parser_end": 1844,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
-      "n_refs": 5
-    },
-    {
-      "query_id": "q57",
-      "temporal_type": "period",
-      "text": "Manifest Destiny Polk administration",
-      "cluster": "no_year",
-      "literal_years": [],
-      "parser_start": null,
-      "parser_end": null,
-      "has_temporal_intent": false,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -1037,7 +1153,9 @@
       ],
       "parser_start": 1846,
       "parser_end": 1846,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 1
     },
     {
@@ -1050,7 +1168,9 @@
       ],
       "parser_start": 1847,
       "parser_end": 1847,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -1063,7 +1183,9 @@
       ],
       "parser_start": 1849,
       "parser_end": 1849,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -1076,7 +1198,9 @@
       ],
       "parser_start": 1850,
       "parser_end": 1850,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -1089,7 +1213,9 @@
       ],
       "parser_start": 1854,
       "parser_end": 1854,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -1102,7 +1228,9 @@
       ],
       "parser_start": 1857,
       "parser_end": 1857,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -1115,7 +1243,9 @@
       ],
       "parser_start": 1858,
       "parser_end": 1858,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -1128,7 +1258,9 @@
       ],
       "parser_start": 1859,
       "parser_end": 1859,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -1141,7 +1273,9 @@
       ],
       "parser_start": 1860,
       "parser_end": 1860,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -1154,7 +1288,9 @@
       ],
       "parser_start": 1855,
       "parser_end": 1855,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -1167,7 +1303,9 @@
       ],
       "parser_start": 1853,
       "parser_end": 1853,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -1181,7 +1319,9 @@
       ],
       "parser_start": 1854,
       "parser_end": 1856,
+      "corpus_coverage": 0.04285714285714286,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -1194,7 +1334,9 @@
       ],
       "parser_start": 1850,
       "parser_end": 1850,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -1207,7 +1349,9 @@
       ],
       "parser_start": 1861,
       "parser_end": 1865,
+      "corpus_coverage": 0.07142857142857142,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -1220,7 +1364,9 @@
       ],
       "parser_start": 1863,
       "parser_end": 1863,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -1233,7 +1379,9 @@
       ],
       "parser_start": 1863,
       "parser_end": 1863,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -1246,7 +1394,9 @@
       ],
       "parser_start": 1864,
       "parser_end": 1864,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -1259,7 +1409,9 @@
       ],
       "parser_start": 1865,
       "parser_end": 1865,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -1272,7 +1424,9 @@
       ],
       "parser_start": 1865,
       "parser_end": 1877,
+      "corpus_coverage": 0.07142857142857142,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -1285,7 +1439,9 @@
       ],
       "parser_start": 1869,
       "parser_end": 1869,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -1298,7 +1454,9 @@
       ],
       "parser_start": 1862,
       "parser_end": 1862,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -1311,7 +1469,9 @@
       ],
       "parser_start": 1862,
       "parser_end": 1862,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -1324,7 +1484,9 @@
       ],
       "parser_start": 1866,
       "parser_end": 1866,
+      "corpus_coverage": 0.014285714285714285,
       "has_temporal_intent": true,
+      "window_resolved": true,
       "n_refs": 5
     },
     {
@@ -1335,7 +1497,9 @@
       "literal_years": [],
       "parser_start": null,
       "parser_end": null,
+      "corpus_coverage": null,
       "has_temporal_intent": false,
+      "window_resolved": false,
       "n_refs": 5
     },
     {
@@ -1346,7 +1510,9 @@
       "literal_years": [],
       "parser_start": null,
       "parser_end": null,
+      "corpus_coverage": null,
       "has_temporal_intent": false,
+      "window_resolved": false,
       "n_refs": 5
     },
     {
@@ -1357,7 +1523,9 @@
       "literal_years": [],
       "parser_start": null,
       "parser_end": null,
+      "corpus_coverage": null,
       "has_temporal_intent": false,
+      "window_resolved": false,
       "n_refs": 5
     },
     {
@@ -1368,7 +1536,9 @@
       "literal_years": [],
       "parser_start": null,
       "parser_end": null,
+      "corpus_coverage": null,
       "has_temporal_intent": false,
+      "window_resolved": false,
       "n_refs": 5
     },
     {
@@ -1379,7 +1549,9 @@
       "literal_years": [],
       "parser_start": null,
       "parser_end": null,
+      "corpus_coverage": null,
       "has_temporal_intent": false,
+      "window_resolved": false,
       "n_refs": 5
     },
     {
@@ -1390,7 +1562,9 @@
       "literal_years": [],
       "parser_start": null,
       "parser_end": null,
+      "corpus_coverage": null,
       "has_temporal_intent": false,
+      "window_resolved": false,
       "n_refs": 5
     },
     {
@@ -1401,7 +1575,9 @@
       "literal_years": [],
       "parser_start": null,
       "parser_end": null,
+      "corpus_coverage": null,
       "has_temporal_intent": false,
+      "window_resolved": false,
       "n_refs": 5
     },
     {
@@ -1412,7 +1588,9 @@
       "literal_years": [],
       "parser_start": null,
       "parser_end": null,
+      "corpus_coverage": null,
       "has_temporal_intent": false,
+      "window_resolved": false,
       "n_refs": 5
     },
     {
@@ -1423,7 +1601,9 @@
       "literal_years": [],
       "parser_start": null,
       "parser_end": null,
+      "corpus_coverage": null,
       "has_temporal_intent": false,
+      "window_resolved": false,
       "n_refs": 5
     },
     {
@@ -1434,7 +1614,9 @@
       "literal_years": [],
       "parser_start": null,
       "parser_end": null,
+      "corpus_coverage": null,
       "has_temporal_intent": false,
+      "window_resolved": false,
       "n_refs": 5
     }
   ]

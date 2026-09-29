@@ -1,0 +1,113 @@
+{
+  "period_queries": [
+    {
+      "query_id": "q17",
+      "text": "European war news Jeffersonian Era",
+      "resolves": true,
+      "window": "(1801,1809)",
+      "is_constrained": true,
+      "coverage": 0.12857142857142856
+    },
+    {
+      "query_id": "q18",
+      "text": "election campaign republican Early Republic",
+      "resolves": true,
+      "window": "(1789,1824)",
+      "is_constrained": true,
+      "coverage": 0.35714285714285715
+    },
+    {
+      "query_id": "q19",
+      "text": "trade embargo Britain Jefferson administration",
+      "resolves": true,
+      "window": "(1801,1809)",
+      "is_constrained": true,
+      "coverage": 0.12857142857142856
+    },
+    {
+      "query_id": "q20",
+      "text": "letters editor public opinion Early National Period",
+      "resolves": true,
+      "window": "(1789,1824)",
+      "is_constrained": true,
+      "coverage": 0.35714285714285715
+    },
+    {
+      "query_id": "q25",
+      "text": "Era of Good Feelings Monroe presidency",
+      "resolves": false,
+      "window": "-",
+      "is_constrained": false,
+      "coverage": null
+    },
+    {
+      "query_id": "q57",
+      "text": "Manifest Destiny Polk administration",
+      "resolves": false,
+      "window": "-",
+      "is_constrained": false,
+      "coverage": null
+    }
+  ],
+  "fall_through_to_noop": [
+    "q25",
+    "q57"
+  ],
+  "actual_spans": {
+    "q17": [
+      "Jeffersonian Era",
+      1801,
+      1809
+    ],
+    "q18": [
+      "Early Republic",
+      1789,
+      1824
+    ],
+    "q19": [
+      "Jefferson administration",
+      1801,
+      1809
+    ],
+    "q20": [
+      "Early National Period",
+      1789,
+      1824
+    ],
+    "q25": [
+      "Era of Good Feelings",
+      1817,
+      1825
+    ],
+    "q57": [
+      "Manifest Destiny / Polk",
+      1843,
+      1853
+    ]
+  },
+  "counterfactual_if_era_added": [
+    {
+      "query_id": "q25",
+      "era": "Era of Good Feelings",
+      "span": [
+        1817,
+        1825
+      ],
+      "bm25_recall": 1.0,
+      "date_sorted_recall": 0.6,
+      "delta": -0.4
+    },
+    {
+      "query_id": "q57",
+      "era": "Manifest Destiny / Polk",
+      "span": [
+        1843,
+        1853
+      ],
+      "bm25_recall": 0.2,
+      "date_sorted_recall": 0.0,
+      "delta": -0.2
+    }
+  ],
+  "decision": "RELABEL, do not extend the gazetteer -- see conclusion above"
+}

@@ -1,0 +1,123 @@
+{
+  "conclusion": "hand-curated by design; not reproducible by any automated generator. The K-sweep exclusion is a property of the instrument, not an unresolved gap.",
+  "derived_from": "data/qrels_original.json minus q18 (build_small_qrels.py)",
+  "n_queries": 19,
+  "omitted_vs_original": [
+    "q18"
+  ],
+  "relevance_differs_from_original": [],
+  "seed_ids_by_commit": {
+    "9350a5e": {
+      "q1": {
+        "seed": "train_1707",
+        "seed_position": 1,
+        "seed_text": "strayed horse reward advertisement",
+        "curated_text": "strayed horse reward advertisement"
+      },
+      "q4": {
+        "seed": "train_1963",
+        "seed_position": 1,
+        "seed_text": "military officer appointments",
+        "curated_text": "military officer appointments"
+      },
+      "q5": {
+        "seed": "train_141",
+        "seed_position": 1,
+        "seed_text": "obituaries deaths 1806",
+        "curated_text": "obituaries deaths 1806"
+      },
+      "q7": {
+        "seed": "train_1569",
+        "seed_position": 1,
+        "seed_text": "ship arrivals cargo from Europe 1803",
+        "curated_text": "ship arrivals cargo from Europe 1803"
+      }
+    },
+    "7c62c82": {
+      "q1": {
+        "seed": "train_1707",
+        "seed_position": 1,
+        "seed_text": "strayed horse reward advertisement",
+        "curated_text": "strayed horse reward advertisement"
+      },
+      "q4": {
+        "seed": "train_1963",
+        "seed_position": 1,
+        "seed_text": "military officer appointments",
+        "curated_text": "military officer appointments"
+      },
+      "q5": {
+        "seed": "train_141",
+        "seed_position": 1,
+        "seed_text": "obituaries deaths 1806",
+        "curated_text": "obituaries deaths 1806"
+      },
+      "q7": {
+        "seed": "train_1569",
+        "seed_position": 1,
+        "seed_text": "ship arrivals cargo from Europe 1803",
+        "curated_text": "ship arrivals cargo from Europe 1803"
+      }
+    }
+  },
+  "hand_corrected_queries": {
+    "q1": {
+      "pre_curation_text": "lost pocket book reward",
+      "curated_text": "strayed horse reward advertisement",
+      "text_rewritten": true,
+      "reference_years": [
+        1804,
+        1805,
+        1807
+      ]
+    },
+    "q4": {
+      "pre_curation_text": "military officer appointments",
+      "curated_text": "military officer appointments",
+      "text_rewritten": false,
+      "reference_years": [
+        1804,
+        1807
+      ]
+    },
+    "q5": {
+      "pre_curation_text": "obituaries deaths 1807",
+      "curated_text": "obituaries deaths 1806",
+      "text_rewritten": true,
+      "reference_years": [
+        1806
+      ]
+    },
+    "q7": {
+      "pre_curation_text": "ship arrivals cargo from Europe 1803",
+      "curated_text": "ship arrivals cargo from Europe 1803",
+      "text_rewritten": false,
+      "reference_years": [
+        1803
+      ]
+    }
+  },
+  "seed_retained_in_curated_set": [
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5",
+    "q6",
+    "q7",
+    "q8",
+    "q9",
+    "q10",
+    "q11",
+    "q12",
+    "q13",
+    "q14",
+    "q15",
+    "q16",
+    "q17",
+    "q19",
+    "q20"
+  ],
+  "reference_ids_absent_from_small_index": [],
+  "reference_ids_outside_window": []
+}

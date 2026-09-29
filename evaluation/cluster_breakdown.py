@@ -31,7 +31,6 @@ from temporal.temporal_parser import TemporalParser
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(REPO, 'evaluation', 'cluster_breakdown.json')
 parser = TemporalParser()
-
 # class representatives from equivalence_classes.json (expanded)
 REPS = OrderedDict([
     ('C0', 'BM25'),          # {BM25, Hybrid, Hybrid+Metadata, MetadataOnly}
@@ -75,6 +74,10 @@ def main():
     for q in queries:
         dec, literal = decade_of(q['query_text'])
         ti = parser.parse(q['query_text'])
+        # is_constrained, not merely "start_year is not None". A window can be
+        # resolved and still cover >=95% of the corpus year span, in which case
+        # it cannot separate any candidate and the temporal channel is inert.
+        # Counting those as constrained overstated the constrained set.
         rows.append({
             'query_id': q['query_id'],
             'temporal_type': q.get('temporal_type'),
@@ -83,7 +86,9 @@ def main():
             'literal_years': literal,
             'parser_start': ti.get('start_year'),
             'parser_end': ti.get('end_year'),
-            'has_temporal_intent': ti.get('start_year') is not None,
+            'corpus_coverage': ti.get('corpus_coverage'),
+            'has_temporal_intent': ti.get('is_constrained', False),
+            'window_resolved': ti.get('start_year') is not None,
             'n_refs': len(q['relevant_doc_ids']),
         })
 
@@ -102,6 +107,10 @@ def main():
                                for t in sorted({r['temporal_type'] for r in members})},
             'n_with_parser_temporal_intent': with_intent,
             'n_without_temporal_intent': len(members) - with_intent,
+            'n_window_resolved': sum(1 for r in members if r['window_resolved']),
+            'n_window_resolved_but_not_discriminating': sum(
+                1 for r in members if r['window_resolved']
+                and not r['has_temporal_intent']),
             'mean_refs_per_query': round(float(np.mean([r['n_refs'] for r in members])), 2),
         }
 
@@ -145,7 +154,8 @@ def main():
 
     # ---------------- per-query win/loss/tie ----------------
     print("\n" + "=" * 100)
-    print("PER-QUERY BREAKDOWN of the 88 scored queries (Recall@10, winner's perspective)")
+    print(f"PER-QUERY BREAKDOWN of the {n} scored queries (Recall@10, "
+          "winner's perspective)")
     print("=" * 100)
     print(f"{'contrast':<40}{'improved':>10}{'unchanged':>11}{'worse':>8}"
           f"{'mean d':>10}{'d in no_year':>14}")
@@ -178,6 +188,11 @@ def main():
         'note': 'no_year is a catch-all mixing non-temporal queries with '
                 'era-named queries whose intent the parser resolves without a '
                 'literal year'},
+        'constraint_definition': {
+            'rule': 'parser.is_constrained: a year window was resolved AND it '
+                    'covers <95% of the corpus year span (1800-1869, 70 years)',
+            'note': 'a resolved window that covers >=95% of the span cannot '
+                    'separate candidates and is counted as unconstrained'},
         'clusters': clusters, 'per_cluster_effects': per_cluster,
         'per_query_breakdown': breakdown, 'rows': rows}
     with open(OUT, 'w', encoding='utf-8') as f:
